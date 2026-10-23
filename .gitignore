@@ -1,0 +1,33 @@
+node_modules/
+.next/
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+.env*
+!.env.example
+
+# Logs, editor settings, operating system files, and temporary output
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+.next-*/
+.vercel/
+
+# Private credentials
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
