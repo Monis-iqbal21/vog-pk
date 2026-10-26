@@ -1,5 +1,6 @@
 export const site = {
   name: 'VOGPK',
+  url: 'https://vogpk.vercel.app',
   tagline: 'Vision of Gamers',
   description: 'Your destination for PC components, gaming hardware, and accessories in Pakistan.',
   contact: { email: null, phone: null, location: 'Pakistan' },

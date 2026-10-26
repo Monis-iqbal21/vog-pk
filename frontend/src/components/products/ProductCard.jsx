@@ -12,7 +12,7 @@ export default function ProductCard({ product, onAddToCart }) {
   const available = product.inventoryVerified === true && Number.isFinite(product.stock) && product.stock > 0;
   const canAdd = Boolean(onAddToCart) && available && approvedPrice;
   return <article className="product-card">
-    <Link href={`/products/${product.category}/${product.slug}`} className="product-card-link" draggable={false}>
+    <Link href={`/products/${product.slug}`} className="product-card-link" draggable={false}>
       <div className="product-image-wrap">
         <Image src={product.image} alt={product.imageAlt || product.name} fill sizes="(min-width: 1400px) 317px, (min-width: 1280px) 23vw, (min-width: 768px) 30vw, 45vw" className="product-image" draggable={false} />
         {product.imageIsPlaceholder ? <span className="product-image-note">Image coming soon</span> : null}

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": 49,
+  "fixtures": [
+    "keyboard",
+    "mouse",
+    "case"
+  ],
+  "actualCatalogueVariantProducts": 0
+}

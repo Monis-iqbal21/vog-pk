@@ -1,0 +1,164 @@
+{
+  "passed": true,
+  "fixtures": 3,
+  "checks": [
+    {
+      "fixture": "keyboard",
+      "dependentClearing": true,
+      "preservedValidChoices": true,
+      "fourAvailabilityStates": true,
+      "priceSaleSkuSpecsAndImages": true,
+      "partialReload": true,
+      "deepLink": true,
+      "backForward": true,
+      "invalidDoesNotFallback": true,
+      "cartDisabled": true,
+      "galleryKeyboardLightbox": true
+    },
+    {
+      "fixture": "mouse",
+      "twoSwatches": true,
+      "referenceStartingPrice": true,
+      "distinctPriceAndImage": true,
+      "cartDisabled": true
+    },
+    {
+      "fixture": "case",
+      "threeDimensions": true,
+      "dropdown": true,
+      "dependencyClearing": true,
+      "laterCompatibleValuePreserved": true,
+      "unknownAndSoldOut": true
+    }
+  ],
+  "responsiveChecks": 18,
+  "responsive": [
+    {
+      "fixture": "keyboard",
+      "width": 1440,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "keyboard",
+      "width": 1024,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "keyboard",
+      "width": 768,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "keyboard",
+      "width": 430,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "keyboard",
+      "width": 390,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "keyboard",
+      "width": 320,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "mouse",
+      "width": 1440,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "mouse",
+      "width": 1024,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "mouse",
+      "width": 768,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "mouse",
+      "width": 430,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "mouse",
+      "width": 390,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "mouse",
+      "width": 320,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "case",
+      "width": 1440,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "case",
+      "width": 1024,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "case",
+      "width": 768,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "case",
+      "width": 430,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "case",
+      "width": 390,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    },
+    {
+      "fixture": "case",
+      "width": 320,
+      "noOverflow": true,
+      "touchTargets": true,
+      "keyboardSwatch": true
+    }
+  ],
+  "allSixRichBlocksPreserved": true
+}

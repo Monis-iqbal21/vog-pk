@@ -2,11 +2,14 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const fs=require('node:fs');
 const path=require('node:path');
 const os=require('node:os');
+const {pathToFileURL}=require('node:url');
 const assert=require('node:assert/strict');
 const widths=[1440,1280,1024,768,430,390,375,320];
 const evidence=path.join(os.tmpdir(),'vog-catalogue-browser');fs.mkdirSync(evidence,{recursive:true});
 const base=process.env.VOG_BASE_URL||'http://localhost:3000';
 (async()=>{
+ const {products}=await import(pathToFileURL(path.resolve(__dirname,'../src/data/products.js')).href);
+ const validPaths=new Map(products.map(product=>['/products/'+product.slug,product.category]));
  const browser=await chromium.launch({channel:'msedge',headless:true});
  const checks=[],errors=[],imageFailures=[];
  try{
@@ -34,7 +37,8 @@ const base=process.env.VOG_BASE_URL||'http://localhost:3000';
      });
      assert.ok(detail.naturalWidth>0&&detail.naturalHeight>0);assert.equal(detail.fit,'contain');
      assert.ok(Math.abs(detail.width-detail.height)<1);assert.ok(detail.disabled);assert.match(detail.price,/Rs\. [\d,]+/);
-     assert.ok(detail.href.startsWith('/products/'+(category||detail.href.split('/')[2])+'/'));
+     assert.ok(validPaths.has(detail.href),'Product card must use a real canonical detail route');
+     if(category)assert.equal(validPaths.get(detail.href),category);
     }
     const layout=await track.locator('.product-card').evaluateAll(cards=>cards.map(c=>{
      const rect=s=>c.querySelector(s).getBoundingClientRect();return {row:Math.round(rect('.product-image-wrap').top),imageHeight:rect('.product-image-wrap').height,brandTop:rect('.product-brand').top,titleTop:rect('.product-name').top,descriptionTop:rect('.product-description').top,priceTop:rect('.product-price').top,buttonTop:rect('.product-add').top};
@@ -64,7 +68,7 @@ const base=process.env.VOG_BASE_URL||'http://localhost:3000';
   }
   assert.equal(errors.length,0,JSON.stringify(errors));assert.equal(imageFailures.length,0,JSON.stringify(imageFailures));
   const page=await browser.newPage();const detail=await page.goto(base+'/products/graphics-cards/rog-strix-rtx5070ti-o16g');const category=await page.goto(base+'/products/graphics-cards');
-  const report={checkedAt:'2026-10-27',widths,checks,checkCount:checks.length,pageErrors:errors,imageFailures,evidenceDirectory:evidence,existingRouteLimitations:{productDetailStatus:detail.status(),categoryListingStatus:category.status(),note:'These routes were absent before the catalogue correction; this task preserves the existing UI and URL structure.'}};
+  const report={checkedAt:'2026-10-27',widths,checks,checkCount:checks.length,pageErrors:errors,imageFailures,evidenceDirectory:evidence,existingRouteLimitations:{productDetailStatus:detail.status(),categoryListingStatus:category.status(),note:'Product details now resolve through canonical routes and legacy redirects. Category-listing destination pages remain outside the product-detail scope.'}};
   fs.writeFileSync(path.resolve(__dirname,'../docs/catalogue-browser-verification.json'),JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify({checks:checks.length,widths,pageErrors:0,imageFailures:0,evidence,existingRouteLimitations:report.existingRouteLimitations}));
  }finally{await browser.close();}

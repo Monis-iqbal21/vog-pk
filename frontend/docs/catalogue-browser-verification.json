@@ -1361,8 +1361,8 @@
   "imageFailures": [],
   "evidenceDirectory": "C:\\Users\\Monis\\AppData\\Local\\Temp\\vog-catalogue-browser",
   "existingRouteLimitations": {
-    "productDetailStatus": 404,
+    "productDetailStatus": 200,
     "categoryListingStatus": 404,
-    "note": "These routes were absent before the catalogue correction; this task preserves the existing UI and URL structure."
+    "note": "Product details now resolve through canonical routes and legacy redirects. Category-listing destination pages remain outside the product-detail scope."
   }
 }
