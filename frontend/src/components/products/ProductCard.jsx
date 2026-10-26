@@ -21,7 +21,7 @@ export default function ProductCard({ product, onAddToCart }) {
       <h3 className="product-name" title={product.name}>{product.name}</h3>
       <p className="product-description" title={product.shortDescription}>{product.shortDescription}</p>
     </Link>
-    {product.imageCreditUrl ? <a href={product.imageCreditUrl} className="product-image-credit" aria-label={`Photo credit and license for ${product.name}`} title="Photo credit, license and image changes">Photo credit</a> : null}
+    {product.imageCreditUrl ? <a href={product.imageCreditUrl} className="product-image-credit" aria-label={`Photo credit and license for ${product.name}`} title={product.imageDevelopmentOnly ? 'Development image: retail replacement pending. View photo credit and license.' : 'Photo credit, license and image changes'}>{product.imageDevelopmentOnly ? 'Development image' : 'Photo credit'}</a> : null}
     <div className="product-card-bottom">
       <div className="product-price-block">
         <span className="product-regular-price" title={!approvedPrice ? `Retailer reference checked ${product.sourceCheckedAt}; not an approved VOGPK selling price` : undefined}>{discounted ? <del>Rs. {rupees.format(product.regularPrice)}</del> : !approvedPrice ? 'Reference' : null}</span>

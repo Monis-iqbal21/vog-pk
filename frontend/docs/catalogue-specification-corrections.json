@@ -1,0 +1,32 @@
+{
+  "msi-mag-pano-m100r-pz-black": {
+    "sourceUrl": "https://www.msi.com/PC-Case/MAG-PANO-M100R-PZ/Specification",
+    "checkedAt": "2026-10-27",
+    "reason": "Icecat incorrectly includes ATX motherboards; MSI specifies M-ATX / ITX. ATX is PSU support, not motherboard support.",
+    "specs": {"Supported motherboard form factors":"micro ATX, Mini-ITX"}
+  },
+  "asus-rog-gladius-iii-wireless": {
+    "sourceUrl": "https://rog.asus.com/mice-mouse-pads/mice/ergonomic-right-handed/rog-gladius-iii-wireless-model/spec/",
+    "checkedAt": "2026-10-27",
+    "reason": "Distinguish six programmable buttons from additional wheel/profile/pair controls.",
+    "specs": {"Buttons quantity":"6 programmable buttons; scroll wheel, profile and pair controls"}
+  },
+  "asus-rog-scope-rx-red": {
+    "sourceUrl": "https://www.dynamiccomputer.pk/keyboard/asus-keyboards/asus-rog-strix-scope-rx-rgb-mechanical-gaming-keyboard-red-switch",
+    "checkedAt": "2026-10-27",
+    "reason": "Exact RX Red SKU and retailer switch variant; avoid generic mechanical classification.",
+    "specs": {"Keyboard key switch technology":"ROG RX Red optical"}
+  },
+  "asus-rog-falchion-rx-low-profile-red": {
+    "sourceUrl": "https://rbtechngames.com/shop-2/gaming-gear-peripherals/keyboards/asus-rog-falchion-rx-low-profile-m603-65-compact-gaming-keyboard-rx-red-switches-with-abs-keycaps/",
+    "checkedAt": "2026-10-27",
+    "reason": "Exact US RX Red low-profile configuration, not Blue or German layout.",
+    "specs": {"Keyboard key switch technology":"ROG RX Red low-profile optical","Keyboard layout":"QWERTY","Keyboard language":"US English"}
+  },
+  "asus-tuf-k3-red-us": {
+    "sourceUrl": "https://zahcomputers.pk/product/asus-tuf-gaming-k3-rgb-wired-mechanical-keyboard/",
+    "checkedAt": "2026-10-27",
+    "reason": "RA05 TUF GAMING K3/RD/US variant matched to the US keyboard photograph.",
+    "specs": {"Keyboard key switch technology":"Red mechanical","Keyboard layout":"QWERTY","Keyboard language":"US English"}
+  }
+}

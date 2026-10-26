@@ -1,0 +1,70 @@
+{
+  "totalProducts": 84,
+  "errors": [],
+  "placeholders": [],
+  "qualityExceptions": [
+    {
+      "id": "intel-core-i9-14900k",
+      "reason": "Original is only 600×575px. Sharp at card size, but below the preferred source resolution; higher-resolution approved replacement still required."
+    },
+    {
+      "id": "intel-core-i5-11400",
+      "reason": "Development specimen has visible lid wear; replace with a pristine authorized packshot before launch."
+    }
+  ],
+  "documentedSharedPackshots": [
+    {
+      "ids": [
+        "kingston-fury-beast-ddr5-16gb-6000",
+        "kingston-fury-beast-16gb-4800"
+      ],
+      "reason": "Both exact-SKU public Icecat records supply the same photograph of the identical black FURY Beast DDR5 single-module heatspreader. Clock/profile specifications differ and are retained separately. This is documented supplier reuse, not an accidental assignment to unrelated hardware."
+    },
+    {
+      "ids": [
+        "xpg-spectrix-d35g-16gb-3200-white",
+        "xpg-spectrix-d35g-32gb-3600-white"
+      ],
+      "reason": "Both exact-SKU public Icecat records supply the same white D35G two-module kit photograph. Both configurations contain two visually identical modules; capacity/timings differ and are documented separately."
+    }
+  ],
+  "categories": {
+    "graphics-cards": 7,
+    "processors": 7,
+    "ram": 7,
+    "gaming-mice": 7,
+    "keyboards": 7,
+    "motherboards": 7,
+    "storage": 7,
+    "monitors": 7,
+    "power-supplies": 7,
+    "pc-cases": 7,
+    "cooling": 7,
+    "accessories": 7
+  },
+  "collections": {
+    "featured": {
+      "count": 7,
+      "categories": {
+        "graphics-cards": 3,
+        "processors": 2,
+        "ram": 1,
+        "gaming-mice": 1
+      }
+    },
+    "newArrivals": {
+      "count": 7,
+      "categories": {
+        "graphics-cards": 3,
+        "processors": 2,
+        "ram": 1,
+        "gaming-mice": 1
+      }
+    }
+  },
+  "referencePrices": 84,
+  "developmentOnly": 84,
+  "uniquePhotographs": 82,
+  "filesAndDataValid": true,
+  "retailReady": false
+}

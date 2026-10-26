@@ -1,0 +1,606 @@
+{
+  "checkedAt": "2026-10-27",
+  "note": "Unapproved research candidates. None is a substitution until image/SKU, price, specifications and permission are confirmed.",
+  "candidates": [
+    {
+      "category": "graphics-cards",
+      "oldId": "nitro-rx9070xt-phantomlink-polar",
+      "id": "asus-rog-astral-rtx5080-oc-16gb",
+      "brand": "ASUS",
+      "model": "ROG Astral GeForce RTX 5080 OC 16GB",
+      "productCode": "ROG-ASTRAL-RTX5080-O16G-GAMING",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "graphics-cards",
+      "oldId": "zotac-rtx5080-solid-oc-white",
+      "id": "asus-prime-rtx5080-oc-16gb",
+      "brand": "ASUS",
+      "model": "Prime GeForce RTX 5080 OC 16GB",
+      "productCode": "PRIME-RTX5080-O16G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "graphics-cards",
+      "oldId": "palit-rtx5070ti-gamingpro-s",
+      "id": "asus-prime-rtx5070-oc-12gb-white",
+      "brand": "ASUS",
+      "model": "Prime GeForce RTX 5070 OC 12GB White",
+      "productCode": "PRIME-RTX5070-O12G-WHITE",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "graphics-cards",
+      "oldId": "asus-dual-rtx5060ti-16g",
+      "id": "asus-dual-rtx5070-oc-12gb",
+      "brand": "ASUS",
+      "model": "Dual GeForce RTX 5070 OC 12GB",
+      "productCode": "DUAL-RTX5070-O12G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "gaming-mice",
+      "oldId": "razer-deathadder-v4-pro-black",
+      "id": "asus-rog-harpe-ace-aim-lab",
+      "brand": "ASUS",
+      "model": "ROG Harpe Ace Aim Lab Edition",
+      "productCode": "ROG HARPE ACE AIM LAB EDITION",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "gaming-mice",
+      "oldId": "logitech-pro-x2-superstrike",
+      "id": "asus-rog-keris-ii-ace-black",
+      "brand": "ASUS",
+      "model": "ROG Keris II Ace Black",
+      "productCode": "90MP03N0-BMUA00",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "gaming-mice",
+      "oldId": "bloody-w95-ultra-stone-black",
+      "id": "asus-rog-gladius-iii-wireless",
+      "brand": "ASUS",
+      "model": "ROG Gladius III Wireless Black",
+      "productCode": "ROG GLADIUS III WIRELESS",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "gaming-mice",
+      "oldId": "bloody-r73-pro-black",
+      "id": "asus-rog-chakram-x-origin",
+      "brand": "ASUS",
+      "model": "ROG Chakram X Origin",
+      "productCode": "ROG CHAKRAM X ORIGIN",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "gaming-mice",
+      "oldId": "aula-sc380pro-black",
+      "id": "asus-rog-strix-impact-iii",
+      "brand": "ASUS",
+      "model": "ROG Strix Impact III Black",
+      "productCode": "90MP0300-BMUA00",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "gaming-mice",
+      "oldId": "attack-shark-rs3-ultra-white",
+      "id": "asus-tuf-m4-air",
+      "brand": "ASUS",
+      "model": "TUF Gaming M4 Air",
+      "productCode": "TUF GAMING M4 AIR",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "gaming-mice",
+      "oldId": "fantech-kanata-s-vx9s",
+      "id": "asus-rog-spatha-x",
+      "brand": "ASUS",
+      "model": "ROG Spatha X",
+      "productCode": "ROG SPATHA X",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "keyboards",
+      "oldId": "logitech-g915-tkl-tactile-carbon",
+      "id": "asus-rog-scope-ii-96-wireless-nx-snow",
+      "brand": "ASUS",
+      "model": "ROG Strix Scope II 96 Wireless NX Snow",
+      "productCode": "90MP037A-BKUA01",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "keyboards",
+      "oldId": "asus-rog-azoth-m701-nx-red",
+      "id": "asus-rog-falchion-rx-low-profile-red",
+      "brand": "ASUS",
+      "model": "ROG Falchion RX Low Profile RX Red",
+      "productCode": "90MP03EC-BKUA10",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "keyboards",
+      "oldId": "attack-shark-r98-he-moonlight",
+      "id": "asus-rog-scope-rx-red",
+      "brand": "ASUS",
+      "model": "ROG Strix Scope RX Red",
+      "productCode": "90MP0240-BKUA00",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "keyboards",
+      "oldId": "aula-f2088-air-red-white",
+      "id": "asus-rog-scope-rx-tkl-wireless-red",
+      "brand": "ASUS",
+      "model": "ROG Strix Scope RX TKL Wireless Deluxe RX Red Black",
+      "productCode": "90MP02J0-BKUA01",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "keyboards",
+      "oldId": "aula-f75-retro-white",
+      "id": "asus-tuf-k3-red-us",
+      "brand": "ASUS",
+      "model": "TUF Gaming K3 Red US",
+      "productCode": "90MP01Q0-BKUA00",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "keyboards",
+      "oldId": "aula-win68-he-max",
+      "id": "asus-rog-falchion-ace-nx-red",
+      "brand": "ASUS",
+      "model": "ROG Falchion Ace NX Red",
+      "productCode": "90MP0346-BKUA01",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "keyboards",
+      "oldId": "aula-win60-he-max",
+      "id": "asus-tuf-k1",
+      "brand": "ASUS",
+      "model": "TUF Gaming K1 US English",
+      "productCode": "TUF GAMING K1",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "pc-cases",
+      "oldId": "cougar-omnyx-black",
+      "id": "asus-rog-hyperion-gr701-black",
+      "brand": "ASUS",
+      "model": "ROG Hyperion GR701 Black",
+      "productCode": "90DC00F0-B39000",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "pc-cases",
+      "oldId": "lian-li-o11-vision-m-black",
+      "id": "asus-proart-pa602-black",
+      "brand": "ASUS",
+      "model": "ProArt PA602 Black",
+      "productCode": "90DC00J0-B09000",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "pc-cases",
+      "oldId": "lian-li-vector-v150-inf-black",
+      "id": "msi-mag-pano-m100r-pz-black",
+      "brand": "MSI",
+      "model": "MAG PANO M100R PZ Black",
+      "productCode": "MAG PANO M100R PZ",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "pc-cases",
+      "oldId": "gigabyte-c201-panoramic-white",
+      "id": "asus-tuf-gt501-black",
+      "brand": "ASUS",
+      "model": "TUF Gaming GT501 Black",
+      "productCode": "TUF GAMING GT501",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "pc-cases",
+      "oldId": "cougar-airface-180-white",
+      "id": "msi-mag-forge-320r-airflow",
+      "brand": "MSI",
+      "model": "MAG FORGE 320R AIRFLOW Black",
+      "productCode": "MAG FORGE 320R AIRFLOW",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "pc-cases",
+      "oldId": "cougar-mx600-air-pro-black",
+      "id": "asus-prime-ap201-tg-black",
+      "brand": "ASUS",
+      "model": "Prime AP201 Tempered Glass Black",
+      "productCode": "90DC00G0-B30010",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "pc-cases",
+      "oldId": "cougar-mx600-mini-v2-pro-white",
+      "id": "msi-mag-forge-m100a-black",
+      "brand": "MSI",
+      "model": "MAG FORGE M100A Black",
+      "productCode": "MAG FORGE M100A",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "cooling",
+      "oldId": "lian-li-hydroshift-ii-lcd-c-360r-black",
+      "id": "asus-rog-ryujin-iii-360-argb",
+      "brand": "ASUS",
+      "model": "ROG Ryujin III 360 ARGB Black",
+      "productCode": "90RC00L1-M0UAY0",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "cooling",
+      "oldId": "thermalright-frozen-horizon-360-digital",
+      "id": "asus-rog-ryuo-iii-360-argb",
+      "brand": "ASUS",
+      "model": "ROG Ryuo III 360 ARGB Black",
+      "productCode": "90RC00I1-M0UAY0",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "cooling",
+      "oldId": "lian-li-hydroshift-ii-lcd-s-360",
+      "id": "asus-rog-strix-lc-iii-360-argb",
+      "brand": "ASUS",
+      "model": "ROG Strix LC III 360 ARGB Black",
+      "productCode": "ROG STRIX LC III 360 ARGB",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "cooling",
+      "oldId": "id-cooling-sl360-v2-space-white",
+      "id": "msi-mag-coreliquid-a13-360-black",
+      "brand": "MSI",
+      "model": "MAG CORELIQUID A13 360 Black",
+      "productCode": "MAG CORELIQUID A13 360",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "cooling",
+      "oldId": "id-cooling-se214xt-df-black",
+      "id": "asus-rog-strix-lc-ii-240-argb",
+      "brand": "ASUS",
+      "model": "ROG Strix LC II 240 ARGB Black",
+      "productCode": "ROG STRIX LC II 240 ARGB",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "cooling",
+      "oldId": "thermalright-magic-qube-360-black",
+      "id": "msi-mag-coreliquid-e360-black",
+      "brand": "MSI",
+      "model": "MAG CORELIQUID E360 Black",
+      "productCode": "MAG CORELIQUID E360",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "cooling",
+      "oldId": "cougar-poseidon-vistek-pro-360-black",
+      "id": "msi-mag-coreliquid-i360-black",
+      "brand": "MSI",
+      "model": "MAG CORELIQUID I360 Black",
+      "productCode": "MAG CORELIQUID I360",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "accessories",
+      "oldId": "steelseries-qck-performance-xl-control",
+      "id": "asus-rog-scabbard-ii",
+      "brand": "ASUS",
+      "model": "ROG Scabbard II",
+      "productCode": "ROG SCABBARD II",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "accessories",
+      "oldId": "steelseries-qck-performance-balance",
+      "id": "asus-rog-sheath-ii-xxl",
+      "brand": "ASUS",
+      "model": "ROG Sheath II XXL",
+      "productCode": "90MP04B0-BPAA00",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "accessories",
+      "oldId": "attack-shark-cm03-rainbow",
+      "id": "asus-rog-hone-ace-aim-lab",
+      "brand": "ASUS",
+      "model": "ROG Hone Ace Aim Lab Edition",
+      "productCode": "ROG HONE ACE AIM LAB EDITION",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "accessories",
+      "oldId": "attack-shark-cm05-glass-black-contours",
+      "id": "asus-tuf-p1",
+      "brand": "ASUS",
+      "model": "TUF Gaming P1",
+      "productCode": "TUF GAMING P1",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "accessories",
+      "oldId": "logitech-g740",
+      "id": "asus-rog-scabbard-ii-arctic-gray-xxl",
+      "brand": "ASUS",
+      "model": "ROG Scabbard II Arctic Gray XXL",
+      "productCode": "90MP03H0-BPAA00",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "accessories",
+      "oldId": "corsair-mm100",
+      "id": "asus-rog-balteus-qi",
+      "brand": "ASUS",
+      "model": "ROG Balteus Qi",
+      "productCode": "90MP0120-B0UA00",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "accessories",
+      "oldId": "steelseries-qck-xxl",
+      "id": "asus-rog-herculx",
+      "brand": "ASUS",
+      "model": "ROG Herculx Graphics Card Holder",
+      "productCode": "90DA0020-B09000",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "ram",
+      "oldId": "lexar-ares-gen2-32gb-8000",
+      "id": "kingston-fury-beast-ddr5-16gb-6000",
+      "brand": "Kingston",
+      "model": "FURY Beast DDR5 16GB 6000 CL36 Black",
+      "productCode": "KF560C36BBE2-16",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "ram",
+      "oldId": "lexar-thor-rgb-gen2-64gb-6000",
+      "id": "kingston-fury-beast-ddr5-16gb-5600",
+      "brand": "Kingston",
+      "model": "FURY Beast DDR5 16GB 5600 CL40 Black",
+      "productCode": "KF556C40BB-16",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "ram",
+      "oldId": "xpg-spectrix-d35g-32gb-3200-black",
+      "id": "xpg-spectrix-d35g-32gb-3200-black",
+      "brand": "XPG",
+      "model": "SPECTRIX D35G RGB 32GB (2x16GB) DDR4-3200 Black",
+      "productCode": "AX4U320016G16A-DTBKD35G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "ram",
+      "oldId": "crucial-ct32g48c40u5",
+      "id": "xpg-spectrix-d35g-16gb-3200-white",
+      "brand": "XPG",
+      "model": "SPECTRIX D35G RGB 16GB (2x8GB) DDR4-3200 White",
+      "productCode": "AX4U32008G16A-DTWHD35G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "ram",
+      "oldId": "corsair-vengeance-lpx-32gb-3200",
+      "id": "xpg-lancer-blade-rgb-32gb-6000",
+      "brand": "XPG",
+      "model": "LANCER BLADE RGB DDR5 32GB (2x16GB) 6000 Black",
+      "productCode": "AX5U6000C3016G-DTLABRBK",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "ram",
+      "oldId": "lexar-ddr5-32gb-5600-udimm",
+      "id": "xpg-spectrix-d35g-32gb-3600-white",
+      "brand": "XPG",
+      "model": "SPECTRIX D35G RGB 32GB (2x16GB) DDR4-3600 White",
+      "productCode": "AX4U360016G18I-DTWHD35G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "motherboards",
+      "oldId": "asus-prime-b850m-f-csm",
+      "id": "msi-mag-b650-tomahawk-wifi",
+      "brand": "MSI",
+      "model": "MAG B650 TOMAHAWK WIFI",
+      "productCode": "MAG B650 TOMAHAWK WIFI",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "storage",
+      "oldId": "corsair-mp600-mini-1tb",
+      "id": "kingston-fury-renegade-2tb",
+      "brand": "Kingston",
+      "model": "FURY Renegade 2TB NVMe SSD",
+      "productCode": "SFYRD/2000G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "storage",
+      "oldId": "corsair-mp700-elite-1tb-heatsink",
+      "id": "kingston-nv2-1tb",
+      "brand": "Kingston",
+      "model": "NV2 1TB NVMe SSD",
+      "productCode": "SNV2S/1000G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "storage",
+      "oldId": "lexar-nq780-512gb",
+      "id": "kingston-nv3-1tb",
+      "brand": "Kingston",
+      "model": "NV3 1TB NVMe SSD",
+      "productCode": "SNV3S/1000G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "storage",
+      "oldId": "lexar-nq780-2tb",
+      "id": "kingston-nv3-2tb",
+      "brand": "Kingston",
+      "model": "NV3 2TB NVMe SSD",
+      "productCode": "SNV3S/2000G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "storage",
+      "oldId": "lexar-sl500-1tb-black",
+      "id": "kingston-fury-renegade-1tb",
+      "brand": "Kingston",
+      "model": "FURY Renegade 1TB NVMe SSD",
+      "productCode": "SFYRS/1000G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "storage",
+      "oldId": "lenovo-ln950-4tb",
+      "id": "kingston-nv3-500gb",
+      "brand": "Kingston",
+      "model": "NV3 500GB",
+      "productCode": "SNV3S/500G",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "monitors",
+      "oldId": "ktc-m27t6",
+      "id": "asus-tuf-vg27aq3a",
+      "brand": "ASUS",
+      "model": "TUF Gaming VG27AQ3A",
+      "productCode": "VG27AQ3A",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "monitors",
+      "oldId": "acer-ed273-x0",
+      "id": "msi-g274qpf-e2",
+      "brand": "MSI",
+      "model": "G274QPF E2",
+      "productCode": "G274QPF E2",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "power-supplies",
+      "oldId": "lian-li-edge-platinum-v2-1350-black",
+      "id": "asus-rog-thor-1000p2",
+      "brand": "ASUS",
+      "model": "ROG THOR 1000W Platinum II",
+      "productCode": "ROG-THOR-1000P2-GAMING",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "power-supplies",
+      "oldId": "asus-tuf-1000g-evo",
+      "id": "asus-rog-strix-1000g-aura",
+      "brand": "ASUS",
+      "model": "ROG Strix 1000W Gold Aura Edition",
+      "productCode": "ROG-STRIX-1000G-AURA-GAMING",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "power-supplies",
+      "oldId": "msi-pag-g850ls-pcie5",
+      "id": "msi-mag-a850gl-pcie5",
+      "brand": "MSI",
+      "model": "MAG A850GL PCIE5",
+      "productCode": "MAG A850GL PCIE5",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "power-supplies",
+      "oldId": "msi-pag-g750ls-pcie5",
+      "id": "msi-mag-a750gl-pcie5",
+      "brand": "MSI",
+      "model": "MAG A750GL PCIE5",
+      "productCode": "MAG A750GL PCIE5",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "power-supplies",
+      "oldId": "cooler-master-elite-gold-1000-black",
+      "id": "msi-mpg-a1000g-pcie5",
+      "brand": "MSI",
+      "model": "MPG A1000G PCIE5",
+      "productCode": "MPG A1000G PCIE5",
+      "sourcePriceVerified": false,
+      "decision": "Candidate only; no catalogue substitution until exact image, specs, permission and PKR reference are verified."
+    },
+    {
+      "category": "monitors",
+      "oldId": "lg-ultragear-27gx790b-b",
+      "id": "asus-rog-strix-xg27acdng",
+      "brand": "ASUS",
+      "model": "ROG Strix OLED XG27ACDNG",
+      "productCode": "XG27ACDNG",
+      "sourcePriceVerified": false,
+      "decision": "Replace low-resolution LG imagery with a verified QD-OLED display and its complete matching data."
+    }
+  ]
+}

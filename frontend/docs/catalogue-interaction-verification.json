@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-27",
+  "desktopDrag": {
+    "width": 1440,
+    "passed": true,
+    "offset": 669
+  },
+  "independentCarousels": true,
+  "dragClickSuppression": true,
+  "mobileTouchSwipe": {
+    "width": 390,
+    "passed": true,
+    "offset": 370
+  }
+}

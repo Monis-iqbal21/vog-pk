@@ -1,0 +1,2653 @@
+{
+  "checkedAt": "2026-10-26",
+  "access": "Official documented public demo account; Open Icecat only. No tokens or restricted content access attempted. Candidate codes are query inputs, not verified matches.",
+  "requests": [
+    {
+      "id": "rog-strix-rtx5070ti-o16g",
+      "brand": "ASUS",
+      "productCode": "ROG-STRIX-RTX5070TI-O16G-GAMING",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=ROG-STRIX-RTX5070TI-O16G-GAMING",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 130519848,
+      "title": "ASUS ROG -STRIX-RTX5070TI-O16G-GAMING NVIDIA GeForce RTX 5070 Ti 16 GB GDDR7",
+      "returnedBrand": "ASUS",
+      "returnedCode": "90YV0M90-M0NA00",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/749aa4588141d2d4a3369cfcbc2a41c2bf3c02d9.jpg",
+        "HighPicSize": "1455388",
+        "HighPicHeight": "2400",
+        "HighPicWidth": "2400",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/8681ad83099213a4755957b835ee1a2d614e346b.jpg",
+        "LowPicSize": "18260",
+        "LowPicHeight": "200",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/636130bdbbdc8e06394b7f4e1ebba9e564cd45c9.jpg",
+        "Pic500x500Size": "84347",
+        "Pic500x500Height": "500",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/85711c2bfccfbcbecb096f7360e0df289e807ea3.jpg",
+        "ThumbPicSize": "4138"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/749aa4588141d2d4a3369cfcbc2a41c2bf3c02d9.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9fc66fcb2d2754b0f8354c3c0a603784fbfe14ea.jpg",
+          "width": "1200",
+          "height": "1200",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/ce583aa33dd3603427f42df870145ad4984fafd9.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9a084fa9f6b9348e3557337db7e12064c906e383.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/ac91a79af85ff568e715c038a901907d9e565968.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/213c5f580fa474c3087f2bd804b36c282afad53f.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/e41089b93fc5d50408958d0a5e8f1e56a6802840.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9c053de70b4ba7d9348ffaea0bd2d49a77de88f3.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/31e92e761f2a49a750e2b370778ed6bdad87dae6.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/b0d9c40bb611583a0f584b8e1da53094826989c8.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://rog.asus.com/graphics-cards/graphics-cards/rog-strix/rog-strix-rtx5070ti-o16g-gaming/"
+    },
+    {
+      "id": "aorus-rtx5080-master-ice-16g",
+      "brand": "GIGABYTE",
+      "productCode": "GV-N5080AORUSM ICE-16GD",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=GIGABYTE&ProductCode=GV-N5080AORUSM+ICE-16GD",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 125097813,
+      "title": "GIGABYTE AORUS GeForce RTX 5080 MASTER ICE 16G Graphics Card",
+      "returnedBrand": "GIGABYTE",
+      "returnedCode": "GV-N5080AORUSM ICE-16GD",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/4494ac3709873a98d76bb1d610ca97bc04ccb5b2.jpg",
+        "HighPicSize": "1453329",
+        "HighPicHeight": "1785",
+        "HighPicWidth": "2047",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/2618f28091dd12e665ede519e43479f8c62363f1.jpg",
+        "LowPicSize": "28035",
+        "LowPicHeight": "174",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/8a81cd6171ae317d3d4a5b34d54e33eb9f7cad09.jpg",
+        "Pic500x500Size": "121835",
+        "Pic500x500Height": "436",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/a3f9fc23df3e3df91611b62f01f2a6ba130ab62a.jpg",
+        "ThumbPicSize": "5862"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/4494ac3709873a98d76bb1d610ca97bc04ccb5b2.jpg",
+          "width": "2047",
+          "height": "1785",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/f170460f8b6d8e8a0e4c54838056d93c7fef7cc6.jpg",
+          "width": "2162",
+          "height": "1058",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/87ccda586bc28d1d74ee4c347d4622ee31beb17b.jpg",
+          "width": "2159",
+          "height": "1329",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/60263de9cfdb0a8cce3823690a44a041b36f0bba.jpg",
+          "width": "1812",
+          "height": "1816",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/60b7068dae2bf9877b51e725ebdb5f7cedcc7f25.jpg",
+          "width": "2127",
+          "height": "1605",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/22968b7bcdbd715bcc491055a00d02b29a6635cc.jpg",
+          "width": "2164",
+          "height": "1048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/18c8600bf0b97314dcf30ef04b9ab45cd28d2c3a.jpg",
+          "width": "2092",
+          "height": "580",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/1ef98e3f46c909236c614aa88997cd8d4e873f77.jpg",
+          "width": "1441",
+          "height": "743",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.gigabyte.com/"
+    },
+    {
+      "id": "nitro-rx9070xt-phantomlink-polar",
+      "brand": "SAPPHIRE",
+      "productCode": "11348-09-20G",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=SAPPHIRE&ProductCode=11348-09-20G",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "proart-rtx5080-16g",
+      "brand": "ASUS",
+      "productCode": "PROART-RTX5080-16G",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=PROART-RTX5080-16G",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 133489558,
+      "title": "ASUS ProArt -RTX5080-16G NVIDIA GeForce RTX 5080 16 GB GDDR7",
+      "returnedBrand": "ASUS",
+      "returnedCode": "90YV0N31-M0NA00",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/9cb48a52b389116deedefe4261884eff454c1e88.jpg",
+        "HighPicSize": "966226",
+        "HighPicHeight": "1245",
+        "HighPicWidth": "2502",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/04bb8b07cdec696988e243a85e931f2d4c5d905e.jpg",
+        "LowPicSize": "12881",
+        "LowPicHeight": "100",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/06c9e7ff6a1026ad053b7c5e37fec648bac66148.jpg",
+        "Pic500x500Size": "59807",
+        "Pic500x500Height": "249",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/f0cae87206e8595a94277bf88e020130d160d937.jpg",
+        "ThumbPicSize": "3130"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/9cb48a52b389116deedefe4261884eff454c1e88.jpg",
+          "width": "2502",
+          "height": "1245",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/694cbf2b349458146de5c43ac9a4aeb774d56563.jpg",
+          "width": "2542",
+          "height": "2366",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/3c3781f8eb7f55f39ce80a9bef78862361139507.jpg",
+          "width": "2544",
+          "height": "1594",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/8ea53ae531e2e217639cd0194a2c4b99366e8a78.jpg",
+          "width": "2526",
+          "height": "1972",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9d3ad5fe6d29f0844408b20867b85ba07fb02d42.jpg",
+          "width": "2530",
+          "height": "1687",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9da9ed7ad94d693792e6397f0af9bd9c37bdca7b.jpg",
+          "width": "2527",
+          "height": "808",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/5592c0efd86f52d66843510a66a365a8fcd12a37.jpg",
+          "width": "2498",
+          "height": "2075",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/cc348a678e18df5be90d60b68d742c5ed8ca8bea.jpg",
+          "width": "2494",
+          "height": "1375",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/80c8b88d5dd3cac950459a9ae1c30b64cca9b158.jpg",
+          "width": "2471",
+          "height": "1710",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/0db2a5492ed1c4d4bc030095f83a8ed7b5d47fce.jpg",
+          "width": "1156",
+          "height": "2516",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/c9a08e0e03b090af5509efbc1f5dee1c132fc3f0.jpg",
+          "width": "2511",
+          "height": "594",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.asus.com/"
+    },
+    {
+      "id": "zotac-rtx5080-solid-oc-white",
+      "brand": "ZOTAC",
+      "productCode": "ZT-B50800Q-10P",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ZOTAC&ProductCode=ZT-B50800Q-10P",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "palit-rtx5070ti-gamingpro-s",
+      "brand": "Palit",
+      "productCode": "GeForce RTX 5070 Ti GamingPro-S 16GB",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Palit&ProductCode=GeForce+RTX+5070+Ti+GamingPro-S+16GB",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "amd-ryzen7-9800x3d",
+      "brand": "AMD",
+      "productCode": "100-100001084WOF",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=AMD&ProductCode=100-100001084WOF",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "intel-core-ultra9-285k",
+      "brand": "Intel",
+      "productCode": "BX80768285K",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Intel&ProductCode=BX80768285K",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "amd-ryzen9-9950x3d",
+      "brand": "AMD",
+      "productCode": "100-100000719WOF",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=AMD&ProductCode=100-100000719WOF",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "intel-core-ultra7-265k",
+      "brand": "Intel",
+      "productCode": "BX80768265K",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Intel&ProductCode=BX80768265K",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "lexar-ares-gen2-32gb-8000",
+      "brand": "Lexar",
+      "productCode": "LD5U16G80C38BR-RGD",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lexar&ProductCode=LD5U16G80C38BR-RGD",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "kingston-fury-beast-16gb-4800",
+      "brand": "Kingston",
+      "productCode": "KF548C38BB-16",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Kingston&ProductCode=KF548C38BB-16",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 94557478,
+      "title": "Kingston Technology FURY Beast 16GB 4800MT/s DDR5 CL38 DIMM Black",
+      "returnedBrand": "Kingston Technology",
+      "returnedCode": "KF548C38BB-16",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/fa14ed9c448dc7d778c892ecbca577915705430d.jpg",
+        "HighPicSize": "622412",
+        "HighPicHeight": "1500",
+        "HighPicWidth": "2400",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/30c496585d7a5c091b7eccf4cea2175da244e0c8.jpg",
+        "LowPicSize": "11810",
+        "LowPicHeight": "125",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/3af54c11e45193bd92cad64a83004f9caa646605.jpg",
+        "Pic500x500Size": "48578",
+        "Pic500x500Height": "313",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/2cfefda8f9cfa33416ca080fda481a98175d06c5.jpg",
+        "ThumbPicSize": "3241"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/fa14ed9c448dc7d778c892ecbca577915705430d.jpg",
+          "width": "2400",
+          "height": "1500",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/7b457b945d81628720988b4d3e49831f2b5b707c.jpg",
+          "width": "2400",
+          "height": "1500",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/369d4efac19b1a948fa3e1c1d354c34f163ac0a1.jpg",
+          "width": "2400",
+          "height": "1500",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/00eef2e0c80e76de9e3499391e0be14a711eab08.jpg",
+          "width": "2400",
+          "height": "1500",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/1506ff0dbbb44894c38a406490ad3d655ad84295.jpg",
+          "width": "2400",
+          "height": "1500",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/f9cec247cbe9a077296db84e5a45e541682bc83a.jpg",
+          "width": "2400",
+          "height": "1500",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/cc7f82b44727e0a937743335bf75d7ee51b84e97.jpg",
+          "width": "8495",
+          "height": "5663",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/b7aadcc07e57a656e0b1bd02c2dc4b9b7cf6ac6d.jpg",
+          "width": "3646",
+          "height": "2150",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/c4abbe9eb22a8f8148dffe4e42216f762698fd58.jpg",
+          "width": "8495",
+          "height": "5663",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/5dd19e8bb9a4153ea46a752a74a27ea73e887ab0.jpg",
+          "width": "8688",
+          "height": "5792",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/0cd1bef29abf414ca1201c6df58d630b2444ca71.jpg",
+          "width": "7519",
+          "height": "4933",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/8928693a4606960da62fb7cb02b638dd48deb1a1.jpg",
+          "width": "8283",
+          "height": "3829",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/62b9d1ce1dbe87779373effd9225d86d0c2b8931.jpg",
+          "width": "9999",
+          "height": "4814",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/6e3a031503244e7de02106f019774f7ccb989b24.jpg",
+          "width": "8272",
+          "height": "5515",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.kingston.com/unitedkingdom/en/memory/gaming/kingston-fury-beast-ddr5-memory"
+    },
+    {
+      "id": "razer-deathadder-v4-pro-black",
+      "brand": "Razer",
+      "productCode": "RZ01-05330100-R3U1",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Razer&ProductCode=RZ01-05330100-R3U1",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "logitech-pro-x2-superstrike",
+      "brand": "Logitech",
+      "productCode": "PRO X2 SUPERSTRIKE",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Logitech&ProductCode=PRO+X2+SUPERSTRIKE",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "logitech-g915-tkl-tactile-carbon",
+      "brand": "Logitech",
+      "productCode": "920-009495",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Logitech&ProductCode=920-009495",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "asus-rog-azoth-m701-nx-red",
+      "brand": "ASUS",
+      "productCode": "ROG Azoth M701 NX Red Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=ROG+Azoth+M701+NX+Red+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "asus-dual-rtx5060ti-16g",
+      "brand": "ASUS",
+      "productCode": "DUAL-RTX5060TI-16G",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=DUAL-RTX5060TI-16G",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "intel-core-i9-14900k",
+      "brand": "Intel",
+      "productCode": "BX8071514900K",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Intel&ProductCode=BX8071514900K",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "intel-core-i7-14700k",
+      "brand": "Intel",
+      "productCode": "BX8071514700K",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Intel&ProductCode=BX8071514700K",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "amd-ryzen9-9900x-tray",
+      "brand": "AMD",
+      "productCode": "100-000000662",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=AMD&ProductCode=100-000000662",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "lexar-thor-rgb-gen2-64gb-6000",
+      "brand": "Lexar",
+      "productCode": "THOR RGB 2nd Gen DDR5 64GB (2×32GB) 6000",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lexar&ProductCode=THOR+RGB+2nd+Gen+DDR5+64GB+%282%C3%9732GB%29+6000",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "xpg-spectrix-d35g-32gb-3200-black",
+      "brand": "XPG",
+      "productCode": "SPECTRIX D35G RGB 32GB (2×16GB) DDR4-3200 Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=XPG&ProductCode=SPECTRIX+D35G+RGB+32GB+%282%C3%9716GB%29+DDR4-3200+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "crucial-ct32g48c40u5",
+      "brand": "Crucial",
+      "productCode": "CT32G48C40U5",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Crucial&ProductCode=CT32G48C40U5",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "corsair-vengeance-lpx-32gb-3200",
+      "brand": "Corsair",
+      "productCode": "CMK32GX4M2E3200C16",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Corsair&ProductCode=CMK32GX4M2E3200C16",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "lexar-ddr5-32gb-5600-udimm",
+      "brand": "Lexar",
+      "productCode": "32GB DDR5-5600 UDIMM",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lexar&ProductCode=32GB+DDR5-5600+UDIMM",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "bloody-w95-ultra-stone-black",
+      "brand": "Bloody",
+      "productCode": "W95 Ultra Stone Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Bloody&ProductCode=W95+Ultra+Stone+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "bloody-r73-pro-black",
+      "brand": "Bloody",
+      "productCode": "R73 Pro Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Bloody&ProductCode=R73+Pro+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "aula-sc380pro-black",
+      "brand": "AULA",
+      "productCode": "SC380Pro Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=AULA&ProductCode=SC380Pro+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "attack-shark-rs3-ultra-white",
+      "brand": "ATTACK SHARK",
+      "productCode": "RS3 ULTRA Carbon Fiber White",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ATTACK+SHARK&ProductCode=RS3+ULTRA+Carbon+Fiber+White",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "fantech-kanata-s-vx9s",
+      "brand": "Fantech",
+      "productCode": "Kanata S VX9S",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Fantech&ProductCode=Kanata+S+VX9S",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "attack-shark-r98-he-moonlight",
+      "brand": "ATTACK SHARK",
+      "productCode": "R98 HE Moonlight",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ATTACK+SHARK&ProductCode=R98+HE+Moonlight",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "aula-f2088-air-red-white",
+      "brand": "AULA",
+      "productCode": "F2088 Air Red Switch White",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=AULA&ProductCode=F2088+Air+Red+Switch+White",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "aula-f75-retro-white",
+      "brand": "AULA",
+      "productCode": "F75 Retro White Milk White Switch",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=AULA&ProductCode=F75+Retro+White+Milk+White+Switch",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "aula-win68-he-max",
+      "brand": "AULA",
+      "productCode": "WIN68 HE Max Grey & Yellow",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=AULA&ProductCode=WIN68+HE+Max+Grey+%26+Yellow",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "aula-win60-he-max",
+      "brand": "AULA",
+      "productCode": "WIN60 HE Max White & Blue",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=AULA&ProductCode=WIN60+HE+Max+White+%26+Blue",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "asus-rog-crosshair-x870e-dark-hero",
+      "brand": "ASUS",
+      "productCode": "ROG CROSSHAIR X870E DARK HERO",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=ROG+CROSSHAIR+X870E+DARK+HERO",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 139192581,
+      "title": "ASUS ROG CROSSHAIR X870E DARK HERO AMD X870E Socket AM5 ATX",
+      "returnedBrand": "ASUS",
+      "returnedCode": "90MB1NT0-M0EAY0",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/ae9d82b763c9cdd32b8e7ddee1c3227d679cefc7.jpg",
+        "HighPicSize": "5658507",
+        "HighPicHeight": "3755",
+        "HighPicWidth": "3262",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/67da6b4a2f133d9c5221d86df70312f105588d3f.jpg",
+        "LowPicSize": "21880",
+        "LowPicHeight": "200",
+        "LowPicWidth": "174",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/cf9b98e42f9a19c119added5dbd1533bbf3bc987.jpg",
+        "Pic500x500Size": "115947",
+        "Pic500x500Height": "500",
+        "Pic500x500Width": "434",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/e840d1155eb47ef999430e6561e1ddab3ed0a569.jpg",
+        "ThumbPicSize": "4008"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/ae9d82b763c9cdd32b8e7ddee1c3227d679cefc7.jpg",
+          "width": "3262",
+          "height": "3755",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9fc66fcb2d2754b0f8354c3c0a603784fbfe14ea.jpg",
+          "width": "1200",
+          "height": "1200",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/6d3e5afee5cd09cc7db8a710a05f0deb5b55e825.jpg",
+          "width": "3694",
+          "height": "4978",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/7173d4a4f8da1d3b9b47528139a2af1c7a01ca1e.jpg",
+          "width": "3305",
+          "height": "3839",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/b0a00d1a29ce85d9ec379b2f02e4a0c34ce8b633.jpg",
+          "width": "4747",
+          "height": "3912",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/b1f18b0ebfcff13225ba2667b8521411925e1600.jpg",
+          "width": "4428",
+          "height": "3984",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/a5c84fab2e38591f78f124b9a978f2b4991f8754.jpg",
+          "width": "3849",
+          "height": "4466",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/a6434a90b6d40a8f683757c7fd0aff4883bda6a5.jpg",
+          "width": "3985",
+          "height": "4622",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9f02a17affcfae1a72ef4a03e76843a11b6fe406.jpg",
+          "width": "5270",
+          "height": "3048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/c3bc6ef73ab6696568481d8adb7ea73957456fb6.jpg",
+          "width": "5412",
+          "height": "2711",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/a02af2c7063c6764842c0e5ab8a96d7abc23f90a.jpg",
+          "width": "3803",
+          "height": "4380",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://rog.asus.com/motherboards/rog-crosshair/rog-crosshair-x870e-dark-hero/"
+    },
+    {
+      "id": "asus-tuf-b850-plus-wifi",
+      "brand": "ASUS",
+      "productCode": "TUF GAMING B850-PLUS WIFI",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=TUF+GAMING+B850-PLUS+WIFI",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 124770326,
+      "title": "ASUS TUF GAMING B850-PLUS WIFI AMD B850 Socket AM5 ATX",
+      "returnedBrand": "ASUS",
+      "returnedCode": "90MB1J30-M0EAY0",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/a8653951b753e7ca48200f77cdcbf0d3e233cf6e.jpg",
+        "HighPicSize": "1518037",
+        "HighPicHeight": "1854",
+        "HighPicWidth": "2297",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/cfd39c48e3986e7989379fe7d7186e8b655ffee4.jpg",
+        "LowPicSize": "22632",
+        "LowPicHeight": "161",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/981e5ea71882f8b5b603888ba78766e1d70800c4.jpg",
+        "Pic500x500Size": "107632",
+        "Pic500x500Height": "404",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/31cdb9bf6ff9c47bc18053b4a34048e8995c1bd1.jpg",
+        "ThumbPicSize": "4814"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/a8653951b753e7ca48200f77cdcbf0d3e233cf6e.jpg",
+          "width": "2297",
+          "height": "1854",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9fc66fcb2d2754b0f8354c3c0a603784fbfe14ea.jpg",
+          "width": "1200",
+          "height": "1200",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/11b555464fe92f99e9524666ae6134c853f42d61.jpg",
+          "width": "1934",
+          "height": "2282",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/6ba3768785fdcc8424c3fa452d61ee917c2387e5.jpg",
+          "width": "1942",
+          "height": "2326",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/55f8e9f6883ac60fbaf8d22c83405f6e9eb58e38.jpg",
+          "width": "1960",
+          "height": "2323",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/60e9a8da6a9067a10b8297d73402efdce02a482f.jpg",
+          "width": "1632",
+          "height": "2442",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d40f9ab41812cfc476ccebe67de5cfc5e881f10c.jpg",
+          "width": "2037",
+          "height": "1561",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/cca5dc144267dfca8d4dcb48f477281deba6c60d.jpg",
+          "width": "1749",
+          "height": "2384",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/c5090896862c0d2f82f69795439d7b70599a67ed.jpg",
+          "width": "1795",
+          "height": "2409",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/6e5b89120cc735b3fc1fcb623bba78da0476b862.jpg",
+          "width": "1794",
+          "height": "2409",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/8597ef9e1cb51dec54bd53a34b92aa77c1fedbf8.jpg",
+          "width": "1726",
+          "height": "2409",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/816dc0e2ae620dcb3baf71a5608a7691ce744b57.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/32d05643932704ab17667a25f28f228be081bc94.jpg",
+          "width": "2378",
+          "height": "865",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/adba7378317c42ed095e5d084c86e9a214ece33e.jpg",
+          "width": "2341",
+          "height": "1769",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/e9417388b1acfaa4cd77d4468ae165914fbd5268.jpg",
+          "width": "2538",
+          "height": "1451",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850-plus-wifi/"
+    },
+    {
+      "id": "gigabyte-z890-aorus-pro-ice",
+      "brand": "GIGABYTE",
+      "productCode": "Z890 AORUS PRO ICE",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=GIGABYTE&ProductCode=Z890+AORUS+PRO+ICE",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 122502905,
+      "title": "GIGABYTE Z890 AORUS PRO ICE Motherboard",
+      "returnedBrand": "GIGABYTE",
+      "returnedCode": "Z890 AORUS PRO ICE",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/1dc844c4f7e2ab2a043579620b5617df6f0dc1fc.jpg",
+        "HighPicSize": "1370997",
+        "HighPicHeight": "1414",
+        "HighPicWidth": "2094",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/925709216b61ed443c3512bda484152d3ee37fa2.jpg",
+        "LowPicSize": "20080",
+        "LowPicHeight": "135",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/c1fdeb31d739491816a0b8680a4596aac9788972.jpg",
+        "Pic500x500Size": "102580",
+        "Pic500x500Height": "338",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/c67e4326d964f1be05df02fc529f1c9dc3d72a69.jpg",
+        "ThumbPicSize": "4066"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/1dc844c4f7e2ab2a043579620b5617df6f0dc1fc.jpg",
+          "width": "2094",
+          "height": "1414",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/b6dd03656b8c6cb84ac38b6e4997678cdbd3b2f7.jpg",
+          "width": "1685",
+          "height": "2037",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/cc7c72e024297bc08a26a57c11737afb6b87712d.jpg",
+          "width": "1524",
+          "height": "2065",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d124337583a85709c93d1070a3fb893ac5a5996d.jpg",
+          "width": "1657",
+          "height": "2092",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/8eb049acc548c4ad715828287bffef078a83b817.jpg",
+          "width": "2019",
+          "height": "739",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.gigabyte.com/"
+    },
+    {
+      "id": "asus-prime-b850-plus-wifi-csm",
+      "brand": "ASUS",
+      "productCode": "PRIME B850-PLUS WIFI-CSM",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=PRIME+B850-PLUS+WIFI-CSM",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 132379529,
+      "title": "ASUS PRIME B850-PLUS WIFI-CSM AMD B850 Socket AM5 ATX",
+      "returnedBrand": "ASUS",
+      "returnedCode": "90MB1L80-M0EAYC",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/a3d6eae7bc6794ce0a1cc0375b042ff88d4cbbb3.jpg",
+        "HighPicSize": "2789281",
+        "HighPicHeight": "2400",
+        "HighPicWidth": "2400",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/3019d9788e65e3ba1b99d534d4da171fffab2e10.jpg",
+        "LowPicSize": "25147",
+        "LowPicHeight": "200",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/04cc0c4817110058f0b247bb9b1655f47aaaa902.jpg",
+        "Pic500x500Size": "132541",
+        "Pic500x500Height": "500",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/d46d3f51dfb1cdf0c2987732b53fc735d2cb5037.jpg",
+        "ThumbPicSize": "4816"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/a3d6eae7bc6794ce0a1cc0375b042ff88d4cbbb3.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/ce1ccc21af20e5958449a1ca1ffc89eb9f54a0cc.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/112e61b0e3c9430688b0ac033e2400eb6a842fb0.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/f4b42ed1636dd16aff074325be9be20ea8722407.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d521b0bce6389acb68ca109f0bc6464be9632900.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/2c66f6c27716be70ed45ee291824731d7b940349.jpg",
+          "width": "2361",
+          "height": "853",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/a431e7ca3451a9e83cd2c3f297f01fbb83db2210.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/48ec7bd6edffe0a48e8e94e8a6ddd1bffe30c094.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.asus.com/motherboards-components/motherboards/csm/prime-b850-plus-wifi-csm/"
+    },
+    {
+      "id": "asus-prime-b850m-f-csm",
+      "brand": "ASUS",
+      "productCode": "PRIME B850M-F-CSM",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=PRIME+B850M-F-CSM",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "asus-x870-max-gaming-wifi7",
+      "brand": "ASUS",
+      "productCode": "X870 MAX GAMING WIFI7",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=X870+MAX+GAMING+WIFI7",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 130073522,
+      "title": "ASUS X870 MAX GAMING WIFI7 AMD X870 Socket AM5 ATX",
+      "returnedBrand": "ASUS",
+      "returnedCode": "90MB1LY0-M0EAY0",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/56f924ae75de7fd57011e451daf3b369a650a392.jpg",
+        "HighPicSize": "2121181",
+        "HighPicHeight": "1935",
+        "HighPicWidth": "2270",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/6cf1bce2e5ffe76d1b5135541bc0f0aebecef298.jpg",
+        "LowPicSize": "21425",
+        "LowPicHeight": "170",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/54a511389c0c276f7ff9550405ca8e8f7df17f9d.jpg",
+        "Pic500x500Size": "106043",
+        "Pic500x500Height": "426",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/6faad5796b563452dba232189ff754cfadea5a9e.jpg",
+        "ThumbPicSize": "4669"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/56f924ae75de7fd57011e451daf3b369a650a392.jpg",
+          "width": "2270",
+          "height": "1935",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/b3ea7c5639ebdeba3bccc32362d6fca27647a924.jpg",
+          "width": "1997",
+          "height": "2356",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d289a1bbd372c2b01c4fc171eef0fd8a642a94e7.jpg",
+          "width": "2000",
+          "height": "2411",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/f45d8321384ef9b468b30a0e48f85f5f48d5cd06.jpg",
+          "width": "1627",
+          "height": "2436",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/1247064662ae85ed09cdf7046acced8532e845f5.jpg",
+          "width": "2052",
+          "height": "1586",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/0a506f72acf2d2f0e1933293cc8c57abdeefa9d3.jpg",
+          "width": "1710",
+          "height": "2417",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/e03664e93db23cebabd9d81731e9a12e53994db3.jpg",
+          "width": "1896",
+          "height": "2378",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/16d1efe878d6a0b83e69e2078acf9cdd35a4639a.jpg",
+          "width": "2472",
+          "height": "2187",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/daaf1777671005b87da976f4e89ecbe53a536a7c.jpg",
+          "width": "2378",
+          "height": "864",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/43cc36bfb19f6fc4c0ad973ea635303531f9cfd2.jpg",
+          "width": "2432",
+          "height": "1245",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/74787f88237a4671be139c0bffff9c8989ee05fa.jpg",
+          "width": "1855",
+          "height": "2378",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/ab9f11621515b9b6914125dd788c381980549792.jpg",
+          "width": "2606",
+          "height": "1354",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.asus.com/motherboards-components/motherboards/others/x870-max-gaming-wifi7/"
+    },
+    {
+      "id": "gigabyte-z890m-gaming-x",
+      "brand": "GIGABYTE",
+      "productCode": "Z890M GAMING X",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=GIGABYTE&ProductCode=Z890M+GAMING+X",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 122797100,
+      "title": "GIGABYTE Z890M GAMING X Motherboard",
+      "returnedBrand": "GIGABYTE",
+      "returnedCode": "Z890M GAMING X",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/1d9c375e8e06f63fab256285f42cfe23967c0a95.jpg",
+        "HighPicSize": "1868082",
+        "HighPicHeight": "1300",
+        "HighPicWidth": "2108",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/582e96a0330d5703b243a90f4456e1b1ae37f20a.jpg",
+        "LowPicSize": "26256",
+        "LowPicHeight": "123",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/91896d9e8377f2f76b6bcda2ad680576af4fa480.jpg",
+        "Pic500x500Size": "129572",
+        "Pic500x500Height": "308",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/505470998c3d193e20990f4455860efdce27e94d.jpg",
+        "ThumbPicSize": "5190"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/1d9c375e8e06f63fab256285f42cfe23967c0a95.jpg",
+          "width": "2108",
+          "height": "1300",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/31eba345223ac3dddcf1a5d3730a303be79bc0e4.jpg",
+          "width": "2029",
+          "height": "2012",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9f2e0de92a8de803507a361c4e881b8701bc57d5.jpg",
+          "width": "1776",
+          "height": "2115",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/1000bb27752b55edc91a7eb4f9829f587a1e88b5.jpg",
+          "width": "2096",
+          "height": "779",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.gigabyte.com/"
+    },
+    {
+      "id": "corsair-mp600-mini-1tb",
+      "brand": "Corsair",
+      "productCode": "CSSD-F1000GBMP600MN",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Corsair&ProductCode=CSSD-F1000GBMP600MN",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "corsair-mp700-elite-1tb-heatsink",
+      "brand": "Corsair",
+      "productCode": "CSSD-F1000GBMP700EHS",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Corsair&ProductCode=CSSD-F1000GBMP700EHS",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "kingston-kc3000-1tb",
+      "brand": "Kingston",
+      "productCode": "SKC3000S/1024G",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Kingston&ProductCode=SKC3000S%2F1024G",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 94818893,
+      "title": "Kingston Technology 1024G KC3000 M.2 2280 NVMe SSD",
+      "returnedBrand": "Kingston Technology",
+      "returnedCode": "SKC3000S/1024G",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/3729d5ab9bd52729203bd86ed65668a209e7b87c.jpg",
+        "HighPicSize": "821512",
+        "HighPicHeight": "773",
+        "HighPicWidth": "2270",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/20886eec49265b03bdb679c47e38e5595ec489e4.jpg",
+        "LowPicSize": "9224",
+        "LowPicHeight": "68",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/72b72f7363ece09b8bcaa09b3f73891d00042a62.jpg",
+        "Pic500x500Size": "46513",
+        "Pic500x500Height": "170",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/4ab06d0bedb651e68e54a0c29ad8a0f8840a5fcc.jpg",
+        "ThumbPicSize": "2393"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/3729d5ab9bd52729203bd86ed65668a209e7b87c.jpg",
+          "width": "2270",
+          "height": "773",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/61c07675674a5a76f92709822bf20329770f2566.jpg",
+          "width": "2271",
+          "height": "775",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/886255672484e10e142c347a654209b43c4313a3.jpg",
+          "width": "2400",
+          "height": "1500",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/74a0827bf8028fcc79a08f7c6ec306d896af9e0e.jpg",
+          "width": "2400",
+          "height": "1500",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/0d8d8fa4fcde20525dd48b65024b9beb8ec3e6fd.jpg",
+          "width": "2400",
+          "height": "1500",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/4e1e3b523a400a93897d1435dff0dd3ad2d18eac.jpg",
+          "width": "2048",
+          "height": "768",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d945d8d4bbbf12f07815efeed2ce2e5931da8fab.jpg",
+          "width": "4850",
+          "height": "1744",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/2ac1814167b29c6aadc8bed0b68fbcb288433f5c.jpg",
+          "width": "4850",
+          "height": "1744",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/cb74a9c8c99be172a0be0323b64ad970479b9da0.jpg",
+          "width": "8495",
+          "height": "5663",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/1dfc21a2557b32394015e82d2a45ad397888e0ee.jpg",
+          "width": "6485",
+          "height": "2444",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.kingston.com/"
+    },
+    {
+      "id": "lexar-nq780-512gb",
+      "brand": "Lexar",
+      "productCode": "NQ780 512GB",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lexar&ProductCode=NQ780+512GB",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lexar-nq780-2tb",
+      "brand": "Lexar",
+      "productCode": "NQ780 2TB",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lexar&ProductCode=NQ780+2TB",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lexar-sl500-1tb-black",
+      "brand": "Lexar",
+      "productCode": "SL500 1TB Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lexar&ProductCode=SL500+1TB+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lenovo-ln950-4tb",
+      "brand": "Lenovo",
+      "productCode": "LN950 4TB (5SD1P69443)",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lenovo&ProductCode=LN950+4TB+%285SD1P69443%29",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lg-ultragear-27gx790b-b",
+      "brand": "LG",
+      "productCode": "27GX790B-B",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=LG&ProductCode=27GX790B-B",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 140779302,
+      "title": "LG 27” UltraGear™ OLED Gaming Monitor, Dual Mode (720Hz@HD, 540Hz@QHD), DP2.1, Black",
+      "returnedBrand": "LG",
+      "returnedCode": "27GX790B-B",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/d368f467ecbc63587bc5f6d3704f9e8fef895dba.jpg",
+        "HighPicSize": "84928",
+        "HighPicHeight": "531",
+        "HighPicWidth": "800",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/02ff03a0a2d695a3f3eabd22e55e0011614f2b13.jpg",
+        "LowPicSize": "11218",
+        "LowPicHeight": "133",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/7f2561e70a52d62d602cde8c1221e8d64b757b84.jpg",
+        "Pic500x500Size": "48765",
+        "Pic500x500Height": "332",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/4591aa3a3db0e17b2f0391eefb677dbc5e2a55e5.jpg",
+        "ThumbPicSize": "2847"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/d368f467ecbc63587bc5f6d3704f9e8fef895dba.jpg",
+          "width": "800",
+          "height": "531",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/1a5bd59e942ab08e544ed2ae3a51b1248859356c.jpg",
+          "width": "800",
+          "height": "531",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/8023f1b649775862a06a4722026d7b4eded1e806.jpg",
+          "width": "800",
+          "height": "531",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/420ec6114b5438ae8cf75ee415f8a5d985bb83c7.jpg",
+          "width": "800",
+          "height": "531",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/ce9db15da90def670e23d1e18c5e167198b8213a.jpg",
+          "width": "800",
+          "height": "531",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/aa34bcbace2f835a77012a17f8974f98ae312a17.jpg",
+          "width": "800",
+          "height": "531",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d797d3246fbed27d7c249848aa54c99e3785c357.jpg",
+          "width": "800",
+          "height": "531",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.lg.com/uk/monitors/gaming/27gx790b-b/"
+    },
+    {
+      "id": "ktc-m27t6",
+      "brand": "KTC",
+      "productCode": "M27T6",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=KTC&ProductCode=M27T6",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lenovo-legion-r45w-30",
+      "brand": "Lenovo",
+      "productCode": "67B1GAC3US",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lenovo&ProductCode=67B1GAC3US",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 114021142,
+      "title": "Lenovo Legion R45w-30 computer monitor 113 cm (44.5\") 5120 x 1440 pixels DQHD LED Black",
+      "returnedBrand": "Lenovo",
+      "returnedCode": "67B1GAC3US",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/f00eea5def7d910d53c2bc8d8bcfb0fcf81698c4.jpg",
+        "HighPicSize": "3617935",
+        "HighPicHeight": "2000",
+        "HighPicWidth": "3571",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/dbc279bc8d5f480b2df7308697510cd47eb5652b.jpg",
+        "LowPicSize": "15260",
+        "LowPicHeight": "112",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/eb9e2076cdb853767340278d2f18aa27a76251f3.jpg",
+        "Pic500x500Size": "79907",
+        "Pic500x500Height": "280",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/51f7ae9414a13fa831c8b04ed8444797495fea97.jpg",
+        "ThumbPicSize": "4198"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/f00eea5def7d910d53c2bc8d8bcfb0fcf81698c4.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/6b3b9d25c2c22dbaa6e08e0d403a72fe942a131d.jpg",
+          "width": "4030",
+          "height": "2257",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d0f03776775b143a7cc55783278bbe3b15fb3269.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/bcea03ec0ad50b5c3d0ebd2db1b1115ac94d8c2b.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/215f71ae6e383a36f40484410dbf46424a3cd1e9.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/13b7cf456732bb2976e363fd2712dbe905446fa1.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/4e0630d5c8c00b627434559501ce1e5fad503573.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/6c0708e09333c2f6a8d7ac08cfe1acaaef72e72c.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/15154b28e18f29fa4ada0124f2768ac5b7598f29.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/c1def321b50b3f4bfaf20af4477fd7c07db86467.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/1f1598a31fe8edc8fbde57f42564bff7e5fef58f.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/b207c6bf9c7bbdd21f277cc10fc8f6019299456b.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/333f7c5535813a653f40888b5c9ba5f93628b13c.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/f9c534764a5639f5a7126834bbeeb394b82caa28.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/e80b60f3c6136fd8438d87818a002f57481b8440.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/747cf5e737f0a322a38dcdb7273bf55082eb9189.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/e497a533eec26dc3917818e61f8947d64fd71e4b.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/2a0393def59569c94c882da8de13902a66be996c.jpg",
+          "width": "3571",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.lenovo.com/"
+    },
+    {
+      "id": "msi-mag-274qp-qd-oled-x24",
+      "brand": "MSI",
+      "productCode": "MAG 274QP QD-OLED X24",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=MSI&ProductCode=MAG+274QP+QD-OLED+X24",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 139624264,
+      "title": "MSI MAG 274QP QD-OLED X24 computer monitor 67.3 cm (26.5\") 2560 x 1440 pixels Wide Quad HD Black",
+      "returnedBrand": "MSI",
+      "returnedCode": "MAG 274QP QD-OLED X24",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/3226e56b1922f7661be44bcf453fa095562a9e3a.jpg",
+        "HighPicSize": "1382084",
+        "HighPicHeight": "2048",
+        "HighPicWidth": "2048",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/7c614ad2bd6d5e6f0f631449d12c8b4e9bdb3e65.jpg",
+        "LowPicSize": "47313",
+        "LowPicHeight": "200",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/64be53dfcf0fa92a5c82a77501bba97310bbe9fc.jpg",
+        "Pic500x500Size": "221600",
+        "Pic500x500Height": "500",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/31d2b5dc4075ec07b63249ff5b292d7d1cdc3257.jpg",
+        "ThumbPicSize": "9093"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/3226e56b1922f7661be44bcf453fa095562a9e3a.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9280ab55c7db52966736f6438b94cd68814f54ae.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/690aa631731da13c9232a20fa5066e82c4534b95.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/505a2b525c95bdc8e96975b8e364dea66e644355.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/5192323663b3675a0eb6fbd56b8d08e4e4808295.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/c51cf519505cfb24174917b2368ffe9f177188e6.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/6147c126f4e17f0384bd639e9467c819479be6da.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/6c0601601c9b556b579f645602f526c0f5b47e35.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/be11b03663a75312b5904dfbc32286b1b5c20917.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/83a55993d9fceb17c5490f9a423d026392bfd24d.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/7470b18f8f99f75907c76cf146d8a71505174da8.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/3b5de26f265178f7cd219a09e8bff61b247fa719.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/1e0b231af8ba9342318038eea55b7ea0910a8058.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/006c0bd90b23459d492dc6604982196b0b1a0475.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/38eec0bb711c9cd0b42fca2cfa1ea475468abc66.jpg",
+          "width": "2048",
+          "height": "2048",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.msi.com/Monitor/MAG-274QP-QD-OLED-X24"
+    },
+    {
+      "id": "philips-evnia-27m2n3500nf-00",
+      "brand": "Philips",
+      "productCode": "27M2N3500NF/00",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Philips&ProductCode=27M2N3500NF%2F00",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 138334559,
+      "title": "Philips Evnia 3000 27M2N3500NF/00 computer monitor 68.6 cm (27\") 2560 x 1440 pixels Quad HD LCD Black",
+      "returnedBrand": "Philips",
+      "returnedCode": "27M2N3500NF/00",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/4681aca6df8b797521f26674a52af1b4fa6c1aa3.jpg",
+        "HighPicSize": "714402",
+        "HighPicHeight": "1200",
+        "HighPicWidth": "1200",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/23cccdd71e5e7e4c38bd1c19c10964f053d14171.jpg",
+        "LowPicSize": "35770",
+        "LowPicHeight": "200",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/261f9fcb6e38fbf1182c45ec8635594b97cece6d.jpg",
+        "Pic500x500Size": "169738",
+        "Pic500x500Height": "500",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/3d29cedb8766024cf342d0b1960bb45b9796f264.jpg",
+        "ThumbPicSize": "7212"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/4681aca6df8b797521f26674a52af1b4fa6c1aa3.jpg",
+          "width": "1200",
+          "height": "1200",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d71e4219146cde3003cb9684bfd41c2455b552b3.jpg",
+          "width": "1181",
+          "height": "1181",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/c16b318f634b075aed63c0c3c5ae8e1dfabc8ddb.jpg",
+          "width": "2000",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d24ef23659d0068012c18d48c6426bf15a1d1e93.jpg",
+          "width": "2000",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/383f3e8b394110b6a0708a2c73de6a5f5e21895f.jpg",
+          "width": "2000",
+          "height": "2000",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/2cd44b3dd498e26182a26de8ba6dcc7ec10833c5.jpg",
+          "width": "5866",
+          "height": "3298",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/8b1c00fb01fc20432830a16cc8682fb0f6ee7a97.jpg",
+          "width": "1200",
+          "height": "1200",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/8c1da33e1fb4e4ea9cb6493c73a64568bc2243bd.jpg",
+          "width": "1200",
+          "height": "1200",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/e567265854a59f52df8fff37c9adcb4d23282836.jpg",
+          "width": "1200",
+          "height": "1200",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/5ff9633a419e7e7a64f88719350ace65afe4eb08.jpg",
+          "width": "1200",
+          "height": "708",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/71bb7924d4376fa9d0ce0d0ac063a994811716c3.jpg",
+          "width": "1200",
+          "height": "1200",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/ae5a45eb12bb22f52f0fab0d4026a974f1736a62.jpg",
+          "width": "1200",
+          "height": "1200",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/731d9642fa64b97313e1bfabaf1df69fa460cb98.jpg",
+          "width": "1200",
+          "height": "1264",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://mmdmonitors.com/"
+    },
+    {
+      "id": "lenovo-legion-r27qc-30",
+      "brand": "Lenovo",
+      "productCode": "67C6GAC2US",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lenovo&ProductCode=67C6GAC2US",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 122316665,
+      "title": "Lenovo Legion R27qc-30 Monitor",
+      "returnedBrand": "Lenovo",
+      "returnedCode": "67C6GAC2US",
+      "demoAccount": true,
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/b52049468de3e301c55538c5801386a428210f26.jpg",
+        "HighPicSize": "138890",
+        "HighPicHeight": "600",
+        "HighPicWidth": "1000",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/cd90888b784889d76571d34edd2cfb4a8b60b067.jpg",
+        "LowPicSize": "16337",
+        "LowPicHeight": "120",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/ef1e89630b82194d7ae0936e3fd9a80505caa4b7.jpg",
+        "Pic500x500Size": "58193",
+        "Pic500x500Height": "300",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/3c225d71cf9ad54b4df8c23c3f422b16b9337076.jpg",
+        "ThumbPicSize": "4007"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/b52049468de3e301c55538c5801386a428210f26.jpg",
+          "width": "1000",
+          "height": "600",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9572d518ddce41bfe629b80d724ed47ff89ff7c4.jpg",
+          "width": "1000",
+          "height": "600",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/40c227c2b81f754918961a6d84d612813bbb3b3b.jpg",
+          "width": "1000",
+          "height": "600",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/c1372b214ed608fe571aa5c6b59e8f6ae8f40e78.jpg",
+          "width": "1000",
+          "height": "600",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/83a38a6f364325b1439a2839fae5457f910a5ff4.jpg",
+          "width": "1000",
+          "height": "600",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/016d7869a0f905743d99a23247bb5b0ff70ca2c2.jpg",
+          "width": "1000",
+          "height": "600",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/4b57925fa1ee4fec6791ea258fc42c7a15f3ca1c.jpg",
+          "width": "1000",
+          "height": "600",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/0a808880933b951e15f86e6b5d71d166ad2d8624.jpg",
+          "width": "1000",
+          "height": "600",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ],
+      "manufacturerUrl": "https://www.lenovo.com/"
+    },
+    {
+      "id": "acer-ed273-x0",
+      "brand": "Acer",
+      "productCode": "ED273 X0",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Acer&ProductCode=ED273+X0",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lian-li-edge-platinum-v2-1350-black",
+      "brand": "Lian Li",
+      "productCode": "EDGE Platinum V2 1350W Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lian+Li&ProductCode=EDGE+Platinum+V2+1350W+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "asus-tuf-1000g-evo",
+      "brand": "ASUS",
+      "productCode": "TUF Gaming 1000G EVO",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=TUF+Gaming+1000G+EVO",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "asus-tuf-850g-evo",
+      "brand": "ASUS",
+      "productCode": "TUF Gaming 850G EVO",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=TUF+Gaming+850G+EVO",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "msi-pag-g850ls-pcie5",
+      "brand": "MSI",
+      "productCode": "PAG G850LS PCIE5",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=MSI&ProductCode=PAG+G850LS+PCIE5",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "msi-pag-g750ls-pcie5",
+      "brand": "MSI",
+      "productCode": "PAG G750LS PCIE5",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=MSI&ProductCode=PAG+G750LS+PCIE5",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "cooler-master-elite-gold-1000-black",
+      "brand": "Cooler Master",
+      "productCode": "Elite Gold 1000W Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Cooler+Master&ProductCode=Elite+Gold+1000W+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "asus-rog-strix-1200-platinum",
+      "brand": "ASUS",
+      "productCode": "ROG Strix 1200W Platinum",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=ROG+Strix+1200W+Platinum",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "cougar-omnyx-black",
+      "brand": "Cougar",
+      "productCode": "OmnyX Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Cougar&ProductCode=OmnyX+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lian-li-o11-vision-m-black",
+      "brand": "Lian Li",
+      "productCode": "O11 VISION-M Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lian+Li&ProductCode=O11+VISION-M+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lian-li-vector-v150-inf-black",
+      "brand": "Lian Li",
+      "productCode": "VECTOR V150 INF Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lian+Li&ProductCode=VECTOR+V150+INF+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "gigabyte-c201-panoramic-white",
+      "brand": "GIGABYTE",
+      "productCode": "C201 PANORAMIC White",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=GIGABYTE&ProductCode=C201+PANORAMIC+White",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "cougar-airface-180-white",
+      "brand": "Cougar",
+      "productCode": "Airface 180 White",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Cougar&ProductCode=Airface+180+White",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "cougar-mx600-air-pro-black",
+      "brand": "Cougar",
+      "productCode": "MX600 Air Pro Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Cougar&ProductCode=MX600+Air+Pro+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "cougar-mx600-mini-v2-pro-white",
+      "brand": "Cougar",
+      "productCode": "MX600 Mini V2 Pro White",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Cougar&ProductCode=MX600+Mini+V2+Pro+White",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lian-li-hydroshift-ii-lcd-c-360r-black",
+      "brand": "Lian Li",
+      "productCode": "HydroShift II LCD-C 360R Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lian+Li&ProductCode=HydroShift+II+LCD-C+360R+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "thermalright-frozen-horizon-360-digital",
+      "brand": "Thermalright",
+      "productCode": "Frozen Horizon 360 Digital ARGB Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Thermalright&ProductCode=Frozen+Horizon+360+Digital+ARGB+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lian-li-hydroshift-ii-lcd-s-360",
+      "brand": "Lian Li",
+      "productCode": "HydroShift II LCD-S 360 Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lian+Li&ProductCode=HydroShift+II+LCD-S+360+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "id-cooling-sl360-v2-space-white",
+      "brand": "ID-COOLING",
+      "productCode": "SL360 V2 Space LCD White",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ID-COOLING&ProductCode=SL360+V2+Space+LCD+White",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "id-cooling-se214xt-df-black",
+      "brand": "ID-COOLING",
+      "productCode": "SE-214-XT DF ARGB Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ID-COOLING&ProductCode=SE-214-XT+DF+ARGB+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "thermalright-magic-qube-360-black",
+      "brand": "Thermalright",
+      "productCode": "Magic Qube 360 ARGB Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Thermalright&ProductCode=Magic+Qube+360+ARGB+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "cougar-poseidon-vistek-pro-360-black",
+      "brand": "Cougar",
+      "productCode": "Poseidon Vistek Pro ARGB 360 Black",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Cougar&ProductCode=Poseidon+Vistek+Pro+ARGB+360+Black",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "steelseries-qck-performance-xl-control",
+      "brand": "SteelSeries",
+      "productCode": "QcK Performance XL Control",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=SteelSeries&ProductCode=QcK+Performance+XL+Control",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "steelseries-qck-performance-balance",
+      "brand": "SteelSeries",
+      "productCode": "QcK Performance Balance",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=SteelSeries&ProductCode=QcK+Performance+Balance",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "attack-shark-cm03-rainbow",
+      "brand": "ATTACK SHARK",
+      "productCode": "CM03 eSport Rainbow Coated",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ATTACK+SHARK&ProductCode=CM03+eSport+Rainbow+Coated",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "attack-shark-cm05-glass-black-contours",
+      "brand": "ATTACK SHARK",
+      "productCode": "CM05 Glass Black Contours",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ATTACK+SHARK&ProductCode=CM05+Glass+Black+Contours",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "logitech-g740",
+      "brand": "Logitech",
+      "productCode": "943-000804",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Logitech&ProductCode=943-000804",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "corsair-mm100",
+      "brand": "Corsair",
+      "productCode": "CH-9100020-WW",
+      "queryBasis": "candidate MPN/model code; response and visual match still required",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Corsair&ProductCode=CH-9100020-WW",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "steelseries-qck-xxl",
+      "brand": "SteelSeries",
+      "productCode": "QcK XXL",
+      "queryBasis": "catalogue model identifier; not a verified MPN",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=SteelSeries&ProductCode=QcK+XXL",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "asus-tuf-1000g-evo",
+      "brand": "ASUS",
+      "productCode": "TUF-GAMING-1000G-EVO",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=TUF-GAMING-1000G-EVO",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "asus-tuf-850g-evo",
+      "brand": "ASUS",
+      "productCode": "TUF-GAMING-850G-EVO",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=TUF-GAMING-850G-EVO",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 144192177,
+      "title": "ASUS TUF-GAMING-850G-EVO power supply unit 850 W 20+4 pin ATX ATX Black",
+      "returnedCode": "90YE00SA-B0AA00",
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/973e79995651c9ef6f652c95887d857bbd1b9e46.jpg",
+        "HighPicSize": "2159504",
+        "HighPicHeight": "2400",
+        "HighPicWidth": "2400",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/f92ef83f1133da52be0e98637cef4066848b0aea.jpg",
+        "LowPicSize": "15212",
+        "LowPicHeight": "200",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/d376ff8799f77aa10a281c80459f74060212927e.jpg",
+        "Pic500x500Size": "90415",
+        "Pic500x500Height": "500",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/65fa17ebd93beaf35e4f5ecdf026ee0109902d46.jpg",
+        "ThumbPicSize": "3151"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/973e79995651c9ef6f652c95887d857bbd1b9e46.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/04ad3b9d298b7cb781f09c489dbcf69dd7b608e9.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/69ebb6c506e415560b6a1677ac580f8671eb8375.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/b6d425950d7cb074f838081f0ee6caaadef8704c.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/abaab13ed88bc8fd087bcc1bcba2b62b510f0c9e.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/8be4236286fb2f70adc4520df1ebb6c10b9c774a.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/c991624c5a426988fc61c3a6e60b993eac8692ba.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/0ce04b82b354c6318c4c3c3b8dd46f36efd9bf66.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-strix-1200-platinum",
+      "brand": "ASUS",
+      "productCode": "ROG-STRIX-1200P-GAMING",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=ROG-STRIX-1200P-GAMING",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 121734613,
+      "title": "ASUS ROG -STRIX-1200P-GAMING power supply unit 1200 W 20+4 pin ATX ATX Black",
+      "returnedCode": "90YE00W0-B0NA00",
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/77b4235699c48187c7cfab3981e2414be2e20f19.jpg",
+        "HighPicSize": "2400929",
+        "HighPicHeight": "2400",
+        "HighPicWidth": "2400",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/0f1629e0900f105304b28bd6de8530cfc3c66443.jpg",
+        "LowPicSize": "25149",
+        "LowPicHeight": "200",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/4131ad44b9f6abfe13710836250454c39fa2f8b4.jpg",
+        "Pic500x500Size": "120193",
+        "Pic500x500Height": "500",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/72d0ce1e29625dfdee39011acd4349630f9858e0.jpg",
+        "ThumbPicSize": "5361"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/77b4235699c48187c7cfab3981e2414be2e20f19.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/802e507e90d95da9d47cb7996dfa1df6e3947c9d.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/7ac24f22c43491d7f61be28263a05a3a323ea4c0.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/c28b7a628fe9f621006a47cb59778f4cb13d24d6.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/5c686a4a2e9dc9e47e57a0f9add245d684e9b23c.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/f1ef7f37ab29122a5aaef8d2fea389b8a41c5e61.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/1c11f1c4933ac0c1f306d2b51358945b81c0efc3.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/db7449ba1e67796631e6594235d989589d3eab8a.jpg",
+          "width": "2277",
+          "height": "2415",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d620e5fdac4204f1c2ecd3d005b8a4cfeca8e36b.jpg",
+          "width": "2511",
+          "height": "1540",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/d4d0882c3ed0697cf9f75c9cbfb75f57c6b31a46.jpg",
+          "width": "2497",
+          "height": "1533",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/7a48581dcab5b92dcede795c52de79ee6c279cf6.jpg",
+          "width": "2306",
+          "height": "2444",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/dc05156c2274de881c0c2b83846c9818e3ddb2ee.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/bc610d9d04dfc24c4f2a321f21096efc3cc080be.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/025e90fc8f91832e383751349246c3478962fe5f.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/9cace91bace3a9a32b503d05d0c6ca4707dd7f7c.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/aaa238b44b270e4059c497a56ee319dfc7d6f96c.jpg",
+          "width": "2400",
+          "height": "2400",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ]
+    },
+    {
+      "id": "cooler-master-elite-gold-1000-black",
+      "brand": "Cooler Master",
+      "productCode": "MPW-A001-AFAG",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Cooler+Master&ProductCode=MPW-A001-AFAG",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lian-li-o11-vision-m-black",
+      "brand": "Lian Li",
+      "productCode": "O11VMX",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lian+Li&ProductCode=O11VMX",
+      "status": 404,
+      "message": "The requested product is not present in the Icecat database"
+    },
+    {
+      "id": "lian-li-vector-v150-inf-black",
+      "brand": "Lian Li",
+      "productCode": "V150INFX",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Lian+Li&ProductCode=V150INFX",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "logitech-pro-x2-superstrike",
+      "brand": "Logitech",
+      "productCode": "910-007700",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Logitech&ProductCode=910-007700",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    },
+    {
+      "id": "asus-rog-azoth-m701-nx-red",
+      "brand": "ASUS",
+      "productCode": "90MP0316-BKEA01",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=ASUS&ProductCode=90MP0316-BKEA01",
+      "status": 200,
+      "message": "OK",
+      "icecatId": 108929116,
+      "title": "ASUS ROG Azoth keyboard Gaming USB + RF Wireless + Bluetooth QWERTY US English Black",
+      "returnedCode": "90MP0316-BKEA01",
+      "image": {
+        "HighPic": "https://images.icecat.biz/img/gallery/002ce9ac36bbfeb782f3d235aad87c6f9ae0c37e.jpg",
+        "HighPicSize": "8299711",
+        "HighPicHeight": "1971",
+        "HighPicWidth": "4422",
+        "LowPic": "https://images.icecat.biz/img/gallery_lows/c0ba38d712c07d02350064e1fed010147607007a.jpg",
+        "LowPicSize": "26795",
+        "LowPicHeight": "89",
+        "LowPicWidth": "200",
+        "Pic500x500": "https://images.icecat.biz/img/gallery_mediums/db889fb907644f82e08bd275a09fbf16975f02ca.jpg",
+        "Pic500x500Size": "129829",
+        "Pic500x500Height": "223",
+        "Pic500x500Width": "500",
+        "ThumbPic": "https://images.icecat.biz/img/gallery_thumbs/daa3ca5ef5e29f507b8258f49d970316176d248e.jpg",
+        "ThumbPicSize": "4947"
+      },
+      "gallery": [
+        {
+          "url": "https://images.icecat.biz/img/gallery/002ce9ac36bbfeb782f3d235aad87c6f9ae0c37e.jpg",
+          "width": "4422",
+          "height": "1971",
+          "isPrivate": "0",
+          "isMain": "Y"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/68f2e23e94902f5ea0b2b3380ac2482d0d6575c4.jpg",
+          "width": "4479",
+          "height": "2498",
+          "isPrivate": "0",
+          "isMain": "N"
+        },
+        {
+          "url": "https://images.icecat.biz/img/gallery/00c4512b03bada7b4650905ce425d0027c2555ff.jpg",
+          "width": "2950",
+          "height": "1501",
+          "isPrivate": "0",
+          "isMain": "N"
+        }
+      ]
+    },
+    {
+      "id": "palit-rtx5070ti-gamingpro-s",
+      "brand": "Palit",
+      "productCode": "NE7507T019T2-GB2031U",
+      "apiUrl": "https://live.icecat.biz/api?lang=EN&shopname=openicecat-live&Brand=Palit&ProductCode=NE7507T019T2-GB2031U",
+      "status": 403,
+      "message": "To access Full Icecat content, an app_key is required. Full Icecat users can find it on their My Profile page."
+    }
+  ]
+}

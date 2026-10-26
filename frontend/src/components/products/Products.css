@@ -8,6 +8,7 @@
 .product-carousel-arrows button:disabled { opacity: .35; cursor: default; }
 .product-track { display: grid; grid-auto-flow: column; grid-template-rows: repeat(2, 1fr); grid-auto-columns: calc((100% - 3 * var(--product-gap)) / 4); gap: var(--product-gap); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--color-border-hover) transparent; padding-bottom: var(--space-4); touch-action: pan-x pan-y pinch-zoom; }
 .product-track > * { scroll-snap-align: start; }
+.product-track--single-row { grid-template-rows: 1fr; }
 .product-track.is-dragging { cursor: grabbing; user-select: none; scroll-snap-type: none; }
 .product-track.is-dragging * { cursor: grabbing; user-select: none; }
 .product-card { position: relative; display: flex; flex-direction: column; min-width: 0; height: 100%; }
@@ -16,7 +17,7 @@
 .product-image-credit:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
 .product-card-link { min-width: 0; display: block; }
 .product-image-wrap { position: relative; aspect-ratio: 1; border-radius: var(--product-image-radius); overflow: hidden; background: var(--color-surface); margin-bottom: var(--space-4); }
-.product-image { object-fit: contain; padding: var(--space-6); }
+.product-image { object-fit: contain; padding: 8px; }
 .product-image-note { position: absolute; bottom: var(--space-3); left: var(--space-2); right: var(--space-2); text-align: center; color: var(--color-text-secondary); font-size: var(--font-xs); }
 .product-brand { display: block; min-height: 20px; font-size: var(--font-xs); font-weight: var(--weight-medium); color: var(--color-text-secondary); }
 .product-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: var(--font-base); font-weight: var(--weight-medium); line-height: 1.45; height: 2.9em; margin: var(--space-1) 0 var(--space-4); }
@@ -52,7 +53,7 @@
   .product-section-header { align-items: flex-start; }
   .product-section-header p { font-size: var(--font-sm); }
   .product-carousel-arrows { gap: var(--space-1); }
-  .product-image { padding: var(--space-3); }
+  .product-image { padding: 8px; }
   .product-image-note { font-size: .5625rem; bottom: var(--space-2); }
   .product-name { font-size: var(--font-sm); }
   .product-price { font-size: clamp(.75rem, 3.2vw, .875rem); }

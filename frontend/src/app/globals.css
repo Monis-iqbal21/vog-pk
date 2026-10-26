@@ -25,7 +25,7 @@ main { flex:1; min-width:0; }
 .container { width:100%; max-width:calc(var(--container-width) + 2 * var(--page-padding)); padding-inline:var(--page-padding); margin-inline:auto; }
 .skip-link { position:fixed; top:var(--space-2); left:var(--space-4); transform:translateY(-200%); padding:var(--space-3); background:var(--color-white); z-index:100; border:1px solid var(--color-primary); }
 .skip-link:focus { transform:translateY(0); }
-.site-header { position:sticky; top:0; z-index:20; background:var(--color-white); border-bottom:1px solid var(--color-border); }
+.site-header { position:sticky; top:0; z-index:20; color:var(--color-text-primary); color-scheme:light; background:var(--color-white); border-bottom:1px solid var(--color-border); }
 .site-footer {
  --color-text-primary:var(--color-dark-text);
  --color-text-secondary:var(--color-dark-muted);

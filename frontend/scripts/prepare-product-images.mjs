@@ -16,8 +16,10 @@ await fs.mkdir(output, { recursive: true });
 // Deliberately limited to the individually reviewed, licensed allowlist.
 // Sequential requests respect the source host; no crawling, retries or access bypasses.
 for (const [id, asset] of Object.entries(productImages)) {
-  const hash = crypto.createHash('md5').update(asset.sourceFile).digest('hex');
-  const downloadUrl = `https://upload.wikimedia.org/wikipedia/commons/${hash[0]}/${hash.slice(0, 2)}/${encodeURIComponent(asset.sourceFile)}`;
+  const sourceFile = asset.sourceFile ?? (asset.sourceUrl?.startsWith('https://commons.wikimedia.org/wiki/File:') ? decodeURIComponent(asset.sourceUrl.split('/wiki/File:')[1]) : null);
+  const hash = sourceFile ? crypto.createHash('md5').update(sourceFile).digest('hex') : null;
+  const downloadUrl = asset.downloadUrl ?? (hash ? `https://upload.wikimedia.org/wikipedia/commons/${hash[0]}/${hash.slice(0, 2)}/${encodeURIComponent(sourceFile)}` : null);
+  if (!downloadUrl) throw new Error(`No approved download source recorded for ${id}`);
   let original;
   if (sourceDirectory) {
     original = await fs.readFile(path.join(sourceDirectory, `${id}.source`));

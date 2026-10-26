@@ -1,0 +1,10 @@
+[
+  {
+    "ids": ["kingston-fury-beast-ddr5-16gb-6000", "kingston-fury-beast-16gb-4800"],
+    "reason": "Both exact-SKU public Icecat records supply the same photograph of the identical black FURY Beast DDR5 single-module heatspreader. Clock/profile specifications differ and are retained separately. This is documented supplier reuse, not an accidental assignment to unrelated hardware."
+  },
+  {
+    "ids": ["xpg-spectrix-d35g-16gb-3200-white", "xpg-spectrix-d35g-32gb-3600-white"],
+    "reason": "Both exact-SKU public Icecat records supply the same white D35G two-module kit photograph. Both configurations contain two visually identical modules; capacity/timings differ and are documented separately."
+  }
+]

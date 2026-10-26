@@ -7,7 +7,7 @@ import SeeAllCard from './SeeAllCard';
 import { HOMEPAGE_PRODUCT_LIMIT } from '@/data/products';
 import './Products.css';
 
-export default function ProductCarousel({ id, title, subtitle, products, seeAllHref, seeAllLabel, children, onAddToCart, labelledBy }) {
+export default function ProductCarousel({ id, title, subtitle, products, seeAllHref, seeAllLabel, children, onAddToCart, labelledBy, singleRow = false }) {
   const track = useRef(null);
   const drag = useRef(null);
   const suppressClick = useRef(false);
@@ -57,7 +57,7 @@ export default function ProductCarousel({ id, title, subtitle, products, seeAllH
       </div>
     </div>
     {children}
-    <div id={`${id}-track`} ref={track} className="product-track" data-item-count={Math.min(products.length, HOMEPAGE_PRODUCT_LIMIT) + 1} role={labelledBy ? 'tabpanel' : 'region'} aria-labelledby={labelledBy} aria-label={labelledBy ? undefined : `${title} products. Use left and right arrow keys to scroll.`} tabIndex={0}
+    <div id={`${id}-track`} ref={track} className={`product-track${singleRow ? ' product-track--single-row' : ''}`} data-item-count={Math.min(products.length, HOMEPAGE_PRODUCT_LIMIT) + 1} role={labelledBy ? 'tabpanel' : 'region'} aria-labelledby={labelledBy} aria-label={labelledBy ? undefined : `${title} products. Use left and right arrow keys to scroll.`} tabIndex={0}
       onKeyDown={(event) => {
         if (event.target !== event.currentTarget) return;
         if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') { event.preventDefault(); move(event.key === 'ArrowRight' ? 1 : -1); }
