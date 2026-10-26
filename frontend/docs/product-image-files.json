@@ -1,0 +1,50 @@
+{
+  "intel-core-i9-14900k": {
+    "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Intel_i9-14900K.webp",
+    "sourceWidth": 600,
+    "sourceHeight": 575,
+    "width": 600,
+    "height": 600,
+    "format": "webp",
+    "bytes": 35310,
+    "sourceSha256": "45df9fdd2632168757fff39732cc050bd0ef94e204f37388b7fb8a3a6914d545",
+    "sha256": "1e1201d233ffe4edcd2057ca0de677b3ca6725226bbf44669abb8d5953de85f8",
+    "changes": "Resized without upscaling; full-frame contain composition on transparent square; encoded as WebP. No product cropping or generative editing."
+  },
+  "amd-ryzen9-9950x3d": {
+    "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/AMD_RYZEN_9_9950X3D_-_DOVRESTI_COMPRARLO%C2%BF_(1920p_30fps_VP9_LQ-128kbit_AAC)-00.00.18.500.png",
+    "sourceWidth": 3840,
+    "sourceHeight": 1920,
+    "width": 1000,
+    "height": 1000,
+    "format": "webp",
+    "bytes": 74842,
+    "sourceSha256": "b02defc357aa1ddd4d54074faba8eab445a4244060e257852923791c4df12209",
+    "sha256": "95c41b3bf69c9638ed6137b347cb305fe86762b25473678ab7ac90260c845bf7",
+    "changes": "Resized without upscaling; full-frame contain composition on transparent square; encoded as WebP. No product cropping or generative editing."
+  },
+  "amd-ryzen7-9800x3d": {
+    "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Video_zum_AMD_Ryzen_7_9800X3D_(ZMASLO)_29.png",
+    "sourceWidth": 3840,
+    "sourceHeight": 2160,
+    "width": 1000,
+    "height": 1000,
+    "format": "webp",
+    "bytes": 58230,
+    "sourceSha256": "5bde1262bd3b8fc4b9501a1e198a3e687ef687665ae37d32ec41c4c11b16f300",
+    "sha256": "4857a53fc6366345615adb18cb8b7798f708b7a1ea037c8c724d3d8e65fefd49",
+    "changes": "Resized without upscaling; full-frame contain composition on transparent square; encoded as WebP. No product cropping or generative editing."
+  },
+  "intel-core-ultra9-285k": {
+    "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/INTEL_CORE_ULTRA_7_265K_-_DOVRESTI_COMPRARLO%C2%BF_%F0%9F%91%80_(1920p_25fps_VP9_LQ-128kbit_AAC)-00.01.41.200.png",
+    "sourceWidth": 3840,
+    "sourceHeight": 1920,
+    "width": 1000,
+    "height": 1000,
+    "format": "webp",
+    "bytes": 19482,
+    "sourceSha256": "331c01988b9b3f828e1638b40c2c2eaa4c6226b5c677172f5c8ad89bda4f3766",
+    "sha256": "1fd888d6a9ccae3651a4498559faf5a8111c3437f948ec9a9bb73a1242c13edf",
+    "changes": "Resized without upscaling; full-frame contain composition on transparent square; encoded as WebP. No product cropping or generative editing."
+  }
+}

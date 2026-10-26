@@ -1,0 +1,3953 @@
+{
+  "checkedAt": "2026-10-26",
+  "note": "Searches were batched in groups of four. Candidate pages are returned search results, not individually verified image licenses or per-product matches. Queries identify the exact model searched. No candidate URL alone authorizes reuse.",
+  "productSearches": [
+    {
+      "batch": 1,
+      "ids": [
+        "rog-strix-rtx5070ti-o16g",
+        "aorus-rtx5080-master-ice-16g",
+        "nitro-rx9070xt-phantomlink-polar",
+        "proart-rtx5080-16g"
+      ],
+      "queries": [
+        "ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB ROG-STRIX-RTX5070TI-O16G-GAMING product image commercial reuse license",
+        "GIGABYTE AORUS GeForce RTX 5080 MASTER ICE 16G GV-N5080AORUSM-ICE-16GD product image commercial reuse license",
+        "SAPPHIRE NITRO+ Radeon RX 9070 XT OC PhantomLink Polar Edition  product image commercial reuse license",
+        "ASUS ProArt GeForce RTX 5080 16GB PROART-RTX5080-16G product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "AORUS GeForce RTX™ 5080 MASTER ICE 16G Graphics Card - GIGABYTE Global",
+          "url": "https://www.gigabyte.com/Graphics-Card/GV-N5080AORUSM-ICE-16GD"
+        },
+        {
+          "title": "ROG Strix GeForce RTX™ 5070 Ti 16GB GDDR7 OC Edition | ROG Strix | Gaming Graphics Cards｜ROG - Republic of Gamers｜ROG USA",
+          "url": "https://rog.asus.com/us/graphics-cards/graphics-cards/rog-strix/rog-strix-rtx5070ti-o16g-gaming/gallery/"
+        },
+        {
+          "title": "SAPPHIRE NITRO+ AMD Radeon™ RX 9070 XT OC 16GB Graphics Card – SAPPHIRE Technology India",
+          "url": "https://www.arksapphire.com/product/nitro-amd-radeon-rx-9070-xt-oc-gpu/"
+        },
+        {
+          "title": "GIGABYTE AORUS GeForce RTX 5080 MASTER ICE 16G NVIDIA 16 GB GDDR7",
+          "url": "https://digipood.eu/storage/energy_labels/543687/information_sheet.pdf"
+        },
+        {
+          "title": "Gigabyte AORUS GeForce RTX 5080 MASTER ICE 16GB Graphics Card — BuyDirect & Save",
+          "url": "https://buydirectny.com/collections/gigabyte/products/gigabyte-aorus-geforce-rtx-5080-master-ice-16gb-graphics-card"
+        },
+        {
+          "title": "SAPPHIRE社製、補助電源ケーブルなしで電源供給できる「PhantomLink」対応のグラフィックボード及びマザーボードを発表 | 株式会社アスク",
+          "url": "https://www.ask-corp.jp/news/2026/06/sapphire-phantomlink-graphicsboard-motherboard.html"
+        },
+        {
+          "title": "Sapphire Nitro+ Radeon RX 9070 XT PhantomLink Edition review: swapping cables for connectors | Club386",
+          "url": "https://www.club386.com/sapphire-nitro-rx-9070-xt-phantomlink-edition-review/"
+        },
+        {
+          "title": "electronis.de :: sapphire Nitro+ Radeon RX 9070 XT OC PhantomLink Polar Edition 16GB GDDR6 lite retail - 11348-09-20G :: nur €1182.40 jetzt günstig bestellen Apple, Macbook, iPad, iPhone, Tablets, Smartphone, Homeoffice, digital, Vernetzung günstig billig",
+          "url": "https://www.electronis.de/index.php/index.php?ID=636783&page=article"
+        },
+        {
+          "title": "Gigabyte RTX 5080 Aorus Master ICE 16GB Graphics Card — Computer Orbit",
+          "url": "https://ca.computerorbit.com/collections/nvidia-graphics-cards/products/gigabyte-rtx-5080-aorus-master-ice-16gb-graphics-card"
+        },
+        {
+          "title": "ProArt GeForce RTX™ 5080 16GB GDDR7 OC Edition - Specifications",
+          "url": "https://www.asus.com/sg/motherboards-components/graphics-cards/proart/proart-rtx5080-o16g/techspec/"
+        },
+        {
+          "title": "GIGABYTE AORUS GeForce RTX 5080 MASTER ICE 16G Graphics",
+          "url": "https://manuals.plus/m/f89d05253ab804bf81135fc5c8cb41238dc2dd26da9eebcd88b5d2b7d159e85b.pdf"
+        },
+        {
+          "title": "GIGABYTE RTX 5080 顯示卡｜AORUS RTX 5080 MASTER ICE 16G | GIGABYTE 香港",
+          "url": "https://futurecomputer.hk/gigabyte-rtx-5080-2/"
+        },
+        {
+          "title": "Описание видеокарты AMD Radeon RX 9070 XT Sapphire Nitro+ PhantomLink Edition OC 16GB (11348-08-20G) в интернет магазине Регард Москва.",
+          "url": "https://www.regard.ru/product/799589/videokarta-amd-radeon-rx-9070-xt-sapphire-nitro-phantomlink-edition-oc-16gb-11348-08-20g/description"
+        },
+        {
+          "title": "Gigabyte NVIDIA GeForce RTX 5080 AORUS MASTER ICE 16GB GDDR7 Graphics – DLBuilds - Gaming PC's",
+          "url": "https://www.dlbuilds.co.uk/products/gigabyte-nvidia-geforce-rtx-5080-aorus-master-ice-16gb-gddr7-graphics-card"
+        },
+        {
+          "title": "SKU: 11348-01-20G",
+          "url": "https://fichastecnicas.pchmayoreo.com/11348-01-20G.pdf"
+        },
+        {
+          "title": "GIGABYTE nVidia GeForce RTX 5080 AORUS MASTER ICE 16GB GV-N5080AORUSM ICE-16GD rev. 1.0 grafička karta",
+          "url": "https://www.pinshop.rs/stampa-proizvoda/42498"
+        },
+        {
+          "title": "Terms & Conditions for ‘Push Your Creative Edge’",
+          "url": "https://www.asus.com/events/eventES/contentimages/f100e519-87e8-490b-964a-9909d2a8a730.pdf"
+        },
+        {
+          "title": "ASUS ProArt -RTX5080-O16G NVIDIA GeForce RTX 5080 16 GB",
+          "url": "https://www.shoprbc.com/images/products/rbc_icecat/_documents_/559/product-pdf"
+        },
+        {
+          "title": "Gigabyte Gaming RTX 5080 VGAGIGR5802R Availability Update",
+          "url": "https://www.reddit.com/r/CentralComputers/comments/1k8hosa"
+        },
+        {
+          "title": "Asus ROG Strix GeForce RTX™ 5070 Ti released? When?",
+          "url": "https://www.reddit.com/r/ASUSROG/comments/1ix7ldy"
+        },
+        {
+          "title": "RTX 5080 AORUS MASTER LCD ISSUE",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1ksw3mh/rtx_5080_aorus_master_lcd_issue/"
+        },
+        {
+          "title": "Will this Anti-Sag Bracket Fit Well With My AORUS RTX 5080 MASTER ICE",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1te80rm/will_this_antisag_bracket_fit_well_with_my_aorus/"
+        },
+        {
+          "title": "Will there be a ProArt RTX 5080 by Asus?",
+          "url": "https://www.reddit.com/r/ASUS/comments/1hvmw0i"
+        },
+        {
+          "title": "Asus wants you to pay $1469 for a posh ProArt RTX 5080 GPU with a wooden frame - is a $500 premium worth it? I don't think so",
+          "url": "https://www.techradar.com/pro/asus-wants-you-to-pay-usd1469-for-a-posh-proart-rtx-5080-gpu-with-a-wooden-frame-is-a-usd500-premium-worth-it-i-dont-think-so"
+        },
+        {
+          "title": "GIGABYTE AORUS RTX 5080 Master ICE",
+          "url": "https://www.reddit.com/r/RTX5080/comments/1wx078e/gigabyte_aorus_rtx_5080_master_ice/"
+        },
+        {
+          "title": "The ROG STRIX RTX 5070 Ti OC Is Finally Here ❤️",
+          "url": "https://www.reddit.com/r/ASUSROG/comments/1khlewi/the_rog_strix_rtx_5070_ti_oc_is_finally_here/"
+        },
+        {
+          "title": "Gigabyte AORUS GeForce RTX 5080 MASTER ICE 16G Graphics Card - 16GB GDDR7, 256bit, PCI-E 5.0, 2805MHz Core Clock, 3 x DP 2.1a, 1 x HDMI 2.1b, NVIDIA DLSS 4, GV-N5080AORUSM ICE-16GD £1399",
+          "url": "https://www.reddit.com/r/PCPartsUK/comments/1kccw0w"
+        },
+        {
+          "title": "Brand new AORUS RTX 5080 Master GPU not recognized in RGB Fusion",
+          "url": "https://www.reddit.com/r/computerhelp/comments/1wn42m7/brand_new_aorus_rtx_5080_master_gpu_not/"
+        },
+        {
+          "title": "AORUS GeForce RTX™ 5080 MASTER 16G LCD screen not working",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1ipk37v/aorus_geforce_rtx_5080_master_16g_lcd_screen_not/"
+        },
+        {
+          "title": "Asus ROG STRIX RTX 5070 Ti OC: Premium Performance or Overpriced Hype?",
+          "url": "https://www.reddit.com/r/ASUSROG/comments/1kjz6bs/asus_rog_strix_rtx_5070_ti_oc_premium_performance/"
+        },
+        {
+          "title": "ASUS ProArt",
+          "url": "https://en.wikipedia.org/wiki/ASUS_ProArt"
+        },
+        {
+          "title": "RTX 5080 FE or Asus ProArt 5080 ??",
+          "url": "https://www.reddit.com/r/buildapc/comments/1u9lzri/rtx_5080_fe_or_asus_proart_5080/"
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "ids": [
+        "zotac-rtx5080-solid-oc-white",
+        "palit-rtx5070ti-gamingpro-s",
+        "asus-dual-rtx5060ti-16g",
+        "amd-ryzen7-9800x3d"
+      ],
+      "queries": [
+        "ZOTAC GAMING GeForce RTX 5080 SOLID OC White Edition  product image commercial reuse license",
+        "Palit GeForce RTX 5070 Ti GamingPro-S 16GB  product image commercial reuse license",
+        "ASUS Dual GeForce RTX 5060 Ti 16GB  product image commercial reuse license",
+        "AMD Ryzen 7 9800X3D  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "ZOTAC GAMING GeForce RTX 5080 SOLID OC White Edition | ZOTAC",
+          "url": "https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-rtx-5080-solid-oc-white-edition?l=en"
+        },
+        {
+          "title": "ZT-B50800Q-10P-brochure",
+          "url": "https://www.zotac.com/download/mediadrivers/External/GraphicsCard/5080/Brochure/ZT-B50800Q-10A-brochure.pdf"
+        },
+        {
+          "title": "AMD Ryzen™ 7 9800X3D Desktop Processor",
+          "url": "https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9800X3d.html"
+        },
+        {
+          "title": "ZOTAC Gaming GeForce RTX 5080 Solid Core OC White Edition 16GB GDDR7 Video Card | Best Buy Canada",
+          "url": "https://www.bestbuy.ca/en-ca/product/zotac-gaming-geforce-rtx-5080-solid-core-oc-white-edition-16gb-gddr7-video-card/19220093"
+        },
+        {
+          "title": "索泰RTX 5080 16GB SOLID CORE OC WHITE - 索泰ZOTAC",
+          "url": "https://www.zotaccn.com/pd.jsp?id=246"
+        },
+        {
+          "title": "ZOTAC GAMING GeForce RTX 5080 SOLID OC White Edition 16GB GDDR7 Gaming Graphics Card ZT-B50800Q-10P",
+          "url": "https://marketplace.nvidia.com/en-ca/consumer/graphics-cards/zotac-gaming-geforce-rtx-5080-solid-oc-white-edition-16gb-gddr7-gaming-graphics-card-zt-b50800q-10p/"
+        },
+        {
+          "title": "ゲーミンググラフィックボード RTX 5080 SOLID OC White Edition ZT-B50800Q-10P [GeForce RTXシリーズ /16GB] 〖PCパーツ〗 ZOTAC｜ゾタック 通販 | ビックカメラ.com",
+          "url": "https://www.biccamera.com/bc/item/13965567/"
+        },
+        {
+          "title": "Zotac GeForce RTX 5080 SOLID OC White Edition",
+          "url": "https://marketplace.nvidia.com/de-de/consumer/graphics-cards/zotac-geforce-rtx-5080-solid-oc-white-edition/"
+        },
+        {
+          "title": "ZOTAC RTX 5080 SOLID OC White Edition 16Go | Pixel 404",
+          "url": "https://www.pixel404.fr/products/zotac-geforce-rtx-5080-solid-oc-white-edition"
+        },
+        {
+          "title": "DUAL-RTX5060TI-O16",
+          "url": "https://media.bechtle.com/asrc/180712/1c4b3d4ee288fc9434f5175bf56070570/c3/-/c5714fd1e71147ba9747f6d0a810e54b/asus-dual-geforce-rtx5060-ti-graphics-cd-datablad-1"
+        },
+        {
+          "title": "КОМПЮТЪРНИ КОМПОНЕНТИ > Видеоконтролери",
+          "url": "https://www.dig.bg/pdf_datasheet.php?products_id=241944"
+        },
+        {
+          "title": "ZOTAC ゾタック ZOTAC GAMING GeForce RTX 5080 SOLID OC White Edition　ZT-B50800Q-10P｜ツクモ公式通販サイト",
+          "url": "https://shop.tsukumo.co.jp/goods/0409172558010/"
+        },
+        {
+          "title": "ZOTAC GAMING ZOTAC GAMING RTX 5080 SOLID OC White 16 GB | PCI-Express graphics cards at very favourable prices | reichelt elektronik",
+          "url": "https://www.reichelt.com/de/en/shop/product/zotac_gaming_rtx_5080_solid_oc_white_16_gb-404402"
+        },
+        {
+          "title": "Palit RTX 5070Ti GamingPro-S 16GB GDDR7",
+          "url": "https://www.littlebit.de/palit-rtx-5070ti-gamingpro-s-16gb-gddr7-l1139231.html"
+        },
+        {
+          "title": "ZOTAC GAMING ZOTAC GAMING RTX 5080 SOLID OC White 16GB | PCI-Express Grafikkarten günstig kaufen | reichelt elektronik",
+          "url": "https://www.reichelt.de/de/de/shop/produkt/zotac_gaming_rtx_5080_solid_oc_white_16gb-404402"
+        },
+        {
+          "title": "Palit Palit GeForce RTX 5070 Ti GamingPro OC NVIDIA 16 GB GDDR7",
+          "url": "https://8ad48833d1ade579b77fe49652b73f00.r2.cloudflarestorage.com/qxlstore-manuals/manuals/p/palit-geforce-rtx-5070-ti-gamingpro-oc-ne7507ts19t2-gb2031a-user-manual.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=563a487b4bba244c5956338a5de5fcde%2F20260609%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260609T141759Z&X-Amz-Expires=3600&X-Amz-Signature=2ec436691a2153bf1c445303174012477b38b532d71d0e857ec601f72d815f51&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B+filename%3D%22palit-geforce-rtx-5070-ti-gamingpro-oc-ne7507ts19t2-gb2031a-user-manual.pdf%22"
+        },
+        {
+          "title": "Was there suppose to be a white SOLID version",
+          "url": "https://www.reddit.com/r/ZOTAC/comments/1itctmb"
+        },
+        {
+          "title": "AMD Ryzen 7 9800X3D - Gistron",
+          "url": "https://gistron.com/info/67171/info.html?pdf=1"
+        },
+        {
+          "title": "Graphics Cards – NVIDIA GeForce RTX™ 50 Series",
+          "url": "https://www.asus.com/events/eventES/contentimages/Holiday%20Magic%20Promo%20TCs.pdf"
+        },
+        {
+          "title": "ZOTAC RTX 5080 Solid OC White",
+          "url": "https://www.reddit.com/r/nvidia/comments/1k2qif5/zotac_rtx_5080_solid_oc_white/"
+        },
+        {
+          "title": "Is the Zotac RTX 5080 Solid Core OC a good gpu?",
+          "url": "https://www.reddit.com/r/nvidia/comments/1wnlsdb/is_the_zotac_rtx_5080_solid_core_oc_a_good_gpu/"
+        },
+        {
+          "title": "Zotac compat",
+          "url": "https://www.reddit.com/r/alphacool/comments/1snbziq/zotac_compat/"
+        },
+        {
+          "title": "Is this white version of the RTX 5080/5090 Solid Card getting released?",
+          "url": "https://www.reddit.com/r/ZOTAC/comments/1i9eu4t"
+        },
+        {
+          "title": "[Removed]",
+          "url": "https://www.reddit.com/r/nvidia/comments/1t10tnw/removed/"
+        },
+        {
+          "title": "Anyone Regret Buying a Zotac 5080 Solid Core?",
+          "url": "https://www.reddit.com/r/RTX5080/comments/1ttx3ty/anyone_regret_buying_a_zotac_5080_solid_core/"
+        },
+        {
+          "title": "Is this odd? OC Edition stickers.",
+          "url": "https://www.reddit.com/r/ZOTAC/comments/1liqjqo"
+        },
+        {
+          "title": "DO NOT BUY THE ZOTAC 5080 SOLID",
+          "url": "https://www.reddit.com/r/PcBuild/comments/1kd7imu/do_not_buy_the_zotac_5080_solid/"
+        },
+        {
+          "title": "Palit GeForce RTX 5070 Ti GamingPro V1 OC 16GB ?",
+          "url": "https://www.reddit.com/r/nvidia/comments/1khzywt"
+        },
+        {
+          "title": "ASUS GeForce RTX 5060 Ti Day 1 Availability in US / CA and Announcing ASUS GeForce RTX 5060 Graphics Cards - Featuring TUF Gaming, ASUS Prime, and ASUS Dual models + FAQ",
+          "url": "https://www.reddit.com/r/nvidia/comments/1k0j0l5"
+        },
+        {
+          "title": "[HELP] Looking for original BIOS dump: Zotac RTX 5080 Solid Core OC (SKU: ZT-B50800J2-10P)",
+          "url": "https://www.reddit.com/r/ZOTAC/comments/1s8n828/help_looking_for_original_bios_dump_zotac_rtx/"
+        },
+        {
+          "title": "Asus swaps out the PCIe x16 connector for x8 on new RTX 5060 Ti GPUs - Gigabyte does the opposite with x16 upgrade to its WindForce Max card",
+          "url": "https://www.tomshardware.com/pc-components/gpus/asus-swaps-out-the-pcie-x16-connector-for-x8-on-new-rtx-5060-ti-gpus-gigabyte-does-the-opposite-with-x16-upgrade-to-its-windforce-max-card"
+        },
+        {
+          "title": "Did AMD just make the Ryzen 7 9800X3D obsolete? - A new CPU threatening its supremacy is on the way",
+          "url": "https://www.windowscentral.com/hardware/amd/amd-ryzen-7-9850x3d-announce"
+        },
+        {
+          "title": "Where to buy Nvidia RTX 5080: most places are sold out, but there's still hope!",
+          "url": "https://www.techradar.com/live/news/where-to-buy-nvidia-rtx-5080-today"
+        },
+        {
+          "title": "UPDATE: NVIDIA's RTX 5070 Ti is NOT going away, but don't expect production to be unaffected",
+          "url": "https://www.windowscentral.com/hardware/nvidia/nvidia-kills-rtx-5070-ti-ai-memory-shortages"
+        },
+        {
+          "title": "I review graphics cards for a living, and prices are as low as I've seen all year thanks to these Black Friday GPU deals",
+          "url": "https://www.techradar.com/computing/gpu/i-review-graphics-cards-for-a-living-and-prices-are-as-low-as-ive-seen-all-year-thanks-to-these-black-friday-gpu-deals"
+        },
+        {
+          "title": "I'm a GPU pro, and these Cyber Monday GPU deals finally give us MSRP prices",
+          "url": "https://www.techradar.com/computing/gpu/im-a-gpu-pro-and-these-cyber-monday-gpu-deals-finally-give-us-msrp-prices"
+        },
+        {
+          "title": "AMD",
+          "url": "https://en.wikipedia.org/wiki/AMD"
+        }
+      ]
+    },
+    {
+      "batch": 3,
+      "ids": [
+        "intel-core-ultra9-285k",
+        "amd-ryzen9-9950x3d",
+        "intel-core-ultra7-265k",
+        "intel-core-i9-14900k"
+      ],
+      "queries": [
+        "Intel Core Ultra 9 285K  product image commercial reuse license",
+        "AMD Ryzen 9 9950X3D  product image commercial reuse license",
+        "Intel Core Ultra 7 265K  product image commercial reuse license",
+        "Intel Core i9-14900K  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "Boxed Packaging for Intel® Core™ i9 Processor 14900K and Intel® Core™...",
+          "url": "https://www.intel.com/content/www/us/en/support/articles/000097035/processors.html"
+        },
+        {
+          "title": "Authorized Use of Intel® Logo Label",
+          "url": "https://www.intel.com/content/www/us/en/support/articles/000090589/processors.html"
+        },
+        {
+          "title": "Intel® Core™ i9 processor 14900K",
+          "url": "https://www.intel.com/content/www/us/en/products/sku/236773/intel-core-i9-processor-14900k-36m-cache-up-to-6-00-ghz/ordering.html"
+        },
+        {
+          "title": "AMD Ryzen 9 9950X3D",
+          "url": "https://www.amd.com/content/dam/amd/en/documents/corporate/events/amd-ces-2025-distribution-deck.pdf"
+        },
+        {
+          "title": "Product image credits · Nerdy Deals",
+          "url": "https://nerdy.deals/image-credits"
+        },
+        {
+          "title": "Microsoft Word - PCN818310-00.docx",
+          "url": "https://cdrdv2-public.intel.com/818310/PCN818310-00.pdf"
+        },
+        {
+          "title": "Category:AMD Ryzen 9 9950X3D - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AAMD_Ryzen_9_9950X3D"
+        },
+        {
+          "title": "Boxed Packaging for Intel® Core™ Ultra 9 Processor 285K",
+          "url": "https://www.intel.com/content/www/us/en/support/articles/000099701/processors.html"
+        },
+        {
+          "title": "Media Center - AMD Newsroom",
+          "url": "https://newsroom.amd.com/media-center/"
+        },
+        {
+          "title": "AMD Ryzen Resources for Partners",
+          "url": "https://www.amd.com/en/partner/browse-by-product/ryzen-resources.html"
+        },
+        {
+          "title": "AMD Ryzen 9 9950X3D - Ryzen 9 9000 Series 16-Core 4.3 GHz Socket AM5 170W AMD Radeon Graphics Desktop CPU Processor - 100-100000719WOF - Newegg.com",
+          "url": "https://www.newegg.com/amd-ryzen-9-9000-series-ryzen-9-9950x3d-granite-ridge-socket-am5-desktop-cpu-processor/p/N82E16819113884?Item=N82E16819113884&cm_sp=Homepage_SS-_-P3_19-113-884-_-06152026"
+        },
+        {
+          "title": "Buy AMD Ryzen™ 9 9950X3D Desktop Processor Direct on AMD",
+          "url": "https://amd-shop-us-en-uat.mybigcommerce.com/amd-ryzen-9-9950x3d-processor/"
+        },
+        {
+          "title": "AMD AMD Ryzen 9 9950X3D(100-100000719WOF)",
+          "url": "https://res.cloudinary.com/dlmmuet4k/raw/upload/v1758401792/product-documents/1758401792386.pdf"
+        },
+        {
+          "title": "Intel Core Ultra 9-285K 24-Core 4.6GHz Processor | Best Buy Canada",
+          "url": "https://www.bestbuy.ca/en-ca/product/intel-core-ultra-9-285k-24-core-4-6ghz-processor/18479019"
+        },
+        {
+          "title": "Category:Intel Core Ultra 9 285K - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AIntel_Core_Ultra_9_285K"
+        },
+        {
+          "title": "Intel Core i9-14900K - 3.20/6.00GHz (24 Cores), 36MB, S.1700, UHD grafika, bez hladnjaka || PDF ponudba izdelka",
+          "url": "https://www.hardware.hr/intel-core-i9-14900k-3.20/6.00ghz-24-cores-36mb-s.1700-uhd-grafika-bez-hladnjaka?pdf=1"
+        },
+        {
+          "title": "Product Brief Intel® Core™ Ultra Desktop Processors (Series 2)",
+          "url": "https://cdrdv2-public.intel.com/839617/core-ultra-desktop-processors-series-2-product-brief.pdf"
+        },
+        {
+          "title": "List of Intel Core desktop processors",
+          "url": "https://en.wikipedia.org/wiki/List_of_Intel_Core_desktop_processors"
+        },
+        {
+          "title": "Intel Core",
+          "url": "https://en.wikipedia.org/wiki/Intel_Core"
+        },
+        {
+          "title": "u/AMDOfficial reached out to me and asked if they could use some of the photos I took from my recent 7950X3D upgrade. I said yes and they got back to me with links to them. Very cool moment, thanks AMD!",
+          "url": "https://www.reddit.com/r/Amd/comments/11opzq7"
+        },
+        {
+          "title": "List of Intel processors",
+          "url": "https://en.wikipedia.org/wiki/List_of_Intel_processors"
+        },
+        {
+          "title": "List of AMD processors with 3D graphics",
+          "url": "https://en.wikipedia.org/wiki/List_of_AMD_processors_with_3D_graphics"
+        },
+        {
+          "title": "Intel Core Ultra 7 265K CPU is currently priced at a record low of $269",
+          "url": "https://www.tomshardware.com/pc-components/cpus/intel-core-ultra-7-265k-cpu-is-currently-priced-at-a-record-low-of-usd269"
+        },
+        {
+          "title": "Intel hikes pricing for its flagship desktop PC chips by up to $50 - official Core Ultra 270K Plus and 250K Plus product pages now recommend prices of up to $349 and $229, respectively",
+          "url": "https://www.tomshardware.com/pc-components/cpus/intel-hikes-pricing-for-its-flagship-desktop-pc-chips-by-up-to-usd50-official-core-ultra-270k-plus-and-250k-plus-product-pages-now-recommend-prices-of-up-to-usd349-and-usd229-respectively"
+        },
+        {
+          "title": "i9-14900k and my Intel RMA experience",
+          "url": "https://www.reddit.com/r/intel/comments/1codhv5/i914900k_and_my_intel_rma_experience/"
+        },
+        {
+          "title": "Arrow Lake (microprocessor)",
+          "url": "https://en.wikipedia.org/wiki/Arrow_Lake_%28microprocessor%29"
+        },
+        {
+          "title": "The AMD Ryzen 7 9950X3D OEM CPU Restock",
+          "url": "https://www.reddit.com/r/CentralComputers/comments/1jtz449"
+        },
+        {
+          "title": "AMD Ryzen 9 9950X3D",
+          "url": "https://en.wikipedia.org/wiki/AMD_Ryzen_9_9950X3D"
+        },
+        {
+          "title": "Didnt know we manufacture a ryzen 9 9950x3d💀",
+          "url": "https://www.reddit.com/r/GamersMY/comments/1x22i55/didnt_know_we_manufacture_a_ryzen_9_9950x3d/"
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "ids": [
+        "intel-core-i7-14700k",
+        "amd-ryzen9-9900x-tray",
+        "lexar-ares-gen2-32gb-8000",
+        "kingston-fury-beast-16gb-4800"
+      ],
+      "queries": [
+        "Intel Core i7-14700K  product image commercial reuse license",
+        "AMD Ryzen 9 9900X (Tray)  product image commercial reuse license",
+        "Lexar ARES RGB 2nd Gen DDR5 32GB (2×16GB) 8000  product image commercial reuse license",
+        "Kingston FURY Beast DDR5 16GB 4800  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "PROFESSIONAL",
+          "url": "https://resources.lexar.com/download/205/lexar-brochure/14645/lexar-brochure-en-2025q3.pdf"
+        },
+        {
+          "title": "KF548C38BBAK2-16-B.ai",
+          "url": "https://www.kingston.com/datasheets/KF548C38BBAK2-16.pdf"
+        },
+        {
+          "title": "Buy AMD RYZEN™ 9 9900X Desktop Processor Direct on AMD",
+          "url": "https://shop-us-en.amd.com/amd-ryzen-9-9900x-processor/"
+        },
+        {
+          "title": "Lexar® ARES RGB DDR5 Desktop Memory | Lexar",
+          "url": "https://americas.lexar.com/product/lexar-ares-rgb-ddr5-desktop-memory/"
+        },
+        {
+          "title": "Detail of Super Intel i7 14700k Central Processing Unit, shot in... News Photo - Getty Images",
+          "url": "https://www.gettyimages.co.uk/detail/news-photo/detail-of-super-intel-i7-14700k-central-processing-unit-news-photo/2214125490"
+        },
+        {
+          "title": "Lexar ARES RGB 2nd Gen DDR5 32GB (x 16GB) DDR5 UDIMM 288-pin Gaming Desktop Memory Kit (LD5U16G60C30BR-RGD ) | Staples",
+          "url": "https://www.staples.com/lexar-ares-rgb-2nd-gen-ddr5-32gb-x-16gb-ddr5-udimm-288-pin-gaming-desktop-memory-kit-ld5u16g60c30br-rgd/product_24657052"
+        },
+        {
+          "title": "Lexar Announces Lexar ARES RGB DDR5 Desktop Memory | Lexar Global",
+          "url": "https://www.lexar.com/global/news/Lexar-Announces-Lexar-ARES-RGB-DDR5-Desktop-Memory/"
+        },
+        {
+          "title": "32GB (16GBx2) DDR5 8000MHz RAM (หน่วยความจำ) LEXAR ARES RGB 2ND GEN DDR5 (INTEL XMP) (BLACK) (LD5U16G80C38BR-RGD)",
+          "url": "https://www.jib.co.th/web/product/readProduct/72739/53/"
+        },
+        {
+          "title": "Presentación de PowerPoint",
+          "url": "https://www.amd.com/content/dam/amd/en/documents/corporate/events/computex-2024-keynote.pdf"
+        },
+        {
+          "title": "File:Intel Core i7-14700K (INVADERPC).png - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File%3AIntel_Core_i7-14700K_%28INVADERPC%29.png"
+        },
+        {
+          "title": "KF548C38BB-16 Kingston Parts Search - Kingston Technology",
+          "url": "https://www.kingston.com/en/memory/search/discontinuedmodels?partid=KF548C38BB-16"
+        },
+        {
+          "title": "Lexar ARES Gen2 RGB DDR5 RAM, 32GB 2x16GB, 8000MT/s, Intel XMP 3.0, CL38-48-48-100, 1.45V, LD5U16G80C38BR-RGD in Pakistan | Computer Zone",
+          "url": "https://www.czone.com.pk/lexar-ares-gen2-rgb-ddr5-ram-32gb-2x16gb-8000mts-intel-xmp-30-cl384848100-145v-ld5u16g80c38brrgd"
+        },
+        {
+          "title": "Lexar ARES RGB 2nd Gen - DDR5 - kit - 32 GB: 2 x 16 GB - DIMM 288-pin",
+          "url": "https://www.misco.co.uk/product/Memory/RAM/Lexar/Lexar-ARES-RGB-2nd-Gen---DDR5---kit---32-GB-2-x-1?prodid=11858961"
+        },
+        {
+          "title": "Lexar ARES Gen2 RGB DDR5 32GB Kit (2 x 16GB) 8000MHz Desktop Memory CL38, Intel XMP 3.0, RGB, 1.45V | Lexar | ZAH Computers",
+          "url": "https://zahcomputers.pk/product/lexar-ares-gen2-rgb-ddr5-32gb-kit-2-x-16gb-8000mhz-desktop-memory-cl38-intel-xmp-3-0-rgb-1-45v/"
+        },
+        {
+          "title": "AMD Ryzen 9 9900X OEM AM5 CPU | Mineshop",
+          "url": "https://mineshop.eu/amd-ryzen-9-9900x-oem-am5-processor"
+        },
+        {
+          "title": "Intel Core i7-14700K Processor User Manual",
+          "url": "https://manuals.plus/asin/B0CGJ41C9W.pdf"
+        },
+        {
+          "title": "AMD Ryzen 9 9900X Tray - Gistron",
+          "url": "https://www.gistron.com/info/66900/info.html?pdf=1"
+        },
+        {
+          "title": "List of Intel Core desktop processors",
+          "url": "https://en.wikipedia.org/wiki/List_of_Intel_Core_desktop_processors"
+        },
+        {
+          "title": "Prime 3690-A",
+          "url": "https://www.reddit.com/r/ASUS/comments/18oy4b5"
+        },
+        {
+          "title": "Is this actually selling for 500+ euro? Been sitting around for about 1.5 years",
+          "url": "https://www.reddit.com/r/IrelandGaming/comments/1tjrxk8/is_this_actually_selling_for_500_euro_been/"
+        },
+        {
+          "title": "AMD's Ryzen 9 9900X desktop CPU offered better value at launch than Intel - and now the 12-core beast is even cheaper",
+          "url": "https://www.windowscentral.com/hardware/cpus/amds-ryzen-9-9900x-cpu-jan-2026"
+        },
+        {
+          "title": "List of Intel processors",
+          "url": "https://en.wikipedia.org/wiki/List_of_Intel_processors"
+        },
+        {
+          "title": "Intel Core",
+          "url": "https://en.wikipedia.org/wiki/Intel_Core"
+        },
+        {
+          "title": "[RAM] LEXAR ARES RGB 32GB (2x16GB) DDR5 6000MHz CL30 36 36 68 Black 1.35V [$120/FS][Canada Computers]",
+          "url": "https://www.reddit.com/r/bapcsalescanada/comments/1e2f12r"
+        },
+        {
+          "title": "WTS: Kingston Fury Beast 16gb DDR5 Ram Desktop",
+          "url": "https://www.reddit.com/r/IndianGaming/comments/1ic1vtw"
+        },
+        {
+          "title": "[RAM] Lexar ARES DDR5-6000MT/s RAM 32GB (2x 16) CL30 - $99.99 (Costco)",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/1nw47v0/ram_lexar_ares_ddr56000mts_ram_32gb_2x_16_cl30/"
+        },
+        {
+          "title": "[USA-CA] [H] 32GB KINGSTON FURY 16GB DDR5-4800MHZ [W] PayPal, Local Cash",
+          "url": "https://www.reddit.com/r/hardwareswap/comments/qvkhyt"
+        },
+        {
+          "title": "R7 9800X3D strange package..",
+          "url": "https://www.reddit.com/r/AMDHelp/comments/1lqoh35/r7_9800x3d_strange_package/"
+        },
+        {
+          "title": "[USA-TX] [H] Kingston Fury RAM 2 x 8GB DDR5 4800MHZ, 2 x 8GB DDR5 5200mhz [W] PayPal or Cash",
+          "url": "https://www.reddit.com/r/hardwareswap/comments/1rlhdmw/usatx_h_kingston_fury_ram_2_x_8gb_ddr5_4800mhz_2/"
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "ids": [
+        "lexar-thor-rgb-gen2-64gb-6000",
+        "xpg-spectrix-d35g-32gb-3200-black",
+        "crucial-ct32g48c40u5",
+        "corsair-vengeance-lpx-32gb-3200"
+      ],
+      "queries": [
+        "Lexar THOR RGB 2nd Gen DDR5 64GB (2×32GB) 6000  product image commercial reuse license",
+        "XPG SPECTRIX D35G RGB 32GB (2×16GB) DDR4-3200 Black  product image commercial reuse license",
+        "Crucial CT32G48C40U5 32GB DDR5-4800  product image commercial reuse license",
+        "Corsair VENGEANCE LPX 32GB (2×16GB) DDR4-3200  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "This 32GB Corsair Vengeance LPX DDR4 kit is the $235 memory upgrade I'd give an older PCs",
+          "url": "https://www.techradar.com/pro/this-32gb-corsair-vengeance-lpx-ddr4-kit-is-the-usd205-memory-upgrade-id-give-an-older-pcs"
+        },
+        {
+          "title": "Setup Sheet",
+          "url": "https://resources.lexar.com/download/2276/document/14821/setupsheet_thor-rgb-2nd-gen-ddr5_desktop-memory_202508.pdf"
+        },
+        {
+          "title": "Setup Sheet",
+          "url": "https://resources.lexar.com/download/2339/document/15064/setupsheet_thor-2nd-gen-ddr5_desktop-memory_202509.pdf"
+        },
+        {
+          "title": "Datasheet-XPG SPECTRIX D35G DDR4 RGB Memory",
+          "url": "https://webapi3.adata.com/storage/downloadfile/datasheet_xpg_spectrix_d35g_ddr4_rgb_memory_20250626.pdf"
+        },
+        {
+          "title": "Datasheet-XPG SPECTRIX D35G DDR4 RGB Memory",
+          "url": "https://www.adata.com/storage/downloadfile/datasheet_xpg_spectrix_d35g_ddr4_rgb_memory_v3.pdf"
+        },
+        {
+          "title": "Datasheet-XPG SPECTRIX D35G DDR4 RGB Memory",
+          "url": "https://webapi3.adata.com/storage/downloadfile/datasheet_xpg_spectrix_d35g_ddr4_rgb_memory_20260407.pdf"
+        },
+        {
+          "title": "Corsair Vengeance LPX 32GB (2x16GB) RAM DDR4 3200MHz CMK32GX4M2E3200C1 — retail.era",
+          "url": "https://retail.era.ca/products/corsair-vengeance-lpx-32gb-2x16gb-ram-ddr4-3200mhz-cmk32gx4m2e3200c16"
+        },
+        {
+          "title": "Lexar THOR G2 RGB 64GB Kit (2x32GB) DDR5-6000 C40 | PLE Computers",
+          "url": "https://www.ple.com.au/products/686939/lexar-thor-g2-rgb-64gb-kit-2x32gb-ddr5-6000-c40"
+        },
+        {
+          "title": "VENGEANCE® LPX 32GB (2 x 16GB) DDR4 DRAM 3200MHz C16 Memory Kit - Black",
+          "url": "https://www.corsair.com/us/en/p/memory/cmk32gx4m2e3200c16/vengeance-lpx-32gb-2-x-16gb-ddr4-dram-3200mhz-c16-memory-kit-black-cmk32gx4m2e3200c16?position=5&queryID=14f4ed5911e8bdb06c0b96475fcae063"
+        },
+        {
+          "title": "XPG 32GB (2x16GB) Spectrix D35G Siyah RGB DDR4 3200Mhz CL16 1.35V PC Ram - Vatan Bilgisayar",
+          "url": "https://www.vatanbilgisayar.com/xpg-32gb-2x16gb-spectrix-d35g-siyah-rgb-ddr4-3200mhz-cl16-1-35v-pc-ram.html"
+        },
+        {
+          "title": "Lexar® THOR RGB 2nd Gen DDR5 Desktop Memory | Lexar",
+          "url": "https://americas.lexar.com/es/product/lexar-thor-rgb-2nd-gen-ddr5-desktop-memory/"
+        },
+        {
+          "title": "GAMING DDR4 DRAM",
+          "url": "https://event.adata.com/computex2023/public/computex2023/upload/xpg.pdf"
+        },
+        {
+          "title": "Crucial 32GB PC5-38400 288-pin DDR5 SDRAM UDIMM (CT32G48C40U5)",
+          "url": "https://www.connection.com/product/crucial-crucial-32gb-ddr5-4800-udimm/ct32g48c40u5/41330435"
+        },
+        {
+          "title": "32GB (2x16GB) DDR4 3200MHz CL16 XPG SPECTRIX D35G RGB Memory | Crox Computers",
+          "url": "https://www.crox.com.au/32gb-2x16gb-ddr4-3200mhz-cl16-xpg-spectrix-d35g-rgb-memory-2/"
+        },
+        {
+          "title": "Crucial 32GB DDR5 4800 MHz UDIMM Memory Module CT32G48C40U5 B&H",
+          "url": "https://www.bhphotovideo.com/c/product/1667337-REG/crucial_ct32g48c40u5_32gb_ddr5_4800mhz_cl40.html"
+        },
+        {
+          "title": "XPG SPECTRIX D35G RGB 32GB (2x16GB) 3200MHz CL16 DDR4 - BLACK | TTX TechTroniX",
+          "url": "https://ttx.sa/en/productdetails/xpg-spectrix-d35g-rgb-32gb-2x16gb-3200mhz-cl16-ddr4-black-42382"
+        },
+        {
+          "title": "Integral - DDR5 - module - 32 GB - DIMM 288-pin - 4800 MHz / PC5-38400 - unbuffered - CT32G48C40U5-IN - Currys Business",
+          "url": "https://business.currys.co.uk/catalogue/computing/components-upgrades/memory-ram/integral-ddr5-module-32-gb-dimm-288-pin-4800-mhz-pc5-38400-unbuffered/P281942P"
+        },
+        {
+          "title": "LexarのDDR5メモリ「THOR RGB 2nd Gen」が入荷、64GB×2枚組など3種類 - AKIBA PC Hotline!",
+          "url": "https://akiba-pc.watch.impress.co.jp/docs/news/news/2131772.html"
+        },
+        {
+          "title": "XPG Ram Sync",
+          "url": "https://www.reddit.com/r/SignalRGB/comments/1njc81c"
+        },
+        {
+          "title": "[WTS] Corsair Vengeance 32GB (2 x 16GB) DDR4 RAM",
+          "url": "https://www.reddit.com/r/dubaiclassifieds/comments/1tmirpd/wts_corsair_vengeance_32gb_2_x_16gb_ddr4_ram/"
+        },
+        {
+          "title": "Bought a RAM update to my rig. I have always wondered why after market companies use such dramatic names about their products. I have positive consumer history with Corsair both in memory and headsets.",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/156s511"
+        },
+        {
+          "title": "Two Corsair Vengeance LPX 32GB kits Part Number CMK32GX4M2B3200C16 completely different memory modules. Who to contact?",
+          "url": "https://www.reddit.com/r/Corsair/comments/kvl1qf"
+        },
+        {
+          "title": "Is ₹12.5k fair for a used Corsair Vengeance LPX 32GB DDR4 3200 CL16 stick?",
+          "url": "https://www.reddit.com/r/IndianGaming/comments/1vmnzki/is_125k_fair_for_a_used_corsair_vengeance_lpx/"
+        },
+        {
+          "title": "WTS RAM DDR4 ADATA XPG Spectrix D35G RGB 16GB Kit (2x8GB) 3200MHz CL16 - Fullset Mulus Like New (COD Only)",
+          "url": "https://www.reddit.com/r/jualbeliindonesia/comments/1v48o3c/wts_ram_ddr4_adata_xpg_spectrix_d35g_rgb_16gb_kit/"
+        },
+        {
+          "title": "Is ₹12.5k fair for a used Corsair Vengeance LPX 32GB DDR4 3200 CL16 stick?",
+          "url": "https://www.reddit.com/r/IndianPCHardware/comments/1vmo2ip/is_125k_fair_for_a_used_corsair_vengeance_lpx/"
+        },
+        {
+          "title": "[RAM] Corsair Vengeance LPX 32GB (2X16GB) DDR4 3200 (PC4-25600) C16 1.35V Desktop Memory - Black - $90 ($115 - $25)",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/x0s1ye"
+        },
+        {
+          "title": "[USA-WI][H] Corsair Vengeance RGB Pro 32GB (2x16GB) DDR4-3200 CL16 (CMW32GX4M2E3200C16) [W] Corsair Vengeance LPX 32GB (2x16GB) DDR4, similar low-profile DDR4 kit, PayPal",
+          "url": "https://www.reddit.com/r/hardwareswap/comments/1upgtd7/usawih_corsair_vengeance_rgb_pro_32gb_2x16gb/"
+        },
+        {
+          "title": "[RAM] Corsair Vengeance LPX 32 GB (2 x 16 GB DDR4-3200 CL16, 16-18-18-36 Desktop Memory - $110",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/j9oxfm"
+        },
+        {
+          "title": "Is Corsair vengeance lpx 2x16gb good? If not, then what other relatively budget 32gb ram should I get?",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/s9b8vr"
+        },
+        {
+          "title": "Are these two Corsair RAM sticks fine to run together in one board?",
+          "url": "https://www.reddit.com/r/buildapc/comments/1dgutoc"
+        }
+      ]
+    },
+    {
+      "batch": 6,
+      "ids": [
+        "lexar-ddr5-32gb-5600-udimm",
+        "razer-deathadder-v4-pro-black",
+        "logitech-pro-x2-superstrike",
+        "bloody-w95-ultra-stone-black"
+      ],
+      "queries": [
+        "Lexar 32GB DDR5-5600 UDIMM  product image commercial reuse license",
+        "Razer DeathAdder V4 Pro Black  product image commercial reuse license",
+        "Logitech G PRO X2 SUPERSTRIKE  product image commercial reuse license",
+        "Bloody W95 Ultra Stone Black  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "DDR5 UDIMM",
+          "url": "https://resources.lexar.com/download/1446/documents/14770/lexar-productsheet-ddr5-udimm-en-202508.pdf"
+        },
+        {
+          "title": "Lexar® DDR5 UDIMM Desktop Memory | Lexar",
+          "url": "https://americas.lexar.com/es/product/lexar-ddr5-udimm-desktop-memory/"
+        },
+        {
+          "title": "Enterprise RDIMM - Lexar",
+          "url": "https://lexarenterprise.com/product/enterprise-rdimm/"
+        },
+        {
+          "title": "Find images you can use & share - Computer - Google Search Help",
+          "url": "https://support.google.com/websearch/answer/29508?co=GENIE.Platform%3DDesktop&hl=en-SN"
+        },
+        {
+          "title": "Bloody Official Website",
+          "url": "https://www.bloodyusa.com/terms.php"
+        },
+        {
+          "title": "Produkt",
+          "url": "https://www.ctistore.pl/razer-deathadder-v4-pro-black-kartapdf-304121.html"
+        },
+        {
+          "title": "Lexar DDR5 32GB 5600MHz UDIMM Desktop Memory – CL46, On-die ECC, 288-pin | Gear-up.me UAE",
+          "url": "https://gear-up.me/lexar-ddr5-32gb-5600mhz-cl46-1x32gb.html"
+        },
+        {
+          "title": "Industry’s First Gaming Mouse Featuring Logitech G’s Revolutionary SUPERSTRIKE Technology – logi BLOG",
+          "url": "https://www.logitech.com/blog/2025/09/17/industrys-first-gaming-mouse-featuring-logitech-gs-revolutionary-superstrike-technology/"
+        },
+        {
+          "title": "Lexar 32GB DDR5-5600 U-DIMM Memory Module | Consulta Mayorista B2B | Electronics Trade Hub",
+          "url": "https://electronicstradehub.com/es/products/lexar-ld5u32g56c46st-bgs-u-dimm-ddr5-5600-32gb"
+        },
+        {
+          "title": "Logitech Assets License – Terms & Authorized Use | Logitech",
+          "url": "https://secure.logitech.com/en-ch/tos/logitech-assets-license"
+        },
+        {
+          "title": "LEXAR U-DIMM 5600MHZ CL46 1.1V PC Arbeitsspeicher 32 GB DDR5 | MediaMarkt",
+          "url": "https://www.mediamarkt.de/de/product/_lexar-u-dimm-5600mhz-cl46-11v-pc-arbeitsspeicher-32-gb-ddr5-3066358.html"
+        },
+        {
+          "title": "Razer DeathAdder V4 Pro Review - RTINGS.com",
+          "url": "https://www.rtings.com/mouse/reviews/razer/deathadder-v4-pro"
+        },
+        {
+          "title": "Razer DeathAdder V4 Pro: Fastest Gaming Mouse | Razer United States",
+          "url": "https://raizer.live/gaming-mice/razer-deathadder-v4-pro"
+        },
+        {
+          "title": "Lexar 32GB (32x1) 5600MHz DDR5 Desktop – Black in Iraq",
+          "url": "https://globaliraq.iq/products/lexar-32gb-32x1-5600mhz-ddr5-desktop-black"
+        },
+        {
+          "title": "DEATHADDER V4 PRO",
+          "url": "https://boulanger.scene7.com/is/content/Boulanger/8886419334743_f_0"
+        },
+        {
+          "title": "Lexar ENTERPRISE",
+          "url": "https://lexarenterprise.com/wp-content/uploads/2025/07/LE-PB-RDIMM-DDR5-5600-v1.2-R3.pdf"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://www.generation.sk/stiahnut/172-mob"
+        },
+        {
+          "title": "Miška Razer DeathAdder V4 Pro, črna || PDF ponudba izdelka",
+          "url": "https://www.altstore.si/miska-razer-deathadder-v4-pro-crna?pdf=1"
+        },
+        {
+          "title": "a youtuber from thailand uses deathadder v4 pro on live stream",
+          "url": "https://www.reddit.com/r/MouseReview/comments/1lru66t"
+        },
+        {
+          "title": "List of Logitech products",
+          "url": "https://en.wikipedia.org/wiki/List_of_Logitech_products"
+        },
+        {
+          "title": "got my Razer deathadder v4 pro today",
+          "url": "https://www.reddit.com/r/razer/comments/1v5w0m5/got_my_razer_deathadder_v4_pro_today/"
+        },
+        {
+          "title": "These could be the first leaked images of the new Logitech Superstrike, which looks rather dashing in all-black",
+          "url": "https://www.pcgamer.com/hardware/gaming-mice/these-could-be-the-first-leaked-images-of-the-new-logitech-superstrike-which-looks-rather-dashing-in-all-black/"
+        },
+        {
+          "title": "Razer Deathadder V4 Pro review: \"the esports mouse to beat\"",
+          "url": "https://www.gamesradar.com/hardware/gaming-mice/razer-deathadder-v4-pro-review/"
+        },
+        {
+          "title": "I tested the Logitech G Pro X2 Superstrike and it's the upgrade for competitive gaming we've been waiting for - here's why",
+          "url": "https://www.tomsguide.com/computing/mice/logitech-g-pro-x2-superstrike-review"
+        },
+        {
+          "title": "Análisis de Logitech G Pro X2 SuperStrike, el ratón que cambia las reglas del juego",
+          "url": "https://as.com/meristation/betech/analisis-de-logitech-g-pro-x2-superstrike-el-raton-que-cambia-las-reglas-del-juego-f202603-n/"
+        },
+        {
+          "title": "I didn't think the Razer DeathAdder Pro could get any better...but then I spent two weeks with the DeathAdder V4 Pro",
+          "url": "https://www.techradar.com/computing/mice/razer-deathadder-v4-pro"
+        },
+        {
+          "title": "Logitech finally made a gaming mouse that vibrates on purpose - and it's awesome",
+          "url": "https://www.windowscentral.com/accessories/logitech-pro-x2-superstrike-haptic-mouse-review"
+        },
+        {
+          "title": "Logitech Pro X2 Superstrike - a new Era.",
+          "url": "https://www.reddit.com/r/MouseReview/comments/1r1eeqj/logitech_pro_x2_superstrike_a_new_era/"
+        },
+        {
+          "title": "[NA] DeathAdder V4 Pro has been pulled from Amazon?",
+          "url": "https://www.reddit.com/r/MouseReview/comments/1mdkiaw"
+        },
+        {
+          "title": "Deathadder v4 pro",
+          "url": "https://www.reddit.com/r/razer/comments/1pyoq69/deathadder_v4_pro/"
+        },
+        {
+          "title": "Logitech G PRO X2 SUPERSTRIKE – Buying Back Your Reflexes?",
+          "url": "https://www.reddit.com/r/MouseReview/comments/1rlqc16/logitech_g_pro_x2_superstrike_buying_back_your/"
+        },
+        {
+          "title": "Dave’s got a major upgrade – meet the DeathAdder V4 Pro.",
+          "url": "https://www.reddit.com/r/MouseReview/comments/1lwfbz6/daves_got_a_major_upgrade_meet_the_deathadder_v4/"
+        },
+        {
+          "title": "Deathadder v4 pro review video",
+          "url": "https://www.reddit.com/r/MouseReview/comments/1lw71kr/deathadder_v4_pro_review_video/"
+        },
+        {
+          "title": "Amazon 3rd Party Lexar RAM",
+          "url": "https://www.reddit.com/r/buildapc/comments/1tygc3a/amazon_3rd_party_lexar_ram/"
+        },
+        {
+          "title": "have logitech paid for all of the hyping of PRO X2 SUPERSTRIKE mouse or it genuinely is that good?",
+          "url": "https://www.reddit.com/r/MouseReview/comments/1rdw4zs/have_logitech_paid_for_all_of_the_hyping_of_pro/"
+        },
+        {
+          "title": "[USA-IN] [H] Crucial Pro DDR5 32GB (2x16) 6000 CL36, Lexar ARES RGB DDR5 32GB (2x16) 5600 CL32 [W] PayPal, Local",
+          "url": "https://www.reddit.com/r/hardwareswap/comments/1q4e2s0/usain_h_crucial_pro_ddr5_32gb_2x16_6000_cl36/"
+        },
+        {
+          "title": "Razer DeathAdder V4 Pro Experiences?",
+          "url": "https://www.reddit.com/r/razer/comments/1u59wx0/razer_deathadder_v4_pro_experiences/"
+        }
+      ]
+    },
+    {
+      "batch": 7,
+      "ids": [
+        "bloody-r73-pro-black",
+        "aula-sc380pro-black",
+        "attack-shark-rs3-ultra-white",
+        "fantech-kanata-s-vx9s"
+      ],
+      "queries": [
+        "Bloody R73 Pro Black  product image commercial reuse license",
+        "AULA SC380Pro Black  product image commercial reuse license",
+        "ATTACK SHARK RS3 ULTRA Carbon Fiber White  product image commercial reuse license",
+        "Fantech Kanata S VX9S  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "Fantech Kanata S VX9S - Gaming Mouse",
+          "url": "https://fantechworld.com/products/kanata-s-vx9s"
+        },
+        {
+          "title": "RS3 ULTRA Carbon Fiber Mouse | 52K DPI, 8K Wireless",
+          "url": "https://attackshark.com/products/rs3-ultra-carbon-fiber-gaming-mouse"
+        },
+        {
+          "title": "RS3 ULTRA Carbon Fiber Mouse | PAW3955MAX, 8K, C06 Cable",
+          "url": "https://attackshark.com/products/attack-shark-rs3-ultra-carbon-fiber-wireless-paw3955max-gaming-mouse-with-c06-ultra-led-cable"
+        },
+        {
+          "title": "KANATA S (VX9S) BLACK - ₱389 | Fantech | Mouse | Unicorp | Unicorp Philippines",
+          "url": "https://unicorp.ph/shop/peripherals/mouse/fantech-kanata-s-vx9s-black"
+        },
+        {
+          "title": "Fantech KANATA S VX9S Gaming Mouse Price in Bangladesh | RYANS",
+          "url": "https://www.ryans.com/fantech-kanata-s-vx9s-gaming-mouse"
+        },
+        {
+          "title": "Legal - Copyright and Trademark Guidelines - Apple",
+          "url": "https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html"
+        },
+        {
+          "title": "Find images you can use & share - Computer - Google Search Help",
+          "url": "https://support.google.com/websearch/answer/29508?co=GENIE.Platform%3DDesktop&hl=en-SN"
+        },
+        {
+          "title": "ATTACK SHARK RS3 UlTRA Carbon Fiber Wireless Gaming Mouse | PAW3955MAX Sensor, 52000 DPI, Dual 8K Polling Rate, Nordic 54L15 MCU, 100M Optical Switches, Web Driver White - Newegg.com",
+          "url": "https://www.newegg.com/rs3-ultra-mouse-attack-shark/p/32K-01G6-00014?Item=9SIC6S5M4N8838"
+        },
+        {
+          "title": "VX9s KANATA S White Gaming Mouse 7.200 DPI",
+          "url": "https://www.fantechesports.cl/kanata-s-vx9s-rgb-gaming-mouse-space-edition"
+        },
+        {
+          "title": "Fantech Kanata S VX9s Wired Gaming Mouse | Ambidextrous Design | 7200 DPI | 6 Macro Buttons | Shopee Malaysia",
+          "url": "https://shopee.com.my/Fantech-Kanata-S-VX9s-Wired-Gaming-Mouse-Ambidextrous-Design-7200-DPI-6-Macro-Buttons-i.69443800.7811028013"
+        },
+        {
+          "title": "FANTECH VX9S Kanata S black MIS",
+          "url": "https://www.tehnomedia.rs/proizvod/fantech-vx9s-kanata-s-black"
+        },
+        {
+          "title": "FANTECH KANATA S VX9S Gaming Mouse User Manual",
+          "url": "https://manuals.plus/m/a86a99cd1d774c8d9a0e2f4f2aa0b6ed04940f0227f9f6413db3264058253846_optim.pdf"
+        },
+        {
+          "title": "FANTECH KANATA S VX9S BLACK / WHITE / PINK GAMING MOUSE | KomputerMedan",
+          "url": "https://komputermedan.com/products/fantech-kanata-s-vx9s-black-white-pink-gaming-mouse"
+        },
+        {
+          "title": "YOGYAKART",
+          "url": "https://els.id/wp-content/plugins/im-dhika/pdf/pricelist_1771559416_ELS-20-Februari-2025-Rev_compressed-1.pdf"
+        },
+        {
+          "title": "Kanata VX9 Software",
+          "url": "https://www.reddit.com/r/MouseReview/comments/1jlslpa/kanata_vx9_software/"
+        },
+        {
+          "title": "产品画册",
+          "url": "https://www.tuongan.com/images/users/files/Cataloge%20AULA%202023.pdf"
+        },
+        {
+          "title": "FANTECHTRADE",
+          "url": "https://fantechtrade.com.au/wp-content/uploads/2022/05/FT-Catalogue-V3.1_MEDIUM-RES.pdf"
+        },
+        {
+          "title": "Fantech, Inc. warrants to the original p",
+          "url": "https://cdn.lsicloud.net/kendall/Resources/AD/Fantech_2SHE1021_Manual.pdf"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://shop.datacom.bg/images/products/originals/aula/add/AULA%20PRIME.pdf"
+        }
+      ]
+    },
+    {
+      "batch": 8,
+      "ids": [
+        "logitech-g915-tkl-tactile-carbon",
+        "asus-rog-azoth-m701-nx-red",
+        "attack-shark-r98-he-moonlight",
+        "aula-f2088-air-red-white"
+      ],
+      "queries": [
+        "Logitech G G915 TKL Tactile Carbon Black  product image commercial reuse license",
+        "ASUS ROG Azoth M701 NX Red Black  product image commercial reuse license",
+        "ATTACK SHARK R98 HE Moonlight  product image commercial reuse license",
+        "AULA F2088 Air Red Switch White  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "Logitech G915 TKL Tenkeyless LIGHTSPEED Keyboard | Logitech G",
+          "url": "https://www.logitechg.com/en-us/shop/p/g915-tkl-wireless.920-009660"
+        },
+        {
+          "title": "Teclado G915 TKL Carbon – Logitech Mexico",
+          "url": "https://www.logitech-mexico.com/recursos/imagenes-productos/teclado-g915-tkl-carbon/"
+        },
+        {
+          "title": "R98 HE Keyboard | Rapid Trigger, Magnetic, 8K, Carbon Fiber",
+          "url": "https://attackshark.com/products/attack-shark-r98-he-rapid-trigger-keyboard"
+        },
+        {
+          "title": "R98 HE Keyboard | Rapid Trigger, Magnetic, 8K, Carbon Fiber",
+          "url": "https://attackshark.com/products/attack-shark-r98-he-rapid-trigger-keyboard?variant=52045033013546"
+        },
+        {
+          "title": "Logitech G915 TKL LIGHTSPEED Wireless Backlit Mechanical Tactile Gaming Keyboard - Carbon | Best Buy Canada",
+          "url": "https://www.bestbuy.ca/en-ca/product/logitech-g915-tkl-lightspeed-wireless-backlit-mechanical-tactile-gaming-keyboard-carbon/14662055"
+        },
+        {
+          "title": "AULA F2088AIR (3909) BÀN PHÍM CƠ GAMING 3 MODE (Phiên bản màu Xám+đen gradient/ Red Switch)",
+          "url": "https://www.tuongan.com/banphimgaming/aula-f2088air-3909-ban-phim-co-gaming-3-mode-phien-ban-mau-xamden-gradient-red-switch/"
+        },
+        {
+          "title": "AULA Mechanical Gaming Keyboard F2088 User Manual",
+          "url": "https://manuals.plus/asin/B083FDR9RZ.pdf"
+        },
+        {
+          "title": "Can I use Images on products ordered on demand? | Shutterstock Help Center",
+          "url": "https://www.shutterstock.com/help/en/articles/10617127-can-i-use-images-on-products-ordered-on-demand"
+        },
+        {
+          "title": "ROG Azoth | Compact | Gaming Gaming Keyboards｜ROG - Republic of Gamers｜ROG USA",
+          "url": "https://rog.asus.com/us/keyboards/keyboards/compact/rog-azoth-model/gallery/"
+        },
+        {
+          "title": "Teclado Mecánico Tenkeyless Inalámbrico p",
+          "url": "https://img.cartimex.com/v2/pdf/920-009660.pdf"
+        },
+        {
+          "title": "Moonlight/LICENSE at master · MoonshotAI/Moonlight · GitHub",
+          "url": "https://github.com/MoonshotAI/Moonlight/blob/master/LICENSE"
+        },
+        {
+          "title": "AULA F2088Air 手册 - 电子书在线预览、各类电子书在线制作-云展网平台",
+          "url": "https://www.yunzhan365.com/basic/25022050.html"
+        },
+        {
+          "title": "AULA F2088 Mechanical Keyboard and S12PRO Gaming Mouse Combo User Manual",
+          "url": "https://manuals.plus/asin/B0D2TJSN8T.pdf"
+        },
+        {
+          "title": "920-009503 specifications",
+          "url": "https://device.report/m/b990dae3a10c8f1483ecb7782c4568f3e65998905b9fa01b7a41f99ee269fc89.pdf"
+        },
+        {
+          "title": "ASUS M701 ROG AZOTH/NXRD/CA/PBT ROG Azoth 75% Gaming Keyboard OLED Display Three-Way Control Knob NX Red Switches ABS Keycaps 1000Hz Polling Rate Wired/Bluetooth/RF",
+          "url": "https://www.centralcomputer.com/asus-m701-rog-azoth-nxrd-ca-pbt-rog-azoth-75-gaming-keyboard-oled-display-three-way-control-knob-nx-red-switches.html"
+        },
+        {
+          "title": "ゲーミングカスタムキーボード M701 ROG AZOTH (NXRD/US/PBT 英語配列 黒色・赤軸） | ASUS（エイスース） | ROGAZOTHNXRDUSPBT | Joshin webショップ 通販",
+          "url": "https://joshinweb.jp/diy/52005/0195553875981.html"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://www.tdsynnex.com/na/us/logitech/wp-content/uploads/sites/62/2023/06/EsportsSolutionDoc.pdf"
+        },
+        {
+          "title": "Package Contents",
+          "url": "https://dlcdnets.asus.com/pub/ASUS/Accessory/Keyboard/ROG_Azoth/Q20535_M701_ROG_AZOTH_QSG_WEB.pdf"
+        },
+        {
+          "title": "G915 TKL with English layout and slim enter - part number.",
+          "url": "https://www.reddit.com/r/LogitechG/comments/1ag0a24"
+        },
+        {
+          "title": "G915 X Reporting for duty",
+          "url": "https://www.reddit.com/r/LogitechG/comments/1fksvru/g915_x_reporting_for_duty/"
+        },
+        {
+          "title": "List of Logitech products",
+          "url": "https://en.wikipedia.org/wiki/List_of_Logitech_products"
+        },
+        {
+          "title": "Need help with replacing the 2.4G transceiver for the ROG Azoth wireless keyboard",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/1dai54k"
+        },
+        {
+          "title": "Hands-on with Asus' ROG Azoth Extreme Edition 20 mechanical keyboard - when carbon fiber isn't enough, Asus goes for the gold",
+          "url": "https://www.tomshardware.com/peripherals/gaming-keyboards/hands-on-with-asus-rog-azoth-extreme-edition-20-mechanical-keyboard"
+        },
+        {
+          "title": "\"The best gaming keyboard I've ever used\": ASUS gave its ROG Azoth Extreme a golden glow-up to celebrate 20 years, and the results are spectacular",
+          "url": "https://www.windowscentral.com/hardware/asus/asus-rog-azoth-extreme-edition-20-review"
+        },
+        {
+          "title": "G915 tkl worth buying",
+          "url": "https://www.reddit.com/r/LogitechG/comments/15uk0js"
+        },
+        {
+          "title": "[USA-CA] [H] Logitech G915 TKL Tactile Black [W] Paypal",
+          "url": "https://www.reddit.com/r/hardwareswap/comments/1c98gi5"
+        },
+        {
+          "title": "Is this real G915 TKL from Logitech?",
+          "url": "https://www.reddit.com/r/LogitechG/comments/gnt2jc"
+        },
+        {
+          "title": "G915 tkl request denied, almost 2 weeks of back and front, and Support added an incorrect product to My Product list .",
+          "url": "https://www.reddit.com/r/LogitechG/comments/zxh6po"
+        },
+        {
+          "title": "g915 tkl wireless - opinion",
+          "url": "https://www.reddit.com/r/LogitechG/comments/h9ezxx"
+        },
+        {
+          "title": "White G915 TKL in low light using the contrastic effect - Really happy with how this keyboard looks",
+          "url": "https://www.reddit.com/r/LogitechG/comments/iyotso"
+        },
+        {
+          "title": "USB C On Logitech G915 TKL Wireless",
+          "url": "https://www.reddit.com/r/LogitechG/comments/uxia9q/usb_c_on_logitech_g915_tkl_wireless/"
+        },
+        {
+          "title": "Just Switched to TKL (G915 X TKL Lightspeed) - First Impressions",
+          "url": "https://www.reddit.com/r/LogitechG/comments/1glsww5/just_switched_to_tkl_g915_x_tkl_lightspeed_first/"
+        },
+        {
+          "title": "Am I crazy? Aren't these supposed to be brown, not red, for GL tactial?",
+          "url": "https://www.reddit.com/r/LogitechG/comments/12atpwo"
+        }
+      ]
+    },
+    {
+      "batch": 9,
+      "ids": [
+        "aula-f75-retro-white",
+        "aula-win68-he-max",
+        "aula-win60-he-max",
+        "asus-rog-crosshair-x870e-dark-hero"
+      ],
+      "queries": [
+        "AULA F75 Retro White Milk White Switch  product image commercial reuse license",
+        "AULA WIN68 HE Max Grey & Yellow  product image commercial reuse license",
+        "AULA WIN60 HE Max White & Blue  product image commercial reuse license",
+        "ASUS ROG Crosshair X870E Dark Hero  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "ROG CROSSHAIR X870E DARK HERO | ROG Crosshair | Gaming Motherboards｜ROG - Republic of Gamers｜ROG USA",
+          "url": "https://rog.asus.com/us/motherboards/rog-crosshair/rog-crosshair-x870e-dark-hero/gallery/"
+        },
+        {
+          "title": "AULA win68 Details",
+          "url": "https://www.aulagaming.com/pages/aula-win68-details"
+        },
+        {
+          "title": "AULA F75 Mechanical - Retro White (Milk White Switch) – TechnicaMV",
+          "url": "https://technicamv.com/collections/new-collection/products/aula-f75-mechanical-gaming-keyboard-retro-white-milk-white-switch"
+        },
+        {
+          "title": "ROG Crosshair X870E Hero",
+          "url": "https://press.asus.com/media/photos/155/albums/747/"
+        },
+        {
+          "title": "AULA WIN68 Manuals, Certifications & Specs",
+          "url": "https://device.report/aula/WIN68"
+        },
+        {
+          "title": "AULA-F75-Lite-Retro-White-Multi-Mode-Mechanical-Keyboard-with-Milk-White-Switch",
+          "url": "https://www.itworld.com.my/brand-store/AULA/Gaming-Keyboard/AULA-F75-Lite-Retro-White-Multi-Mode-Mechanical-Keyboard-with-Milk-White-Switch?limit=100"
+        },
+        {
+          "title": "ASUS 90MB1NT0-M0EAY0 - ASUS ROG CROSSHAIR X870E DARK HERO AMD X870E Socket AM5 ATX",
+          "url": "https://www.lambda-tek.com/ASUS-90MB1NT0-M0EAY0-sh/B51896472"
+        },
+        {
+          "title": "AULA WIN60 HE PRO 60% Mechanical Gaming Keyboard User Manual",
+          "url": "https://manuals.plus/asin/B0F62XJWMF.pdf"
+        },
+        {
+          "title": "Aula Argentina",
+          "url": "https://aulagaming.com.ar/products/teclado-aula-f75"
+        },
+        {
+          "title": "Aula F75 75% Wireless Mechanical Keyboard Price in Pakistan | OJ Tech",
+          "url": "https://ojtech.pk/products/aula-f75-75-tri-mode-wireless-mechanical-gaming-keyboard"
+        },
+        {
+          "title": "AULA WIN68 HE Magnetic Gaming Keyboard – Gray/Black – US - Aula Keyboards",
+          "url": "https://aula-keyboards.com/products/aula-wireless-keyboard-win68-he-magnetic-switch-wired-mechanical-gaming-keyboard-gray-black"
+        },
+        {
+          "title": "BÀN PHÍM CƠ GAMING AULA F75 3 MODE (Màu xám trắng / Milk White switch) – PC Gaming, đồ họa, văn phòng, linh kiện vi tính, máy tính bàn chính hãng uy tín tại bmt daklak",
+          "url": "https://maytinhbandaklak.com/products/ban-phim-co-gaming-aula-f75-3-mode-mau-xam-trang-milk-white-switch"
+        },
+        {
+          "title": "Teclado Magnético Gamer Aula WIN68 HE Max, RGB, ANSI, Hall Effect, Switch Magnetic WingChun, 65%, Preto, Cinza e Amarelo",
+          "url": "https://www.terabyteshop.com.br/produto/41867/teclado-magnetico-gamer-aula-win68-he-max-rgb-ansi-hall-effect-switch-magnetic-wingchun-65-preto-cinza-e-amarelo"
+        },
+        {
+          "title": "EPOMAKER Aula WIN60 HE Magnetic Keyboard User Manual",
+          "url": "https://manuals.plus/asin/B0DR2HSYJ3.pdf"
+        },
+        {
+          "title": "E27914_ROG_CROSSHAIR_X870E_DARK_HERO_EM_V2_WEB",
+          "url": "https://www.bhphotovideo.com/lit_files/1287784.pdf"
+        },
+        {
+          "title": "ASUS 90MB1NT0-M0EAY0 - ASUS ROG CROSSHAIR X870E DARK HERO AMD X870E Socket AM5 ATX",
+          "url": "https://www.shoprbc.com/images/products/rbc_icecat/_documents_/581/product-pdf"
+        },
+        {
+          "title": "The Aula F75 Pro is as good as they say",
+          "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1pd9vq8/the_aula_f75_pro_is_as_good_as_they_say/"
+        },
+        {
+          "title": "Aula is resold by Epomaker, it is not an Epomaker product. Epomaker does do the software and this is why there are so many issues with the F75 - See here on how to fix non-responsive Aula",
+          "url": "https://www.reddit.com/r/Epomaker/comments/1hikwum/aula_is_resold_by_epomaker_it_is_not_an_epomaker/"
+        },
+        {
+          "title": "ROG Crosshair X870E Glacial and ROG Crosshair X870E Dark Hero are now available for Pre-Order on the ASUS eShop (US)",
+          "url": "https://www.reddit.com/r/ASUSROG/comments/1qepwwk/rog_crosshair_x870e_glacial_and_rog_crosshair/"
+        },
+        {
+          "title": "AULA F75 KEYBOARD",
+          "url": "https://www.reddit.com/r/keyboards/comments/1ek0n3z"
+        },
+        {
+          "title": "is Aula F75 worth it? Reco me some keebs that has hot swap",
+          "url": "https://www.reddit.com/r/PHbuildapc/comments/1jotkz3/is_aula_f75_worth_it_reco_me_some_keebs_that_has/"
+        },
+        {
+          "title": "Finally joined the AULA gang — F75 ordered! 🥹⌨️",
+          "url": "https://www.reddit.com/r/mkindia/comments/1vluyp6/finally_joined_the_aula_gang_f75_ordered/"
+        },
+        {
+          "title": "The AULA F75 is amazing (my first mechanical keyboard)",
+          "url": "https://www.reddit.com/r/keyboards/comments/1nl97aj/the_aula_f75_is_amazing_my_first_mechanical/"
+        },
+        {
+          "title": "One more Aula F75",
+          "url": "https://www.reddit.com/r/mkindia/comments/1jkag11"
+        },
+        {
+          "title": "Finally bought Aula f75",
+          "url": "https://www.reddit.com/r/mkindia/comments/1x86vcj/finally_bought_aula_f75/"
+        },
+        {
+          "title": "I bought the Aula F75",
+          "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1f8loey/i_bought_the_aula_f75/"
+        },
+        {
+          "title": "Twenty years ago, copper was king for PC enthusiasts so Asus has brought it back for its ROG anniversary. Well, sort of",
+          "url": "https://www.pcgamer.com/hardware/motherboards/twenty-years-ago-copper-was-king-for-pc-enthusiasts-so-asus-has-brought-it-back-for-its-rog-anniversary-well-sort-of/"
+        },
+        {
+          "title": "[WTS] Aula f75, lightly used 4-5 months",
+          "url": "https://www.reddit.com/r/mkindia/comments/1qjumji/wts_aula_f75_lightly_used_45_months/"
+        },
+        {
+          "title": "Aula f75",
+          "url": "https://www.reddit.com/r/keyboards/comments/1lqjx31"
+        },
+        {
+          "title": "Leaked Asus ROG Crosshair X870E Extreme images suggest an imminent launch",
+          "url": "https://www.tomshardware.com/pc-components/motherboards/leaked-asus-rog-crosshair-x870e-extreme-images-suggest-an-imminent-launch"
+        },
+        {
+          "title": "Republic of Gamers",
+          "url": "https://en.wikipedia.org/wiki/Republic_of_Gamers"
+        }
+      ]
+    },
+    {
+      "batch": 10,
+      "ids": [
+        "asus-tuf-b850-plus-wifi",
+        "gigabyte-z890-aorus-pro-ice",
+        "asus-prime-b850-plus-wifi-csm",
+        "asus-prime-b850m-f-csm"
+      ],
+      "queries": [
+        "ASUS TUF Gaming B850-PLUS WIFI  product image commercial reuse license",
+        "GIGABYTE Z890 AORUS PRO ICE  product image commercial reuse license",
+        "ASUS PRIME B850-PLUS WIFI-CSM  product image commercial reuse license",
+        "ASUS PRIME B850M-F-CSM  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "Z890 AORUS PRO ICE Motherboard - GIGABYTE Global",
+          "url": "https://www.gigabyte.com/Motherboard/Z890-AORUS-PRO-ICE"
+        },
+        {
+          "title": "TUF GAMING B850-PLUS WIFI｜Motherboards｜ASUS USA",
+          "url": "https://www.asus.com/us/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850-plus-wifi/"
+        },
+        {
+          "title": "PRIME B850-PLUS WIFI-CSM - Tech Specs｜Motherboards｜ASUS USA",
+          "url": "https://www.asus.com/us/motherboards-components/motherboards/csm/prime-b850-plus-wifi-csm/techspec/"
+        },
+        {
+          "title": "PRIME B850-PLUS WIFI-CSM｜Motherboards｜ASUS Global",
+          "url": "https://www.asus.com/motherboards-components/motherboards/prime/prime-b850-plus-wifi-csm/"
+        },
+        {
+          "title": "PRIME B850-PLUS WIFI-CSM｜Motherboards｜ASUS USA",
+          "url": "https://www.asus.com/us/motherboards-components/motherboards/csm/prime-b850-plus-wifi-csm/"
+        },
+        {
+          "title": "Z890 AORUS PRO ICE",
+          "url": "https://download.gigabyte.com/FileList/Manual/mb_manual_z890-aorus-pro-ice_1004_e.pdf?v=328fc1b7da318d5b05d5f35ffddf5494"
+        },
+        {
+          "title": "PRIME B850-PLUS WIFI-CSM | Motherboards | ASUS India",
+          "url": "https://www.asus.com/in/motherboards-components/motherboards/csm/prime-b850-plus-wifi-csm/"
+        },
+        {
+          "title": "Find images you can use & share - Computer - Google Search Help",
+          "url": "https://support.google.com/websearch/answer/29508?co=GENIE.Platform%3DDesktop&hl=en-SN"
+        },
+        {
+          "title": "Reimaging Rights Licensing Guidance",
+          "url": "https://www.microsoft.com/licensing/guidance/Reimaging-rights"
+        },
+        {
+          "title": "Z890 AORUS PRO ICE",
+          "url": "https://cdn.multitronic.fi/media/a/7/mmo_122502905_1736357458_31_1935372.pdf"
+        },
+        {
+          "title": "Z890 AORUS PRO ICE Motherboard in AORUS Official Store | AORUS Official Store",
+          "url": "https://store.aorus.com/z890-aorus-pro-ice-motherboard/"
+        },
+        {
+          "title": "AMD B850チップセット搭載・ビジネス向けマザーボード「PRIME B850-PLUS WIFI-CSM」が発売｜株式会社アユート PCパーツ・VR・オーディオ等周辺機器 総合代理店",
+          "url": "https://www.aiuto-jp.co.jp/information/entry_2361.php"
+        },
+        {
+          "title": "ASUS PRIME B850M-F CSM AM5 Micro-ATX PCIe 5.0 Board | OJ Tech",
+          "url": "https://www.ojtech.pk/products/asus-prime-b850m-f-csm"
+        },
+        {
+          "title": "Z890 AORUS PRO ICE GIGABYTE Z890 AORUS PRO ICE LGA1851 | Overview, Specs, Details | SHI Government Solutions",
+          "url": "https://texas.gs.shi.com/product/49765068/Z890-AORUS-PRO-ICE-GIGABYTE-Z890-AORUS-PRO-ICE-LGA1851"
+        },
+        {
+          "title": "TUF GAMING B850-PLUS WIFI specifications summary",
+          "url": "https://dlcdnets.asus.com/pub/ASUS/mb/SocketAM5/TUF_GAMING_B850-PLUS_WIFI/E25809_TUF_GAMING_B850-PLUS_WIFI_UM_V2_WEB.pdf?model=TUF+GAMING+B850-PLUS+WIFI"
+        },
+        {
+          "title": "GIGABYTE Z890 AORUS PRO ICE - GIGABYTE Z890 AORUS PRO ICE Motherboard - Supports Intel Core Ultra (Series 2) CPUs, 16+1+2 phases VRM, up to 9500MHz DDR5 (OC), 1xPCIe 5.0 + 4xPCIe 4.0, Wi-Fi 7, 5GbE LAN, Thunderbolt 4",
+          "url": "https://www.shoprbc.com/images/products/rbc_icecat/_documents_/905/product-pdf"
+        },
+        {
+          "title": "ASUS TUF GAMING B850-PLUS WIFI AMD B850 Protsessoripesa AM5 ATX",
+          "url": "https://digipood.eu/storage/energy_labels/539473/information_sheet.pdf"
+        },
+        {
+          "title": "[PROMOTION] PLUS ULTRA, UNLOCKED: Get the Ultimate Gift Box with Eligible GIGABYTE Z890 Motherboards",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1u379uk/promotion_plus_ultra_unlocked_get_the_ultimate/"
+        },
+        {
+          "title": "Z890 AORUS Pro Ice build all in for $468",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1rqjjkl/z890_aorus_pro_ice_build_all_in_for_468/"
+        },
+        {
+          "title": "What is this magnetic Gigabyte accessory that came with my Z890 AORUS Elite WiFi7 ICE?",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1v126bk/what_is_this_magnetic_gigabyte_accessory_that/"
+        },
+        {
+          "title": "[EVENT] GIGABYTE X PCMR \"PLUS ULTRA: Unlocked\" Giveaway Build Highlights",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1ss615e/event_gigabyte_x_pcmr_plus_ultra_unlocked/"
+        },
+        {
+          "title": "ASUS Announces Seven AMD B850 Motherboards Including the TUF Gaming B850-BTF WIFI - With PCIe Gen5 x16 Slot w/ Q-Release, PCIe Gen5 M.2 w/ Q-Latch, 3+ M.2 PCIe NVMe M.2 Slots, 20Gbps or 10Gbps USB-C, WiFi 7 w/ Q-Antenna, 2.5GbE+, Q-Dashboard, Q-LED, Driver Hub, AI Adviser, and more!",
+          "url": "https://www.reddit.com/r/Amd/comments/1huzqah"
+        },
+        {
+          "title": "[Info] Current Active GIGABYTE Promotions (Game Bundles + Eligible Products)",
+          "url": "https://www.reddit.com/r/aorusin/comments/1mutm8n"
+        },
+        {
+          "title": "Gigabyte debuts a consumer motherboard which supports 256GB DDR5 in dual channel - but you may need to sell a kidney to buy the memory",
+          "url": "https://www.techradar.com/pro/gigabyte-debuts-a-consumer-motherboard-that-supports-256gb-ddr5-in-dual-channel-but-you-may-need-to-sell-a-kidney-to-buy-the-memory"
+        },
+        {
+          "title": "[PRODUCT SPOTLIGHT] Building with a GIGABYTE Z890 or B860 Motherboard? Pick Up a Free Game",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1xcsauz/product_spotlight_building_with_a_gigabyte_z890/"
+        },
+        {
+          "title": "[EVENT] Earn a FREE Limited Edition Gift Box with the Purchase of GIGABYTE Z890 Motherboards",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1sz91gu/event_earn_a_free_limited_edition_gift_box_with/"
+        },
+        {
+          "title": "Intel® Motherboard Bundle: Get Star Wars Outlaws Gold Edition",
+          "url": "https://www.reddit.com/r/aorusin/comments/1led50a"
+        },
+        {
+          "title": "Gigabyte Aorus Z890 Pro Ice Motherboard",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1ki7gzv/gigabyte_aorus_z890_pro_ice_motherboard/"
+        },
+        {
+          "title": "Asus TUF B850-PLUS Wifi Antenna",
+          "url": "https://www.reddit.com/r/ASUS/comments/1kd59zo"
+        },
+        {
+          "title": "[Tuf Gaming B850 Plus Wifi MB] Wifi problem",
+          "url": "https://www.reddit.com/r/ASUS/comments/1vvsfwf/tuf_gaming_b850_plus_wifi_mb_wifi_problem/"
+        }
+      ]
+    },
+    {
+      "batch": 11,
+      "ids": [
+        "asus-x870-max-gaming-wifi7",
+        "gigabyte-z890m-gaming-x",
+        "corsair-mp600-mini-1tb",
+        "corsair-mp700-elite-1tb-heatsink"
+      ],
+      "queries": [
+        "ASUS X870 MAX GAMING WIFI7  product image commercial reuse license",
+        "GIGABYTE Z890M GAMING X  product image commercial reuse license",
+        "Corsair MP600 MINI 1TB  product image commercial reuse license",
+        "Corsair MP700 ELITE 1TB with Heatsink  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "SSD: How to: Remove a pre-installed heatsink – Corsair",
+          "url": "https://help.corsair.com/hc/en-us/articles/4407803750669-SSD-How-to-Remove-a-pre-installed-heatsink"
+        },
+        {
+          "title": "Corsair MP700 Elite SSD review: The retail, budget PCIe 5.0 SSD of choice is officially here | Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/ssds/corsair-mp700-elite-ssd-review"
+        },
+        {
+          "title": "Z890M GAMING X",
+          "url": "https://download.gigabyte.com/FileList/Manual/mb_manual_z890m-gaming-x_1002_e.pdf?v=c2f5eed146be0bd186d48e3a085e43c1"
+        },
+        {
+          "title": "Corsair MP700 ELITE 2TB with heatsink NVM",
+          "url": "https://www.littlebit-tech.nl/media/productattach/c/s/cssdf4f000gbmp700ehs.pdf"
+        },
+        {
+          "title": "X870 MAX GAMING WIFI7 SERIES specifications summary",
+          "url": "https://dlcdnets.asus.com/pub/ASUS/mb/SocketAM5/X870_MAX_GAMING_WIFI/E25880_X870_MAX_GAMING_WIFI7_SERIES_EM_WEB.pdf?model=X870+MAX+GAMING+WIFI7"
+        },
+        {
+          "title": "Z890M GAMING X",
+          "url": "https://download.gigabyte.com/FileList/Manual/mb_manual_z890m-gaming-x_1002_e.pdf"
+        },
+        {
+          "title": "GIGABYTE GIGABYTE Z890M GAMING X Motherboard - Supports Intel Core Ultra (Series 2) CPUs, 8+1+2 phases VRM, up to 8800MHz DDR5 (OC), 1xPCIe 5.0 + 2xPCIe 4.0, 2.5GbE LAN, USB 3.2 Gen 1",
+          "url": "https://8ad48833d1ade579b77fe49652b73f00.r2.cloudflarestorage.com/qxlstore-manuals/manuals/g/gigabyte-z890m-gaming-x-motherboard-supports-z890m-gaming-x-user-manual.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=563a487b4bba244c5956338a5de5fcde%2F20260522%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260522T123237Z&X-Amz-Expires=3600&X-Amz-Signature=d8a7c2b89a720e4dfa24034264f9376aa69bf136c662ae596cc385cd92dae395&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B+filename%3D%22gigabyte-z890m-gaming-x-motherboard-supports-z890m-gaming-x-user-manual.pdf%22"
+        },
+        {
+          "title": "X870 MAX GAMING WIFI7｜Motherboards｜ASUS USA",
+          "url": "https://www.asus.com/us/motherboards-components/motherboards/others/x870-max-gaming-wifi7/"
+        },
+        {
+          "title": "Can I use the photos and videos for a commercial project? – Pexels",
+          "url": "https://help.pexels.com/hc/en-us/articles/360042295214-Can-I-use-the-photos-and-videos-for-a-commercial-project"
+        },
+        {
+          "title": "CORSAIR MP700 ELITE 1TB WITH HEATSINK | Shopee Thailand",
+          "url": "https://shopee.co.th/product/22858428/29521303289"
+        },
+        {
+          "title": "Corsair MP700 Elite 1 To (avec dissipateur) - SSD - Top Achat",
+          "url": "https://www.topachat.com/pages/detail2_cat_est_micro_puis_rubrique_est_w_ssd_puis_ref_est_in20025395.html"
+        },
+        {
+          "title": "Gigabyte Z890M GAMING X | Overview, Specs, Details | SHI Government Solutions",
+          "url": "https://texas.gs.shi.com/product/49353688/Gigabyte-Z890M-GAMING-X"
+        },
+        {
+          "title": "Corsair MP700 ELITE w/ Heatsink PCIe Gen5 NVMe M.2 SSD - 1TB | PLE Computers",
+          "url": "https://ple.lol/products/670815/corsair-mp700-elite-w-heatsink-pcie-gen5-nvme-m2-ssd-1tb"
+        },
+        {
+          "title": "Z890M GAMING X - Specification | Motherboard GIGABYTE",
+          "url": "https://en.gigabyte.ru/products/page/mb/z890m_gaming_x/sp"
+        },
+        {
+          "title": "SSD 1Tb Corsair MP700 Elite NVMe M.2 Type 2280 with heatsink - Ibertronica",
+          "url": "https://ibertronica.es/en/ssd-1tb-corsair-mp700-elite-nvme-m2-type-2280-con-disipador"
+        },
+        {
+          "title": "X870 MAX GAMING WIFI7 SERIES",
+          "url": "https://dlcdnets.asus.com/pub/ASUS/mb/SocketAM5/X870_MAX_GAMING_WIFI/J25880_X870_MAX_GAMING_WIFI7_Series_EM_WEB.pdf?model=X870+MAX+GAMING+WIFI7+W"
+        },
+        {
+          "title": "Z890M GAMING X Mainboards Spezifikation - GIGABYTE Germany",
+          "url": "https://www.gigabyte.com/de/Motherboard/Z890M-GAMING-X/sp"
+        },
+        {
+          "title": "Corsair MP600 MINI 1TB M.2 NVMe PCIe x4 Gen4 2 SSD – M.2 2230  - Not being detected",
+          "url": "https://www.reddit.com/r/Corsair/comments/1eqz8e0"
+        },
+        {
+          "title": "[SSD] Corsair MP700 Elite 1TB PCIe 5.0 x4 NVMe M.2 SSD – Up to 10,000MB/sec – High-Density 3D TLC NAND - $110",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/1iju92g"
+        },
+        {
+          "title": "Corsair MP600 Mini - Newly released performance SSD",
+          "url": "https://www.reddit.com/r/Surface/comments/1dszou3"
+        },
+        {
+          "title": "*NEW* MP600 Mini",
+          "url": "https://www.reddit.com/r/Corsair/comments/12ynkl8"
+        },
+        {
+          "title": "Looking for M2 SSD heatsink bundled with Corsair MP700",
+          "url": "https://www.reddit.com/r/Corsair/comments/1ixvgzj"
+        },
+        {
+          "title": "Just installed a new Corsair MP600 Mini 1TB!",
+          "url": "https://www.reddit.com/r/Surface/comments/135wtjc"
+        },
+        {
+          "title": "Corsair MP600 Mini Update!",
+          "url": "https://www.reddit.com/r/Surface/comments/13kugou"
+        },
+        {
+          "title": "[PROMOTION] PLUS ULTRA, UNLOCKED: Get the Ultimate Gift Box with Eligible GIGABYTE Z890 Motherboards",
+          "url": "https://www.reddit.com/r/gigabyte/comments/1u379uk/promotion_plus_ultra_unlocked_get_the_ultimate/"
+        },
+        {
+          "title": "Instructions said to REMOVE the SSD sticker with model name.. why?",
+          "url": "https://www.reddit.com/r/buildapc/comments/1h7rog1"
+        },
+        {
+          "title": "[SSD] Corsair MP600 Mini 1TB M.2 NVMe PCIe x4 Gen4 2 SSD – M.2 2230 $75",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/1j4c6gj"
+        },
+        {
+          "title": "Corsair MP600 Mini power drain over OEM?  SP11",
+          "url": "https://www.reddit.com/r/Surface/comments/1g1r18p"
+        },
+        {
+          "title": "SP11 SSD upgrade: Corsair MP600 Mini vs MP600 Core Mini?",
+          "url": "https://www.reddit.com/r/Surface/comments/1eattnh"
+        }
+      ]
+    },
+    {
+      "batch": 12,
+      "ids": [
+        "kingston-kc3000-1tb",
+        "lexar-nq780-512gb",
+        "lexar-nq780-2tb",
+        "lexar-sl500-1tb-black"
+      ],
+      "queries": [
+        "Kingston KC3000 1TB  product image commercial reuse license",
+        "Lexar NQ780 512GB  product image commercial reuse license",
+        "Lexar NQ780 2TB  product image commercial reuse license",
+        "Lexar SL500 1TB Black  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "Sp",
+          "url": "https://resources.lexar.com/download/2152/document/13671/productsheet-nq780-pcie-4-0-ssd.pdf"
+        },
+        {
+          "title": "Setup Sheet",
+          "url": "https://resources.lexar.com/download/2152/document/14414/setupsheet-nq780-pcie-4-0-ssd.pdf"
+        },
+        {
+          "title": "KC3000 PCIe 4.0 NVMe M.2 SSD High-performance for desktop and laptop PCs – Kingston Technology",
+          "url": "https://www.kingston.com/datasheets/KC3000_en.pdf"
+        },
+        {
+          "title": "Lexar NQ780 PCIe Gen4 NVMe M.2 SSD - 512GB | PLE Computers",
+          "url": "https://www.ple.com.au/Products/685885/Lexar-NQ780-PCIe-Gen4-NVMe-M2-SSD--512GB"
+        },
+        {
+          "title": "Lexar NQ780 2TB PCIe Gen 4x4 NVMe M.2 Internal SSD - Best Buy",
+          "url": "https://www.bestbuy.com/product/lexar-nq780-2tb-pcie-gen-4x4-nvme-m-2-internal-ssd/J36XPK4K84/sku/12565017"
+        },
+        {
+          "title": "Configure a PC with Kingston KC3000 1TB Gen4 M.2 SSD",
+          "url": "https://www.pugetsystems.com/parts/Hard-Drive/Kingston-KC3000-1TB-Gen4-M-2-SSD-15056/"
+        },
+        {
+          "title": "1TB LEXAR SL500 (BLACK) | ComputerG",
+          "url": "https://www.computerg.shop/shop/1tb-lexar-sl500-black-lsl500x001t-rnbng-65944"
+        },
+        {
+          "title": "Lexar® SL500 Portable SSD | Lexar",
+          "url": "https://1410dd2bdd37e05ebf19-a2305060cc55ab8db83b1ef4b8835a6b.ssl.cf5.rackcdn.com/tl1ihYNA_Hqx7Hdfo5-kVw"
+        },
+        {
+          "title": "Lexar-ProductSheet-PortableSSD-SL600-EN-202306",
+          "url": "https://resources.lexar.com/download/1330/documents/14743/lexar-productsheet-sl500-en-final.pdf"
+        },
+        {
+          "title": "Kingston KC3000 1TB — specifications, compatibility and prices · Rigwise",
+          "url": "https://www.rigwise.io/products/storage/kingston-kc3000-1tb"
+        },
+        {
+          "title": "Lexar SL500 USB 3.2 Gen 2 Type-C Portable External SSD",
+          "url": "https://www.adorama.com/lexar-sl500-portable-external-ssd-usb-3-2-gen-2-type-c/p/illsl500x001"
+        },
+        {
+          "title": "Kingston KC3000 PCIe 4.0 M.2 1TB Solid-state Drive | Sweetwater",
+          "url": "https://www.sweetwater.com/store/detail/KC3000-1TB--kingston-kc3000-pcie-4.0-m2-1tb-solid-state-drive"
+        },
+        {
+          "title": "1TB LEXAR SL500 BLACK | CSSI.CO.ZA",
+          "url": "https://shop.cssi.co.za/959130-1tb-lexar-sl500-black-en"
+        },
+        {
+          "title": "Lexar SSD NQ780 Pcie 4.0 NVMe M.2 512GB",
+          "url": "https://www.mbizmarket.co.id/catalog/detail/lexar-ssd-nq780-pcie-40-nvme-m2-512gb-5819034-9217198.html"
+        },
+        {
+          "title": "Product Details",
+          "url": "https://mtcdubai.com/en/product/lexar-2tb-nq780-m2-2280-pcie-gen-44-nvme-ssd"
+        },
+        {
+          "title": "Pauta Distribuição | Distribuidora B2B de tecnologia",
+          "url": "https://pauta.com.br/ssd-lexar-nq780-512gb-m2-2280-nvme-pcie-gen-4x4-lnq780x512g-rnnng"
+        },
+        {
+          "title": "Lexar teams up with an unlikely partner for its latest portable storage products",
+          "url": "https://www.digitalcameraworld.com/cameras/storage/lexar-teams-up-with-an-unlikely-partner-for-its-latest-portable-storage-products"
+        },
+        {
+          "title": "Lexar NQ780 4 TB NVMe SSD review",
+          "url": "https://www.pcgamer.com/hardware/ssds/lexar-nq780-4-tb-nvme-ssd-review/"
+        },
+        {
+          "title": "I reviewed the Lexar SL500 Portable SSD Magnetic Set and it might be my favorite iPhone accessory ever",
+          "url": "https://www.techradar.com/pro/lexar-sl500-portable-ssd-magnetic-set-review"
+        },
+        {
+          "title": "Kingston KC3000, is there a catch?",
+          "url": "https://www.reddit.com/r/buildapc/comments/x50iv6/kingston_kc3000_is_there_a_catch/"
+        },
+        {
+          "title": "Fake Kingston SSD M.2?",
+          "url": "https://www.reddit.com/r/computers/comments/1s82xjh/fake_kingston_ssd_m2/"
+        },
+        {
+          "title": "[USA-CA] [H] Kingston KC3000 1TB NVMe (Sealed ×5) [W] PayPal G&S / Local Cash",
+          "url": "https://www.reddit.com/r/hardwareswap/comments/1qelbk3/usaca_h_kingston_kc3000_1tb_nvme_sealed_5_w/"
+        },
+        {
+          "title": "Is there a problem with my KC3000?",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/17qmm7z"
+        },
+        {
+          "title": "Is lexar a reliable brand for ssd?",
+          "url": "https://www.reddit.com/r/PHbuildapc/comments/1vf1r49/is_lexar_a_reliable_brand_for_ssd/"
+        },
+        {
+          "title": "[SSD] 1TB KC3000 - High Performance NVMe M.2 Internal SSD up to 7000MB/s – $93 Subscribe to get 10% Off",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/wl08oi"
+        },
+        {
+          "title": "[SSD] 1TB Kingston KC3000 M.2 NVMe SSD - $90.99",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/ynfk4k/ssd_1tb_kingston_kc3000_m2_nvme_ssd_9099/"
+        },
+        {
+          "title": "[SSD] Kingston 1TB KC3000 PCIe 4.0 NVMe M.2 SSD - $92.70 ($102.99 - 10% w/ code WELCOME10)",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/yfxnvu"
+        },
+        {
+          "title": "Is it some cheap trick by Kingston?? can someone verify",
+          "url": "https://www.reddit.com/r/IndianGaming/comments/yyc9yv"
+        },
+        {
+          "title": "Fake or not (kingston)",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/1ii7elo"
+        },
+        {
+          "title": "[SSD] 1TB Kingston KC3000 M.2 NVMe SSD - $92.69 w/ code WELCOME10",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/x03y6u"
+        },
+        {
+          "title": "[SSD] Kingston KC3000 M.2 2280 1TB PCIe 4.0 x4 NVMe 3D TLC - $92.99",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/yl3vdl"
+        }
+      ]
+    },
+    {
+      "batch": 13,
+      "ids": [
+        "lenovo-ln950-4tb",
+        "lg-ultragear-27gx790b-b",
+        "ktc-m27t6",
+        "lenovo-legion-r45w-30"
+      ],
+      "queries": [
+        "Lenovo LN950 4TB (5SD1P69443)  product image commercial reuse license",
+        "LG UltraGear 27GX790B-B  product image commercial reuse license",
+        "KTC M27T6  product image commercial reuse license",
+        "Lenovo Legion R45W-30  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "27 Inch UltraGear OLED Gaming Monitor - 27GX790B-B | LG USA",
+          "url": "https://www.lg.com/us/monitors/lg-27gx790b-b-gaming-monitor"
+        },
+        {
+          "title": "Lenovo R45w-30 - Overview - Lenovo Support PR",
+          "url": "https://pcsupport.lenovo.com/pr/en/solutions/r45w_30"
+        },
+        {
+          "title": "Lenovo LN950 Specifications",
+          "url": "https://www.lenovo-storage.com/wp-content/uploads/2025/06/Lenovo-LN950-Specifications.pdf"
+        },
+        {
+          "title": "Lenovo Legion R45w-30 44.5-inch VA Curved DualQHD 170Hz USB-C Docking Gaming Monitor | 67B1GAC3US | Lenovo US",
+          "url": "https://www.lenovo.com/us/en/p/accessories-and-software/monitors/gaming/67b1gac3us?bc_pid=NjdCMUdBQzNVUw%3D%3D"
+        },
+        {
+          "title": "深圳市康特智能显示有限公司",
+          "url": "https://www.ktcplay.com/goods/detail/1959810111461429249"
+        },
+        {
+          "title": "LG UltraGear 27-inch 4th Gen. OLED QHD Gaming Monitorㅣ27GX790B with Dual-Mode(720Hz@HD, 540Hz@QHD), 0.02ms(GtG), DP2.1, VESA DisplayHDR™ True Black 500 - 27GX790B-B | LG Canada",
+          "url": "https://www.lg.com/ca_en/monitors/gaming/27gx790b-b/"
+        },
+        {
+          "title": "Lenovo LN950 in Peru | Pana Compu",
+          "url": "https://www.panacompu.com/peru/en/product-information/lenovo-ln950-solid-state-drive-4tb-m2-2280"
+        },
+        {
+          "title": "Lenovo LN950 Specifications",
+          "url": "https://www.lenovo-storage.com/wp-content/uploads/2025/08/Lenovo-LN950-Specifications.pdf"
+        },
+        {
+          "title": "1e855365dfab30ad45ce9d576768a307232000dbddc22e52d50dc6b584f7866c_optim.pdf",
+          "url": "https://manuals.plus/wp-content/plugins/pdfjs-viewer-shortcode/pdfjs/web/viewer.php?attachment_id=&dButton=true&file=%2Fm%2F1e855365dfab30ad45ce9d576768a307232000dbddc22e52d50dc6b584f7866c_optim.pdf&oButton=false&pButton=true&sButton=false"
+        },
+        {
+          "title": "Lenovo Legion R45w-30 45-inch mega-wide gaming monitor review: Like a window into virtual worlds | Tom's Hardware",
+          "url": "https://www.tomshardware.com/monitors/gaming-monitors/lenovo-legion-r45w-30-45-inch-mega-wide-gaming-monitor-review"
+        },
+        {
+          "title": "価格.com - LG UltraGear 27GX790B-B [26.5インチ] の製品画像",
+          "url": "https://kakaku.com/item/K0001725618/images/"
+        },
+        {
+          "title": "FAQ – Lenovo Brand World",
+          "url": "https://brandworld.lenovo.com/faq/"
+        },
+        {
+          "title": "‎LG 27GX790B Manuals, Certifications & Specs",
+          "url": "https://device.report/lg/27gx790b"
+        },
+        {
+          "title": "KTC M27T6 QHD Mini LED Gaming Monitor User Manual",
+          "url": "https://manuals.plus/asin/B0F7Q22V3W.pdf"
+        },
+        {
+          "title": "報道関",
+          "url": "https://www.lg.com/content/dam/channel/wcms/jp/press-release/pdf/20260210-lg-ultragear-27gx790b.pdf"
+        },
+        {
+          "title": "Label_EK",
+          "url": "https://www.lg.com/uk/lgecs.downloadFile.ldwf?DOC_ID=20251121267715&FILE_NAME=27GX790B_UK+new+Erp+label.pdf&GSRI_DOC=GSRI&ORIGINAL_NAME_b1_a1=27GX790B_UK+new+Erp+label%5B20251121022024607%5D.pdf&SPEC_DOWNLOAD=N&TC=DwnCmd"
+        },
+        {
+          "title": "MFL05832901_27GX790B_WW_00.pdf",
+          "url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=bTQIZ0ew4ahM3x64rrUSMw"
+        },
+        {
+          "title": "Question about an used LG 27GX790B-B",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1tpld3m/question_about_an_used_lg_27gx790bb/"
+        },
+        {
+          "title": "I just tested the world's fastest OLED gaming monitor - and its refresh rates are insane",
+          "url": "https://www.tomsguide.com/computing/monitors/lg-ultragear-27gx790b-b-review"
+        },
+        {
+          "title": "LG UltraGear OLED 27GX790B-B gaming monitor review: Basically flawless",
+          "url": "https://www.t3.com/tech/monitors/lg-ultragear-oled-27gx790b-b-gaming-monitor-review-basically-flawless"
+        },
+        {
+          "title": "If you like high-refresh 1440p gaming monitors, how about the latest 540 Hz LG OLED with a 200 Hz IPS model thrown in for free?",
+          "url": "https://www.pcgamer.com/hardware/gaming-monitors/if-you-like-high-refresh-1440p-gaming-monitors-how-about-the-latest-540-hz-lg-oled-with-a-200-hz-ips-model-thrown-in-for-free/"
+        },
+        {
+          "title": "Thinking of joining the Ultrawide Master Race - Lenovo Legion R45w-30",
+          "url": "https://www.reddit.com/r/ultrawidemasterrace/comments/17wj6i7"
+        },
+        {
+          "title": "Question about an used LG 27GX790B-B",
+          "url": "https://www.reddit.com/r/Monitors/comments/1tpletu/question_about_an_used_lg_27gx790bb/"
+        },
+        {
+          "title": "I tested the LG UltraGear 27GX790B-B 540Hz Tandem OLED — Ask Me Anything",
+          "url": "https://www.reddit.com/r/LGOLED/comments/1vsgul3/i_tested_the_lg_ultragear_27gx790bb_540hz_tandem/"
+        },
+        {
+          "title": "[LG UltraGear 27GX790B-B] What Actually Matters in Real-World Use",
+          "url": "https://www.reddit.com/r/LG_UserHub/comments/1qpu4nr/lg_ultragear_27gx790bb_what_actually_matters_in/"
+        },
+        {
+          "title": "Does anyone have experience with the Lenovo Legion R45w-30",
+          "url": "https://www.reddit.com/r/ultrawidemasterrace/comments/1sq2341/does_anyone_have_experience_with_the_lenovo/"
+        },
+        {
+          "title": "Lenovo Legion R45W-30",
+          "url": "https://www.reddit.com/r/ultrawidemasterrace/comments/1osjay5/lenovo_legion_r45w30/"
+        },
+        {
+          "title": "For anyone who got the LG 27GX790B-B 540hz OLED - how is it?",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1qy3qms/for_anyone_who_got_the_lg_27gx790bb_540hz_oled/"
+        },
+        {
+          "title": "Do Lenovo Legions or any Lenovo laptops come with official Windows licenses?",
+          "url": "https://www.reddit.com/r/LenovoLegion/comments/1l1qo2t"
+        },
+        {
+          "title": "Mura effect normal on the LG 27GX790B-B?",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1v1cxw9/mura_effect_normal_on_the_lg_27gx790bb/"
+        },
+        {
+          "title": "Is the 27GX790B-B worth it for $550? or should I spend more to get an glossy oled 500+hz 1440p?",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1r7ul9u/is_the_27gx790bb_worth_it_for_550_or_should_i/"
+        },
+        {
+          "title": "Lenovo Legion R45w-30",
+          "url": "https://www.reddit.com/r/ultrawidemasterrace/comments/18xavgl"
+        }
+      ]
+    },
+    {
+      "batch": 14,
+      "ids": [
+        "msi-mag-274qp-qd-oled-x24",
+        "philips-evnia-27m2n3500nf-00",
+        "lenovo-legion-r27qc-30",
+        "acer-ed273-x0"
+      ],
+      "queries": [
+        "MSI MAG 274QP QD-OLED X24  product image commercial reuse license",
+        "Philips Evnia 27M2N3500NF/00  product image commercial reuse license",
+        "Lenovo Legion R27QC-30  product image commercial reuse license",
+        "Acer ED273 X0  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "MAG 274QP QD-OLED X24",
+          "url": "https://storage-asset.msi.com/datasheet/monitor/us/MAG-274QP-QD-OLED-X24.pdf"
+        },
+        {
+          "title": "MAG 274QP QD-OLED X24 | 27 Inch Gaming Monitor | MSI Global",
+          "url": "https://www.msi.com/Monitor/MAG-274QP-QD-OLED-X24"
+        },
+        {
+          "title": "Register your",
+          "url": "https://www.documents.philips.com/assets/20251104/daf8b19e68ba4f78bf20b38b0054f2b2.pdf"
+        },
+        {
+          "title": "27M2N3500NF/00 Philips Quad HD gaming monitor",
+          "url": "https://www.documents.philips.com/assets/20251120/972ee67b7c124adaa96cb39b009e3942.pdf"
+        },
+        {
+          "title": "Lenovo LEGION",
+          "url": "https://news.lenovo.com/wp-content/uploads/2024/08/9127_DS_Q1-25_Legion-R27qc-30-Monitor_Gaming_D3_250624.pdf"
+        },
+        {
+          "title": "MSI MAG 274QP QD-OLED X24 | パソコン工房〖公式通販〗",
+          "url": "https://www.pc-koubou.jp/products/detail.php?product_id=1228610"
+        },
+        {
+          "title": "Specifications - Lenovo PSREF",
+          "url": "https://psref.lenovo.com/Detail/Legion_R27qc_30_Monitor?M=67C6GAC2AU"
+        },
+        {
+          "title": "MSI MAG 274QP QD-OLED X24 26.5\" 1440p HDR MAG 274QP QD-OLED X24",
+          "url": "https://www.bhphotovideo.com/c/product/1945150-REG/msi_mag_274qp_qd_oled_x24_27_qhd_oled_x24.html"
+        },
+        {
+          "title": "27M2N3500NF/00",
+          "url": "https://www.evnia.philips/pl/monitors/27m2n3500nf_00"
+        },
+        {
+          "title": "Product - Lenovo PSREF",
+          "url": "https://psrefstuff.lenovo.com/Product/Lenovo%20Monitors/Legion_R27qc_30_Monitor"
+        },
+        {
+          "title": "Lenovo Legion R27qc-30 - Overview - Lenovo Support CM",
+          "url": "https://support.lenovo.com/cm/he/solutions/pd500762-lenovo-legion-r27qc-30-overview"
+        },
+        {
+          "title": "MSI MAG 274QP QD-OLED X24 27\" QHD 240Hz Flat Gaming Monitor - MSI-US Official Store",
+          "url": "https://us-store.msi.com/MAG-Series-Monitor/MAG-274QP-QD-OLED-X24?limit=24&order=DESC&sort=p.price"
+        },
+        {
+          "title": "Evnia Gaming monitor Quad HD gaming monitor 27M2N3500NF/00 | Philips",
+          "url": "https://www.philips.co.uk/c-p/27M2N3500NF_00/-"
+        },
+        {
+          "title": "Nitro ED3 - ED273 X0 Tech Specs | LCD Monitor | Acer United Kingdom",
+          "url": "https://www.acer.com/gb-en/monitors/gaming/nitro-ed3/pdp/UM.HE3EE.018"
+        },
+        {
+          "title": "Legion R27qc-30 27\" Lightning-fast Refresh Rate & Response Time Gaming Monitor | Lenovo Sri Lanka",
+          "url": "https://www.lenovo.com/lk/en/p/monitors/legion/legion-r27qc-30-27-inch-monitor/mong0001"
+        },
+        {
+          "title": "MSI MAG 274QP QD-OLED X24",
+          "url": "https://jp.msi.com/Monitor/MAG-274QP-QD-OLED-X24"
+        },
+        {
+          "title": "[USA-IN] [H] MSI MAG 274QP OLED Monitor [W] PayPal, Local Cash",
+          "url": "https://www.reddit.com/r/hardwareswap/comments/1sy6woz/usain_h_msi_mag_274qp_oled_monitor_w_paypal_local/"
+        },
+        {
+          "title": "Msi mag 274QP QD OLED x24",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1qzorv7/msi_mag_274qp_qd_oled_x24/"
+        },
+        {
+          "title": "My 2-Month MSI RMA Nightmare: From a promised OLED \"Upgrade\" to a dirty, downgraded replacement",
+          "url": "https://www.reddit.com/r/MSI_Gaming/comments/1s4lz3y/my_2month_msi_rma_nightmare_from_a_promised_oled/"
+        },
+        {
+          "title": "MSI MAG 274QP QD-OLED X24 – Honest Review After Use (240Hz 1440p OLED)",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1uku1pw/msi_mag_274qp_qdoled_x24_honest_review_after_use/"
+        },
+        {
+          "title": "MAG 274QP QD-OLED X24 blue/cloudy stains",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1tjjza4/mag_274qp_qdoled_x24_bluecloudy_stains/"
+        },
+        {
+          "title": "Is the MSI - MAG 274QP QD-OLED X24 a good monitor",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1w1r6kv/is_the_msi_mag_274qp_qdoled_x24_a_good_monitor/"
+        },
+        {
+          "title": "Monitor RMA: should i take this replacement?",
+          "url": "https://www.reddit.com/r/MSI_Gaming/comments/1uyu4z2/monitor_rma_should_i_take_this_replacement/"
+        },
+        {
+          "title": "What is up with the MAG 271QP QD-OLED X24?",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1jnldyd"
+        },
+        {
+          "title": "Quick Review: MSI MAG 274QP QD-OLED X24",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1uiuvez/quick_review_msi_mag_274qp_qdoled_x24/"
+        },
+        {
+          "title": "Is the MSI MAG 274QP QD-OLED X24 a good buy for €400? Worried about a bright room.",
+          "url": "https://www.reddit.com/r/OLED_Gaming/comments/1v1k98n/is_the_msi_mag_274qp_qdoled_x24_a_good_buy_for/"
+        },
+        {
+          "title": "[MONITOR] MSI MAG 274QP QD-OLED X24 27\" QHD 240Hz - $386.99 (Member Discount)",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/1qy1ir5/monitor_msi_mag_274qp_qdoled_x24_27_qhd_240hz/"
+        },
+        {
+          "title": "Hi, everyone is there anybody here updated thier MAG 274QP QD OLED x24 firmware? I didn’t know how to do it. Please help.",
+          "url": "https://www.reddit.com/r/MSI_Gaming/comments/1uji68h/hi_everyone_is_there_anybody_here_updated_thier/"
+        }
+      ]
+    },
+    {
+      "batch": 15,
+      "ids": [
+        "lian-li-edge-platinum-v2-1350-black",
+        "asus-tuf-1000g-evo",
+        "asus-tuf-850g-evo",
+        "msi-pag-g850ls-pcie5"
+      ],
+      "queries": [
+        "Lian Li EDGE Platinum V2 1350W Black  product image commercial reuse license",
+        "ASUS TUF Gaming 1000G EVO  product image commercial reuse license",
+        "ASUS TUF Gaming 850G EVO  product image commercial reuse license",
+        "MSI PAG G850LS PCIE5  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "Lian Li Edge Platinum V2 1350W PSU, Ultimate Power & Efficiency Black - Best Buy",
+          "url": "https://www.bestbuy.com/product/lian-li-edge-platinum-v2-1350w-psu-ultimate-power-efficiency-black/J39TC2ZY73"
+        },
+        {
+          "title": "EDGE Platinum V2 1350W with EDGE Hub ADV Black [1350W /ATX /Cybenetics Platinum /80PLUS Platinum] LIANLI｜リアンリ 通販 | ビックカメラ.com〖送料無料 ※一部対象外あり〗",
+          "url": "https://www.biccamera.com/bc/item/15650151/"
+        },
+        {
+          "title": "Find images you can use & share - Computer - Google Search Help",
+          "url": "https://support.google.com/websearch/answer/29508?co=GENIE.Platform%3DDesktop&hl=en-SN"
+        },
+        {
+          "title": "港都狼窩2.0: LIAN LI EDGE PLATINUM EG1350P V2 1350W白金全模組化電源開箱",
+          "url": "https://wolflsi.blogspot.com/2026/10/blog-post_14.html"
+        },
+        {
+          "title": "Lian Li EDGE Platinum V2 schwarz 1350W | Preisvergleich Geizhals Deutschland",
+          "url": "https://geizhals.de/lian-li-edge-platinum-v2-schwarz-1350w-eg1350p-v2-black-a3968841.html"
+        },
+        {
+          "title": "Lian Li EDGE Platinum V2 1350W Cybenetics Platinum ATX 3.1 Black Power Supply with EDGE Hub ADV LN173254 - EG1350P.BH00 | SCAN UK",
+          "url": "https://www.scan.co.uk/products/1350w-lian-li-edge-platinum-v2-black-fully-modular-cybenetics-platinum-single-rail-1125a-atx"
+        },
+        {
+          "title": "TUF Gaming 850W Gold EVO | Power Supply Units | ASUS Global - Specifications",
+          "url": "https://www.asus.com/uk/motherboards-components/power-supply-units/tuf-gaming/tuf-gaming-850g-evo/techspec/"
+        },
+        {
+          "title": "EDGE Platinum V2 - LIAN LI is a Leading Provider of PC Cases | Computer Cases",
+          "url": "https://lian-li.com/product-tag/edge-platinum-v2/"
+        },
+        {
+          "title": "LIAN LI EDGE PLATINUM V2 1350W ATX3.1 FULL MODUALR",
+          "url": "https://www.cap.com.hk/products/detail/_7KN0SEYNR"
+        },
+        {
+          "title": "Edge Platinum V2 - LIAN LI adalah Penyedia Terkemuka Casing PC | Casing Komputer",
+          "url": "https://lian-li.com/id/product/edge-platinum-v2/"
+        },
+        {
+          "title": "LIAN LI EDGE Platinum V2 EG1350P-BH-JP [Black] 価格比較 - 価格.com",
+          "url": "https://kakaku.com/item/K0001804298/"
+        },
+        {
+          "title": "Reimaging Rights Licensing Guidance",
+          "url": "https://www.microsoft.com/licensing/guidance/Reimaging-rights"
+        },
+        {
+          "title": "Power Supply",
+          "url": "https://www.asus.com/events/eventES/contentimages/UpgradeYourGamingRig_TandCs.pdf"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://gzhls.at/blob/ldb/c/9/a/2/aba6be60a06eeb000ba49cb3c3e3c4317b47.pdf"
+        },
+        {
+          "title": "Advanced Power. Smarter Connectivity - EDGE PLATINUM V2 PSU Series",
+          "url": "https://www.reddit.com/r/lianli/comments/1wvpzlu/advanced_power_smarter_connectivity_edge_platinum/"
+        },
+        {
+          "title": "BUILT FOR THE LONG HAUL",
+          "url": "https://fichastecnicas.pchmayoreo.com/TUF-GAMING-850G.pdf"
+        },
+        {
+          "title": "MAG A850GLS PCIE5",
+          "url": "https://storage-asset.msi.com/datasheet/power-supply/vn/MAG-A850GLS-PCIE5.pdf"
+        },
+        {
+          "title": "Google™ License Terms",
+          "url": "https://dlcdnet.asus.com/pub/ASUS/mb/SocketAM4/TUF_B350M-PLUS_GAMING/E12949_TUF_B350M-PLUS_GAMING_UM_web.pdf"
+        },
+        {
+          "title": "D",
+          "url": "https://mail.simlimsquare.com.sg/images/pricelist/1752554092.pdf"
+        },
+        {
+          "title": "Lian Li's Edge Platinum V2 PSUs have an LED dust indicator, magnetic filter, and a snap-on fan and USB header hub - Edge line's trademark 90-degree power connector also returns",
+          "url": "https://www.tomshardware.com/pc-components/power-supplies/lian-lis-edge-platinum-v2-psus-have-an-led-dust-indicator-magnetic-filter-and-a-snap-on-fan-and-usb-header-hub-edge-lines-trademark-90-degree-power-connector-also-returns"
+        },
+        {
+          "title": "What kind of high power GPU cable does the Lian Li edge 1300watt PLATINUM include??",
+          "url": "https://www.reddit.com/r/lianli/comments/1iobau7"
+        },
+        {
+          "title": "Help for new Lian LI build",
+          "url": "https://www.reddit.com/r/lianli/comments/1iko5d8"
+        },
+        {
+          "title": "I might have been scammed - need opinion from Lian Li Edge PSU owners",
+          "url": "https://www.reddit.com/r/lianli/comments/1jxzuh4"
+        },
+        {
+          "title": "I'm planning to buy Lian Li Edge I'm stuck between Gold and Platinum",
+          "url": "https://www.reddit.com/r/lianli/comments/1kbht6a"
+        },
+        {
+          "title": "Edge 1300w platinum PSU port question.",
+          "url": "https://www.reddit.com/r/lianli/comments/1iorh77/edge_1300w_platinum_psu_port_question/"
+        },
+        {
+          "title": "LIAN LI EDGE PSUs: Fully Compatible with NVIDIA RTX 50 Series",
+          "url": "https://www.reddit.com/r/lianli/comments/1ip7ogn/lian_li_edge_psus_fully_compatible_with_nvidia/"
+        },
+        {
+          "title": "How big is the lian li edge 850w platinum?",
+          "url": "https://www.reddit.com/r/PcBuildHelp/comments/1trqi9q/how_big_is_the_lian_li_edge_850w_platinum/"
+        },
+        {
+          "title": "LIAN LI 12V-2x6 Cable Compatibility with RTX 50 Series FE Cards",
+          "url": "https://www.reddit.com/r/lianli/comments/1iheoq4/lian_li_12v2x6_cable_compatibility_with_rtx_50/"
+        }
+      ]
+    },
+    {
+      "batch": 16,
+      "ids": [
+        "msi-pag-g750ls-pcie5",
+        "cooler-master-elite-gold-1000-black",
+        "asus-rog-strix-1200-platinum",
+        "cougar-omnyx-black"
+      ],
+      "queries": [
+        "MSI PAG G750LS PCIE5  product image commercial reuse license",
+        "Cooler Master Elite Gold 1000W Black  product image commercial reuse license",
+        "ASUS ROG Strix 1200W Platinum  product image commercial reuse license",
+        "Cougar OmnyX Black  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "ROG STRIX 1200W Platinum | Power Supply Units | ROG USA",
+          "url": "https://rog.asus.com/us/power-supply-units/rog-strix/rog-strix-1200p-gaming/gallery/"
+        },
+        {
+          "title": "ELITE GOLD 1000 | MPW-A001-AFAG",
+          "url": "https://www.1fodiscount.com/ressources/site/document/product/fiche-technique-pour-cooler-master-elite-gold-1000w-noir_15089.pdf"
+        },
+        {
+          "title": "SPECIFICATIONS",
+          "url": "https://gzhls.at/blob/ldb/3/9/9/4/4cd5d54497a8a3d4e7cbbe41edac39072370.pdf"
+        },
+        {
+          "title": "Cooler Master ELITE Gold 1000W Power Supply Unit Instruction Manual",
+          "url": "https://manuals.plus/asin/B0G4L99VL3.pdf"
+        },
+        {
+          "title": "ASUS ROG STRIX 1200W 80Plus Platinum modularni ATX napajalnik || PDF ponudba izdelka",
+          "url": "https://www.techtradecenter.si/asus-rog-strix-1200w-80plus-platinum-modularni-napajalnik?pdf=1"
+        },
+        {
+          "title": "Announcing the ROG Strix Platinum Power Supply Series | ASUS Pressroom - Official Global News & Updates",
+          "url": "https://press.asus.com/news/press-releases/asus-rog-strix-platinum-psu-gaming-series-release/"
+        },
+        {
+          "title": "Fonte Cooler Master Elite Gold 1000W | KaBuM!",
+          "url": "https://www.kabum.com.br/produto/938641/fonte-cooler-master-elite-gold-1000w-80-plus-gold-modular-pfc-ativo-preta-mpw-a001-afag-bbr"
+        },
+        {
+          "title": "Cooler Master ELITE Gold 1000W Power Supply Unit Instruction Manual",
+          "url": "https://manuals.plus/es/asin/B0G4L99VL3"
+        },
+        {
+          "title": "Cooler Master Elite Gold 1000W PSU – Cooler Master EU Store",
+          "url": "https://store.coolermaster.eu/products/elite-gold-1000-fm-a-eu-cord"
+        },
+        {
+          "title": "Buy Asus ROG STRIX 1200W Platinum PSU at Connection Public Sector Solutions",
+          "url": "https://www.govconnection.com/product/asus-rog-strix-1200w-platinum-psu/rog-strix-1200p-gaming/41980491"
+        },
+        {
+          "title": "Reimaging Rights Licensing Guidance",
+          "url": "https://www.microsoft.com/licensing/guidance/Reimaging-rights"
+        },
+        {
+          "title": "Monthly Product Updates",
+          "url": "https://www.msipartner.com/"
+        },
+        {
+          "title": "1200W ROG Strix Platinum Modular ATX3.1 Power Supply | ASUS | GAME",
+          "url": "https://www.game.co.uk/asus-1200w-rog-strix-platinum-modular-atx31-power-supply-717777"
+        },
+        {
+          "title": "ASUS ROG STRIX 1200W PLATINUM ATX3 PSU (10Y) 90YE00W0-B0NA00",
+          "url": "https://www.simlimsquare.com.sg/public/index.php/product/asus-rog-strix-1200w-platinum-atx3-psu-10y-90ye00w0-b0na00-31561"
+        },
+        {
+          "title": "〖msi微星微星PAG G750LS PCIE5图片〗msi微星 微星PAG G750LS PCIE5高清图_外观图_细节图-ZOL中关村在线",
+          "url": "https://detail.zol.com.cn/2143/2142154/pic.shtml"
+        },
+        {
+          "title": "ASUS ROG STRIX 1200W Platinum Bloc d'alimentation Platinum ATX, Noir - Canada Computers & Electronics",
+          "url": "https://www.canadacomputers.com/qc/power-supplies/270846/asus-rog-strix-1200w-platinum-bloc-d-alimentation-platinum-atx-noir-rog-strix-1200p-gaming.html"
+        },
+        {
+          "title": "Elite GOLD 1000 manual.pdf",
+          "url": "https://pdf.megekko.nl/00976707-manual.pdf"
+        },
+        {
+          "title": "Silent Pro product sheet draft-1.ai",
+          "url": "https://dubaimachines.com/productattachments/download/link/id/1317/"
+        },
+        {
+          "title": "Bought a new PSU, trying to register - says that this SN was already used",
+          "url": "https://www.reddit.com/r/ASUSROG/comments/1pft8rh/bought_a_new_psu_trying_to_register_says_that/"
+        },
+        {
+          "title": "PSU Asus ROG Strix 1200W Platinum",
+          "url": "https://www.reddit.com/r/ASUSROG/comments/1h936yw"
+        },
+        {
+          "title": "Announcing the ROG Equalizer Upgrade Program for Current Owners of the ROG Thor III and ROG Strix Platinum Power Supplies + Short FAQ About the ROG Equalizer",
+          "url": "https://www.reddit.com/r/ASUS/comments/1uj6ddh/announcing_the_rog_equalizer_upgrade_program_for/"
+        },
+        {
+          "title": "Thoughts on Asus Rog Strix 1200W Platinum ATX v3.1",
+          "url": "https://www.reddit.com/r/buildapc/comments/1hhjhqr/thoughts_on_asus_rog_strix_1200w_platinum_atx_v31/"
+        },
+        {
+          "title": "Thoughts on ASUS ROG STRIX 1200W Platinum for 5090?",
+          "url": "https://www.reddit.com/r/buildapc/comments/1pap3ci/thoughts_on_asus_rog_strix_1200w_platinum_for_5090/"
+        },
+        {
+          "title": "Is this PSU good to use?",
+          "url": "https://www.reddit.com/r/buildapc/comments/1qk1tpe/is_this_psu_good_to_use/"
+        },
+        {
+          "title": "[PSU] ASUS ROG STRIX 1200W 80 PLUS Platinum ATX $247.69 Memory Express",
+          "url": "https://www.reddit.com/r/bapcsalescanada/comments/1rcz15t/psu_asus_rog_strix_1200w_80_plus_platinum_atx/"
+        },
+        {
+          "title": "Rog Strix 1200W",
+          "url": "https://www.reddit.com/r/ASUSROG/comments/1waiq9r/rog_strix_1200w/"
+        },
+        {
+          "title": "[USA-CA] [H] ASUS ROG Strix Platinum 1200W PSU (2X) [W] PayPal",
+          "url": "https://www.reddit.com/r/hardwareswap/comments/1rgs25a/usaca_h_asus_rog_strix_platinum_1200w_psu_2x_w/"
+        },
+        {
+          "title": "Experiences with Asus PSU",
+          "url": "https://www.reddit.com/r/ASUSROG/comments/1ree02k/experiences_with_asus_psu/"
+        },
+        {
+          "title": "Coil Whine - ROG STRIX 1200W PLATINIUM",
+          "url": "https://www.reddit.com/r/ASUSROG/comments/1lohodk/coil_whine_rog_strix_1200w_platinium/"
+        },
+        {
+          "title": "ASUS Strix 1200w $180 vs Sama 1200W $120usd platinum power supplies?",
+          "url": "https://www.reddit.com/r/buildapc/comments/1rfm8st/asus_strix_1200w_180_vs_sama_1200w_120usd/"
+        }
+      ]
+    },
+    {
+      "batch": 17,
+      "ids": [
+        "lian-li-o11-vision-m-black",
+        "lian-li-vector-v150-inf-black",
+        "gigabyte-c201-panoramic-white",
+        "cougar-airface-180-white"
+      ],
+      "queries": [
+        "Lian Li O11 VISION-M Black  product image commercial reuse license",
+        "Lian Li VECTOR V150 INF Black  product image commercial reuse license",
+        "GIGABYTE C201 PANORAMIC White  product image commercial reuse license",
+        "Cougar Airface 180 White  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "O11 Vision-M - LIAN LI is a Leading Provider of PC Cases | Computer Cases",
+          "url": "https://lian-li.com/product/o11-vision-m/"
+        },
+        {
+          "title": "LIAN LI SM092 - 欲しいPC DIYパーツを世界から－株式会社ディラック ( Dirac )",
+          "url": "https://dirac.co.jp/sm092/"
+        },
+        {
+          "title": "Lian Li Vector V150 INF Black RGB Tempered Glass Micro-ATX Mid-Tower Case (V150INFX) | CIPC",
+          "url": "https://cipc.com/en/details/lian-li-vector-v150-inf-noir-rgb-verre-trempe-micro-atx-tour-moyenne-boitier-v150infx"
+        },
+        {
+          "title": "Boeing Images FAQ (Frequently Asked Questions)",
+          "url": "https://secure.boeingimages.com/C.aspx?VF=BOE_2&VP3=CMS3"
+        },
+        {
+          "title": "Find images you can use & share - Computer - Google Search Help",
+          "url": "https://support.google.com/websearch/answer/29508?co=GENIE.Platform%3DDesktop&hl=en-SN"
+        },
+        {
+          "title": "GIGABYTE C201 PANORAMIC｜GIGABYTE",
+          "url": "https://www.aorus.com/pc-case/GB-C201P/key-features"
+        },
+        {
+          "title": "R-R-L9L-VectorV150-INF - KCC MSIP RRA ID",
+          "url": "https://fccid.io/R-R-L9L-VectorV150-INF"
+        },
+        {
+          "title": "Lian Li julkaisi mATX-kokoluokkaan uuden Vector V150 INF -kotelon - io-tech.fi",
+          "url": "https://www.io-tech.fi/uutinen/lian-li-julkaisi-matx-kokoluokkaan-uuden-vector-v150-inf-kotelon/"
+        },
+        {
+          "title": "Lian Li O11 Vision-M (Noir) · Occasion Lian Li - Devis gratuit - LDLC.pro - Coin des affaires",
+          "url": "https://www.ldlc.pro/fiche/PB00747848.html"
+        },
+        {
+          "title": "Lian Li 011 Vision O11 VISION-M Midi Tower Black - MT Shop",
+          "url": "https://mts.ee/en/toode/lian-li-011-vision-o11-vision-m-midi-tower-black-1415289546"
+        },
+        {
+          "title": "Gigabyte C201 PANORAMIC PC case | Gigabyteshop.lt",
+          "url": "https://gigabyteshop.lt/en/pc-cases/gigabyte-c201-panoramic-pc-case.html?id=18013"
+        },
+        {
+          "title": "Buy Lian Li Vector V150 Infinity TG mATX Case Black [V150INFX] | PC Case Gear Australia",
+          "url": "https://www.pccasegear.com/products/72491/lian-li-vector-v150-infinity-tg-matx-case-black"
+        },
+        {
+          "title": "TORRE MATX LIAN LI O11 VISION-M BLACK",
+          "url": "https://www.globomatik.com/pdfproduct/product/print/id/79530/"
+        },
+        {
+          "title": "Le",
+          "url": "https://www.malabs.com/media/catalog/catalog_2023.pdf"
+        },
+        {
+          "title": "MB KOMPIUTERIŲ GURU",
+          "url": "https://www.shopro.lt/index.php?product_id=59591&route=product%2Fpdf"
+        },
+        {
+          "title": "Uputstvo za upotrebu (EN) LIAN LI kućište O11 Vision crno",
+          "url": "https://device.report/m/e438c7fd948782511fc3b34d3c5d8cd21160becb0350dea7d95de5fac30ea2fa.pdf"
+        },
+        {
+          "title": "Lian Li O11 Vision Black ATX Mid Tower PC Case User Manual",
+          "url": "https://manuals.plus/asin/B0CPKYTP94.pdf"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://device.report/m/1752ad53820bca137b9f5b096cf871b9cb931d8de03ded57061d1ae43b0d9a9a.pdf"
+        },
+        {
+          "title": "O11 Vision-M",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/1wxvlr4/o11_visionm/"
+        },
+        {
+          "title": "Lian Li sent me an O11 Vision-M, a pack of SL-Flex Series fans, and their new GA II Lite AIO; I decided to revamp my girlfriend’s gaming rig!",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/1x40kfz/lian_li_sent_me_an_o11_visionm_a_pack_of_slflex/"
+        },
+        {
+          "title": "I bought a used Lian Li O11 Dynamic Chromed and it came without the silicone pads for the \"low\" mode",
+          "url": "https://www.reddit.com/r/lianli/comments/1l329hr"
+        },
+        {
+          "title": "My new rig, featuring Lian Li O11 Vision-M and Uni Fan SL Flex!",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/1w7rohh/my_new_rig_featuring_lian_li_o11_visionm_and_uni/"
+        },
+        {
+          "title": "O11 Vision-M Hall of Fame build (ft. Mado-Homu and CL FLEX fans)",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/1wqngm2/o11_visionm_hall_of_fame_build_ft_madohomu_and_cl/"
+        },
+        {
+          "title": "Lian Li Vector V150 INF - A LANCOOL 217 INF downsized!",
+          "url": "https://www.reddit.com/r/lianli/comments/1t0f3tm/lian_li_vector_v150_inf_a_lancool_217_inf/"
+        },
+        {
+          "title": "Upgraded my son's battlestation with an O11 Vision-M with UNI FAN FLEX fans.",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/1wu3gyb/upgraded_my_sons_battlestation_with_an_o11/"
+        },
+        {
+          "title": "Vision-M BTF",
+          "url": "https://www.reddit.com/r/lianli/comments/1xec34x/visionm_btf/"
+        },
+        {
+          "title": "I had a Vision (M)",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/1wu48yv/i_had_a_vision_m/"
+        },
+        {
+          "title": "Balance Compatibility. Boost Cooling: Introducing O11 Vision-M",
+          "url": "https://www.reddit.com/r/lianli/comments/1tk4ovp/balance_compatibility_boost_cooling_introducing/"
+        },
+        {
+          "title": "Lian li O11 Vision-M Build",
+          "url": "https://www.reddit.com/r/lianli/comments/1uvdhz3/lian_li_o11_visionm_build/"
+        },
+        {
+          "title": "Lian Li O11 Vision-M build with UNI Fan SL FLEX",
+          "url": "https://www.reddit.com/r/pcmasterrace/comments/1wrxlnz/lian_li_o11_visionm_build_with_uni_fan_sl_flex/"
+        }
+      ]
+    },
+    {
+      "batch": 18,
+      "ids": [
+        "cougar-mx600-air-pro-black",
+        "cougar-mx600-mini-v2-pro-white",
+        "lian-li-hydroshift-ii-lcd-c-360r-black",
+        "thermalright-frozen-horizon-360-digital"
+      ],
+      "queries": [
+        "Cougar MX600 Air Pro Black  product image commercial reuse license",
+        "Cougar MX600 Mini V2 Pro White  product image commercial reuse license",
+        "Lian Li HydroShift II LCD-C 360R Black  product image commercial reuse license",
+        "Thermalright Frozen Horizon 360 Digital ARGB Black  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "Lian Li HydroShift II LCD-C 360R Black 360mm AIO Liquid Cooler — Computer Orbit",
+          "url": "https://ca.computerorbit.com/products/lian-li-hydroshift-ii-lcd-c-360r-black-360mm-aio-liquid-cooler"
+        },
+        {
+          "title": "MyShop",
+          "url": "https://myshop.cl/producto/gabinete-cougar-mx600-mini-v2-pro-sfuente-micro-atx-blanco-incluye-3-fan-120mm-argb-pwm-frontales-1-fan-120mm-argb-pwm-trasero-382tc900004-p42741"
+        },
+        {
+          "title": "Lian Li’s tube-hiding Hydroshift II LCD-C AIO cooler adds a rotating dial for software-free display and RGB control | Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/liquid-cooling/lian-lis-tube-hiding-hydroshift-ii-lcd-c-aio-cooler-adds-a-rotating-dial-for-software-free-display-and-rgb-control"
+        },
+        {
+          "title": "Thermalright Frozen Horizon ARGB 360mm AIO CPU Cooler Digital Black - Umart.com.au",
+          "url": "https://www.umart.com.au/product/thermalright-frozen-horizon-argb-360mm-aio-cpu-cooler-digital-black-92069"
+        },
+        {
+          "title": "Thermalright Frozen Horizon 360 BLACK ARGB – CPU water cooling – Max 28 dBA - Galaxus",
+          "url": "https://www.galaxus.at/en/s1/product/thermalright-frozen-horizon-360-black-argb-cpu-water-cooling-max-28-dba-cpu-water-coolers-42921526"
+        },
+        {
+          "title": "Lian Li Hydroshift II LCD-C 360CL 360mm All in One Liquid CPU Cooling Kit - Black - Micro Center",
+          "url": "https://www.microcenter.com/product/693879/lian-li-hydroshift-ii-lcd-c-360cl-360mm-all-in-one-liquid-cpu-cooling-kit-black?storeid=125"
+        },
+        {
+          "title": "Minitorre e Microtorre: Cougar Caja Minitorre MX600 MINI V2 PRO White - Oferta PTec",
+          "url": "https://ptec.pt/produto/cougar-caja-minitorre-mx600-mini-v2-pro-3-5-branco"
+        },
+        {
+          "title": "Jual Thermalright Frozen Horizon 360 DIGITAL BLACK ARGB CPU Liquid Cooler Radiator Layar Digital CPU Air Cooler untuk AMD AM4 / AM5 Intel LGA1851 / 2011 / 1700 | Shopee Indonesia",
+          "url": "https://shopee.co.id/Thermalright-Frozen-Horizon-360-DIGITAL-BLACK-ARGB-CPU-Liquid-Cooler-Radiator-Layar-Digital-CPU-Air-Cooler-untuk-AMD-AM4-AM5-Intel-LGA1851-2011-1700-i.1568383865.40523601983"
+        },
+        {
+          "title": "Lian Li GHS2LCD36B - Lian Li GA II Hydroshift II LCD-C 360N Computer case All-in-one liquid cooler Black",
+          "url": "https://www.lambda-tek.eu/Lian-Li-GHS2LCD36B-sh/B52457453"
+        },
+        {
+          "title": "Thermalright FROZEN HORIZON 360 Digital ARGB 서린 (블랙) - PC부품 | 피씨토피아",
+          "url": "https://www.pctopia.co.kr/goods/goods_view.php?cateCd=015&goodsNo=1000017615"
+        },
+        {
+          "title": "Écran LCD HydroShift II - LIAN LI est un fournisseur leader de boîtiers PC | Boîtiers d'ordinateur",
+          "url": "https://www.lian-li.com/fr/product/hydroshift-ii/"
+        },
+        {
+          "title": "HydroShift II LCD-C - LIAN LI, PC Kasaları Alanında Lider Bir Tedarikçidir | Bilgisayar Kasaları",
+          "url": "https://www.lian-li.com/tr/product/hydroshift-ii/"
+        },
+        {
+          "title": "Lian Li HydroShift 360R BK - Water Cooler com Tela LCD e Iluminação RGB",
+          "url": "https://www.reparacaomobile.pt/pt/dissipador-water-cooler-lian-li-hydroshift-360r-bk.php?format=pdf&tmpl=component"
+        },
+        {
+          "title": "01--Hydroshift II LCD-C R说明书-无风扇-142x210-20p",
+          "url": "https://gzhls.at/blob/ldb/3/3/b/0/5c5129c3ac0b2e3c08d3f5cc72271d234979.pdf"
+        },
+        {
+          "title": "Lian Li Kasalar",
+          "url": "https://gpu.com.tr/lian-li-urunleri/d_pdf"
+        },
+        {
+          "title": "COMPUTEX 2025 - HydroShift II LCD-C - Available in CL or N version",
+          "url": "https://www.reddit.com/r/lianli/comments/1krjls7"
+        },
+        {
+          "title": "HydroShift II LCD-C 360 – Follow-Up Notice",
+          "url": "https://www.reddit.com/r/lianli/comments/1la4yep"
+        },
+        {
+          "title": "LIAN LI HydroShift II LCD-C 360TL AIO CPU Cooler Installation Guide",
+          "url": "https://device.report/m/d13c2f938592290e714ecbc57ca857aa62d919d1998c92740cfb53ee086469a6_optim.pdf"
+        },
+        {
+          "title": "COUGAR MX600 RGB - Full Tower Gaming Case - COUGAR",
+          "url": "https://pimcontent1.ingrammicro.com/pe/assets/media/brochure/5934448_5934448-mx600rgb-black.pdf"
+        },
+        {
+          "title": "Lian Li Hydroshift II-S LCD 360TL ARGB Liquid CPU Cooler User Manual",
+          "url": "https://manuals.plus/asin/B0FPCS7VH2.pdf"
+        },
+        {
+          "title": "[Release] Lian Li HydroShift LCD RGB (LED only) custom SignalRGB plugin",
+          "url": "https://www.reddit.com/r/SignalRGB/comments/1radpq9/release_lian_li_hydroshift_lcd_rgb_led_only/"
+        },
+        {
+          "title": "[BUG] Lian li Hydroshift II lcd c coolers - missing",
+          "url": "https://www.reddit.com/r/BuildCores/comments/1w1inr9/bug_lian_li_hydroshift_ii_lcd_c_coolers_missing/"
+        },
+        {
+          "title": "Product Launch: HydroShift II LCD-S",
+          "url": "https://www.reddit.com/r/lianli/comments/1oqr4yc/product_launch_hydroshift_ii_lcds/"
+        },
+        {
+          "title": "Faulty Hydroshift Lcd 360R RGB in less than a year",
+          "url": "https://www.reddit.com/r/lianli/comments/1w6kxpu/faulty_hydroshift_lcd_360r_rgb_in_less_than_a_year/"
+        },
+        {
+          "title": "HydroShift LCD 360R Fan controller",
+          "url": "https://www.reddit.com/r/lianli/comments/1g1ect8/hydroshift_lcd_360r_fan_controller/"
+        },
+        {
+          "title": "HydroShift II LCD-C 360 – Important Notice",
+          "url": "https://www.reddit.com/r/lianli/comments/1l711al/hydroshift_ii_lcdc_360_important_notice/"
+        },
+        {
+          "title": "Removing and reattaching Curved OLED 360",
+          "url": "https://www.reddit.com/r/lianli/comments/1tj9901/removing_and_reattaching_curved_oled_360/"
+        },
+        {
+          "title": "Lían li hydroshift 2",
+          "url": "https://www.reddit.com/r/lianli/comments/1l999dh"
+        },
+        {
+          "title": "Hydroshift II 360 TL vs LCD-C - Are they the same?",
+          "url": "https://www.reddit.com/r/lianli/comments/1nfg7qg/hydroshift_ii_360_tl_vs_lcdc_are_they_the_same/"
+        },
+        {
+          "title": "The Hydroshift 2 AIO is finally out!",
+          "url": "https://www.reddit.com/r/lianli/comments/1ky8vgf"
+        }
+      ]
+    },
+    {
+      "batch": 19,
+      "ids": [
+        "lian-li-hydroshift-ii-lcd-s-360",
+        "id-cooling-sl360-v2-space-white",
+        "id-cooling-se214xt-df-black",
+        "thermalright-magic-qube-360-black"
+      ],
+      "queries": [
+        "Lian Li HydroShift II LCD-S 360 Black  product image commercial reuse license",
+        "ID-COOLING SL360 V2 Space LCD White  product image commercial reuse license",
+        "ID-COOLING SE-214-XT DF ARGB Black  product image commercial reuse license",
+        "Thermalright Magic Qube 360 ARGB Black  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "HydroShift II LCD-S - LIAN LI is a Leading Provider of PC Cases | Computer Cases",
+          "url": "https://lian-li.com/product/hydroshift-ii-lcd-s/"
+        },
+        {
+          "title": "ID-COOLING-CPU Air Cooler: SE-214-XT DF",
+          "url": "https://www.idcooling.com/product/detail?id=514"
+        },
+        {
+          "title": "Lian-Li HydroShift II LCD-S 360 All-In-One ARGB CPU Liquid Cooler",
+          "url": "https://www.adorama.com/lian-li-hydroshift-ii-lcd-s-360-cpu-liquid-cooler/p/lihyd2"
+        },
+        {
+          "title": "Lian Li HydroShift II LCD-S 360 TL Black | パソコン工房〖公式通販〗",
+          "url": "https://www.pc-koubou.jp/products/detail.php?product_id=1217265"
+        },
+        {
+          "title": "Lian Li HydroShift II LCD-S 360 AIO Liquid Cooler 3.4 Inch IPS LCD 360mm Radiator with CL or TL Wireless Fans | Black | White",
+          "url": "https://netcodex.ph/product/lian-li-hydroshift-ii-lcd-s-360-aio-liquid-cooler-3-4-inch-ips-lcd-360mm-radiator-with-cl-or-tl-wireless-fans-black-white/"
+        },
+        {
+          "title": "Описание системы жидкостного охлаждения ID-COOLING SL360 V2 WHITE в интернет магазине Регард Москва.",
+          "url": "https://www.regard.ru/product/794846/sistema-zidkostnogo-oxlazdeniia-id-cooling-sl360-v2-white/description"
+        },
+        {
+          "title": "Lian Li HydroShift II LCD-S 360TL - 360mm ARGB AIO Liquid CPU Cooler (Black) | PLE Computers",
+          "url": "https://www.ple.com.au/products/684023/lian-li-hydroshift-ii-lcd-s-360tl-360mm-argb-aio-liquid-cpu-cooler-black"
+        },
+        {
+          "title": "Lian Li HYDROSHIFT II LCD-C 360N Fanless Radiator Kit, Black w/ 2.1in Color IPS Display Screen - Liquid AIO CPU Coolers - Memory Express Inc.",
+          "url": "https://www.memoryexpress.com/Products/MX00134226"
+        },
+        {
+          "title": "Lian Li HydroShift II LCD-S 360mm Black AIO Cooler | Computer Orbit",
+          "url": "https://computerorbit.com/collections/cooling-products/products/lian-li-hydroshift-ii-lcd-s-360cl-black-all-in-one-cpu-cooler?_fid=bcf3fc7dc&_pos=401&_ss=c"
+        },
+        {
+          "title": "LIAN LI Hydroshift II LCD-S 360 - DIRAC",
+          "url": "https://dirac.co.jp/hydroshift-ii-lcd-s-360/"
+        },
+        {
+          "title": "Thermalright Magic Qube 360 ARGB CPU Cooler | Scorptec Computers",
+          "url": "https://www.scorptec.com.au/product/cooling/cpu-coolers/124090-magic-qube-360-argb-black"
+        },
+        {
+          "title": "Buy ID-COOLING SE-214-XT V2 ARGB CPU Air Cooler Black [SE-214-XT-V2-ARGB] | PC Case Gear Australia",
+          "url": "https://www.pccasegear.com/products/70440/id-cooling-se-214-xt-v2-argb-cpu-air-cooler-black"
+        },
+        {
+          "title": "Lian Li Hydroshift II-S LCD 360TL ARGB Liquid CPU Cooler User Manual",
+          "url": "https://manuals.plus/asin/B0FPCQ2895.pdf"
+        },
+        {
+          "title": "SL360 & 240 XT",
+          "url": "https://static.idcooling.com/resources/link/20240522/SL360%20%26%20240%20XT_8u968r.pdf"
+        },
+        {
+          "title": "03--Hydroshift II LCD-C说明书-142x210-20p",
+          "url": "https://media.ldlc.com/bo/file/fiches/pdf/manuel/lian_li/HydroShift%20II%20LCD-C%20360N%20Manual.pdf"
+        },
+        {
+          "title": "Lian Li Hydroshift II-S LCD 360TL ARGB Liquid CPU Cooler User Manual",
+          "url": "https://manuals.plus/asin/B0FPCS7VH2.pdf"
+        },
+        {
+          "title": "ID-COOLING SL360 PRO SE 360mm AIO CPU Liquid Cooler with Customizable LCD Display, 2.1\" LCD Display for Images, GIFS, MP4 and Performance Metrics, 3 AS-120 Silent Fans, Fits Intel & AMD",
+          "url": "https://manuals.plus/asin/B0D7392YS4.pdf"
+        },
+        {
+          "title": "Lian Li Hydroshift II 360 Liquid CPU Cooler (HS2LCD36B) Instruction Manual",
+          "url": "https://manuals.plus/asin/B0F1MH44QZ.pdf"
+        },
+        {
+          "title": "Product Launch: HydroShift II LCD-S",
+          "url": "https://www.reddit.com/r/lianli/comments/1oqr4yc/product_launch_hydroshift_ii_lcds/"
+        },
+        {
+          "title": "COMPUTEX 2025 - HydroShift II LCD-C - Available in CL or N version",
+          "url": "https://www.reddit.com/r/lianli/comments/1krjls7"
+        },
+        {
+          "title": "HydroShift II LCD-C 360 – Follow-Up Notice",
+          "url": "https://www.reddit.com/r/lianli/comments/1la4yep"
+        },
+        {
+          "title": "HydroShift II LCD-S LCD completely dead, pump running, not detected in L-Connect",
+          "url": "https://www.reddit.com/r/lianli/comments/1rufhtz/hydroshift_ii_lcds_lcd_completely_dead_pump/"
+        },
+        {
+          "title": "The Lian Li Hydroshift II OLED Curved(Motorized) 360TL RGB Liquid CPU Cooler is out!",
+          "url": "https://www.reddit.com/r/lianli/comments/1tkftph/the_lian_li_hydroshift_ii_oled_curvedmotorized/"
+        },
+        {
+          "title": "HydroShift II LCD-S 360TL - LCD only works when physically pressed",
+          "url": "https://www.reddit.com/r/lianli/comments/1s1mtt0/hydroshift_ii_lcds_360tl_lcd_only_works_when/"
+        },
+        {
+          "title": "Lian Li HydroShift II LCD-S fits the O11 Vision",
+          "url": "https://www.reddit.com/r/lianli/comments/1q62iye/lian_li_hydroshift_ii_lcds_fits_the_o11_vision/"
+        },
+        {
+          "title": "Can I replace the fans on LianLi Hydroshift II LCD-S 360tl?",
+          "url": "https://www.reddit.com/r/lianli/comments/1qlv9nt/can_i_replace_the_fans_on_lianli_hydroshift_ii/"
+        },
+        {
+          "title": "How customisable is a hydro shift LCD",
+          "url": "https://www.reddit.com/r/lianli/comments/1hzkdjc/how_customisable_is_a_hydro_shift_lcd/"
+        },
+        {
+          "title": "Removing and reattaching Curved OLED 360",
+          "url": "https://www.reddit.com/r/lianli/comments/1tj9901/removing_and_reattaching_curved_oled_360/"
+        },
+        {
+          "title": "Lian Li HydroShift II LCD",
+          "url": "https://www.reddit.com/r/lianli/comments/1qh53yo/lian_li_hydroshift_ii_lcd/"
+        },
+        {
+          "title": "Lian Li HydroShift II LCD-S 360 Fanless Black Display Connection Issue.",
+          "url": "https://www.reddit.com/r/lianli/comments/1ut0kds/lian_li_hydroshift_ii_lcds_360_fanless_black/"
+        },
+        {
+          "title": "iDataCool: HPC with Hot-Water Cooling and Energy Reuse",
+          "url": "https://arxiv.org/abs/1309.4887"
+        }
+      ]
+    },
+    {
+      "batch": 20,
+      "ids": [
+        "cougar-poseidon-vistek-pro-360-black",
+        "steelseries-qck-performance-xl-control",
+        "steelseries-qck-performance-balance",
+        "attack-shark-cm03-rainbow"
+      ],
+      "queries": [
+        "Cougar Poseidon Vistek Pro ARGB 360 Black  product image commercial reuse license",
+        "SteelSeries QcK Performance XL Control  product image commercial reuse license",
+        "SteelSeries QcK Performance Balance  product image commercial reuse license",
+        "ATTACK SHARK CM03 eSport Rainbow Coated  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "Rainbow Coated eSport Gaming Mouse Pad | ATTACK SHARK",
+          "url": "https://attackshark.sg/products/attack-shark-cm03-esport-gaming-mouse-pad-rainbow-coated"
+        },
+        {
+          "title": "Produtos com até 15 OFF no PIX KaBuM",
+          "url": "https://www.kabum.com.br/produto/1038382/water-cooler-cougar-poseidon-vistek-argb-360-intel-amd-preto-cgr-psdvargb-b-360"
+        },
+        {
+          "title": "COUGAR Poseiden Vistek Pro ARGB 360mm CPU Liquid Cooler ( With LCD Display ) ( Black )",
+          "url": "https://sclgaming.in/product/cougar-poseiden-vistek-pro-argb-360mm-cpu-liquid-cooler-with-lcd-display-black/"
+        },
+        {
+          "title": "CGR-PSDVPRGB-B-360 COUGAR Poseidon Vistek Pro ARGB 360 AiO Liquid Watercooling - Black | Katalogas - SKYTECH.LT",
+          "url": "https://www.skytech.lt/cgrpsdvprgbb360-cougar-poseidon-vistek-pro-argb-360-aio-liquid-watercooling-blac-p-847614.html"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://www.1fodiscount.com/ressources/site/document/product/mode-demploi-pour-poseidon-vistek-pro-rgb-360-noir_15211.pdf"
+        },
+        {
+          "title": "CPU LIQUID COOLER (ระบบระบายความร้อนด้วยน้ำ) COUGAR POSEIDON VISTEK PRO ARGB 360 - BLACK",
+          "url": "https://jib.co.th/web/product/readProduct/81941/1393/CPU-LIQUID-COOLER--%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%99%E0%B9%89%E0%B8%B3--COUGAR-POSEIDON-VISTEK-PRO-ARGB-360---BLACK"
+        },
+        {
+          "title": "COUGAR 3MPVP360.0001 - COUGAR Poseidon Vistek Pro ARGB 360 Procesador Sistema de refrigeración líquida todo en uno 12 cm Negro",
+          "url": "https://hardwareonline.com/img/cms/pdf/4710483779695.pdf"
+        },
+        {
+          "title": "QcK Performance XL - Control",
+          "url": "https://steelseries.com/en-ee/gaming-mousepads/qck-performance?model=Control&mousepadSize=xl"
+        },
+        {
+          "title": "SteelSeries QcK Performance Gaming Mouse Pad XL Control Black - Best Buy",
+          "url": "https://www.bestbuy.com/product/steelseries-qck-performance-gaming-mouse-pad-xl-control-black/J3GTVPHXG4"
+        },
+        {
+          "title": "Cougar Poseidon Vistek Pro ARGB 360 - Black [3MPVP360.0001] | SoloTodo.cl",
+          "url": "https://www.solotodo.cl/products/404366-cougar-poseidon-vistek-pro-argb-360-black-3mpvp3600001"
+        },
+        {
+          "title": "COUGAR Poseidon Vistek ARGB 360 Liquid Cooler | Unreal Tech",
+          "url": "https://www.unrealtech.co.za/products/cougar-poseidon-vistek-argb-360-liquid-cpu-cooler-black"
+        },
+        {
+          "title": "Cougar Poseidon Vistek ARGB 360 | Azerty.nl",
+          "url": "https://azerty.nl/product/cougar-poseidon-vistek-argb-360-waterkoeler/9522092"
+        },
+        {
+          "title": "SteelSeries' New QcK Mouse Pads Are Built For Speed And Precision - GameSpot",
+          "url": "https://www.gamespot.com/articles/steelseries-new-qck-mouse-pads-are-built-for-speed-and-precision/1100-6530026/"
+        },
+        {
+          "title": "Tản nhiệt nước AIO Cougar Poseidon Vistek Pro ARGB 360 Black - HugoTech - Beat the Lowest Price",
+          "url": "https://hugotech.vn/tan-nhiet-nuoc-aio-cougar-poseidon-vistek-pro-argb-360/"
+        },
+        {
+          "title": "QCK PERFORMANCE 系列",
+          "url": "https://www.costco.com.tw/mediapermalink/157689_pdf_01-251212"
+        },
+        {
+          "title": "<table id=\"e1\">",
+          "url": "https://themark.com.co/wp-content/uploads/2026/02/LISTA-PARTES-FEBRERO-25-1.pdf"
+        },
+        {
+          "title": "COUGAR POSEIDON LT ARGB 360_usermanual",
+          "url": "https://cougargaming.com/fileadmin/downloads/USERS_MANUAL/poseidon-ltARGB360_usermanual.pdf"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://downloads.ctfassets.net/4lyxhctxrf55/3VI1NYiWX4qdd31XdJVGU9/148da6386d868117fc496f62591f6fae/Katalog_Entertainment_Marzec_2026.pdf"
+        },
+        {
+          "title": "Retail packaging sucks - Steelseries",
+          "url": "https://www.reddit.com/r/MousepadReview/comments/1je8ad7"
+        },
+        {
+          "title": "QcK Performance - Speed fabric issue",
+          "url": "https://www.reddit.com/r/MousepadReview/comments/1njqktf/qck_performance_speed_fabric_issue/"
+        },
+        {
+          "title": "SteelSeries QcK XL Performance Gaming Mousepad (Speed, Balanced, Control)",
+          "url": "https://www.reddit.com/r/MousepadReview/comments/1rpimmp/steelseries_qck_xl_performance_gaming_mousepad/"
+        },
+        {
+          "title": "Steelseries QCK cloth pad lineup",
+          "url": "https://www.reddit.com/r/MousepadReview/comments/1ppl20q/steelseries_qck_cloth_pad_lineup/"
+        },
+        {
+          "title": "Has anyone used both the QcK Performance Balance and the QcK Heavy?",
+          "url": "https://www.reddit.com/r/MousepadReview/comments/1n3wqtp"
+        },
+        {
+          "title": "Fake QcK Heavy or degraded quality",
+          "url": "https://www.reddit.com/r/steelseries/comments/fe99ck"
+        },
+        {
+          "title": "Classic QcK VS QcK Performance (Balance)?",
+          "url": "https://www.reddit.com/r/MousepadReview/comments/1lhkuj9/classic_qck_vs_qck_performance_balance/"
+        },
+        {
+          "title": "Steelseries qck vs qck heavy vs qck performance balance which one is the best",
+          "url": "https://www.reddit.com/r/MousepadReview/comments/1n5lzqk/steelseries_qck_vs_qck_heavy_vs_qck_performance/"
+        }
+      ]
+    },
+    {
+      "batch": 21,
+      "ids": [
+        "attack-shark-cm05-glass-black-contours",
+        "logitech-g740",
+        "corsair-mm100",
+        "steelseries-qck-xxl"
+      ],
+      "queries": [
+        "ATTACK SHARK CM05 Glass Black Contours  product image commercial reuse license",
+        "Logitech G G740  product image commercial reuse license",
+        "Corsair MM100  product image commercial reuse license",
+        "SteelSeries QcK XXL  product image commercial reuse license"
+      ],
+      "candidatePages": [
+        {
+          "title": "CM05 Premium Tempered Glass Gaming Mouse Pad | ATTACK SHARK",
+          "url": "https://attackshark.com/products/attackshark-cm05-tempered-glass-gaming-mouse-pad"
+        },
+        {
+          "title": "Tapis de souris gaming en verre trempé premium CM05 | ATTACK SHARK",
+          "url": "https://attackshark.fr/products/attackshark-cm05-tempered-glass-gaming-mouse-pad"
+        },
+        {
+          "title": "ATTACK SHARK CM05 Glass Gaming Mousepad – Black Contours | 450 × 400mm | 9H Tempered Glass | Nano-Micro-Etched Surface | ATTACK SHARK | ZAH Computers",
+          "url": "https://zahcomputers.pk/product/attack-shark-cm05-glass-gaming-mousepad-black-contours/"
+        },
+        {
+          "title": "Logitech 943-000806 - Logitech G G740",
+          "url": "https://www.lambda-tek.com/Logitech-943-000806-sh/B46970616"
+        },
+        {
+          "title": "GLASSPAD ATTACK SHARK CM05 contour line | CYREX Store Bolivia",
+          "url": "https://cyrexstore.com/producto/glasspad-attack-shark-cm05-black-contour-line"
+        },
+        {
+          "title": "G740 Large Cloth Gaming Mouse Pad | Logitech G",
+          "url": "https://www.logitechg.com/en-us/shop/p/g740-large-cloth-mouse-pad.943-000804"
+        },
+        {
+          "title": "Logitech Assets License – Terms & Authorized Use | Logitech",
+          "url": "https://secure.logitech.com/en-ch/tos/logitech-assets-license"
+        },
+        {
+          "title": "QcK XXL",
+          "url": "https://steelseries.com/en-gb/gaming-mousepads/qck?color=fortnite-battle-bus&mousepadSize=xxl"
+        },
+        {
+          "title": "SteelSeries QcK XXL - mouse pad - 67500 - Mouse Pads & Wrist Rests - CDW.com",
+          "url": "https://www.cdw.com/product/steelseries-qck-xxl-mouse-pad/6163467"
+        },
+        {
+          "title": "MousePad Gamer de Tecido Logitech G G740 preto",
+          "url": "https://www.logitechstore.com.br/mousepad-gamer-de-tecido-logitech-g-g740-preto/"
+        },
+        {
+          "title": "Steelseries QcK Heavy XXL (XXL 900mm x 400mm) / 67500",
+          "url": "https://baitukas.lt/en/computer-equipment-office-supplies/external-computer-accessories/mouse-pads/67500-steelseries-qck-xxl-musematte-p16214/16214/2/p"
+        },
+        {
+          "title": "ATTACK SHARK CM05 Glass Gaming Mouse Pad,17.7x15.7 UK | Ubuy",
+          "url": "https://www.u-buy.co.uk/product/PU3CVAYDK-cm05-large-glass-gaming-mouse-pad-450x400mm-nano-textured-glass-for-precision-speed-anti-slip-pu-base-9h-hardness-smooth-durable"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://downloads.ctfassets.net/4lyxhctxrf55/3VI1NYiWX4qdd31XdJVGU9/148da6386d868117fc496f62591f6fae/Katalog_Entertainment_Marzec_2026.pdf"
+        },
+        {
+          "title": "Composed of hig",
+          "url": "https://www.farnell.com/datasheets/1782963.pdf"
+        },
+        {
+          "title": "Steelseries qck xxl gaming mousepad | PDF Download",
+          "url": "https://www.selexion.be/fr/pr/steelseries-qck-xxl-gaming-mousepad/product-sheet"
+        },
+        {
+          "title": "Product List",
+          "url": "https://iontech.com.ph/wp-content/uploads/2023/04/Brand-Pricelist-LOGITECH-G.pdf"
+        },
+        {
+          "title": "IN 2020 STEELSERIES LAUNCHED",
+          "url": "https://manuals.plus/m/780251c73b3f8b4334266eaeef6688ca5efc7b98315a4cbccf28e8a081d4598d.pdf"
+        },
+        {
+          "title": "Logitech_PW_Catalogue_REV7_Combined_Online",
+          "url": "https://cdnc.heyzine.com/files/uploaded/e5d63c108b6f27486793718a2d726fcbfe9990c8-1.pdf"
+        },
+        {
+          "title": "List of Logitech products",
+          "url": "https://en.wikipedia.org/wiki/List_of_Logitech_products"
+        },
+        {
+          "title": "[Mousepad] SteelSeries QcK XXL Thick Mousepad: FaZe Clan Edition (XXL Thick Cloth - 900mm x 400mm x 4mm) - $15 ($40 - $25, 63% off)",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/1jhtkzy/mousepad_steelseries_qck_xxl_thick_mousepad_faze/"
+        },
+        {
+          "title": "[MOUSEPAD] SteelSeries QcK Heavy XXL - $19.99",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/1l8inh2"
+        },
+        {
+          "title": "New Steelseries QCK Mousepad?",
+          "url": "https://www.reddit.com/r/MousepadReview/comments/1abqmmd"
+        },
+        {
+          "title": "Qck without logo?",
+          "url": "https://www.reddit.com/r/MousepadReview/comments/p2tqll"
+        },
+        {
+          "title": "Logitech G",
+          "url": "https://en.wikipedia.org/wiki/Logitech_G"
+        },
+        {
+          "title": "[Mouse] SteelSeries QcK XXL Gaming Mouse Pad - Black ($39.99) [Bestbuy.ca]",
+          "url": "https://www.reddit.com/r/bapcsalescanada/comments/g4mw46"
+        },
+        {
+          "title": "Fake steelseries",
+          "url": "https://www.reddit.com/r/steelseries/comments/1sq1lst/fake_steelseries/"
+        },
+        {
+          "title": "Please make bigger QcK Heavy 6mm",
+          "url": "https://www.reddit.com/r/steelseries/comments/ytchuj"
+        },
+        {
+          "title": "QCK XXL",
+          "url": "https://www.reddit.com/r/steelseries/comments/jm583r"
+        },
+        {
+          "title": "[Mousepad] SteelSeries QcK XXL Thick (QcK Heavy XXL 900 x 400 x 4 mm) $15 / QcK XXL Classic $15",
+          "url": "https://www.reddit.com/r/buildapcsales/comments/1h2oq4p/mousepad_steelseries_qck_xxl_thick_qck_heavy_xxl/"
+        }
+      ]
+    },
+    {
+      "batch": 22,
+      "ids": [
+        "rog-strix-rtx5070ti-o16g",
+        "aorus-rtx5080-master-ice-16g",
+        "nitro-rx9070xt-phantomlink-polar",
+        "proart-rtx5080-16g"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB\"",
+        "site:commons.wikimedia.org \"GIGABYTE AORUS GeForce RTX 5080 MASTER ICE 16G\"",
+        "site:commons.wikimedia.org \"SAPPHIRE NITRO+ Radeon RX 9070 XT OC PhantomLink Polar Edition\"",
+        "site:commons.wikimedia.org \"ASUS ProArt GeForce RTX 5080 16GB\""
+      ],
+      "candidatePages": [
+        {
+          "title": "Category:Video cards (flat list) - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AVideo_cards_%28flat_list%29"
+        }
+      ]
+    },
+    {
+      "batch": 23,
+      "ids": [
+        "zotac-rtx5080-solid-oc-white",
+        "palit-rtx5070ti-gamingpro-s",
+        "asus-dual-rtx5060ti-16g",
+        "amd-ryzen7-9800x3d"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"ZOTAC GAMING GeForce RTX 5080 SOLID OC White Edition\"",
+        "site:commons.wikimedia.org \"Palit GeForce RTX 5070 Ti GamingPro-S 16GB\"",
+        "site:commons.wikimedia.org \"ASUS Dual GeForce RTX 5060 Ti 16GB\"",
+        "site:commons.wikimedia.org \"AMD Ryzen 7 9800X3D\""
+      ],
+      "candidatePages": [
+        {
+          "title": "Category:AMD Ryzen 7 9800X3D - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AAMD_Ryzen_7_9800X3D"
+        },
+        {
+          "title": "Category:Microprocessors with integrated graphics - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AMicroprocessors_with_integrated_graphics"
+        },
+        {
+          "title": "Category:Microprocessors using DDR5 SDRAM - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AMicroprocessors_using_DDR5_SDRAM"
+        },
+        {
+          "title": "Category:2024 microprocessors - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3A2024_microprocessors"
+        },
+        {
+          "title": "Category:Desktop microprocessors - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3ADesktop_microprocessors"
+        },
+        {
+          "title": "Category:AMD Ryzen 9000 series - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AAMD_Ryzen_9000_series"
+        },
+        {
+          "title": "Category:4.7 GHz microprocessors - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3A4.7_GHz_microprocessors"
+        },
+        {
+          "title": "Category:2-die microprocessors - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3A2-die_microprocessors"
+        },
+        {
+          "title": "Category:ASUS video cards - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AASUS_video_cards"
+        },
+        {
+          "title": "Category:AMD Ryzen 7 - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AAMD_Ryzen_7"
+        },
+        {
+          "title": "Category:Videos of microprocessors - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AVideos_of_microprocessors"
+        },
+        {
+          "title": "Category:2024-11-06 - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3A2024-11-06"
+        }
+      ]
+    },
+    {
+      "batch": 24,
+      "ids": [
+        "intel-core-ultra9-285k",
+        "amd-ryzen9-9950x3d",
+        "intel-core-ultra7-265k",
+        "intel-core-i9-14900k"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Intel Core Ultra 9 285K\"",
+        "site:commons.wikimedia.org \"AMD Ryzen 9 9950X3D\"",
+        "site:commons.wikimedia.org \"Intel Core Ultra 7 265K\"",
+        "site:commons.wikimedia.org \"Intel Core i9-14900K\""
+      ],
+      "candidatePages": [
+        {
+          "title": "Category:Micro-Star International computers - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AMicro-Star_International_computers"
+        },
+        {
+          "title": "Category:Intel Core Ultra 9 285K - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AIntel_Core_Ultra_9_285K"
+        },
+        {
+          "title": "Category:3.2 GHz microprocessors - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3A3.2_GHz_microprocessors"
+        },
+        {
+          "title": "Category:Intel Core Ultra 9 - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AIntel_Core_Ultra_9"
+        },
+        {
+          "title": "File:Intel i9-14900K.webp - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File%3AIntel_i9-14900K.webp"
+        },
+        {
+          "title": "Category:Microprocessors supporting SSE4.2 - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AMicroprocessors_supporting_SSE4.2"
+        },
+        {
+          "title": "Category:7-Zip – Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3A7-Zip?uselang=no"
+        },
+        {
+          "title": "Category:Micro-Star International products - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AMicro-Star_International_products"
+        },
+        {
+          "title": "Category:AMD Ryzen 9 9950X3D - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AAMD_Ryzen_9_9950X3D"
+        },
+        {
+          "title": "Category:Microprocessors with integrated graphics - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AMicroprocessors_with_integrated_graphics"
+        },
+        {
+          "title": "Category:24-core microprocessors - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3A24-core_microprocessors"
+        },
+        {
+          "title": "Category:Big.LITTLE microprocessors - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3ABig.LITTLE_microprocessors"
+        }
+      ]
+    },
+    {
+      "batch": 25,
+      "ids": [
+        "intel-core-i7-14700k",
+        "amd-ryzen9-9900x-tray",
+        "lexar-ares-gen2-32gb-8000",
+        "kingston-fury-beast-16gb-4800"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Intel Core i7-14700K\"",
+        "site:commons.wikimedia.org \"AMD Ryzen 9 9900X (Tray)\"",
+        "site:commons.wikimedia.org \"Lexar ARES RGB 2nd Gen DDR5 32GB (2×16GB) 8000\"",
+        "site:commons.wikimedia.org \"Kingston FURY Beast DDR5 16GB 4800\""
+      ],
+      "candidatePages": [
+        {
+          "title": "Category:Intel Core i7 14th generation - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AIntel_Core_i7_14th_generation"
+        },
+        {
+          "title": "Category:Intel Core i (14th generation) - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AIntel_Core_i_%2814th_generation%29"
+        },
+        {
+          "title": "Category:Intel Core i7-14700K - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AIntel_Core_i7-14700K"
+        },
+        {
+          "title": "Category:Intel Core i CPUs (flat list) - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AIntel_Core_i_CPUs_%28flat_list%29"
+        },
+        {
+          "title": "File:Intel Core i7-14700K (INVADERPC).png - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File%3AIntel_Core_i7-14700K_%28INVADERPC%29.png"
+        },
+        {
+          "title": "File:Unboxing The Intel 14th GEN 14900K, 14700K, 14600K - INVADERPC.webm - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File%3AUnboxing_The_Intel_14th_GEN_14900K%2C_14700K%2C_14600K_-_INVADERPC.webm"
+        },
+        {
+          "title": "File:ТОП МУТАНТ – дешевый конкурент i7-14700K ¦ Мобильный i7-14700HX на МОЩНОЙ плате Erying (1440p 30fps VP9-128kbit AAC)-00.02.43.200.png - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File%3A%D0%A2%D0%9E%D0%9F_%D0%9C%D0%A3%D0%A2%D0%90%D0%9D%D0%A2_%E2%80%93_%D0%B4%D0%B5%D1%88%D0%B5%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D0%B5%D0%BD%D1%82_i7-14700K_%C2%A6_%D0%9C%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_i7-14700HX_%D0%BD%D0%B0_%D0%9C%D0%9E%D0%A9%D0%9D%D0%9E%D0%99_%D0%BF%D0%BB%D0%B0%D1%82%D0%B5_Erying_%281440p_30fps_VP9-128kbit_AAC%29-00.02.43.200.png"
+        },
+        {
+          "title": "Category:Intel Core i7-12700 - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category%3AIntel_Core_i7-12700"
+        },
+        {
+          "title": "File:Intel Core 14 Generation First Review – i7 Slightly Upgraded (极客湾Geekerwan) 03.png - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File%3AIntel_Core_14_Generation_First_Review_%E2%80%93_i7_Slightly_Upgraded_%28%E6%9E%81%E5%AE%A2%E6%B9%BEGeekerwan%29_03.png"
+        },
+        {
+          "title": "File:14-ый провал Intel Зачем появились 14900K, 14700K и 14600K-00.01.59.355 (Мой Компьютер).png - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File%3A14-%D1%8B%D0%B9_%D0%BF%D1%80%D0%BE%D0%B2%D0%B0%D0%BB_Intel_%D0%97%D0%B0%D1%87%D0%B5%D0%BC_%D0%BF%D0%BE%D1%8F%D0%B2%D0%B8%D0%BB%D0%B8%D1%81%D1%8C_14900K%2C_14700K_%D0%B8_14600K-00.01.59.355_%28%D0%9C%D0%BE%D0%B9_%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%29.png"
+        },
+        {
+          "title": "File:ТОП МУТАНТ – дешевый конкурент i7-14700K ¦ Мобильный i7-14700HX на МОЩНОЙ плате Erying (1440p 30fps VP9-128kbit AAC)-00.30.14.800.png - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File%3A%D0%A2%D0%9E%D0%9F_%D0%9C%D0%A3%D0%A2%D0%90%D0%9D%D0%A2_%E2%80%93_%D0%B4%D0%B5%D1%88%D0%B5%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D0%B5%D0%BD%D1%82_i7-14700K_%C2%A6_%D0%9C%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_i7-14700HX_%D0%BD%D0%B0_%D0%9C%D0%9E%D0%A9%D0%9D%D0%9E%D0%99_%D0%BF%D0%BB%D0%B0%D1%82%D0%B5_Erying_%281440p_30fps_VP9-128kbit_AAC%29-00.30.14.800.png"
+        },
+        {
+          "title": "File:14-ый провал Intel Зачем появились 14900K, 14700K и 14600K-00.02.47.755 (Мой Компьютер).png - Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File%3A14-%D1%8B%D0%B9_%D0%BF%D1%80%D0%BE%D0%B2%D0%B0%D0%BB_Intel_%D0%97%D0%B0%D1%87%D0%B5%D0%BC_%D0%BF%D0%BE%D1%8F%D0%B2%D0%B8%D0%BB%D0%B8%D1%81%D1%8C_14900K%2C_14700K_%D0%B8_14600K-00.02.47.755_%28%D0%9C%D0%BE%D0%B9_%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%29.png"
+        }
+      ]
+    },
+    {
+      "batch": 26,
+      "ids": [
+        "lexar-thor-rgb-gen2-64gb-6000",
+        "xpg-spectrix-d35g-32gb-3200-black",
+        "crucial-ct32g48c40u5",
+        "corsair-vengeance-lpx-32gb-3200"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Lexar THOR RGB 2nd Gen DDR5 64GB (2×32GB) 6000\"",
+        "site:commons.wikimedia.org \"XPG SPECTRIX D35G RGB 32GB (2×16GB) DDR4-3200 Black\"",
+        "site:commons.wikimedia.org \"Crucial CT32G48C40U5 32GB DDR5-4800\"",
+        "site:commons.wikimedia.org \"Corsair VENGEANCE LPX 32GB (2×16GB) DDR4-3200\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 27,
+      "ids": [
+        "lexar-ddr5-32gb-5600-udimm",
+        "razer-deathadder-v4-pro-black",
+        "logitech-pro-x2-superstrike",
+        "bloody-w95-ultra-stone-black"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Lexar 32GB DDR5-5600 UDIMM\"",
+        "site:commons.wikimedia.org \"Razer DeathAdder V4 Pro Black\"",
+        "site:commons.wikimedia.org \"Logitech G PRO X2 SUPERSTRIKE\"",
+        "site:commons.wikimedia.org \"Bloody W95 Ultra Stone Black\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 28,
+      "ids": [
+        "bloody-r73-pro-black",
+        "aula-sc380pro-black",
+        "attack-shark-rs3-ultra-white",
+        "fantech-kanata-s-vx9s"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Bloody R73 Pro Black\"",
+        "site:commons.wikimedia.org \"AULA SC380Pro Black\"",
+        "site:commons.wikimedia.org \"ATTACK SHARK RS3 ULTRA Carbon Fiber White\"",
+        "site:commons.wikimedia.org \"Fantech Kanata S VX9S\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 29,
+      "ids": [
+        "logitech-g915-tkl-tactile-carbon",
+        "asus-rog-azoth-m701-nx-red",
+        "attack-shark-r98-he-moonlight",
+        "aula-f2088-air-red-white"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Logitech G G915 TKL Tactile Carbon Black\"",
+        "site:commons.wikimedia.org \"ASUS ROG Azoth M701 NX Red Black\"",
+        "site:commons.wikimedia.org \"ATTACK SHARK R98 HE Moonlight\"",
+        "site:commons.wikimedia.org \"AULA F2088 Air Red Switch White\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 30,
+      "ids": [
+        "aula-f75-retro-white",
+        "aula-win68-he-max",
+        "aula-win60-he-max",
+        "asus-rog-crosshair-x870e-dark-hero"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"AULA F75 Retro White Milk White Switch\"",
+        "site:commons.wikimedia.org \"AULA WIN68 HE Max Grey & Yellow\"",
+        "site:commons.wikimedia.org \"AULA WIN60 HE Max White & Blue\"",
+        "site:commons.wikimedia.org \"ASUS ROG Crosshair X870E Dark Hero\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 31,
+      "ids": [
+        "asus-tuf-b850-plus-wifi",
+        "gigabyte-z890-aorus-pro-ice",
+        "asus-prime-b850-plus-wifi-csm",
+        "asus-prime-b850m-f-csm"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"ASUS TUF Gaming B850-PLUS WIFI\"",
+        "site:commons.wikimedia.org \"GIGABYTE Z890 AORUS PRO ICE\"",
+        "site:commons.wikimedia.org \"ASUS PRIME B850-PLUS WIFI-CSM\"",
+        "site:commons.wikimedia.org \"ASUS PRIME B850M-F-CSM\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 32,
+      "ids": [
+        "asus-x870-max-gaming-wifi7",
+        "gigabyte-z890m-gaming-x",
+        "corsair-mp600-mini-1tb",
+        "corsair-mp700-elite-1tb-heatsink"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"ASUS X870 MAX GAMING WIFI7\"",
+        "site:commons.wikimedia.org \"GIGABYTE Z890M GAMING X\"",
+        "site:commons.wikimedia.org \"Corsair MP600 MINI 1TB\"",
+        "site:commons.wikimedia.org \"Corsair MP700 ELITE 1TB with Heatsink\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 33,
+      "ids": [
+        "kingston-kc3000-1tb",
+        "lexar-nq780-512gb",
+        "lexar-nq780-2tb",
+        "lexar-sl500-1tb-black"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Kingston KC3000 1TB\"",
+        "site:commons.wikimedia.org \"Lexar NQ780 512GB\"",
+        "site:commons.wikimedia.org \"Lexar NQ780 2TB\"",
+        "site:commons.wikimedia.org \"Lexar SL500 1TB Black\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 34,
+      "ids": [
+        "lenovo-ln950-4tb",
+        "lg-ultragear-27gx790b-b",
+        "ktc-m27t6",
+        "lenovo-legion-r45w-30"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Lenovo LN950 4TB (5SD1P69443)\"",
+        "site:commons.wikimedia.org \"LG UltraGear 27GX790B-B\"",
+        "site:commons.wikimedia.org \"KTC M27T6\"",
+        "site:commons.wikimedia.org \"Lenovo Legion R45W-30\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 35,
+      "ids": [
+        "msi-mag-274qp-qd-oled-x24",
+        "philips-evnia-27m2n3500nf-00",
+        "lenovo-legion-r27qc-30",
+        "acer-ed273-x0"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"MSI MAG 274QP QD-OLED X24\"",
+        "site:commons.wikimedia.org \"Philips Evnia 27M2N3500NF/00\"",
+        "site:commons.wikimedia.org \"Lenovo Legion R27QC-30\"",
+        "site:commons.wikimedia.org \"Acer ED273 X0\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 36,
+      "ids": [
+        "lian-li-edge-platinum-v2-1350-black",
+        "asus-tuf-1000g-evo",
+        "asus-tuf-850g-evo",
+        "msi-pag-g850ls-pcie5"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Lian Li EDGE Platinum V2 1350W Black\"",
+        "site:commons.wikimedia.org \"ASUS TUF Gaming 1000G EVO\"",
+        "site:commons.wikimedia.org \"ASUS TUF Gaming 850G EVO\"",
+        "site:commons.wikimedia.org \"MSI PAG G850LS PCIE5\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 37,
+      "ids": [
+        "msi-pag-g750ls-pcie5",
+        "cooler-master-elite-gold-1000-black",
+        "asus-rog-strix-1200-platinum",
+        "cougar-omnyx-black"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"MSI PAG G750LS PCIE5\"",
+        "site:commons.wikimedia.org \"Cooler Master Elite Gold 1000W Black\"",
+        "site:commons.wikimedia.org \"ASUS ROG Strix 1200W Platinum\"",
+        "site:commons.wikimedia.org \"Cougar OmnyX Black\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 38,
+      "ids": [
+        "lian-li-o11-vision-m-black",
+        "lian-li-vector-v150-inf-black",
+        "gigabyte-c201-panoramic-white",
+        "cougar-airface-180-white"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Lian Li O11 VISION-M Black\"",
+        "site:commons.wikimedia.org \"Lian Li VECTOR V150 INF Black\"",
+        "site:commons.wikimedia.org \"GIGABYTE C201 PANORAMIC White\"",
+        "site:commons.wikimedia.org \"Cougar Airface 180 White\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 39,
+      "ids": [
+        "cougar-mx600-air-pro-black",
+        "cougar-mx600-mini-v2-pro-white",
+        "lian-li-hydroshift-ii-lcd-c-360r-black",
+        "thermalright-frozen-horizon-360-digital"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Cougar MX600 Air Pro Black\"",
+        "site:commons.wikimedia.org \"Cougar MX600 Mini V2 Pro White\"",
+        "site:commons.wikimedia.org \"Lian Li HydroShift II LCD-C 360R Black\"",
+        "site:commons.wikimedia.org \"Thermalright Frozen Horizon 360 Digital ARGB Black\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 40,
+      "ids": [
+        "lian-li-hydroshift-ii-lcd-s-360",
+        "id-cooling-sl360-v2-space-white",
+        "id-cooling-se214xt-df-black",
+        "thermalright-magic-qube-360-black"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Lian Li HydroShift II LCD-S 360 Black\"",
+        "site:commons.wikimedia.org \"ID-COOLING SL360 V2 Space LCD White\"",
+        "site:commons.wikimedia.org \"ID-COOLING SE-214-XT DF ARGB Black\"",
+        "site:commons.wikimedia.org \"Thermalright Magic Qube 360 ARGB Black\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 41,
+      "ids": [
+        "cougar-poseidon-vistek-pro-360-black",
+        "steelseries-qck-performance-xl-control",
+        "steelseries-qck-performance-balance",
+        "attack-shark-cm03-rainbow"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"Cougar Poseidon Vistek Pro ARGB 360 Black\"",
+        "site:commons.wikimedia.org \"SteelSeries QcK Performance XL Control\"",
+        "site:commons.wikimedia.org \"SteelSeries QcK Performance Balance\"",
+        "site:commons.wikimedia.org \"ATTACK SHARK CM03 eSport Rainbow Coated\""
+      ],
+      "candidatePages": []
+    },
+    {
+      "batch": 42,
+      "ids": [
+        "attack-shark-cm05-glass-black-contours",
+        "logitech-g740",
+        "corsair-mm100",
+        "steelseries-qck-xxl"
+      ],
+      "queries": [
+        "site:commons.wikimedia.org \"ATTACK SHARK CM05 Glass Black Contours\"",
+        "site:commons.wikimedia.org \"Logitech G G740\"",
+        "site:commons.wikimedia.org \"Corsair MM100\"",
+        "site:commons.wikimedia.org \"SteelSeries QcK XXL\""
+      ],
+      "candidatePages": []
+    }
+  ],
+  "policySearches": [
+    {
+      "brands": [
+        "SAPPHIRE",
+        "ZOTAC",
+        "Palit",
+        "Lexar"
+      ],
+      "candidatePages": [
+        {
+          "title": "Terms of Use | Lexar",
+          "url": "https://americas.lexar.com/es/terms-of-use/"
+        },
+        {
+          "title": "Terms & Conditions",
+          "url": "https://www.sapphiretechnologies.com/terms"
+        },
+        {
+          "title": "利用規約｜ZOTAC公式ダイレクトショップ",
+          "url": "https://zotac.co.jp/terms-of-service/"
+        },
+        {
+          "title": "Lexar Official Brand Assets | Brandfolder",
+          "url": "https://brandfolder.com/lexar"
+        },
+        {
+          "title": "Terms and Conditions - Sapphire Media & Entertainment",
+          "url": "https://sapphiregroup.uk/terms-and-conditions"
+        },
+        {
+          "title": ":: Palit - Contact US ::",
+          "url": "https://www.palit.com/contact.php?lang=en"
+        },
+        {
+          "title": "ZOTAC | MEDIA CENTER | ZOTAC",
+          "url": "https://www.zotac.com/us/files/download/media"
+        },
+        {
+          "title": "Terms of use · Sapphire Studios",
+          "url": "https://sapphirestudios.org/terms"
+        },
+        {
+          "title": "Terms and Conditions | Sapphire Midnight",
+          "url": "https://www.sapphiremidnight.com/terms-conditions"
+        },
+        {
+          "title": "索泰ZOTAC",
+          "url": "https://www.zotaccn.com/"
+        },
+        {
+          "title": "Terms of service – Sapphire c2c.",
+          "url": "https://sapphirec2c.com/policies/terms-of-service"
+        },
+        {
+          "title": "SAPPHIRE REFURBISHMENTS TERMS AND CONDITIONS",
+          "url": "https://sapphirerefurbishments.co.uk/images/sapphire-refurbishments-terms-and-conditions.pdf"
+        },
+        {
+          "title": "Contact Us | Lexar",
+          "url": "https://americas.lexar.com/contact-us/"
+        },
+        {
+          "title": "8/28/23, 10:21 AM",
+          "url": "https://m.media-amazon.com/images/I/91rPPfiMBrL.pdf"
+        },
+        {
+          "title": "Precautions - Read this first!",
+          "url": "https://www.bhphotovideo.com/lit_files/294136.pdf"
+        },
+        {
+          "title": "2025 REV. 2",
+          "url": "https://www.zotac.com/us/system/files/media_center/zotac_branding_guidelines.pdf"
+        },
+        {
+          "title": "PHOTOGRAPHY RULES",
+          "url": "https://old.nine10.dev/wp-content/uploads/2023/08/Sapphire-and-Soull_brand_guide-June-2022.pdf"
+        },
+        {
+          "title": "ZOTAC_GAMING_BrandGuidelines_2021-REV1.03",
+          "url": "https://manuals.plus/m/e9310eacdeb0fdce565f562a9b641385168bc6f5651a9912bd11861008e655b3.pdf"
+        },
+        {
+          "title": "ZOTAC",
+          "url": "https://en.wikipedia.org/wiki/ZOTAC"
+        },
+        {
+          "title": "Lexar",
+          "url": "https://de.wikipedia.org/wiki/Lexar"
+        },
+        {
+          "title": "Lexar",
+          "url": "https://en.wikipedia.org/wiki/Lexar"
+        },
+        {
+          "title": "Zotac",
+          "url": "https://pt.wikipedia.org/wiki/Zotac"
+        },
+        {
+          "title": "Zotac",
+          "url": "https://de.wikipedia.org/wiki/Zotac"
+        }
+      ]
+    },
+    {
+      "brands": [
+        "Kingston",
+        "XPG ADATA",
+        "Crucial",
+        "Razer"
+      ],
+      "candidatePages": [
+        {
+          "title": "Terms of Use",
+          "url": "https://www.xpg.com/us/terms"
+        },
+        {
+          "title": "Legal - General Terms of Use | Razer United States",
+          "url": "https://www.razer.com/legal/general-terms-of-use"
+        },
+        {
+          "title": "Razer Legal | Razer United States",
+          "url": "https://www.razer.com/legal"
+        },
+        {
+          "title": "Releases and Usage Rights",
+          "url": "https://www.audentia-gestion.fr/Crucial/PDF/crucial-brand-styleguide.pdf"
+        },
+        {
+          "title": "Legal | Razer Trademark Use Guidelines | Razer Singapore",
+          "url": "https://www.razer.com/sg-en/legal/trademark-use-guidelines"
+        },
+        {
+          "title": "Phone: 800-836-7581",
+          "url": "https://kingstonvisitorsguide.com/wp-content/uploads/2023/02/KVG-Map-2023-Media-Kit.pdf"
+        },
+        {
+          "title": "Terms & Conditions| XPG Online",
+          "url": "https://www.xpg.co.uk/pages/terms-conditions"
+        },
+        {
+          "title": "Reproductions",
+          "url": "https://www.kingstonheritage.org.uk/sites/default/files/6851729/2025-08/Style_and_branding_guidelines___Kingston_Heritage_Service.pdf"
+        },
+        {
+          "title": "Image Requests | Discover & Access Visual Resources — Museum of Health Care at Kingston",
+          "url": "https://www.museumofhealthcare.ca/explore/research-and-collections/image-use.html"
+        },
+        {
+          "title": "RAZER AXON FAQ",
+          "url": "https://axon.razer.com/static/faq/"
+        },
+        {
+          "title": "Marketing Materials - LoDA Resource Center",
+          "url": "https://lodasupport.kingston.com/press-images"
+        },
+        {
+          "title": "modification or repair, unauthorized commercial use or any operation of the Product outside Razer’s recommended parameters; (f) claims arising from external causes, including (without limitation, accidents, acts of God, liquid contact, fire or earthquake); (g) Products with a serial number or date stamp that has been altered, obliterated or removed; (h) Products for which Razer will not receive payment; or (i) cosmetic and normal wear and tear, including (without limitation), scratches, dents and chips.",
+          "url": "https://m.media-amazon.com/images/I/A1L3D9jUIsL.pdf"
+        },
+        {
+          "title": "RAZER AXON CONTEST RULES AND REGULATIONS",
+          "url": "https://axon-staging.razer.com/static/contestRules/"
+        },
+        {
+          "title": "Reproductions and licensing | Kingston Heritage",
+          "url": "https://www.kingstonheritage.org.uk/reproductions-and-licensing"
+        },
+        {
+          "title": "Reproductions terms and conditions | Kingston Heritage",
+          "url": "https://www.kingstonheritage.org.uk/reproductions-terms-and-conditions?categoryId=3&documentId=10"
+        },
+        {
+          "title": "Media Policy",
+          "url": "https://kingstonfencing.co.uk/wp-content/docs/Kingston%20Fencing%20Club%20Media%20Policy.pdf"
+        },
+        {
+          "title": "Product Support",
+          "url": "https://www.xpg.com/en/support"
+        },
+        {
+          "title": "RAZER END USER LICENSE AGREEMENT",
+          "url": "https://assets.razerzone.com/downloads/software/RazerSynapse3EndUserLicenseAgreement.pdf"
+        },
+        {
+          "title": "ADATA",
+          "url": "https://en.wikipedia.org/wiki/ADATA"
+        },
+        {
+          "title": "XPG",
+          "url": "https://en.wikipedia.org/wiki/XPG"
+        },
+        {
+          "title": "Razer Inc.",
+          "url": "https://en.wikipedia.org/wiki/Razer_Inc."
+        },
+        {
+          "title": "ADATA",
+          "url": "https://de.wikipedia.org/wiki/ADATA"
+        }
+      ]
+    },
+    {
+      "brands": [
+        "Bloody",
+        "AULA",
+        "ATTACK SHARK",
+        "Fantech"
+      ],
+      "candidatePages": [
+        {
+          "title": "Bloody Official Website",
+          "url": "https://www.bloody.com/en/terms.php"
+        },
+        {
+          "title": "Bloody Official Website",
+          "url": "https://www.bloodyusa.com/terms.php"
+        },
+        {
+          "title": "Policies & Terms | AULA Indonesia",
+          "url": "https://aula.co.id/policies"
+        },
+        {
+          "title": "Submit your project · Fantech",
+          "url": "https://www.fantech.net/en-us/expertise/fantech-5-hub/submit-your-project"
+        },
+        {
+          "title": "Politica de confidențialitate",
+          "url": "https://fantech.ro/politica-de-confidentialitate"
+        },
+        {
+          "title": "Bloody Official Website",
+          "url": "https://www.bloody.com/en/policy.php"
+        },
+        {
+          "title": "Aula",
+          "url": "https://aula.enciclo.es/legal"
+        },
+        {
+          "title": "@attackshark | Linktree",
+          "url": "https://linktr.ee/attackshark"
+        },
+        {
+          "title": "Business Contact",
+          "url": "https://fantechworld.com/pages/business-contact"
+        },
+        {
+          "title": "Terms of service – US - Aula Keyboards",
+          "url": "https://aula-keyboards.com/policies/terms-of-service"
+        },
+        {
+          "title": "Bloody Official Website",
+          "url": "https://www.bloodyusa.com/proReg.php"
+        },
+        {
+          "title": "Aviso Legal - Aula PT",
+          "url": "https://www.aulapt.org/contacto/aviso-legal/"
+        },
+        {
+          "title": "FANTECH NZ  TERMS AND CONDITIONS OF PURCHASE",
+          "url": "https://www.fantech.com.au/images/AboutUs/Terms_and_Conditions_Purchase_NZ.pdf"
+        },
+        {
+          "title": "content_management",
+          "url": "https://cdn.fanter.com/docs/content_management.pdf"
+        },
+        {
+          "title": "| | --- | --- | --- Permissions Guidelines for Aut",
+          "url": "https://authorservices-ppd.wiley.com/asset/book-author-documents.html/Permissions_Guidelines_Full.pdf"
+        },
+        {
+          "title": "Terms and Conditions of Purchase (m+k mark up) (4135056).DOCX",
+          "url": "https://www.fantech.com.au/images/AboutUs/Terms_and_Conditions_Purchase.pdf"
+        },
+        {
+          "title": "1",
+          "url": "https://digitalassets.southafrica.net/download/SA%20Tourism%20Digital%20Assets%20User%20Manual.pdf"
+        },
+        {
+          "title": "Ralawise Limited",
+          "url": "https://shop.ralawise.com/48e562/siteassets/.com/page-specific/terms--conditions/2786.pdf"
+        }
+      ]
+    },
+    {
+      "brands": [
+        "LG",
+        "KTC monitor",
+        "Lenovo",
+        "Acer"
+      ],
+      "candidatePages": [
+        {
+          "title": "Online terms of use",
+          "url": "https://www.acer.org/online-terms-of-use"
+        },
+        {
+          "title": "Legal Statement | LG Global",
+          "url": "https://www.lg.com/global/legal/"
+        },
+        {
+          "title": "Terms of Use LG Electronics | LG USA",
+          "url": "https://www.lg.com/us/terms"
+        },
+        {
+          "title": "Lenovo Terms of use - United States | Lenovo US",
+          "url": "https://www.lenovo.com/us/en/legal/"
+        },
+        {
+          "title": "Copyright and Trademark Information | Lenovo US | Lenovo US",
+          "url": "https://www.lenovo.com/us/en/legal/copytrade/"
+        },
+        {
+          "title": "お問合せ | ＫＴＣツールオフィシャルサイト",
+          "url": "https://ktc.jp/inquiry"
+        },
+        {
+          "title": "Imagery – Lenovo Brand World",
+          "url": "https://brandworld.lenovo.com/visual-identity/imagery/"
+        },
+        {
+          "title": "OUR STANDARD",
+          "url": "https://www.lg.com/content/dam/lge/global/sustainability/pdf/LGE_CoC_FINAL_EN_revised.pdf"
+        },
+        {
+          "title": "FAQ – Lenovo Brand World",
+          "url": "https://brandworld.lenovo.com/faq/"
+        },
+        {
+          "title": "联想智能内容中心",
+          "url": "https://ldam.lenovo.com/policy/agreement"
+        },
+        {
+          "title": "PROTECTING COMPANY ASSETS",
+          "url": "https://static.lenovo.com/ww/docs/sustainability/lenovo-code-english-final-v7.pdf"
+        },
+        {
+          "title": "Logo – Lenovo Brand World",
+          "url": "https://brandworld.lenovo.com/visual-identity/logo/"
+        },
+        {
+          "title": "Online terms of use",
+          "url": "https://mfb.acer.org/online-terms-of-use"
+        },
+        {
+          "title": "Permissions and copyright - ACER",
+          "url": "https://www.acer.org/id/author-guidelines/permissions-and-copyright"
+        },
+        {
+          "title": "Appendix F. Notices",
+          "url": "https://www.bhphotovideo.com/lit_files/256905.pdf"
+        },
+        {
+          "title": "uses by You.",
+          "url": "https://media.us.lg.com/m/2c61405cf9ec3a9a/original/OM_ACSmart5_PACS5A000_11_2024.pdf"
+        },
+        {
+          "title": "You may use this feature solely for creative purposes. The use of this feature involving infringement of any other person’s rights, such as copyright or defamatory or offensive statements, may be subject to civil, criminal, or administrative liabilities and/or penalties under applicable laws. You shall not copy, reproduce, distribute, or otherwise make illegal use of any copyrighted materials without permission of the rightful owner or copyright holder. To the fullest extent permitted by applicable law, LG Electronics disclaims all expressed and implied warranties as well as liabilities associated thereto.",
+          "url": "https://www.bhphotovideo.com/lit_files/367690.pdf"
+        },
+        {
+          "title": "worldwide, non-exclusive, non-revocable, royalty-free, transferable, sub-licensable right to promote and distribute part or all of the information in any media formats with any manner, including without limitation",
+          "url": "https://za-offers.acer.com/wp-content/uploads/2025/09/Terms-and-Conditions-of-Reviews-website-ZA-2.pdf"
+        },
+        {
+          "title": "Use of manufacturers own product images in content - allowed?",
+          "url": "https://www.reddit.com/r/Wordpress/comments/q34lmh"
+        },
+        {
+          "title": "LG Electronics",
+          "url": "https://en.wikipedia.org/wiki/LG_Electronics"
+        },
+        {
+          "title": "KTC Technology",
+          "url": "https://en.wikipedia.org/wiki/KTC_Technology"
+        },
+        {
+          "title": "Acer Inc.",
+          "url": "https://en.wikipedia.org/wiki/Acer_Inc."
+        },
+        {
+          "title": "Lenovo",
+          "url": "https://en.wikipedia.org/wiki/Lenovo"
+        }
+      ]
+    },
+    {
+      "brands": [
+        "Lian Li",
+        "Cooler Master",
+        "Cougar gaming",
+        "SteelSeries"
+      ],
+      "candidatePages": [
+        {
+          "title": "Terms of Use",
+          "url": "https://www.coolermaster.com/en-global/terms-of-use.html"
+        },
+        {
+          "title": "Terms of Use - Cooler Master",
+          "url": "https://coolermaster-usa.com/contact_page_id-4.html"
+        },
+        {
+          "title": "Terms & Conditions :: Cougar Gaming Cyprus",
+          "url": "https://cougargamingcyprus.com/terms-conditions"
+        },
+        {
+          "title": "Refund and Returns Policy – Cougar Gaming",
+          "url": "https://cougargaming.co.za/policies-procedures/"
+        },
+        {
+          "title": "Terms and Conditions for SteelSeries | SteelSeries",
+          "url": "https://steelseries.com/policies/terms"
+        },
+        {
+          "title": "Mentions légales – Cougar Gaming",
+          "url": "https://www.cougargaming.fr/policies/legal-notice"
+        },
+        {
+          "title": "Game On - Terms and Conditions | SteelSeries",
+          "url": "https://steelseries.com/game-on/terms-and-conditions"
+        },
+        {
+          "title": "Create Your Theme - LIAN LI is a Leading Provider of PC Cases | Computer Cases",
+          "url": "https://lian-li.com/create-your-theme/"
+        },
+        {
+          "title": "COUGAR Contact",
+          "url": "https://cougargaming.com/us/support/contact/"
+        },
+        {
+          "title": "Terms of Use",
+          "url": "https://www.coolermaster.com/en-au/terms-of-use.html"
+        },
+        {
+          "title": "9x - 60 sec video | SteelSeries ApS",
+          "url": "https://www.mynewsdesk.com/steelseries/videos/9x-60-sec-video-43406"
+        },
+        {
+          "title": "Conditions d’utilisation – Cougar Gaming",
+          "url": "https://www.cougargaming.fr/policies/terms-of-service"
+        },
+        {
+          "title": "Prod",
+          "url": "https://device.report/m/e635c1679113ae70ed246149cf3f917ac49c9b525ea29c6ee7d967205914fe03.pdf"
+        },
+        {
+          "title": "citeturn64search12 [wordlim: 200] Published: 3.0 years ago; Hot New (/products/new-product/) ... Instagram",
+          "url": "https://www.instagram.com/cougargaming_official/"
+        },
+        {
+          "title": "• COUGAR does not authorize or endorse",
+          "url": "https://m.media-amazon.com/images/I/71dOjDvrNXS.pdf"
+        },
+        {
+          "title": "Left page advert",
+          "url": "https://www.malabs.com/media/catalog/catalog.pdf"
+        },
+        {
+          "title": "Cooler Master Products: Limited Warranty",
+          "url": "https://assets.coolermaster.com/gaming/download/cases/stryker/stryker-manual.pdf"
+        },
+        {
+          "title": "www.cougargaming.com",
+          "url": "https://manuals.plus/m/2b689bd620d312c093fd2aa5bff8198a1d9d9fa2de94dc861670a6dc5e4673d0_optim.pdf"
+        },
+        {
+          "title": "STC_usermanual",
+          "url": "https://www.interdiscount.ch/static-shops/products/document/ce786d5b7d117455403883e5f5e40eb8d49c.pdf"
+        },
+        {
+          "title": "Lian Li",
+          "url": "https://en.wikipedia.org/wiki/Lian_Li"
+        },
+        {
+          "title": "Lian Li",
+          "url": "https://de.wikipedia.org/wiki/Lian_Li"
+        },
+        {
+          "title": "Cooler Master",
+          "url": "https://en.wikipedia.org/wiki/Cooler_Master"
+        },
+        {
+          "title": "Lian Li",
+          "url": "https://fr.wikipedia.org/wiki/Lian_Li"
+        },
+        {
+          "title": "Lian Li",
+          "url": "https://pt.wikipedia.org/wiki/Lian_Li"
+        },
+        {
+          "title": "SteelSeries",
+          "url": "https://en.wikipedia.org/wiki/SteelSeries"
+        }
+      ]
+    },
+    {
+      "brands": [
+        "Thermalright",
+        "ID-COOLING",
+        "Philips Evnia",
+        "Intel"
+      ],
+      "candidatePages": [
+        {
+          "title": "Intel Terms of Use",
+          "url": "https://www.intel.com/content/www/us/en/legal/terms-of-use.html"
+        },
+        {
+          "title": "ID-COOLING: AIO Liquid Cooler, CPU Air Cooler, Case Fan",
+          "url": "https://www.idcooling.com/Company/contact"
+        },
+        {
+          "title": "Press Hub - Newsroom",
+          "url": "https://newsroom.intel.com/press-hub"
+        },
+        {
+          "title": "Умови використання сайту",
+          "url": "https://www.id-cooling.ua/terms_use_site/"
+        },
+        {
+          "title": "Thermalright – Ultimate CPU Cooling Solution",
+          "url": "https://www.thermalright.com/"
+        },
+        {
+          "title": "Terms & conditions - Acceptable use policy",
+          "url": "https://www.philips.co.uk/c-w/terms/acceptable-use-policy.html"
+        },
+        {
+          "title": "Intel Personal Release (“Release”)",
+          "url": "https://www.intel.com/content/dam/www/public/emea/ie/en/documents/personal-release-form-ty-ie.pdf"
+        },
+        {
+          "title": "Rev 08.08.2025",
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2022-11/program-terms-and-conditions.pdf"
+        },
+        {
+          "title": "ID® | Rights",
+          "url": "https://id.dk/en/rights"
+        },
+        {
+          "title": "Intel Promotional Material Release (“PMR”) Form",
+          "url": "https://cdrdv2-public.intel.com/671151/pmr-intel-promotional-material-release-form.pdf"
+        },
+        {
+          "title": "Philips General Trademark Use Guidelines | Philips",
+          "url": "https://www.philips.com/a-w/about/innovation/ips/philips-general-trademark-use-guidelines"
+        },
+        {
+          "title": "Teilnahmebedingungen von Intel",
+          "url": "https://www.intel.de/content/www/de/de/legal/terms-of-use.html"
+        },
+        {
+          "title": "Conditions d'utilisation",
+          "url": "https://www.intel.fr/content/www/fr/fr/legal/terms-of-use.html"
+        },
+        {
+          "title": "Philips wordmark - Media library | Philips",
+          "url": "https://www.philips.com/a-w/about/news/media-library/2024-Philips-Wordmark.html"
+        },
+        {
+          "title": "Authorized Use of Intel® Logo Label",
+          "url": "https://www.intel.com/content/www/us/en/support/articles/000090589/processors.html"
+        },
+        {
+          "title": "Legal Terms",
+          "url": "https://www.philips.com/c-dam/b2c/tv/categorypage/master/footer/legal_terms_ugc_guideline.pdf"
+        },
+        {
+          "title": "IMPORTANT - READ BEFORE COPYING, INSTALLING OR USING.",
+          "url": "https://community.intel.com/legacyfs/online/drupal_files/managed/c0/5f/Master-EULA-for-Intel-Sw-Development-Products-March-2015.pdf"
+        },
+        {
+          "title": "Intel® Commercial Software & Cloud Services",
+          "url": "https://cdrdv2-public.intel.com/784518/SW_CloudSvc_CommercialTerms_ver1.2.pdf"
+        }
+      ]
+    }
+  ]
+}

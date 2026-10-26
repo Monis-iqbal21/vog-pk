@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ProductCard from './ProductCard';
 import SeeAllCard from './SeeAllCard';
+import { HOMEPAGE_PRODUCT_LIMIT } from '@/data/products';
 import './Products.css';
 
 export default function ProductCarousel({ id, title, subtitle, products, seeAllHref, seeAllLabel, children, onAddToCart, labelledBy }) {
@@ -56,7 +57,7 @@ export default function ProductCarousel({ id, title, subtitle, products, seeAllH
       </div>
     </div>
     {children}
-    <div id={`${id}-track`} ref={track} className="product-track" role={labelledBy ? 'tabpanel' : 'region'} aria-labelledby={labelledBy} aria-label={labelledBy ? undefined : `${title} products. Use left and right arrow keys to scroll.`} tabIndex={0}
+    <div id={`${id}-track`} ref={track} className="product-track" data-item-count={Math.min(products.length, HOMEPAGE_PRODUCT_LIMIT) + 1} role={labelledBy ? 'tabpanel' : 'region'} aria-labelledby={labelledBy} aria-label={labelledBy ? undefined : `${title} products. Use left and right arrow keys to scroll.`} tabIndex={0}
       onKeyDown={(event) => {
         if (event.target !== event.currentTarget) return;
         if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') { event.preventDefault(); move(event.key === 'ArrowRight' ? 1 : -1); }
@@ -81,7 +82,7 @@ export default function ProductCarousel({ id, title, subtitle, products, seeAllH
       }} onPointerUp={endDrag} onPointerCancel={endDrag} onLostPointerCapture={() => { drag.current = null; track.current?.classList.remove('is-dragging'); }}
       onClickCapture={(event) => { if (suppressClick.current) { event.preventDefault(); event.stopPropagation(); suppressClick.current = false; } }}
       onDragStart={(event) => event.preventDefault()}>
-      {products.slice(0, 8).map((product) => <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />)}
+      {products.slice(0, HOMEPAGE_PRODUCT_LIMIT).map((product) => <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />)}
       <SeeAllCard href={seeAllHref} label={seeAllLabel} />
     </div>
   </section>;
