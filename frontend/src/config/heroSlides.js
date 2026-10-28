@@ -14,7 +14,7 @@ export const heroSlides = [
     bottomRight: {
       id: 'hardware', label: 'PREMIUM HARDWARE', heading: "Built for What's Next",
       description: 'High-performance components for serious gamers.', cta: 'View Featured Products',
-      href: '/products/featured', image: '/images/hero/premium-hardware-placeholder.svg',
+      href: '/collections/featured', image: '/images/hero/premium-hardware-placeholder.svg',
     },
   },
   {

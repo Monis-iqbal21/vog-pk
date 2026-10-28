@@ -1,91 +1,59 @@
 # VOGPK — Vision of Gamers
 
-Initial storefront foundation. Frontend: Next.js 16 (App Router), React, JavaScript/JSX, Tailwind CSS 4, Inter via next/font, and Lucide icons. Backend: NestJS 12 with its standard TypeScript module setup.
+Monorepo with three independently installed applications:
 
-VOGPK is a Pakistan-focused PC hardware and gaming e-commerce project. This monorepo keeps the storefront and REST API as separate applications, each with its own package manifest and lockfile. The backend runs on Node.js. PostgreSQL and Prisma are planned; neither is installed or configured yet.
+| App | Stack | Local address |
+|---|---|---|
+| `frontend/` | Next.js 16, React, JavaScript/JSX | http://localhost:3000 |
+| `admin/` | Separate Next.js administration app | http://localhost:3001 |
+| `backend/` | NestJS 12, TypeScript, Prisma 7, PostgreSQL | http://localhost:4000/api/health |
 
-## Repository structure
+Node.js 24.15+ and npm are required. There is no Turborepo/Nx workspace. Run `npm ci` inside each application. Git is managed at this root.
 
-```text
-vog-pk/
-├── frontend/     # Next.js storefront: public/, src/, package.json
-├── backend/      # NestJS REST API: src/, test/, package.json
-├── .gitignore
-└── README.md
-```
+The storefront includes the hero, curated product carousels, 84 development products, product detail pages and galleries, dependent variant architecture, and category/collection listings with filters. Products retain retailer-reference prices and unverified inventory; no checkout or fake purchasing is implemented.
 
-Git is managed at the repository root. Install dependencies within each application; no workspace orchestration is required.
+## Administration setup
 
-## Requirements
+Read **[Admin Phase 1 setup, security, owner provisioning and deployment guide](docs/admin-phase1.md)**. This includes the exact startup sequence, local PostgreSQL helper, manual database setup, configuration examples, CLI owner bootstrap and security-test commands.
 
-Node.js 24.15+ (verified with 24.20.0) and npm.
+There is **no default owner password and no public registration**. Migrations/role seeding do not create an account. Supply your own owner credentials securely through the documented bootstrap command.
 
-Git is required to clone and contribute to the repository.
-
-## Run locally
-
-Open two terminals from this directory:
+Start each application in its own terminal after database/configuration setup:
 
 ```powershell
 cd frontend
-npm ci
 npm run dev
 ```
 
-Frontend: http://localhost:3000
-
 ```powershell
 cd backend
-npm ci
 npm run start:dev
 ```
 
-Backend: http://localhost:4000/api/health → {"status":"ok"}. CORS allows http://localhost:3000.
+```powershell
+cd admin
+npm run dev
+```
 
-## Environment setup
+Backend and admin require local environment configuration; placeholder-only `.env.example` files are provided. Do not commit `.env.local`, database files, generated test credentials or secrets. The optional database helper is development-only, binds loopback on port 5433, and does not install a system service.
 
-Neither application currently requires environment variables. The backend port and local frontend CORS origin are configured in `backend/src/main.ts`. No `.env.example` files are needed at this stage. When environment configuration is introduced, add placeholder-only `.env.example` files and keep real `.env` files local; Git excludes environment files while allowing `.env.example`.
+## Checks
 
-## Planned deployment architecture
+- Storefront: `npm run lint`, `npm run build`; listing/product/gallery/variant verification scripts are documented in its reports.
+- Admin: `npm run lint`, `npm run build`; `node scripts/test-admin-browser.cjs` against the isolated test API verifies browser/BFF/session/RBAC flows.
+- Backend: `npm run lint`, `npm test`, `npm run test:e2e`, `npm run db:validate`, `npm run build`, `npm run test:security`.
+- Migrations: `npm run db:migrate`; roles/permissions: `npm run db:seed` (both from backend, against an explicitly configured database).
 
-Deploy the applications independently from the same GitHub repository:
+## Implementation reports
 
-| Application | Hosting | Root directory | Future domain |
-| --- | --- | --- | --- |
-| Frontend | Vercel (planned) | `frontend` | `vogpk.com` |
-| Backend | To be selected | `backend` | `api.vogpk.com` |
+- [Product detail pages](frontend/docs/product-detail-pages.md)
+- [Dependent variants and future catalogue schema](frontend/docs/product-variants.md)
+- [Product listing routes, facets and future API contract](frontend/docs/product-listing-pages.md)
+- [Secure admin foundation, database models, roles, sessions and verification](docs/admin-phase1.md)
+- [Completed real development authentication and RBAC verification](docs/admin-auth-verification.md)
 
-The frontend uses Next.js; the backend runs as a separate NestJS service. These domains and production deployments are not configured. Production API connectivity and CORS configuration will be addressed when deployment is implemented.
+## Deployment preparation
 
-## Checks and production
+Keep the storefront in its existing Vercel project rooted at `frontend`. The independent admin is prepared for a Netlify project rooted at `admin`; see the [admin routing, Netlify and custom-domain guide](docs/admin-routing-netlify.md). Deploy `backend` independently to a suitable Node.js service with PostgreSQL. Origins, API URLs and cookie security are configurable; no production domain is hardcoded into admin business logic. Production administration requires HTTPS, host-only Secure cookies and server-only secrets.
 
-Frontend: `npm run lint`, `npm run build`, then `npm start`.
-Backend: `npm run lint`, `npm test`, `npm run test:e2e`, `npm run build`, then `npm run start:prod`.
-
-## Structure and customization
-
-- `frontend/src/app/globals.css`: central palette, typography, spacing, container, border, radius, and shadow tokens; Tailwind is available alongside semantic CSS classes.
-- `frontend/src/app/layout.jsx`: shared navbar, main landmark, skip link, and footer.
-- `frontend/src/components/layout/`: reusable branding and responsive navigation/footer.
-- `frontend/src/config/navigation.js`: navigation, categories, future URLs, and footer links.
-- `frontend/src/config/site.js`: site identity and contact/social placeholders. Replace null values with real details when available. Social brand marks are inline SVGs; UI icons use Lucide.
-- `frontend/public/images/`, `frontend/src/components/ui/`, `frontend/src/lib/`: reserved for future assets and shared code.
-- `backend/src/`: root module, health controller, and bootstrap with `/api` prefix and port 4000.
-
-The homepage deliberately contains only a welcome placeholder. Search is a visual input, and account, wishlist, and cart buttons are marked as coming soon. The cart badge uses a dash until real data exists. Future product, support, policy, and account pages are not implemented; their links use the intended URL structure and currently reach Next.js's 404 page. No database, commerce API, authentication, checkout, or newsletter is included.
-
-Desktop dropdowns use native details controls (Enter/Space, Tab, Escape). The mobile navigation uses a modal dialog with native focus containment, Escape/close handling, focus return, expandable categories, and background scroll locking. It closes when resizing to desktop.
-
-## Verification
-
-Completed on 24 October 2026:
-
-- Frontend and backend dependency installation, lint, and production builds passed.
-- Backend unit and HTTP integration tests passed.
-- Running production backend returned HTTP 200 with `{"status":"ok"}` at `/api/health`; the local frontend CORS origin was confirmed.
-- Running frontend checked in headless Microsoft Edge at 320, 375, 768, 1024, and 1440px: homepage renders, footer stacks, no horizontal overflow, mobile categories expand, Escape closes menus, focus returns, and scroll locking releases.
-- Desktop dropdowns verified with Enter, Tab, and Escape; no browser runtime errors.
-- Both npm dependency audits reported zero vulnerabilities.
-
-Future-route links intentionally resolve to 404 until the corresponding development phase.
-- Additional interaction checks passed: repeated Tab focus containment inside the drawer, close on desktop resize, Home link dismissal, and mobile search focus. Explicit Tab wrapping supplements the native dialog behavior.
+No DNS/deployment configuration is performed automatically. MFA, invitations/password change onboarding, operational monitoring and production database/backup setup remain launch prerequisites. Product/order/marketing administration modules are protected placeholders in Phase 1; full editors, payments, customer accounts and checkout are outside this milestone.

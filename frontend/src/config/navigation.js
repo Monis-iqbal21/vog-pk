@@ -8,6 +8,7 @@ export const components = [
 export const peripherals = [
   category('Keyboards', 'keyboards'), category('Gaming Mice', 'gaming-mice'),
   category('Headsets', 'headsets'), category('Mousepads', 'mousepads'), category('Controllers', 'controllers'),
+  category('Gaming Accessories', 'accessories'),
 ];
 export const navigation = [
   { label: 'Home', href: '/' }, { label: 'All Products', href: '/products' },

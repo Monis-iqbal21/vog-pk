@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": 25,
+  "database": "isolated PostgreSQL test database",
+  "defaultRoles": 6,
+  "permissions": 27,
+  "storedPasswordHash": "Argon2id 64 MiB / 3 passes / 1 lane",
+  "sessions": "Opaque 256-bit tokens, SHA-256 at rest",
+  "apiPort": 4002
+}

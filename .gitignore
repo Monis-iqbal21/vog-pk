@@ -23,6 +23,8 @@ Desktop.ini
 .cache/
 .next-*/
 .vercel/
+.local/
+backend/src/generated/
 
 # Private credentials
 *.pem
@@ -31,3 +33,32 @@ Desktop.ini
 *.pfx
 id_rsa*
 id_ed25519*
+
+# Operator credentials, verification state and private hosting metadata
+pass.txt
+*.dpapi
+*test-accounts.json
+*storage-state*.json
+.netlify/
+.turbo/
+*.crt
+*.cer
+*.p7b
+*.p8
+
+# Database files/backups (schema and migrations remain versioned)
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.dump
+*.backup
+*.bak
+*dump*.sql
+*backup*.sql
+pgdata/
+
+# Disposable browser/test output; sanitized docs reports are reviewed separately
+playwright-report/
+test-results/
+blob-report/

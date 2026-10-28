@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-29",
   "widths": [
     1440,
     1280,
@@ -18,7 +18,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/featured",
+      "seeAllHref": "/collections/featured",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -30,7 +30,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/new-arrivals",
+      "seeAllHref": "/collections/new-arrivals",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -186,7 +186,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/featured",
+      "seeAllHref": "/collections/featured",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -198,7 +198,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/new-arrivals",
+      "seeAllHref": "/collections/new-arrivals",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -354,7 +354,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/featured",
+      "seeAllHref": "/collections/featured",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -366,7 +366,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/new-arrivals",
+      "seeAllHref": "/collections/new-arrivals",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -522,7 +522,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/featured",
+      "seeAllHref": "/collections/featured",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -534,7 +534,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/new-arrivals",
+      "seeAllHref": "/collections/new-arrivals",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -690,7 +690,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/featured",
+      "seeAllHref": "/collections/featured",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -702,7 +702,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/new-arrivals",
+      "seeAllHref": "/collections/new-arrivals",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -858,7 +858,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/featured",
+      "seeAllHref": "/collections/featured",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -870,7 +870,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/new-arrivals",
+      "seeAllHref": "/collections/new-arrivals",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -1026,7 +1026,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/featured",
+      "seeAllHref": "/collections/featured",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -1038,7 +1038,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/new-arrivals",
+      "seeAllHref": "/collections/new-arrivals",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -1194,7 +1194,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/featured",
+      "seeAllHref": "/collections/featured",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -1206,7 +1206,7 @@
       "cards": 7,
       "imagesDecoded": true,
       "alignment": true,
-      "seeAllHref": "/products/new-arrivals",
+      "seeAllHref": "/collections/new-arrivals",
       "arrows": true,
       "keyboardNavigation": true,
       "noPageOverflow": true
@@ -1362,7 +1362,7 @@
   "evidenceDirectory": "C:\\Users\\Monis\\AppData\\Local\\Temp\\vog-catalogue-browser",
   "existingRouteLimitations": {
     "productDetailStatus": 200,
-    "categoryListingStatus": 404,
-    "note": "Product details now resolve through canonical routes and legacy redirects. Category-listing destination pages remain outside the product-detail scope."
+    "categoryListingStatus": 200,
+    "note": "Product detail and category listing routes are implemented; catalogue browsing uses the existing /products/<category> convention."
   }
 }

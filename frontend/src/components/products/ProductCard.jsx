@@ -1,3 +1,5 @@
+'use client';
+import {useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Plus } from 'lucide-react';
@@ -5,6 +7,7 @@ import { Plus } from 'lucide-react';
 const rupees = new Intl.NumberFormat('en-PK', { maximumFractionDigits: 0 });
 
 export default function ProductCard({ product, onAddToCart }) {
+  const [imageError,setImageError]=useState(false);
   const approvedPrice = product.pricingApproved === true && Number.isFinite(product.price) && product.price > 0;
   const discounted = approvedPrice && product.promotionApproved === true && Number.isFinite(product.regularPrice) && Number.isFinite(product.salePrice) && product.salePrice > 0 && product.salePrice < product.regularPrice;
   const referencePrice = Number.isFinite(product.referencePricePKR) && product.referencePricePKR > 0;
@@ -14,7 +17,7 @@ export default function ProductCard({ product, onAddToCart }) {
   return <article className="product-card">
     <Link href={`/products/${product.slug}`} className="product-card-link" draggable={false}>
       <div className="product-image-wrap">
-        <Image src={product.image} alt={product.imageAlt || product.name} fill sizes="(min-width: 1400px) 317px, (min-width: 1280px) 23vw, (min-width: 768px) 30vw, 45vw" className="product-image" draggable={false} />
+        <Image src={!product.image||imageError?'/images/products/product-placeholder.svg':product.image} alt={!product.image||imageError?`Image unavailable for ${product.name}`:product.imageAlt || product.name} onError={()=>{if(!imageError)setImageError(true);}} fill sizes="(min-width: 1400px) 317px, (min-width: 1280px) 23vw, (min-width: 768px) 30vw, 45vw" className="product-image" draggable={false} />
         {product.imageIsPlaceholder ? <span className="product-image-note">Image coming soon</span> : null}
       </div>
       <span className="product-brand">{product.brand}</span>

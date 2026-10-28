@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": 10,
+  "results": [
+    "Real owner browser login redirects to dashboard",
+    "Dashboard refresh and authenticated root/login redirects",
+    "HttpOnly SameSite Strict local session cookie",
+    "Owner access to all 11 protected modules",
+    "Unauthenticated direct API request rejected",
+    "CSRF-less mutation rejected",
+    "Logout invalidates server session and replay rejected",
+    "Protected route inaccessible after logout",
+    "Customer storefront remains public",
+    "No browser runtime errors"
+  ],
+  "mode": "Real local owner account and approved development API; no API override",
+  "credentialsPrinted": false,
+  "credentialsPersisted": false,
+  "accountAccessModified": false
+}

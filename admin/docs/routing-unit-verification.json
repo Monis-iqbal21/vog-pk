@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "checks": 19,
+  "returnPathsValidated": true,
+  "hostedConfigFailClosed": true,
+  "netlifyAndCustomDomainsConfigurable": true
+}

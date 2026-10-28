@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "authentication": true,
+  "csrf": true,
+  "permissionChecks": [
+    {
+      "authenticationRedirects": true,
+      "genericWrongPassword": true,
+      "csrfRequired": true,
+      "passwordVisibility": true
+    },
+    {
+      "realCookieSession": true,
+      "hostOnly": true,
+      "httpOnly": true,
+      "sameSiteStrict": true,
+      "noLocalStorage": true,
+      "noTokenInMarkup": true,
+      "noindexAndNoStore": true
+    },
+    {
+      "ownerPages": 11,
+      "sidebarCollapse": true,
+      "mobileModal": true,
+      "staffCreationAndDisable": true,
+      "selfChangesUnavailable": true
+    },
+    {
+      "role": "STORE_MANAGER",
+      "permissionNavigation": true,
+      "directRestrictedPageDenied": true,
+      "directApi403": true
+    },
+    {
+      "role": "CATALOG_MANAGER",
+      "permissionNavigation": true,
+      "directRestrictedPageDenied": true,
+      "directApi403": true
+    },
+    {
+      "role": "ORDER_MANAGER",
+      "permissionNavigation": true,
+      "directRestrictedPageDenied": true,
+      "directApi403": true
+    },
+    {
+      "role": "MARKETING_MANAGER",
+      "permissionNavigation": true,
+      "directRestrictedPageDenied": true,
+      "directApi403": true
+    },
+    {
+      "role": "VIEWER",
+      "permissionNavigation": true,
+      "directRestrictedPageDenied": true,
+      "directApi403": true
+    }
+  ],
+  "responsiveChecks": 12,
+  "responsive": [
+    {
+      "page": "login",
+      "width": 1920,
+      "noOverflow": true
+    },
+    {
+      "page": "login",
+      "width": 1440,
+      "noOverflow": true
+    },
+    {
+      "page": "login",
+      "width": 1024,
+      "noOverflow": true
+    },
+    {
+      "page": "login",
+      "width": 768,
+      "noOverflow": true
+    },
+    {
+      "page": "login",
+      "width": 390,
+      "noOverflow": true
+    },
+    {
+      "page": "login",
+      "width": 320,
+      "noOverflow": true
+    },
+    {
+      "page": "dashboard",
+      "width": 1920,
+      "noOverflow": true,
+      "sidebar": true
+    },
+    {
+      "page": "dashboard",
+      "width": 1440,
+      "noOverflow": true,
+      "sidebar": true
+    },
+    {
+      "page": "dashboard",
+      "width": 1024,
+      "noOverflow": true,
+      "sidebar": true
+    },
+    {
+      "page": "dashboard",
+      "width": 768,
+      "noOverflow": true,
+      "sidebar": true
+    },
+    {
+      "page": "dashboard",
+      "width": 390,
+      "noOverflow": true,
+      "sidebar": true
+    },
+    {
+      "page": "dashboard",
+      "width": 320,
+      "noOverflow": true,
+      "sidebar": true
+    }
+  ],
+  "expirationRedirect": true,
+  "serverLogoutRevocation": true,
+  "noPublicSecrets": true,
+  "pageErrors": [],
+  "evidenceDirectory": "C:\\Users\\Monis\\AppData\\Local\\Temp\\vog-admin",
+  "expiredMutationRedirect": true,
+  "allModuleLayoutChecks": {
+    "passed": true,
+    "checks": 22,
+    "widths": [
+      1440,
+      320
+    ]
+  },
+  "latestRoutingEvidence": "routing-http-verification.json"
+}

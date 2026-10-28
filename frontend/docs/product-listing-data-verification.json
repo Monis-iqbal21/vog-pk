@@ -1,0 +1,720 @@
+{
+  "passed": true,
+  "checks": 40,
+  "eligibleProducts": 84,
+  "categories": 12,
+  "curatedFeatured": 8,
+  "curatedNewArrivals": 8,
+  "pageSize": 12,
+  "coverage": [
+    {
+      "category": "graphics-cards",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "gpu-manufacturer",
+          "label": "GPU manufacturer",
+          "sourceKeys": [
+            "Graphics processor manufacturer",
+            "gpuManufacturer"
+          ],
+          "covered": 0,
+          "missing": [
+            "rog-strix-rtx5070ti-o16g",
+            "aorus-rtx5080-master-ice-16g",
+            "asus-rog-astral-rtx5080-oc-16gb",
+            "proart-rtx5080-16g",
+            "asus-prime-rtx5080-oc-16gb",
+            "asus-prime-rtx5070-oc-12gb-white",
+            "asus-dual-rtx5070-oc-12gb"
+          ]
+        },
+        {
+          "code": "gpu",
+          "label": "GPU model",
+          "sourceKeys": [
+            "Graphics processor",
+            "gpu"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "vram",
+          "label": "VRAM capacity",
+          "sourceKeys": [
+            "Discrete graphics card memory",
+            "vram"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "memory-type",
+          "label": "Memory type",
+          "sourceKeys": [
+            "Graphics card memory type",
+            "memoryType"
+          ],
+          "covered": 7,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "category": "processors",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "manufacturer",
+          "label": "Manufacturer",
+          "sourceKeys": [
+            "Manufacturer",
+            "manufacturer"
+          ],
+          "covered": 0,
+          "missing": [
+            "amd-ryzen9-9950x",
+            "intel-core-i7-13700k-tray",
+            "intel-core-i5-13600k",
+            "intel-core-i7-12700k-tray",
+            "intel-core-i9-14900k",
+            "intel-core-i7-12700kf-tray",
+            "intel-core-i5-11400"
+          ]
+        },
+        {
+          "code": "socket",
+          "label": "Socket",
+          "sourceKeys": [
+            "Socket",
+            "socket"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "cores",
+          "label": "Core count",
+          "sourceKeys": [
+            "Cores",
+            "cores"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "family",
+          "label": "Processor family",
+          "sourceKeys": [
+            "Processor family",
+            "family"
+          ],
+          "covered": 0,
+          "missing": [
+            "amd-ryzen9-9950x",
+            "intel-core-i7-13700k-tray",
+            "intel-core-i5-13600k",
+            "intel-core-i7-12700k-tray",
+            "intel-core-i9-14900k",
+            "intel-core-i7-12700kf-tray",
+            "intel-core-i5-11400"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "motherboards",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "socket",
+          "label": "Socket",
+          "sourceKeys": [
+            "Processor socket",
+            "socket"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "chipset",
+          "label": "Chipset",
+          "sourceKeys": [
+            "Motherboard chipset",
+            "chipset"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "form-factor",
+          "label": "Form factor",
+          "sourceKeys": [
+            "Motherboard form factor",
+            "formFactor"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "memory-support",
+          "label": "Memory support",
+          "sourceKeys": [
+            "Supported memory types",
+            "memorySupport"
+          ],
+          "covered": 7,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "category": "ram",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "capacity",
+          "label": "Capacity",
+          "sourceKeys": [
+            "Internal memory",
+            "capacity"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "generation",
+          "label": "DDR generation",
+          "sourceKeys": [
+            "Internal memory type",
+            "generation"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "frequency",
+          "label": "Rated frequency / data rate",
+          "sourceKeys": [
+            "Memory data transfer rate",
+            "Memory clock speed",
+            "speed"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "kit",
+          "label": "Kit configuration",
+          "sourceKeys": [
+            "Memory layout (modules x size)",
+            "kit"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "color",
+          "label": "Colour",
+          "sourceKeys": [
+            "Product colour",
+            "color"
+          ],
+          "covered": 1,
+          "missing": [
+            "kingston-fury-beast-ddr5-16gb-6000",
+            "kingston-fury-beast-16gb-4800",
+            "xpg-spectrix-d35g-32gb-3200-black",
+            "xpg-spectrix-d35g-16gb-3200-white",
+            "xpg-lancer-blade-rgb-32gb-6000",
+            "xpg-spectrix-d35g-32gb-3600-white"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "storage",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "storage-type",
+          "label": "Storage type",
+          "sourceKeys": [
+            "Storage type",
+            "storageType"
+          ],
+          "covered": 0,
+          "missing": [
+            "kingston-fury-renegade-2tb",
+            "kingston-nv2-1tb",
+            "kingston-kc3000-1tb",
+            "kingston-nv3-1tb",
+            "kingston-nv3-2tb",
+            "kingston-fury-renegade-1tb",
+            "kingston-nv3-500gb"
+          ]
+        },
+        {
+          "code": "capacity",
+          "label": "Capacity",
+          "sourceKeys": [
+            "SSD capacity",
+            "capacity"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "interface",
+          "label": "Interface",
+          "sourceKeys": [
+            "Interface",
+            "interface"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "form-factor",
+          "label": "Form factor",
+          "sourceKeys": [
+            "SSD form factor",
+            "formFactor"
+          ],
+          "covered": 7,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "category": "keyboards",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "switch-technology",
+          "label": "Switch technology",
+          "sourceKeys": [
+            "Keyboard key switch",
+            "switchType"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "switch-model",
+          "label": "Switch model",
+          "sourceKeys": [
+            "Keyboard key switch technology",
+            "switchModel"
+          ],
+          "covered": 6,
+          "missing": [
+            "asus-tuf-k1"
+          ]
+        },
+        {
+          "code": "layout",
+          "label": "Keyboard size / layout",
+          "sourceKeys": [
+            "Keyboard form factor",
+            "layout"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "connectivity",
+          "label": "Connectivity",
+          "sourceKeys": [
+            "Device interface",
+            "Connectivity",
+            "connectivity"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "color",
+          "label": "Colour",
+          "sourceKeys": [
+            "Product colour",
+            "color"
+          ],
+          "covered": 7,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "category": "gaming-mice",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "connectivity",
+          "label": "Connectivity",
+          "sourceKeys": [
+            "Device interface",
+            "Connectivity",
+            "connectivity"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "sensor",
+          "label": "Sensor technology",
+          "sourceKeys": [
+            "Movement detection technology",
+            "sensor"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "dpi",
+          "label": "DPI",
+          "sourceKeys": [
+            "Movement resolution",
+            "dpi"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "polling-rate",
+          "label": "Polling rate",
+          "sourceKeys": [
+            "Polling rate",
+            "pollingRate"
+          ],
+          "covered": 0,
+          "missing": [
+            "asus-rog-harpe-ace-aim-lab",
+            "asus-rog-keris-ii-ace-black",
+            "asus-rog-gladius-iii-wireless",
+            "asus-rog-chakram-x-origin",
+            "asus-rog-strix-impact-iii",
+            "asus-tuf-m4-air",
+            "asus-rog-spatha-x"
+          ]
+        },
+        {
+          "code": "weight",
+          "label": "Weight",
+          "sourceKeys": [
+            "Weight",
+            "weight"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "color",
+          "label": "Colour",
+          "sourceKeys": [
+            "Product colour",
+            "color"
+          ],
+          "covered": 7,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "category": "monitors",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "screen-size",
+          "label": "Screen size",
+          "sourceKeys": [
+            "Display diagonal",
+            "screenSize"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "resolution",
+          "label": "Resolution",
+          "sourceKeys": [
+            "Display resolution",
+            "resolution"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "refresh-rate",
+          "label": "Refresh rate",
+          "sourceKeys": [
+            "Maximum refresh rate",
+            "refreshRate"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "panel",
+          "label": "Panel type",
+          "sourceKeys": [
+            "Panel type",
+            "panelType"
+          ],
+          "covered": 6,
+          "missing": [
+            "msi-g274qpf-e2"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "power-supplies",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "wattage",
+          "label": "Wattage",
+          "sourceKeys": [
+            "Total power",
+            "wattage"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "efficiency",
+          "label": "Efficiency certification",
+          "sourceKeys": [
+            "80 PLUS certification",
+            "efficiency"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "modularity",
+          "label": "Modularity",
+          "sourceKeys": [
+            "Cabling type",
+            "modularity"
+          ],
+          "covered": 7,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "category": "pc-cases",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "motherboard-support",
+          "label": "Motherboard support",
+          "sourceKeys": [
+            "Supported motherboard form factors",
+            "motherboardSupport"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "color",
+          "label": "Colour",
+          "sourceKeys": [
+            "Product colour",
+            "color"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "case-type",
+          "label": "Case type",
+          "sourceKeys": [
+            "Form factor",
+            "caseType"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "gpu-clearance",
+          "label": "Maximum GPU clearance",
+          "sourceKeys": [
+            "Maximum graphics card length",
+            "gpuClearance"
+          ],
+          "covered": 6,
+          "missing": [
+            "msi-mag-forge-m100a-black"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "cooling",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "cooler-type",
+          "label": "Cooling type",
+          "sourceKeys": [
+            "Type",
+            "type"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "radiator-size",
+          "label": "Radiator size",
+          "sourceKeys": [
+            "Radiator size",
+            "radiatorSize"
+          ],
+          "covered": 0,
+          "missing": [
+            "asus-rog-ryujin-iii-360-argb",
+            "asus-rog-ryuo-iii-360-argb",
+            "asus-rog-strix-lc-iii-360-argb",
+            "msi-mag-coreliquid-a13-360-black",
+            "asus-rog-strix-lc-ii-240-argb",
+            "msi-mag-coreliquid-e360-black",
+            "msi-mag-coreliquid-i360-black"
+          ]
+        },
+        {
+          "code": "socket",
+          "label": "Socket compatibility",
+          "sourceKeys": [
+            "Supported processor sockets",
+            "supportedSockets"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "color",
+          "label": "Colour",
+          "sourceKeys": [
+            "Product colour",
+            "color"
+          ],
+          "covered": 7,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "category": "accessories",
+      "products": 7,
+      "attributes": [
+        {
+          "code": "accessory-type",
+          "label": "Accessory type",
+          "sourceKeys": [
+            "Product type",
+            "type"
+          ],
+          "covered": 0,
+          "missing": [
+            "asus-rog-scabbard-ii",
+            "asus-rog-sheath-ii-xxl",
+            "asus-rog-hone-ace-aim-lab",
+            "asus-tuf-p1",
+            "asus-rog-scabbard-ii-arctic-gray-xxl",
+            "asus-rog-balteus-qi",
+            "asus-rog-herculx"
+          ]
+        },
+        {
+          "code": "connectivity",
+          "label": "Connectivity",
+          "sourceKeys": [
+            "Device interface",
+            "Connectivity",
+            "connectivity"
+          ],
+          "covered": 0,
+          "missing": [
+            "asus-rog-scabbard-ii",
+            "asus-rog-sheath-ii-xxl",
+            "asus-rog-hone-ace-aim-lab",
+            "asus-tuf-p1",
+            "asus-rog-scabbard-ii-arctic-gray-xxl",
+            "asus-rog-balteus-qi",
+            "asus-rog-herculx"
+          ]
+        },
+        {
+          "code": "compatibility",
+          "label": "Compatibility",
+          "sourceKeys": [
+            "Compatibility",
+            "compatibility"
+          ],
+          "covered": 0,
+          "missing": [
+            "asus-rog-scabbard-ii",
+            "asus-rog-sheath-ii-xxl",
+            "asus-rog-hone-ace-aim-lab",
+            "asus-tuf-p1",
+            "asus-rog-scabbard-ii-arctic-gray-xxl",
+            "asus-rog-balteus-qi",
+            "asus-rog-herculx"
+          ]
+        },
+        {
+          "code": "size",
+          "label": "Size",
+          "sourceKeys": [
+            "Size",
+            "size"
+          ],
+          "covered": 0,
+          "missing": [
+            "asus-rog-scabbard-ii",
+            "asus-rog-sheath-ii-xxl",
+            "asus-rog-hone-ace-aim-lab",
+            "asus-tuf-p1",
+            "asus-rog-scabbard-ii-arctic-gray-xxl",
+            "asus-rog-balteus-qi",
+            "asus-rog-herculx"
+          ]
+        },
+        {
+          "code": "width",
+          "label": "Width",
+          "sourceKeys": [
+            "Width",
+            "width"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "depth",
+          "label": "Depth",
+          "sourceKeys": [
+            "Depth",
+            "depth"
+          ],
+          "covered": 7,
+          "missing": []
+        },
+        {
+          "code": "color",
+          "label": "Colour",
+          "sourceKeys": [
+            "Product colour",
+            "color"
+          ],
+          "covered": 7,
+          "missing": []
+        }
+      ]
+    }
+  ]
+}

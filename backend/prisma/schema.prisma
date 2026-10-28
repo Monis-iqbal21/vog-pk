@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client"
+  output = "../src/generated/prisma"
+  moduleFormat = "esm"
+}
+datasource db {
+  provider = "postgresql"
+}
+model AdminUser {
+  id String @id @default(uuid()) @db.Uuid
+  name String @db.VarChar(100)
+  email String @unique @db.VarChar(254)
+  passwordHash String
+  active Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lastLoginAt DateTime?
+  roles AdminUserRole[]
+  sessions AdminSession[]
+  audits AuditLog[]
+}
+model Role {
+  id String @id @default(uuid()) @db.Uuid
+  code String @unique @db.VarChar(50)
+  name String
+  description String
+  system Boolean @default(false)
+  users AdminUserRole[]
+  permissions RolePermission[]
+}
+model Permission {
+  id String @id @default(uuid()) @db.Uuid
+  code String @unique @db.VarChar(80)
+  description String
+  roles RolePermission[]
+}
+model AdminUserRole {
+  userId String @db.Uuid
+  roleId String @db.Uuid
+  user AdminUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role Role @relation(fields: [roleId], references: [id], onDelete: Restrict)
+  @@id([userId,roleId])
+  @@index([roleId])
+}
+model RolePermission {
+  roleId String @db.Uuid
+  permissionId String @db.Uuid
+  role Role @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission Permission @relation(fields: [permissionId], references: [id], onDelete: Restrict)
+  @@id([roleId,permissionId])
+  @@index([permissionId])
+}
+model AdminSession {
+  id String @id @default(uuid()) @db.Uuid
+  userId String @db.Uuid
+  tokenHash String @unique @db.Char(64)
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+  lastActivityAt DateTime @default(now())
+  revokedAt DateTime?
+  user AdminUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId, revokedAt])
+  @@index([expiresAt])
+}
+model AuditLog {
+  id String @id @default(uuid()) @db.Uuid
+  actorId String? @db.Uuid
+  action String @db.VarChar(100)
+  resource String @db.VarChar(80)
+  resourceId String?
+  createdAt DateTime @default(now())
+  metadata Json?
+  actor AdminUser? @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  @@index([createdAt])
+  @@index([actorId, createdAt])
+}
+model LoginThrottle {
+  key String @id @db.VarChar(160)
+  attempts Int @default(1)
+  expiresAt DateTime
+  @@index([expiresAt])
+}

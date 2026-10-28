@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "mode": "Real documented development API/database; no URL override",
+  "adminOrigin": "http://localhost:3001",
+  "apiOrigin": "http://localhost:4000",
+  "credentials": "Randomly generated, Argon2id hashed; local DPAPI vault; never logged",
+  "checksPassed": 23,
+  "checks": [
+    {
+      "name": "Anonymous root and protected pages redirect to login",
+      "passed": true
+    },
+    {
+      "name": "Real login form rejects an invalid password",
+      "passed": true
+    },
+    {
+      "name": "Securely provisioned owner logs in to dashboard",
+      "passed": true
+    },
+    {
+      "name": "Dashboard refresh and authenticated root/login keep a valid session",
+      "passed": true
+    },
+    {
+      "name": "HttpOnly host-only cookie, no public token or localStorage credential",
+      "passed": true
+    },
+    {
+      "name": "Owner can open all 11 protected admin modules",
+      "passed": true
+    },
+    {
+      "name": "Unauthenticated and forged direct API requests return 401",
+      "passed": true
+    },
+    {
+      "name": "CSRF-free and hostile-origin mutations are rejected",
+      "passed": true
+    },
+    {
+      "name": "STORE_MANAGER permissions enforced in UI and direct API",
+      "passed": true
+    },
+    {
+      "name": "CATALOG_MANAGER permissions enforced in UI and direct API",
+      "passed": true
+    },
+    {
+      "name": "ORDER_MANAGER permissions enforced in UI and direct API",
+      "passed": true
+    },
+    {
+      "name": "MARKETING_MANAGER permissions enforced in UI and direct API",
+      "passed": true
+    },
+    {
+      "name": "VIEWER permissions enforced in UI and direct API",
+      "passed": true
+    },
+    {
+      "name": "Self-permission edits are forbidden",
+      "passed": true
+    },
+    {
+      "name": "Logout revokes the server session and token replay fails",
+      "passed": true
+    },
+    {
+      "name": "Protected return destination is restored after real login",
+      "passed": true
+    },
+    {
+      "name": "External return destination cannot redirect a real login",
+      "passed": true
+    },
+    {
+      "name": "Absolute session expiry redirects to login with safe return path",
+      "passed": true
+    },
+    {
+      "name": "Idle session expiry rejects browser and API access",
+      "passed": true
+    },
+    {
+      "name": "Disabled account loses its session and cannot log in",
+      "passed": true
+    },
+    {
+      "name": "Role change revokes current sessions and new login uses current permissions",
+      "passed": true
+    },
+    {
+      "name": "Storefront remains public and staff login stays separate",
+      "passed": true
+    },
+    {
+      "name": "Existing approved environment files are unchanged",
+      "passed": true
+    }
+  ],
+  "cleanup": {
+    "passed": true,
+    "limitedRoleAccountsDisabled": true,
+    "verificationSessionsRevoked": true,
+    "developmentOwnerPreserved": true
+  },
+  "pageErrors": [],
+  "unverified": [
+    "Remote HTTPS cookie behavior and hosting deployment were not tested in this local HTTP run."
+  ]
+}

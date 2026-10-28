@@ -1,0 +1,19 @@
+# Set this Netlify project's Base directory and Package directory to admin.
+# Next.js is detected automatically; retain the default current OpenNext adapter.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+[context.production.environment]
+  ADMIN_ENVIRONMENT = "hosted"
+  COOKIE_SECURE = "true"
+
+[context.deploy-preview.environment]
+  ADMIN_ENVIRONMENT = "hosted"
+  COOKIE_SECURE = "true"
+
+# No SPA catch-all: App Router, SSR and BFF routes are handled by the adapter.
+# Set exact per-context URLs and secrets in Netlify, not in this file.

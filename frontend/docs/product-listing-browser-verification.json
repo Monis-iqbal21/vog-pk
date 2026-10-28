@@ -1,0 +1,1104 @@
+{
+  "passed": true,
+  "listingRoutes": 15,
+  "categories": 12,
+  "filterSortPaginationUrl": true,
+  "serverRenderedFilteredStateAndCanonical": true,
+  "invalidRoutes404": true,
+  "technicalCategoriesTested": 12,
+  "drawerWidths": [
+    1024,
+    768,
+    430,
+    390,
+    375,
+    320
+  ],
+  "navigationAndBreadcrumbs": true,
+  "missingImageFallback": true,
+  "responsiveChecks": 135,
+  "responsive": [
+    {
+      "path": "/products",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/graphics-cards",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/processors",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/motherboards",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/ram",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/storage",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/keyboards",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/gaming-mice",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/monitors",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/power-supplies",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/pc-cases",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/cooling",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/accessories",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/featured",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/new-arrivals",
+      "width": 1920,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/graphics-cards",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/processors",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/motherboards",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/ram",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/storage",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/keyboards",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/gaming-mice",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/monitors",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/power-supplies",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/pc-cases",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/cooling",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/accessories",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/featured",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/new-arrivals",
+      "width": 1440,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/graphics-cards",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/processors",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/motherboards",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/ram",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/storage",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/keyboards",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/gaming-mice",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/monitors",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/power-supplies",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/pc-cases",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/cooling",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/accessories",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/featured",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/new-arrivals",
+      "width": 1280,
+      "columns": 4,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/graphics-cards",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/processors",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/motherboards",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/ram",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/storage",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/keyboards",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/gaming-mice",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/monitors",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/power-supplies",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/pc-cases",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/cooling",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/accessories",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/featured",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/new-arrivals",
+      "width": 1024,
+      "columns": 3,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/graphics-cards",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/processors",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/motherboards",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/ram",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/storage",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/keyboards",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/gaming-mice",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/monitors",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/power-supplies",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/pc-cases",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/cooling",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/accessories",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/featured",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/new-arrivals",
+      "width": 768,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/graphics-cards",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/processors",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/motherboards",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/ram",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/storage",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/keyboards",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/gaming-mice",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/monitors",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/power-supplies",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/pc-cases",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/cooling",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/accessories",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/featured",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/new-arrivals",
+      "width": 430,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/graphics-cards",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/processors",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/motherboards",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/ram",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/storage",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/keyboards",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/gaming-mice",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/monitors",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/power-supplies",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/pc-cases",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/cooling",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/accessories",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/featured",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/new-arrivals",
+      "width": 390,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/graphics-cards",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/processors",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/motherboards",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/ram",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/storage",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/keyboards",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/gaming-mice",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/monitors",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/power-supplies",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/pc-cases",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/cooling",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/accessories",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/featured",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/new-arrivals",
+      "width": 375,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/graphics-cards",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/processors",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/motherboards",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/ram",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/storage",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/keyboards",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/gaming-mice",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/monitors",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/power-supplies",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/pc-cases",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/cooling",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/products/accessories",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/featured",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    },
+    {
+      "path": "/collections/new-arrivals",
+      "width": 320,
+      "columns": 2,
+      "noOverflow": true,
+      "alignedPrices": true,
+      "disabledPurchasing": true
+    }
+  ],
+  "pageErrors": [],
+  "evidenceDirectory": "C:\\Users\\Monis\\AppData\\Local\\Temp\\vog-product-listings"
+}

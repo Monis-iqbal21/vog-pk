@@ -28,7 +28,7 @@ const base=process.env.VOG_BASE_URL||'http://localhost:3000';
      assert.equal(await track.locator(':scope > :last-child').getAttribute('class'),'product-see-all');
     }
     const href=await track.locator('.product-see-all').getAttribute('href');
-    assert.equal(href,category?'/products/'+category:'/products/'+id);
+    assert.equal(href,category?'/products/'+category:'/collections/'+id);
     for(const card of await track.locator('.product-card').all()){
      await card.scrollIntoViewIfNeeded();await card.locator('img').evaluate(img=>img.decode());
      const detail=await card.evaluate(c=>{
@@ -68,7 +68,8 @@ const base=process.env.VOG_BASE_URL||'http://localhost:3000';
   }
   assert.equal(errors.length,0,JSON.stringify(errors));assert.equal(imageFailures.length,0,JSON.stringify(imageFailures));
   const page=await browser.newPage();const detail=await page.goto(base+'/products/graphics-cards/rog-strix-rtx5070ti-o16g');const category=await page.goto(base+'/products/graphics-cards');
-  const report={checkedAt:'2026-10-27',widths,checks,checkCount:checks.length,pageErrors:errors,imageFailures,evidenceDirectory:evidence,existingRouteLimitations:{productDetailStatus:detail.status(),categoryListingStatus:category.status(),note:'Product details now resolve through canonical routes and legacy redirects. Category-listing destination pages remain outside the product-detail scope.'}};
+  assert.equal(detail.status(),200);assert.equal(category.status(),200);
+  const report={checkedAt:new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Karachi'}),widths,checks,checkCount:checks.length,pageErrors:errors,imageFailures,evidenceDirectory:evidence,existingRouteLimitations:{productDetailStatus:detail.status(),categoryListingStatus:category.status(),note:'Product detail and category listing routes are implemented; catalogue browsing uses the existing /products/<category> convention.'}};
   fs.writeFileSync(path.resolve(__dirname,'../docs/catalogue-browser-verification.json'),JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify({checks:checks.length,widths,pageErrors:0,imageFailures:0,evidence,existingRouteLimitations:report.existingRouteLimitations}));
  }finally{await browser.close();}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "anonymousRoot": "/login",
+  "directLogin200": true,
+  "protectedRoutes": 11,
+  "validatedReturnPaths": true,
+  "spoofedContextHeaderOverwritten": true,
+  "invalidCookieRejected": true,
+  "loginRefresh": true,
+  "noRedirectLoops": true,
+  "unauthenticatedApi401": true,
+  "noindexNoStore": true,
+  "storefrontUnaffected": true,
+  "pageErrors": [],
+  "authenticatedBrowserRetest": "This suite tests anonymous routing. See live-auth-verification.json and commit-auth-verification.json for separate real authenticated browser evidence using the approved development API."
+}

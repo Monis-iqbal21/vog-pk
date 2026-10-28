@@ -1,0 +1,24 @@
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import {usePathname,useRouter} from 'next/navigation';
+import {useEffect,useRef,useState} from 'react';
+import {LayoutDashboard,Package,Tags,Layers,ImageIcon,PanelsTopLeft,Ticket,ShoppingBag,Settings,Users,ScrollText,PanelLeftClose,PanelLeftOpen,Menu,X,LogOut,ChevronDown} from 'lucide-react';
+import {modules} from '@/config/modules';
+import {adminMutation} from '@/lib/client-api';
+import {loginPath} from '@/lib/return-path';
+const icons={overview:LayoutDashboard,products:Package,categories:Tags,variants:Layers,media:ImageIcon,homepage:PanelsTopLeft,coupons:Ticket,orders:ShoppingBag,settings:Settings,staff:Users,audit:ScrollText};
+export default function AdminShell({user,children}){
+ const path=usePathname(),[collapsed,setCollapsed]=useState(false),[open,setOpen]=useState(false),[logoutError,setLogoutError]=useState(''),[pending,setPending]=useState(false),dialog=useRef(null);
+ const permitted=modules.filter(module=>user.permissions.includes(module.permission));
+ const router=useRouter();
+ useEffect(()=>{const expired=()=>{router.replace(loginPath(path+window.location.search));router.refresh();};window.addEventListener('vog:session-expired',expired);return ()=>window.removeEventListener('vog:session-expired',expired);},[router,path]);
+ useEffect(()=>{if(!open)return;const old=document.body.style.overflow;document.body.style.overflow='hidden';const media=matchMedia('(min-width:1024px)');const close=()=>{if(media.matches)dialog.current?.close();};media.addEventListener('change',close);return ()=>{document.body.style.overflow=old;media.removeEventListener('change',close);};},[open]);
+ async function logout(){setPending(true);setLogoutError('');try{await adminMutation('auth/logout');router.replace('/login');router.refresh();}catch(error){setLogoutError(error.message);setPending(false);}}
+ function links(mobile=false){return <nav aria-label={mobile?'Mobile administration':'Administration'}>{permitted.map(module=>{const Icon=icons[module.icon];return <Link key={module.path} href={module.path} title={module.title} aria-label={module.title} aria-current={path===module.path?'page':undefined} onClick={()=>{if(mobile)dialog.current.close();}}><Icon size={20} aria-hidden="true" /><span>{module.title}</span></Link>;})}</nav>;}
+ return <div className={`admin-shell${collapsed?' sidebar-collapsed':''}`}>
+  <aside className="admin-sidebar"><Link href="/dashboard" className="sidebar-brand" aria-label="VOGPK Admin home"><Image src="/vog-logo.png" alt="VOGPK" width={160} height={56} /><span>Admin</span></Link>{links()}<button className="collapse-sidebar" type="button" aria-label={collapsed?'Expand sidebar':'Collapse sidebar'} onClick={()=>setCollapsed(value=>!value)}>{collapsed?<PanelLeftOpen size={20} />:<PanelLeftClose size={20} />}<span>Collapse sidebar</span></button></aside>
+  <div className="admin-workspace"><header className="admin-header"><button type="button" className="icon-button mobile-sidebar-trigger" aria-label="Open sidebar" aria-haspopup="dialog" aria-expanded={open} onClick={()=>{dialog.current.showModal();setOpen(true);}}><Menu /></button><p className="current-page">{modules.find(module=>module.path===path)?.title??'Administration'}</p><details className="profile-menu"><summary aria-label={`Account menu for ${user.name}`}><span className="avatar" aria-hidden="true">{user.name.slice(0,1).toUpperCase()}</span><span>Account</span><ChevronDown size={15} aria-hidden="true" /></summary><div className="profile-details"><strong>{user.name}</strong><span>{user.email}</span><span>{user.roles.map(role=>role.name).join(', ')}</span><button type="button" onClick={logout} disabled={pending}><LogOut size={16} aria-hidden="true" />{pending?'Signing out…':'Sign out'}</button>{logoutError?<p role="alert" className="form-error">{logoutError}</p>:null}</div></details></header><main id="admin-main" className="admin-content">{children}</main></div>
+  <dialog ref={dialog} className="sidebar-dialog" aria-labelledby="sidebar-title" onClose={()=>setOpen(false)} onClick={event=>{if(event.target===event.currentTarget)dialog.current.close();}} onKeyDown={event=>{if(event.key!=='Tab')return;const controls=[...event.currentTarget.querySelectorAll('button,a[href]')].filter(item=>item.getClientRects().length);if(event.shiftKey&&document.activeElement===controls[0]){event.preventDefault();controls.at(-1)?.focus();}else if(!event.shiftKey&&document.activeElement===controls.at(-1)){event.preventDefault();controls[0]?.focus();}}}><div className="mobile-sidebar-heading"><strong id="sidebar-title">VOGPK Admin</strong><button className="icon-button" type="button" aria-label="Close sidebar" autoFocus onClick={()=>dialog.current.close()}><X /></button></div>{links(true)}</dialog>
+ </div>;
+}

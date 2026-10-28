@@ -1,0 +1,27 @@
+{
+  "name": "vogpk-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "node scripts/check-config.mjs && next build",
+    "start": "next start --port 3001",
+    "lint": "eslint",
+    "check:config": "node scripts/check-config.mjs",
+    "test:routing": "node scripts/test-routing.mjs",
+    "test:auth:development": "node scripts/verify-development-auth.cjs"
+  },
+  "dependencies": {
+    "@next/env": "^16.4.3",
+    "lucide-react": "^1.61.0",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "^4"
+  }
+}

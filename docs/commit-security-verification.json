@@ -1,0 +1,45 @@
+{
+  "auditDate": "2026-10-29",
+  "repository": "Monis-iqbal21/vog-pk",
+  "branch": "main",
+  "scanner": "Gitleaks 8.30.1",
+  "historyFindings": 0,
+  "stagedTreeFindings": 0,
+  "knownCredentialMatches": 0,
+  "knownCredentialObjectsScanned": 480,
+  "knownCredentialScanNote": "Scan covered history and index before final documentation-only edits; final complete index separately scanned by Gitleaks.",
+  "ignoreAssertionsPassed": true,
+  "productionDependencyVulnerabilities": {
+    "frontend": 0,
+    "admin": 0,
+    "backend": 0
+  },
+  "checks": {
+    "frontendLint": true,
+    "frontendBuild": true,
+    "listingData": 40,
+    "listingResponsive": 135,
+    "listingRoutes": 15,
+    "adminLint": true,
+    "adminBuild": true,
+    "adminRouting": 19,
+    "anonymousProtectedModules": 11,
+    "realOwnerBrowserGroups": 10,
+    "backendLint": true,
+    "backendBuild": true,
+    "prismaValidation": true,
+    "backendUnit": 1,
+    "backendHttp": 1,
+    "backendSecurityRbac": 25,
+    "ownerSetup": 8
+  },
+  "databaseResetExecuted": false,
+  "adminApiUrlOverrideUsed": false,
+  "adminDeploymentCreated": false,
+  "storefrontSettingsChanged": false,
+  "unverified": [
+    "Existing storefront Root Directory field is not exposed by the connector summary; confirm frontend in dashboard.",
+    "Production admin project, HTTPS backend/database, production owner and remote HTTPS/session behavior remain to be provisioned and verified."
+  ],
+  "excludedUnrelatedUserAssets": 2
+}
