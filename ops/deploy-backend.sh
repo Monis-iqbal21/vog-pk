@@ -49,6 +49,33 @@ switch_to(){
  sudo -n systemctl daemon-reload || return 1
  sudo -n systemctl restart vogpk-api || return 1
 }
+save_previous_override(){
+ if sudo -n test -e "$dropin"; then
+  sudo -n test ! -L "$dropin" || fail 'Refusing a symlinked service override.'
+  sudo -n grep -q '^# Managed by VOGPK release tooling$' "$dropin" || fail 'An unrelated release override exists; inspect before activation.'
+  sudo -n install -m 600 -o ubuntu -g ubuntu "$dropin" "$state/previous-dropin.conf" || fail 'Could not save the previous override.'
+  printf 'present\n' >"$state/previous-dropin.kind"
+ else
+  printf 'absent\n' >"$state/previous-dropin.kind"
+ fi
+}
+restore_previous_override(){
+ [[ -f $state/previous-dropin.kind ]] || fail 'No exact previous service override was recorded.'
+ if sudo -n test -e "$dropin"; then
+  sudo -n test ! -L "$dropin" || fail 'Refusing a symlinked service override.'
+  sudo -n grep -q '^# Managed by VOGPK release tooling$' "$dropin" || fail 'Service override changed outside release tooling; inspect manually.'
+ fi
+ case $(cat "$state/previous-dropin.kind") in
+  present)
+   [[ -f $state/previous-dropin.conf ]] || fail 'The saved previous override is missing.'
+   sudo -n install -m 644 "$state/previous-dropin.conf" "$dropin" || return 1
+   ;;
+  absent) sudo -n rm -f -- "$dropin" || return 1 ;;
+  *) fail 'Invalid previous override state; inspect manually.' ;;
+ esac
+ sudo -n systemctl daemon-reload || return 1
+ sudo -n systemctl restart vogpk-api || return 1
+}
 
 case "$action" in
  prepare)
@@ -62,11 +89,18 @@ case "$action" in
   # Database changes require separate review; this workflow never migrates or seeds.
   cmp -s "$target/prisma/schema.prisma" "$repo/backend/prisma/schema.prisma" || fail 'Schema differs; review migration compatibility before preparing this release.'
   diff -qr "$target/prisma/migrations" "$repo/backend/prisma/migrations" >/dev/null || fail 'Migration files differ; separate review is required.'
-  ln -s "$repo/backend/.env.local" "$target/.env.local"
   log="$state/build-$2.log"
-  if ! (cd "$target" && npm ci && npm run build && npm run lint && npm test) >"$log" 2>&1; then
+  # Avoid accidental production dotenv loading and inherited runtime credentials.
+  # Same-UID builds are still trusted code, not a hostile-code isolation boundary.
+  if ! env -i PATH="$PATH" HOME="$HOME" LANG=C.UTF-8 NODE_ENV=test /bin/bash -c '
+   cd "$1" && npm ci && npm run build &&
+   mapfile -d "" lint_files < <(find src test -type f -name "*.ts" ! -path "src/generated/*" -print0) &&
+   (( ${#lint_files[@]} > 0 )) &&
+   npm exec --offline --no -- oxlint --type-aware --no-ignore "${lint_files[@]}" && npm test
+  ' _ "$target" >"$log" 2>&1; then
    fail 'Release preparation failed. Review the private build log locally; do not paste credentials or connection details.'
   fi
+  ln -s "$repo/backend/.env.local" "$target/.env.local"
   printf '%s\n' "$2" >"$target/RELEASE_COMMIT"
   printf 'Prepared release %s. Live service, environment and database unchanged.\n' "$2"
   ;;
@@ -78,6 +112,7 @@ case "$action" in
   previous=$(systemctl show vogpk-api -p WorkingDirectory --value)
   [[ $previous == "$repo/backend" || $previous =~ ^$releases/[a-f0-9]{40}/backend$ ]] || fail 'Unexpected service working directory; inspect manually.'
   [[ $previous != "$target" ]] || fail 'This release is already active.'
+  save_previous_override
   printf '%s\n' "$previous" >"$state/previous"
   previous_mode=ready; [[ $previous == "$repo/backend" ]] && previous_mode=legacy
   if switch_to "$target" && probe ready; then
@@ -85,7 +120,7 @@ case "$action" in
    printf 'Release active and readiness/loopback verified.\n'
   else
    printf 'New release failed; restoring the previous application (no database rollback).\n' >&2
-   switch_to "$previous"
+   restore_previous_override || fail 'Could not restore the previous service configuration; operator intervention required.'
    probe "$previous_mode" || fail 'Rollback health failed. Operator intervention required.'
    fail 'Activation failed; previous application restored.'
   fi
@@ -94,8 +129,10 @@ case "$action" in
   [[ ${2:-} == --approved-restart ]] || fail 'Rollback restarts production. Obtain approval before passing --approved-restart.'
   [[ -f $state/previous ]] || fail 'No previous release has been recorded.'
   target=$(cat "$state/previous")
+  [[ $target == "$repo/backend" || $target =~ ^$releases/[a-f0-9]{40}/backend$ ]] || fail 'Unsafe previous release path.'
+  [[ -f $target/dist/main.js && -d $target/node_modules ]] || fail 'Previous application artifacts are missing.'
   mode=ready; [[ $target == "$repo/backend" ]] && mode=legacy
-  switch_to "$target"
+  restore_previous_override || fail 'Could not restore the previous service configuration; operator intervention required.'
   probe "$mode" || fail 'Rollback health failed. Inspect service locally without disclosing its environment.'
   printf '%s\n' "$target" >"$state/active"
   printf 'Previous application restored. Database and credentials unchanged.\n'

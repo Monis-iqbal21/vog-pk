@@ -35,15 +35,15 @@ The current pg driver warns about future TLS interpretation of `sslmode=require`
 
 ## Repeatable application deployment and rollback
 
-`ops/deploy-backend.sh` prepares a separate ARM64 release from an immutable Git commit. It does not pull over the dirty production checkout, replace `.env.local`, run migrations, seed roles, bootstrap an Owner or reset data. A symlink references the existing private environment. New dependencies, generated client and build output stay inside ignored release storage. Schema/migration changes are refused for separate review. Preparation runs build, lint and unit tests before writing a release marker.
+`ops/deploy-backend.sh` prepares a separate ARM64 release from an immutable Git commit. It does not pull over the dirty production checkout, replace `.env.local`, run migrations, seed roles, bootstrap an Owner or reset data. Build/install/tests use a minimal environment and do not receive a runtime environment-file link. Only after they pass is the existing private environment linked into the release. These processes still run as the trusted ubuntu operator, so this is not isolation against malicious same-UID dependencies. New dependencies, generated client and build output stay inside ignored release storage. Schema/migration changes are refused for separate review. Preparation runs build, lint and unit tests before writing a release marker.
 
-These are **remaining commands**, not a record of an executed release. First approve the source commit/push; a main push can trigger Vercel builds. From the local reviewed repository, the eventual push is a normal push—never force push:
+These are **remaining commands**, not a record of an executed release. First approve publishing the feature branch, then review a draft pull request into main. Publishing the branch may trigger Vercel preview builds; merging main may trigger production builds. Never force push or merge without separate approval:
 
 ```powershell
-git push origin HEAD:main
+git push --set-upstream origin codex/production-readiness
 ```
 
-After that push is separately approved and complete, SSH with the existing key and pinned known host:
+The PR body is prepared in `docs/pull-requests/production-readiness.md`. GitHub cannot create the PR while the branch exists only locally. Confirm an approved database recovery point before production deployment. After approved review/merge, SSH with the existing key and pinned known host:
 
 ```powershell
 ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -i D:\work\coding\vog-secrets\ssh-key-2026-10-28.key ubuntu@80.225.254.168
@@ -61,7 +61,7 @@ git show "$APPROVED_SHA:ops/deploy-backend.sh" > .local/operator-tools/deploy-ba
 bash .local/operator-tools/deploy-backend.sh prepare "$APPROVED_SHA"
 ```
 
-**Obtain restart approval before the next command.** Activation installs one clearly owned systemd drop-in, changes the service's working directory/entry point to the prepared release and restarts `vogpk-api`. It explicitly fixes `NODE_ENV`/`HOST` to production/loopback. Failed health/binding checks trigger restoration of the previous application and another restart; the approval must cover that automatic fallback. No database rollback occurs.
+**Obtain restart approval before the next command.** Activation saves the previous managed override (or records its absence), installs one clearly owned systemd drop-in, changes the service's working directory/entry point to the prepared release and restarts `vogpk-api`. It explicitly fixes `NODE_ENV`/`HOST` to production/loopback. Failed health/binding checks restore the exact saved override, or remove only the newly created override if it was absent, then restart the previous application; approval must cover that automatic fallback. The original base unit and source are not rewritten. No database rollback occurs.
 
 ```bash
 bash .local/operator-tools/deploy-backend.sh activate "$APPROVED_SHA" --approved-restart
@@ -79,6 +79,8 @@ bash .local/operator-tools/deploy-backend.sh rollback --approved-restart
 ```
 
 The first rollback target is the untouched original backend, whose health probe predates `/health/ready`; legacy rollback checks liveness/binding only. Later releases require readiness. Keep the previous application, its dependencies and the original environment. Release cleanup is manual after health verification and rollback-window approval. This process has isolated safety/syntax tests, but **live activation, automatic rollback and manual rollback drills remain unverified** because no restart was authorized. It involves a brief service interruption; no zero-downtime claim is made.
+
+The rollout preflight added nine deployment-path regression tests, bringing operations coverage to 23 isolated tests on Windows and Ubuntu ARM64. They cover runtime/build environment separation, source linting below the ignored release directory, failed preparation, approval checks, successful activation/manual rollback, byte-exact override restoration, failed-health fallback, unrelated-override refusal and missing rollback state. An actual backend build/source lint/nine-unit-test run also passed without a runtime environment file. This is stronger fixture/build coverage, not a production restart drill. Probe retries can take approximately 150 seconds before fallback, plus service restart time; a maintenance window and active operator are required.
 
 ## Health and monitoring
 
