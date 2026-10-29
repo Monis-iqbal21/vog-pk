@@ -1,0 +1,14 @@
+[Unit]
+Description=Check VOGPK certificate validity and expiry
+After=network-online.target caddy.service
+OnFailure=vogpk-alert.service
+
+[Service]
+Type=oneshot
+User=ubuntu
+ExecStart=/bin/bash /opt/vogpk/ops/check-certificate.sh
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+TimeoutStartSec=30

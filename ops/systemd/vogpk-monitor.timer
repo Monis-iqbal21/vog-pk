@@ -1,0 +1,11 @@
+[Unit]
+Description=Check VOGPK health every ten minutes
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=10min
+RandomizedDelaySec=30s
+Unit=vogpk-monitor.service
+
+[Install]
+WantedBy=timers.target

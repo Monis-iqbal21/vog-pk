@@ -2,6 +2,8 @@
 
 NestJS 12 / TypeScript, Prisma 7 and PostgreSQL. Public health remains at `/api/health`; administration routes use a confidential BFF boundary plus database-backed opaque sessions and permission guards.
 
+Production operations are documented in [the deployment runbook](../docs/PRODUCTION_DEPLOYMENT.md). `HOST` defaults to loopback in production and all interfaces in local development. `/api/health/ready` is the bounded, uncached database probe. Use `npm run test:security:fresh` for non-resetting local integration checks; it refuses remote databases and does not export generated credentials.
+
 See [the root Phase 1 guide](../docs/admin-phase1.md) for setup, environment values, owner provisioning, database migration, account recovery, security decisions and deployment requirements.
 
 ```powershell

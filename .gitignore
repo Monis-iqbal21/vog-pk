@@ -62,3 +62,17 @@ pgdata/
 playwright-report/
 test-results/
 blob-report/
+
+# Production operations credentials and database exports
+*.env
+pgpass
+.pgpass
+*.pgpass
+pg_service.conf
+*msmtprc
+alert-recipient
+restic-password
+alert-smtp-password
+*.dump.age
+*.sql.gz
+backend/scripts/.security-fresh-*.mjs
