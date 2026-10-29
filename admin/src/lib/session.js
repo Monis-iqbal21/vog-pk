@@ -6,7 +6,8 @@ import {adminConfig} from './config';
 import {backendRequest} from './api';
 import {loginPath} from './return-path';
 export const currentAdmin=cache(async()=>{
- const token=(await cookies()).get(adminConfig().sessionCookie)?.value;if(!token)return null;
+ const cfg=adminConfig();if(!cfg.authEnabled)return null;
+ const token=(await cookies()).get(cfg.sessionCookie)?.value;if(!token)return null;
  const result=await backendRequest('auth/me',{token});
  if(result.status===401)return null;
  if(result.status!==200)throw new Error('Administration service is unavailable. Please retry shortly.');
