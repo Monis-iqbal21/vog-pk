@@ -1,5 +1,7 @@
 # VOGPK — Vision of Gamers
 
+Production operations: [deployment, backups, monitoring and readiness checklist](docs/PRODUCTION_DEPLOYMENT.md). The live admin Vercel project is `vog-admin`; production changes and backup/alert activation remain approval-gated.
+
 Monorepo with three independently installed applications:
 
 | App | Stack | Local address |

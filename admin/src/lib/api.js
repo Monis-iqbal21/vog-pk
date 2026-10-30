@@ -2,6 +2,7 @@ import 'server-only';
 import {adminConfig} from './config';
 export async function backendRequest(path,{method='GET',token,body,clientIp}={}){
  const cfg=adminConfig();
+ if(!cfg.authEnabled)return {status:503,data:{message:'Authentication is disabled for this preview.'}};
  const headers={'x-admin-bff-key':cfg.secret,'Content-Type':'application/json'};
  if(token)headers.Authorization=`Bearer ${token}`;
  if(clientIp)headers['x-admin-client-ip']=clientIp;

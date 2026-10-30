@@ -28,6 +28,7 @@
     "owner:bootstrap": "tsx scripts/bootstrap-owner.ts",
     "owner:recover": "tsx scripts/reset-password.ts",
     "test:security": "npm run build && node scripts/test-security.mjs",
+    "test:security:fresh": "npm run build && node scripts/test-security-fresh.mjs",
     "security:cleanup": "tsx scripts/cleanup-security.ts",
     "verify:dev:provision": "node scripts/provision-development-verification.mjs",
     "owner:setup": "node scripts/setup-owner-access.mjs"

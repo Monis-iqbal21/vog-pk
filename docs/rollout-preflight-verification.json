@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-30",
+  "timezone": "Asia/Karachi",
+  "reviewedOriginalCommit": "7fb9aebeb591305b53334aeb0017152846c283fb",
+  "originalCommitFiles": 34,
+  "originalTreeSecretFindings": 0,
+  "historySecretFindings": 0,
+  "correctedIndexSecretFindings": 0,
+  "deploymentFindingsCorrectedLocally": [
+    "Runtime environment linked only after build/tests; minimal build environment",
+    "Exact prior managed override or absence restored during rollback",
+    "Explicit nonempty source lint scope below ignored release ancestor; generated code excluded"
+  ],
+  "validation": {
+    "windowsHermeticOperationsTests": 23,
+    "oracleArm64HermeticOperationsTests": 23,
+    "ubuntuSystemdTemplates": 7,
+    "secretFreeExportedBackendBuild": true,
+    "secretFreeExportedBackendTypeAwareLint": true,
+    "secretFreeExportedBackendUnitTests": 9,
+    "newDependencyInstallExecuted": false,
+    "realOracleReleaseBuildOrRestartDrill": false
+  },
+  "oracle": {
+    "gitHead": "3b65e51e652dce77b8971095bdc9bc167f3b2bf6",
+    "onlyTrackedModification": "backend/src/main.ts loopback binding",
+    "originalModificationOverwritten": false,
+    "apiAndCaddyActive": true,
+    "apiRestartCountUnchanged": true,
+    "releaseOverridePresent": false,
+    "productionCredentialsOrDataChanged": false
+  },
+  "pullRequest": {
+    "base": "main",
+    "head": "codex/production-readiness",
+    "title": "Prepare VOGPK production rollout safeguards",
+    "bodyFile": "docs/pull-requests/production-readiness.md",
+    "remoteHeadExists": false,
+    "published": false,
+    "reason": "Branch push requires user approval"
+  },
+  "recoveryPoint": {
+    "recommended": "Approved manual Neon snapshot of the existing production branch after actual plan/price/quota verification",
+    "created": false,
+    "accountPlanAndAvailableSlotVerified": false,
+    "independentEncryptedBackup": "PENDING APPROVAL",
+    "restoreDrill": "PENDING APPROVAL"
+  },
+  "status": "HOLD pending publication, recovery-point, merge and activation approvals",
+  "pushMergeRestartFirewallOrCloudResourceActions": false,
+  "paidResourceOrPlanUpgradeCreated": false
+}

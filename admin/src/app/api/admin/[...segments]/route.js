@@ -8,6 +8,7 @@ async function handler(request,{params}){
  const {segments}=await params,path=segments.join('/'),method=request.method,cfg=adminConfig();
  const allowed=routes[method]?.has(path)||method==='PATCH'&&/^staff\/[a-f0-9-]{36}$/.test(path);
  if(!allowed)return NextResponse.json({message:'Not found.'},{status:404});
+ if(!cfg.authEnabled)return NextResponse.json({message:'Authentication is disabled for this preview.'},{status:503,headers:{'Cache-Control':'no-store'}});
  const jar=await cookies(),token=jar.get(cfg.sessionCookie)?.value;
  if(method!=='GET'){
   const origin=request.headers.get('origin'),csrf=request.headers.get('x-csrf-token')??'',expected=jar.get(cfg.csrfCookie)?.value??'';

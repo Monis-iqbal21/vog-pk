@@ -1,0 +1,15 @@
+# Review-only SMTP template. Configure an existing approved email service privately.
+defaults
+auth on
+tls on
+tls_starttls on
+tls_certcheck on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+timeout 15
+
+account default
+host APPROVED_SMTP_HOST
+port 587
+from APPROVED_SENDER
+user APPROVED_SMTP_USERNAME
+passwordeval "cat /etc/vogpk/alert-smtp-password"

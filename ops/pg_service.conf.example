@@ -1,0 +1,16 @@
+# Direct (non-pooler) Neon endpoint, configured privately by the operator.
+[vogpk-backup]
+host=APPROVED_DIRECT_NEON_HOST
+port=5432
+dbname=APPROVED_DATABASE
+user=APPROVED_BACKUP_ROLE
+sslmode=verify-full
+connect_timeout=15
+
+# Separate empty recovery database; never point this at the production branch.
+[vogpk-restore]
+host=APPROVED_SEPARATE_RESTORE_HOST
+port=5432
+dbname=APPROVED_EMPTY_RESTORE_DATABASE
+user=APPROVED_RESTORE_ROLE
+sslmode=verify-full

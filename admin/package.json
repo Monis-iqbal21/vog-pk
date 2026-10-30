@@ -9,6 +9,7 @@
     "lint": "eslint",
     "check:config": "node scripts/check-config.mjs",
     "test:routing": "node scripts/test-routing.mjs",
+    "test:preview": "node scripts/test-preview-config.mjs && node scripts/test-preview-http.mjs",
     "test:auth:development": "node scripts/verify-development-auth.cjs"
   },
   "dependencies": {
