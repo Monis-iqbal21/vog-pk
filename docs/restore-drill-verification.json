@@ -1,0 +1,275 @@
+{
+  "date": "2026-10-31",
+  "timezone": "Asia/Karachi",
+  "reviewedCommit": "8c75ca5858d89599108d96c4493a87dc550977bd",
+  "status": "PASS",
+  "source": {
+    "bucket": "vogpk-neon-backups",
+    "region": "ap-mumbai-1",
+    "object": "vogpk-neon-20261030T205611Z-e029cde4.dump.age",
+    "cipherBytes": 19619,
+    "cipherSha256": "d19866e8842d06e0eefc331ad539acdbb1518c76b05f91463427a6c3b112ad82",
+    "captureStartedUtc": "2026-10-30T20:56:11.537Z",
+    "freshOciDownloadVerified": true,
+    "objectStorageDownloadRequests": 1
+  },
+  "target": {
+    "postgresqlVersion": "18.6",
+    "architecture": "aarch64",
+    "temporary": true,
+    "unixSocketOnly": true,
+    "tcpListeningDisabled": true,
+    "dataAndWalOnTmpfs": true,
+    "productionDestinationRejected": true,
+    "agePrivateKeyStayedOnWindows": true,
+    "osPackagesOrServicesChanged": false
+  },
+  "timing": {
+    "startedUtc": "2026-10-30T21:32:24.770Z",
+    "clusterPreparedUtc": "2026-10-30T21:32:32.093Z",
+    "restoreStartedUtc": "2026-10-30T21:33:10.456Z",
+    "restoreCompletedUtc": "2026-10-30T21:33:10.488Z",
+    "verificationCompletedUtc": "2026-10-30T21:34:57.906Z",
+    "completedUtc": "2026-10-30T21:35:23.057Z",
+    "restoreSeconds": 0.032,
+    "drillSeconds": 178.287,
+    "checkpointAgeSecondsAtStart": 2173.233,
+    "includesToolDownloadAndExtraction": false,
+    "note": "Drill duration includes verifier corrections; measured exercise timing is not a production RTO guarantee. No scheduled RPO is claimed."
+  },
+  "verification": {
+    "logicalChecksPassed": 42,
+    "checks": [
+      {
+        "label": "All user schemas match",
+        "passed": true
+      },
+      {
+        "label": "All nine tables match checkpoint",
+        "passed": true
+      },
+      {
+        "label": "Checkpoint row count: AdminSession",
+        "passed": true
+      },
+      {
+        "label": "Checkpoint row count: AdminUser",
+        "passed": true
+      },
+      {
+        "label": "Checkpoint row count: AdminUserRole",
+        "passed": true
+      },
+      {
+        "label": "Checkpoint row count: AuditLog",
+        "passed": true
+      },
+      {
+        "label": "Checkpoint row count: LoginThrottle",
+        "passed": true
+      },
+      {
+        "label": "Checkpoint row count: Permission",
+        "passed": true
+      },
+      {
+        "label": "Checkpoint row count: Role",
+        "passed": true
+      },
+      {
+        "label": "Checkpoint row count: RolePermission",
+        "passed": true
+      },
+      {
+        "label": "Checkpoint row count: _prisma_migrations",
+        "passed": true
+      },
+      {
+        "label": "Columns/types/null/defaults: AdminUser",
+        "passed": true
+      },
+      {
+        "label": "Columns/types/null/defaults: Role",
+        "passed": true
+      },
+      {
+        "label": "Columns/types/null/defaults: Permission",
+        "passed": true
+      },
+      {
+        "label": "Columns/types/null/defaults: AdminUserRole",
+        "passed": true
+      },
+      {
+        "label": "Columns/types/null/defaults: RolePermission",
+        "passed": true
+      },
+      {
+        "label": "Columns/types/null/defaults: AdminSession",
+        "passed": true
+      },
+      {
+        "label": "Columns/types/null/defaults: AuditLog",
+        "passed": true
+      },
+      {
+        "label": "Columns/types/null/defaults: LoginThrottle",
+        "passed": true
+      },
+      {
+        "label": "Prisma migration name/checksum/completion",
+        "passed": true
+      },
+      {
+        "label": "All six FK definitions and validation flags",
+        "passed": true
+      },
+      {
+        "label": "No orphan rows: AdminUserRole_userId_fkey",
+        "passed": true
+      },
+      {
+        "label": "No orphan rows: AdminUserRole_roleId_fkey",
+        "passed": true
+      },
+      {
+        "label": "No orphan rows: RolePermission_roleId_fkey",
+        "passed": true
+      },
+      {
+        "label": "No orphan rows: RolePermission_permissionId_fkey",
+        "passed": true
+      },
+      {
+        "label": "No orphan rows: AdminSession_userId_fkey",
+        "passed": true
+      },
+      {
+        "label": "No orphan rows: AuditLog_actorId_fkey",
+        "passed": true
+      },
+      {
+        "label": "Indexes and primary keys valid",
+        "passed": true
+      },
+      {
+        "label": "Prisma migration bookkeeping columns",
+        "passed": true
+      },
+      {
+        "label": "Six expected system roles",
+        "passed": true
+      },
+      {
+        "label": "All 27 permission codes",
+        "passed": true
+      },
+      {
+        "label": "Exact RBAC permissions: SUPER_ADMIN",
+        "passed": true
+      },
+      {
+        "label": "Exact RBAC permissions: STORE_MANAGER",
+        "passed": true
+      },
+      {
+        "label": "Exact RBAC permissions: CATALOG_MANAGER",
+        "passed": true
+      },
+      {
+        "label": "Exact RBAC permissions: ORDER_MANAGER",
+        "passed": true
+      },
+      {
+        "label": "Exact RBAC permissions: MARKETING_MANAGER",
+        "passed": true
+      },
+      {
+        "label": "Exact RBAC permissions: VIEWER",
+        "passed": true
+      },
+      {
+        "label": "All 79 RBAC links",
+        "passed": true
+      },
+      {
+        "label": "Single active Owner retained",
+        "passed": true
+      },
+      {
+        "label": "Password/token hashes remain opaque",
+        "passed": true
+      },
+      {
+        "label": "No unexpected public functions/views/triggers",
+        "passed": true
+      },
+      {
+        "label": "Live API/source/env/unit unchanged",
+        "passed": true
+      }
+    ],
+    "tableCounts": {
+      "AdminSession": "1",
+      "AdminUser": "1",
+      "AdminUserRole": "1",
+      "AuditLog": "2",
+      "LoginThrottle": "2",
+      "Permission": "27",
+      "Role": "6",
+      "RolePermission": "79",
+      "_prisma_migrations": "1"
+    },
+    "foreignKeys": 6,
+    "roles": 6,
+    "permissions": 27,
+    "rolePermissionLinks": 79,
+    "prismaMigration": "202610290001_admin_security",
+    "migrationChecksumMatched": true,
+    "offlinePageChecksumsPassed": true,
+    "offlineChecksumSummary": {
+      "filesScanned": 1287,
+      "blocksScanned": 3898,
+      "badChecksums": 0,
+      "dataChecksumVersion": 1
+    },
+    "negativeDestinationGuardPassed": true,
+    "unexpectedUserSchemasFunctionsTriggersViews": false
+  },
+  "cleanup": {
+    "temporaryClusterStopped": true,
+    "plaintextArchiveRemoved": true,
+    "tmpfsDataWalAndSocketRemoved": true,
+    "tcpListenerAbsent": true,
+    "swapWasDisabled": true,
+    "encryptedBackupRetained": true,
+    "privateKeyRetainedOutsideOracle": true
+  },
+  "production": {
+    "apiStateFilesAndUnitUnchanged": true,
+    "apiRestartCount": 0,
+    "apiWorkingDirectoryUnchanged": true,
+    "apiLoopbackBindingPreserved": true,
+    "neonWrites": false,
+    "migrationsRun": false,
+    "ownerChanged": false,
+    "firewallOrIamChanged": false,
+    "cloudResourcesCreated": false,
+    "automatedSchedulesEnabled": false,
+    "prMerged": false,
+    "productionDeployed": false
+  },
+  "errors": {
+    "restoreErrors": 0,
+    "resolvedTooling": [
+      "PostgreSQL server needed liburing2; extracted Ubuntu package into private tools without OS installation.",
+      "Verifier required text-array normalization and SET NULL FK handling; corrected and all 42 checks passed on rerun."
+    ],
+    "intentionalGuardRejection": "Synthetic non-isolated PGHOST rejected before connecting; not a restore failure."
+  },
+  "limitations": [
+    "Application RBAC data restored and verified. Global Neon database roles/ownership/ACLs and credentials are not recreated by this --no-owner/--no-acl logical archive.",
+    "Production authenticated browser/multi-role verification and live release/rollback remain separate checks. The subsequent systemd audit explains the global stale-registry flag; see systemd-preflight-verification.json."
+  ],
+  "recommendation": "Recovery and Oracle ARM64 preparation gates are satisfied. Subsequent systemd preflight supports a conditional GO after explicit manager reload/post-check, merge and restart/fallback approval. No production deployment executed."
+}

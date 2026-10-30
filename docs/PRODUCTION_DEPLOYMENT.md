@@ -1,6 +1,6 @@
 # VOGPK production deployment and readiness
 
-Evidence collected **2026-10-30, Asia/Karachi**. PASS means actually observed or tested; PENDING identifies an unexecuted step or an access/approval gap. Local changes described here have not been installed on Oracle. No production restart, reboot, firewall change, credential change, account reset, database reset or paid resource creation was performed.
+Baseline evidence collected **2026-10-30, Asia/Karachi**; approved backup and isolated restore evidence updated **2026-10-31**. PASS means actually observed or tested; PENDING identifies an unexecuted step or an access/approval gap. The reviewed backend release is prepared on Oracle but is not running. One approved private free-allocation OCI bucket and a restricted instance-principal backup policy were created during the earlier backup phase. This restore drill changed no IAM/firewall policy, production credentials or data, and performed no production restart, deployment, merge or paid resource creation.
 
 ## Architecture and observed baseline
 
@@ -130,13 +130,17 @@ systemctl list-timers 'vogpk-*'
 
 Use `ops/alert.msmtprc.example` for the shape of the private SMTP configuration, with TLS verification retained. `/etc/vogpk/alert.msmtprc`, `/etc/vogpk/alert-smtp-password` and `/etc/vogpk/alert-recipient` must be root-owned 600; none is committed or created by this task. Do not send test mail until the destination and credentials are approved. **Email alert activation: PENDING APPROVAL.**
 
-## Encrypted Neon backups — PENDING APPROVAL
+## Encrypted Neon backup — verified manual checkpoint
 
-The preferred destination is a **private, dedicated OCI Object Storage Standard bucket in Mumbai**, if the tenancy's actual Always Free entitlement, home region, remaining quota and request budget permit it. The VM is in Mumbai; that alone does not establish the tenancy's home region or bucket eligibility. No OCI storage credentials/CLI/account billing access were available for verification.
+Authenticated OCI inspection confirmed Mumbai as the home region, 10 GiB free Object Storage and approximately zero usage before creating the approved private Standard bucket `vogpk-neon-backups`. The first age-encrypted object is `vogpk-neon-20261030T205611Z-e029cde4.dump.age`, 19,619 bytes. Capture began 2026-10-30 20:56:11 UTC (2026-10-31 01:56:11 Asia/Karachi). The private key remains on the user's Windows computer with independently retained recovery material, confirmed by the user. No private key is stored on Oracle or in Git.
+
+An exact-instance dynamic group permits only object create/list/read and bucket-metadata read in that bucket. It has no overwrite/delete, bucket-management or administrator rights. No persistent admin API key was installed on the server. The initial upload/download/full decryption verification passed. The manual backup used PostgreSQL 18.6, an exported read-only consistent snapshot, a direct Neon connection and verified TLS. It is an **age-encrypted object, not a restic repository**. Recovery procedure and the successful full restore exercise are recorded below and in [restore-drill-verification.json](restore-drill-verification.json).
 
 Oracle's [Always Free documentation](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm) currently lists 20 GB combined storage for Always Free-only accounts and 50,000 requests/month; paid/trial Standard allocations differ. Verify the account-specific allowance, existing usage, retention footprint and temporary prune headroom before approval. Do not enable paid capacity, archive transitions, replication or versioning without evaluating costs. Keep a conservative capacity/request warning threshold and stop before exceeding the approved allowance; this implementation cannot enforce OCI account-wide quotas. Always Free VM reclamation is also a continuity risk; retain recovery assets off the VM.
 
-`postgres-backup.sh` streams `pg_dump` custom format directly into **restic's encrypted remote repository**. No plaintext dump is written to disk. The repository and a dedicated backup identity must be approved first. The storage credentials and encryption password are separate, private and never passed in process arguments. Use [OCI S3 compatibility](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/s3compatibleapi.htm), limited bucket permissions and HTTPS. Restic also encrypts before upload, independently of OCI server-side encryption.
+### Future scheduled restic strategy — PENDING APPROVAL
+
+`postgres-backup.sh` prepares a separate future strategy using `pg_dump` streamed into **restic's encrypted remote repository**. It was not used for the verified age checkpoint. No restic repository, service account, storage credential files, prune or schedule were configured. That setup requires separate approval and permissions review; the current write-once backup principal deliberately lacks restic's deletion/prune permissions. Do not broaden it automatically. The storage credentials and repository password must remain separate and private. See [OCI S3 compatibility](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/s3compatibleapi.htm).
 
 Preparation after storage/credential approval:
 
@@ -150,16 +154,16 @@ Preparation after storage/credential approval:
 
 Retention: seven daily, four weekly and six monthly recovery points, scoped to the dedicated host and complete-snapshot tag. A failed producer/upload remains pending and is never promoted to a valid recovery point. Pending snapshots need operator review/removal after the failure is understood. Restic `forget` removes snapshot references; bytes remain until prune. With separate pruning approval, the script runs check/prune/check on Sundays. This may consume requests, temporary storage and Neon/network allowance; do not enable it until capacity is reviewed. Without prune, storage use can grow despite snapshot retention. A compromised VM with write/delete storage credentials can delete backups; immutable/offline protection is a separate design/approval, not a property claimed here. See [restic streaming backup](https://restic.readthedocs.io/en/stable/040_backup.html) and [retention/pruning](https://restic.readthedocs.io/en/stable/060_forget.html).
 
-After the manual backup and restore drill are approved and pass:
+Only after separate approval of the scheduled restic strategy, its credentials and retention/prune capacity may an operator run the following. The successful manual age backup/restore does **not** authorize these commands:
 
 ```bash
 sudo systemctl start vogpk-backup.service
 sudo systemctl enable --now vogpk-backup.timer
 ```
 
-These commands were not executed. PostgreSQL client tools, restic and the destination are not installed/configured on Oracle. **Backup storage, credentials, first backup, restore drill and schedule: PENDING APPROVAL.**
+These commands were not executed. PostgreSQL 18.6 tools are privately extracted; the private OCI bucket, manual encrypted backup and full isolated restore are verified. Restic and its scheduled-service configuration remain uninstalled. **Automatic backup/retention/pruning activation: PENDING APPROVAL.**
 
-### Recovery without overwriting production
+### Future restic recovery without overwriting production
 
 Choose a reviewed complete snapshot, verify restic integrity and recover into a **new, separately approved empty database/branch**. `restic dump` decrypts only into a pipe; do not write the dump to an unencrypted shared directory. Provision the empty destination separately and privately configure the `vogpk-restore` service; its target must differ from production. Creation of a recovery branch/database may consume paid allowances and requires approval first.
 
@@ -176,7 +180,123 @@ restic dump "$SNAPSHOT" /vogpk.dump | pg_restore --dbname=service=vogpk-restore 
 
 Do not use `--clean`, `--create`, schema reset or the production connection for a drill. Dumps are trusted executable database content; inspect the archive before restoring, as [PostgreSQL documents](https://www.postgresql.org/docs/current/app-pgrestore.html). Validate schema/migration state, table counts, audit data and application/RBAC behavior in the isolated environment; restored sessions and staff hashes remain sensitive and must not be exported or used as production access. Document the recovery timestamp and data-loss window. Do not switch the production connection until the recovery is reviewed and an approved cutover/rollback plan exists.
 
-Neon also provides [point-in-time restore](https://neon.com/docs/postgres/backup-restore/branch-restore). Its [current plan documentation](https://neon.com/docs/introduction/plans) describes limited Free restore history and longer paid windows; the actual project's plan, configured history and snapshot allowance were not accessible here. Check the console instead of assuming the default window. Do not restore the production root branch in place during a test. Provider history is complementary to an independent encrypted backup, not evidence that the offsite strategy is operational.
+Neon also provides [point-in-time restore](https://neon.com/docs/postgres/backup-restore/branch-restore). Authenticated console inspection on 2026-10-31 confirmed the Free plan, a six-hour restore history, 32.32 MB project storage and no snapshots at inspection. Recheck the moving history window and actual snapshot billing before any future resource creation. No Neon snapshot or restore was performed. Never restore the production root branch in place during a test.
+
+### Approved age-backup restore drill — PASS, 2026-10-31
+
+The existing object was freshly downloaded through the restricted instance principal and verified against its ciphertext checksum. Windows age decrypted it locally and streamed plaintext over encrypted SSH into a private memory-backed archive. The private age identity never left Windows. The target was a new PostgreSQL **18.6 ARM64** cluster entirely in `/dev/shm`, with TCP listening disabled, a mode-700 Unix socket directory and peer authentication mapped only to a distinct drill administrator. No database server package was installed into the operating system. CPU affinity, lower process priority, a 2 GiB per-process address-space limit and small database buffers bounded resource use on existing infrastructure.
+
+Before receiving/restoring data, the verifier rejected inherited database connection settings and checked the actual server version, database, user, data directory, empty target and Unix-socket connection. A synthetic non-isolated PGHOST test was rejected before any connection. No production database settings were loaded into the restore process. The archive object list was reviewed for unexpected executable/global objects before a single-transaction restore using `--no-owner --no-acl --exit-on-error`. No migrations, seeds or Owner recovery commands ran.
+
+**All 42 logical checks passed:** all user schemas and nine table counts; eight application tables' column names/types/null/default definitions; Prisma bookkeeping columns and applied migration name/checksum/completion; all six validated foreign keys including delete/update actions and referenced columns; no orphan links; all expected indexes and nine primary keys valid; six system roles, all 27 permission codes and all 79 exact role-permission links; one active Owner; and no unexpected public functions/views/triggers. Application RBAC data was verified; global Neon login roles, ownership/ACLs and credentials are intentionally not recreated by this logical archive.
+
+| Restored table | Checkpoint and restored rows |
+| --- | ---: |
+| AdminSession | 1 |
+| AdminUser | 1 |
+| AdminUserRole | 1 |
+| AuditLog | 2 |
+| LoginThrottle | 2 |
+| Permission | 27 |
+| Role | 6 |
+| RolePermission | 79 |
+| _prisma_migrations | 1 |
+
+The temporary cluster was stopped, and offline PostgreSQL page checksums passed: **1,287 files / 3,898 blocks scanned, zero bad checksums**. The plaintext archive had already been removed after restoration; the entire temporary cluster/data/WAL/socket directory was then removed from tmpfs. Swap was disabled. No matching temporary PostgreSQL process or TCP listener remained. No plaintext dump or restored database was left on persistent disk; the encrypted OCI object and protected recovery key remain retained. Production source/build/environment/unit hashes, API start timestamp, restart count and working directory remained unchanged. Local health and the loopback listener were rechecked.
+
+Measured timeline (UTC): preparation began **21:32:24.770**, restore **21:33:10.456–21:33:10.488**, final logical verification **21:34:57.906**, stop/checksum/cleanup completed **21:35:23.057**, all on 2026-10-30 (2026-10-31 in Asia/Karachi). Restore command: **0.032 s**. Whole measured drill: **178.287 s**, excluding tool download/extraction and including verifier corrections. Checkpoint age at drill start: **2,173.233 s**. These are observed exercise timings, not production RTO or scheduled-RPO guarantees. The drill used one additional Object Storage GET; metadata/authentication calls are not a complete tenancy billing meter.
+
+Errors resolved: the privately extracted server needed the Ubuntu liburing2 dependency; it was extracted without an OS installation. An initial verifier assertion omitted the valid `SET NULL` FK action and needed text-array normalization; both were corrected, and all checks passed on rerun. There were **zero pg_restore errors**. The intentional destination-guard rejection is recorded separately from failures. Sanitized evidence: [restore-drill-verification.json](restore-drill-verification.json).
+
+For future recovery of this age object, verify the encrypted checksum, retain the private identity locally and stream age decryption to a guarded, separately approved isolated PostgreSQL 18 target. Do not feed this file to restic. If the current Oracle VM is lost, approve a new narrowly scoped recovery identity because existing access matches that VM only. This exercise does not authorize a production database restore or connection cutover.
+
+**Updated recommendation after final systemd review:** recovery-point and Oracle ARM64 preparation gates are satisfied, and the reload warning is explained below. **Conditional GO for a controlled rollout using the existing prepared release, after explicit approvals.** First perform an approved manager reload without restarting services and require unchanged service/PID/health plus a cleared reload flag. No reload, restart, merge or deployment has been performed. A live release/rollback and production authenticated multi-role browser verification remain separate checks; commercial hosting/security/monitoring items below remain open.
+
+### Final systemd preflight — 2026-10-31
+
+Evidence: [systemd-preflight-verification.json](systemd-preflight-verification.json). The host runs systemd 255.4-1ubuntu8.18. `NeedDaemonReload=yes` comes from the **manager-wide unit_file_state_outdated flag**, not a mismatched API unit. The transient `init.scope` also reports yes despite having no fragment, source file, loaded drop-ins or possible scope drop-ins in any unit search directory. This rules out the file/drop-in branches of [systemd 255's implementation](https://github.com/systemd/systemd/blob/v255/src/core/unit.c#L3589-L3615). Unchanged vendor targets and Caddy report the same global condition. The flag is set by unit-file installation operations and cleared by a manager reload; the available read-only diagnostics do not retain which historical caller last set it. No attribution to a particular operator/package is claimed.
+
+The API base unit was last modified at 2026-10-29 05:45:26 UTC, before its current process began. Loaded properties, all declared on-disk directives and running argv/cwd agree. There are no API-specific, dash-prefix or global service drop-ins in the unit search paths. No base-unit edit or other configuration repair is necessary. The existing `NeedDaemonReload=yes` remains unchanged because this audit did not reload the manager.
+
+| Setting | Current loaded / disk / process | Proposed release override |
+| --- | --- | --- |
+| User | ubuntu | Inherited unchanged |
+| WorkingDirectory | original backend | Prepared 8c75ca5 release/backend |
+| ExecStart | Node with --env-file pointing to original .env.local, original dist/main.js | Node release dist/main.js; existing linked .env.local loaded by dotenv |
+| Environment | Existing production settings | NODE_ENV=production, HOST=127.0.0.1; existing values retained |
+| UMask | 0022 | 0077 |
+| NoNewPrivileges / PrivateTmp | Enabled | Inherited unchanged |
+| Restart | on-failure, 5 seconds | Inherited unchanged |
+| Stop/start timeout | 90 seconds each; Type=simple | Inherited unchanged |
+
+Node --env-file and the release's dotenv parser were compared using an ephemeral HMAC, with no secret values printed. They interpret every existing environment entry identically; Node startup-only options are absent. The compiled release defaults to 127.0.0.1:4000 in production, and the override explicitly fixes HOST to loopback. The original compiled backend also retains its explicit loopback binding.
+
+Rechecked: all 50 tracked backend files and all 96 dist artifacts match the prepared commit/manifest; release marker, environment symlink and versioned operator script match. Both baseline and proposed unit/drop-in copies pass offline systemd validation. That validation emitted only existing OCI vendor monitoring-unit executable-mode warnings; no unrelated permissions were changed. All 23 hermetic operations tests pass again on ARM64. The original backend dist/dependencies and base unit remain available for rollback.
+
+Rollback restores the previous managed override **byte-for-byte or its prior absence**, then reloads systemd and restarts the retained application. In the present baseline no managed override exists, so fallback removes only its new owned override and returns to the original base unit/ExecStart. Unrelated overrides are refused, and original source/environment/database are untouched. This is exact restoration of the prior effective API configuration, not the former PID/uptime, the global dirty-cache flag, or a filesystem-wide snapshot. Live fallback is still untested until an approved activation/drill.
+
+### Exact controlled rollout sequence — approval required
+
+1. Review/publish only the sanitized documentation/evidence to the existing Draft PR after push approval; never include `.local`, secret files or the unrelated frontend assets. Preserve the verified encrypted checkpoint and its independent key. Keep an operator available for fallback.
+2. Obtain approval for a **standalone manager reload**, with no service restart. Capture API and Caddy PIDs/start times, then run:
+
+```bash
+systemctl show vogpk-api caddy -p MainPID -p ExecMainStartTimestamp -p NRestarts
+sudo systemctl daemon-reload
+systemctl show vogpk-api -p NeedDaemonReload -p MainPID -p ExecMainStartTimestamp -p NRestarts -p WorkingDirectory -p ExecStart
+systemctl is-active vogpk-api caddy
+curl --fail --silent --show-error --max-time 10 http://127.0.0.1:4000/api/health
+curl --fail --silent --show-error --max-time 15 https://80-225-254-168.sslip.io/api/health
+ss -lntH 'sport = :4000'
+```
+
+Require NeedDaemonReload=no, unchanged PIDs/start times and API configuration, active services, successful health and only 127.0.0.1:4000. If anything differs or the flag remains yes, stop and investigate; do not activate or repeatedly force reloads. A manager reload does not intentionally restart the API or Caddy and should not cause a service interruption.
+
+3. Obtain **main merge approval**. Treat merging main as triggering both connected Vercel production builds. Monitor them until READY; verify storefront/login and an authorized existing-session admin read against the still-compatible old backend. Do not modify users or roles for a smoke test.
+4. Fetch main on Oracle without checking out/resetting the dirty original tree. Confirm the merged backend tree is exactly the prepared backend tree before using the artifact:
+
+```bash
+cd /home/ubuntu/vog-pk
+CANDIDATE=8c75ca5858d89599108d96c4493a87dc550977bd
+git fetch --no-tags origin main
+test "$(git rev-parse origin/main:backend)" = "$(git rev-parse "$CANDIDATE:backend")"
+# Expected backend tree: 2b2782eee217c114447eea4ec2b0cec7085edb0f
+```
+
+If backend trees differ, stop: review and separately prepare that code. Documentation-only commits do not require rebuilding an unchanged backend tree. Recheck artifact integrity and the original rollback artifacts immediately before activation.
+
+5. Obtain **API override installation/restart approval**, explicitly covering a second restart for failed-health fallback. Then use the already-reviewed immutable script:
+
+```bash
+OPERATOR=/home/ubuntu/vog-pk/.local/operator-tools/deploy-backend-8c75ca5858d89599108d96c4493a87dc550977bd.sh
+bash "$OPERATOR" activate "$CANDIDATE" --approved-restart
+```
+
+The script records prior override state, installs only 20-vogpk-release.conf, reloads systemd and restarts vogpk-api. Caddy is not restarted. No migration/seed/database rollback occurs. Normal API interruption should be seconds but is not measured live and is not zero-downtime. Requests may fail during it. The readiness/binding retry budget is up to about **150 seconds**, in addition to systemd stop/start/fallback time; current stop grace is **90 seconds per restart**. Do not present 150 seconds as a total outage bound.
+
+6. After successful activation, verify:
+
+```bash
+systemctl is-active vogpk-api caddy
+systemctl show vogpk-api -p NeedDaemonReload -p WorkingDirectory -p MainPID -p NRestarts
+curl --fail --silent --show-error --max-time 10 http://127.0.0.1:4000/api/health
+curl --fail --silent --show-error --max-time 10 http://127.0.0.1:4000/api/health/ready
+curl --fail --silent --show-error --max-time 15 https://80-225-254-168.sslip.io/api/health/ready
+ss -lntH 'sport = :4000'
+```
+
+Require the release WorkingDirectory/RELEASE_COMMIT, only the loopback listener, local/public success and cleared reload flag. Run the private authenticated dashboard/session/logout and allowed/forbidden-read checks plus storefront smoke test. Never print cookies/tokens. The old backend does not provide /health/ready, so only liveness is expected before activation and after initial rollback.
+
+**Automatic fallback:** any switch/install/reload/restart failure, or failure of local readiness/required loopback binding through all 15 attempts, restores prior override bytes/absence and restarts the old application. If restoration or old liveness fails, operator intervention is required. External HTTPS/admin/storefront smoke failures are **not** included in the automatic probe; an operator uses the separately approved manual rollback:
+
+```bash
+bash "$OPERATOR" rollback --approved-restart
+systemctl is-active vogpk-api caddy
+curl --fail --silent --show-error --max-time 10 http://127.0.0.1:4000/api/health
+ss -lntH 'sport = :4000'
+```
+
+Initial fallback uses legacy liveness plus binding, not database readiness. Check authorized API reads separately. Preserve private rollback metadata and original artifacts; do not restore Neon or overwrite source/environment to fix an application failure. Vercel rollback, if needed, is separate and requires approval to reinstate a known production deployment; never promote the auth-disabled Preview as a production fallback.
 
 ## Security and reliability actions requiring approval
 
@@ -185,7 +305,7 @@ Neon also provides [point-in-time restore](https://neon.com/docs/postgres/backup
 - **SSH policy:** password and keyboard-interactive authentication are off; public-key authentication is on. Root key login and X11 forwarding remain permitted. Draft changes should disable unnecessary root/X11 access only after confirming the ubuntu key and a second session; validate with `sshd -t` before an approved reload. SSH socket activation is in use; do not mistake a disabled `ssh.service` for no listening SSH.
 - **Service isolation:** API runs as `ubuntu`, with NoNewPrivileges/PrivateTmp and restart-on-failure, but without a read-only filesystem sandbox. The reviewed `vogpk-api-hardening.conf` is optional and uninstalled. A dedicated runtime account and root-controlled immutable releases improve isolation but require permission/path testing and restart approval. Current application/deploy identity is not fully separated.
 - **Caddy restart policy:** active/enabled, but `Restart=no` was observed. `caddy-reliability.conf` prepares restart-on-failure; installing/reloading service policy is approval-gated. Do not restart Caddy merely to test the template.
-- **Backups/alerts:** explicitly pending; no credentials or timers were activated.
+- **Backup automation/alerts:** manual encrypted backup and isolated recovery verification passed. Automatic backup/prune schedules and all alert credentials/timers remain pending approval. No IAM policy was changed during the restore drill.
 - **External identity:** sslip.io is working for this development deployment. A domain under the business's control and a tested DNS/TLS transition should be planned before commercial launch without breaking existing origins/cookies.
 
 ## Vercel production checks and commercial launch
@@ -234,10 +354,14 @@ Locally, all 25 real PostgreSQL security/RBAC checks passed using randomly gener
 | Production authenticated session / multi-role journey | PENDING | No browser session or securely provisioned test credentials available |
 | Production secrets in sampled journal/Git | PASS for sampled checks | No configured production secret matches; no values disclosed |
 | Local security/build/operations tests | PASS | See sanitized verification JSON |
-| Live release/rollback drill | PENDING APPROVAL | Requires approved commit push and production restart |
-| OCI Mumbai eligibility / backup destination | PENDING APPROVAL | Home-region/remaining quota/account verification needed |
-| Encrypted backup / retention / recovery drill | PENDING APPROVAL | Scripts/templates prepared; no offsite backup executed |
+| Oracle ARM64 release preparation | PASS | Reviewed 8c75ca5 staged but not running; build/lint, 9 unit tests and 23 isolated ops tests passed in the earlier preparation phase |
+| Systemd loaded/disk/process comparison and reload cause | PASS | Global registry stale flag proven; no API divergence; offline unit validation passed; no reload performed |
+| Staged release/artifact recheck and operations tests | PASS | 50 tracked / 96 dist files match, environment parsing compatible; 23 ARM64 isolated operations tests |
+| Live release/rollback drill | PENDING APPROVAL | Standalone daemon-reload/post-check, main merge and API restart/fallback require separate approval |
+| OCI Mumbai eligibility / manual backup destination | PASS | Home region/free allowance verified; private Standard bucket and restricted exact-instance principal |
+| Manual encrypted backup / full isolated recovery drill | PASS | Fresh OCI download, Windows decryption, 42 logical checks, offline page checksums and complete temporary-cluster cleanup |
+| Automatic backup retention/prune/schedules | PENDING APPROVAL | No restic repository/service/timer or automated lifecycle rules activated |
 | Email alerts / external uptime / TLS checks scheduled | PENDING APPROVAL | No account, credentials, recipient or timer activated |
 | Commercial hosting eligibility | PENDING | Confirm actual Vercel plan; Hobby unsuitable for commercial launch |
 
-The working production storefront and admin were preserved. The backup, monitoring, release and hardening preparations are reviewable; they are not a declaration that production readiness is complete.
+The working production storefront and admin were preserved. The manual recovery gate is verified; production deployment, live rollback, monitoring and hardening remain separately approval-gated. No merge or production deployment was performed.

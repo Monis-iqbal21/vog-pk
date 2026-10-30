@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-31",
+  "timezone": "Asia/Karachi",
+  "candidate": "8c75ca5858d89599108d96c4493a87dc550977bd",
+  "systemdVersion": "255.4-1ubuntu8.18",
+  "needDaemonReload": "yes",
+  "cause": "manager-wide unit_file_state_outdated flag; proven by transient init.scope with no fragment, source, or possible drop-ins also reporting yes",
+  "historicalLastSetter": "Not retained in available read-only diagnostics; no attribution claimed",
+  "controlUnit": {
+    "LoadState": "loaded",
+    "FragmentPath": "",
+    "SourcePath": "",
+    "DropInPaths": "",
+    "NeedDaemonReload": "yes",
+    "Transient": "yes"
+  },
+  "controlApplicableDropins": [],
+  "apiApplicableDropins": [],
+  "apiComparisons": {
+    "Description": true,
+    "Type": true,
+    "User": true,
+    "WorkingDirectory": true,
+    "Restart": true,
+    "RestartSec": true,
+    "NoNewPrivileges": true,
+    "PrivateTmp": true,
+    "Environment": true,
+    "ExecStartLoaded": true,
+    "RunningExecStart": true,
+    "RunningCwd": true,
+    "After": true,
+    "Wants": true
+  },
+  "apiBaseUnitMtimeUtc": "2026-10-29T05:45:26.564957+00:00",
+  "mainPid": 5987,
+  "apiStart": "Thu 2026-10-29 05:57:13 UTC",
+  "restartCount": 0,
+  "unitFileNeedsChange": false,
+  "stagedTrackedFilesMatching": 50,
+  "stagedDistFilesMatching": 96,
+  "stagedMarkerMatches": true,
+  "operatorScriptMatchesCommit": true,
+  "runtimeEnvSymlinkValid": true,
+  "timeoutStart": "1min 30s",
+  "timeoutStop": "1min 30s",
+  "killMode": "control-group",
+  "currentUmask": "0022",
+  "proposedUmask": "0077",
+  "pendingUnitFileReloadExecuted": false,
+  "liveServiceChanged": false,
+  "sourceReferences": [
+    "https://github.com/systemd/systemd/blob/v255/src/core/unit.c#L3589-L3615",
+    "https://github.com/systemd/systemd/blob/v255/src/core/dbus-manager.c",
+    "https://github.com/systemd/systemd/blob/v255/src/core/manager.c"
+  ],
+  "interpretation": "NeedDaemonReload is manager-wide stale unit-file registry state, not a loaded/on-disk/running API mismatch. No API unit edit is required. Last historical setter is not identified.",
+  "offlineUnitValidation": {
+    "baseline": "PASS",
+    "candidateWithDropin": "PASS",
+    "activated": false,
+    "nonBlockingWarnings": "Existing OCI unified-monitoring-agent vendor unit files have executable mode; no unrelated file permissions changed."
+  },
+  "environmentCompatibility": {
+    "nodeEnvFileAndReleaseDotenvMatch": true,
+    "nodeStartupOnlySettingsAbsent": true,
+    "comparisonUsedEphemeralHmac": true,
+    "secretValuesPrinted": false
+  },
+  "rollback": {
+    "isolatedOperationsTestsPassed": 23,
+    "originalArtifactsPresent": true,
+    "managedOverrideCurrentlyAbsent": true,
+    "priorOverrideBytesOrAbsenceRestored": true,
+    "unrelatedOverridesRefused": true,
+    "originalSourceAndEnvUntouched": true,
+    "liveDrillPerformed": false,
+    "scope": "Restores previous effective API unit configuration and retained application; not the same PID/uptime, global stale-cache flag, or a filesystem-wide snapshot."
+  },
+  "health": {
+    "api": "PASS",
+    "caddy": "active/enabled",
+    "publicHttpsHealthStatus": 200,
+    "storefrontStatus": 200,
+    "adminLoginStatus": 200,
+    "listener": "127.0.0.1:4000",
+    "productionReadyEndpointNotYetDeployed": true
+  },
+  "deployment": {
+    "sha": "8c75ca5858d89599108d96c4493a87dc550977bd",
+    "backendTree": "2b2782eee217c114447eea4ec2b0cec7085edb0f",
+    "overrideFile": "20-vogpk-release.conf",
+    "changes": [
+      "WorkingDirectory points to prepared release",
+      "ExecStart resets to reviewed node release entrypoint; dotenv loads existing linked environment",
+      "NODE_ENV=production; HOST=127.0.0.1",
+      "UMask=0077; existing ubuntu identity and NoNewPrivileges/PrivateTmp/restart policy inherited"
+    ],
+    "automaticRollback": [
+      "Unit installation/daemon-reload/API restart operation fails",
+      "Local /api/health/ready or required loopback listener fails through all 15 attempts"
+    ],
+    "readinessProbeBudgetSeconds": 150,
+    "expectedOutage": "Usually seconds; unmeasured live. Stop grace up to 90 seconds per restart plus readiness probe/fallback time. Not a zero-downtime deployment.",
+    "externalSmokeFailure": "Requires operator-approved rollback; external HTTPS/admin checks are not in automatic probe."
+  },
+  "documentationSecretReview": {
+    "tool": "gitleaks 8.30.1",
+    "scope": "docs directory including production deployment, restore and systemd evidence",
+    "findings": 0,
+    "productionEnvFilesIncluded": false,
+    "privateRecoveryKeyIncluded": false
+  },
+  "approvalsRequired": [
+    "Publish reviewed documentation changes to existing Draft PR",
+    "Controlled systemctl daemon-reload and post-reload verification before merge/activation",
+    "Merge main, which is expected to trigger Vercel production builds",
+    "Install prepared release override and restart vogpk-api, including automatic fallback restart if needed"
+  ],
+  "performed": {
+    "daemonReload": false,
+    "productionRestart": false,
+    "productionStop": false,
+    "prMerge": false,
+    "productionDatabaseWrite": false,
+    "credentialsChanged": false,
+    "firewallOrIamChanged": false,
+    "schedulesActivated": false,
+    "paidResourcesCreated": false
+  },
+  "recommendation": "Conditional GO for controlled rollout using the existing prepared release after explicit approval. First reload systemd without restarting services and require matching properties/unchanged PID/health plus NeedDaemonReload=no; otherwise stop. No rollout authorized or executed by this report."
+}
