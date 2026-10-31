@@ -3,10 +3,11 @@ import {cookies} from 'next/headers';
 import {timingSafeEqual} from 'node:crypto';
 import {adminConfig,cookieOptions} from '@/lib/config';
 import {backendRequest} from '@/lib/api';
+import {allowedScopedRoute} from '@/lib/scoped-routes';
 const routes={GET:new Set(['auth/me','roles','permissions','staff','audit-logs']),POST:new Set(['auth/login','auth/logout','staff'])};
 async function handler(request,{params}){
  const {segments}=await params,path=segments.join('/'),method=request.method,cfg=adminConfig();
- const allowed=routes[method]?.has(path)||method==='PATCH'&&/^staff\/[a-f0-9-]{36}$/.test(path);
+ const allowed=routes[method]?.has(path)||method==='PATCH'&&/^staff\/[a-f0-9-]{36}$/.test(path)||allowedScopedRoute(method,path);
  if(!allowed)return NextResponse.json({message:'Not found.'},{status:404});
  if(!cfg.authEnabled)return NextResponse.json({message:'Authentication is disabled for this preview.'},{status:503,headers:{'Cache-Control':'no-store'}});
  const jar=await cookies(),token=jar.get(cfg.sessionCookie)?.value;

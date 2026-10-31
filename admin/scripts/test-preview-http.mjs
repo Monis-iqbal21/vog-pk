@@ -48,7 +48,7 @@ try{
  for(const section of ['','dashboard','products','categories','variants','media','homepage','coupons','orders','settings','staff','audit-logs']){
   const result=await fetch(base+'/'+section,{headers,redirect:'manual'});assert.equal(result.status,307);assert.equal(new URL(result.headers.get('location'),base).pathname,'/login');checks++;
  }
- for(const [method,route] of [['GET','auth/me'],['GET','roles'],['GET','permissions'],['GET','staff'],['GET','audit-logs'],['POST','auth/login'],['POST','auth/logout'],['POST','staff'],['PATCH','staff/00000000-0000-4000-8000-000000000000']]){
+ for(const [method,route] of [['GET','contexts'],['GET','scopes/platform/access'],['POST','scopes/platform/roles'],['GET','auth/me'],['GET','roles'],['GET','permissions'],['GET','staff'],['GET','audit-logs'],['POST','auth/login'],['POST','auth/logout'],['POST','staff'],['PATCH','staff/00000000-0000-4000-8000-000000000000']]){
   const result=await fetch(base+'/api/admin/'+route,{method,headers:{...headers,Origin:'https://'+env.VERCEL_URL,'Content-Type':'application/json'},...(method==='GET'?{}:{body:'{}'})});
   assert.equal(result.status,503);assert.equal(result.headers.get('set-cookie'),null);assert.match(result.headers.get('cache-control'),/no-store/);assert.match((await result.json()).message,/disabled for this preview/);checks++;
  }

@@ -18,6 +18,8 @@ model AdminUser {
   roles AdminUserRole[]
   sessions AdminSession[]
   audits AuditLog[]
+  tenantMemberships TenantMembership[]
+  platformAssignments PlatformRoleAssignment[]
 }
 model Role {
   id String @id @default(uuid()) @db.Uuid
@@ -33,6 +35,7 @@ model Permission {
   code String @unique @db.VarChar(80)
   description String
   roles RolePermission[]
+  scopes PermissionScope[]
 }
 model AdminUserRole {
   userId String @db.Uuid
@@ -70,13 +73,157 @@ model AuditLog {
   resourceId String?
   createdAt DateTime @default(now())
   metadata Json?
+  tenantId String? @db.Uuid
+  storeId String? @db.Uuid
+  scopeKind AuthorizationScope?
+  tenant Tenant? @relation(fields: [tenantId], references: [id], onDelete: Restrict)
+  store Store? @relation(fields: [storeId, tenantId], references: [id, tenantId], onDelete: Restrict)
   actor AdminUser? @relation(fields: [actorId], references: [id], onDelete: SetNull)
   @@index([createdAt])
   @@index([actorId, createdAt])
+  @@index([tenantId, storeId, createdAt])
 }
 model LoginThrottle {
   key String @id @db.VarChar(160)
   attempts Int @default(1)
   expiresAt DateTime
   @@index([expiresAt])
+}
+
+enum AuthorizationScope {
+  PLATFORM
+  TENANT
+  STORE
+}
+
+model Tenant {
+  id String @id @default(uuid()) @db.Uuid
+  slug String @unique @db.VarChar(80)
+  name String @db.VarChar(160)
+  active Boolean @default(true)
+  createdAt DateTime @default(now())
+  stores Store[]
+  memberships TenantMembership[]
+  roles ScopedRole[]
+  audits AuditLog[]
+}
+
+model Store {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  slug String @db.VarChar(80)
+  name String @db.VarChar(160)
+  active Boolean @default(true)
+  createdAt DateTime @default(now())
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Restrict)
+  memberships StoreMembership[]
+  roles ScopedRole[]
+  audits AuditLog[]
+  legacyBridge LegacyStoreBridge?
+  @@unique([id, tenantId])
+  @@unique([tenantId, slug])
+}
+
+// Singleton: existing global RBAC is usable only in this explicit default context.
+model LegacyStoreBridge {
+  key String @id @db.VarChar(20)
+  storeId String @unique @db.Uuid
+  tenantId String @db.Uuid
+  store Store @relation(fields: [storeId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  @@unique([storeId, tenantId])
+}
+
+model TenantMembership {
+  tenantId String @db.Uuid
+  userId String @db.Uuid
+  active Boolean @default(true)
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Restrict)
+  user AdminUser @relation(fields: [userId], references: [id], onDelete: Restrict)
+  stores StoreMembership[]
+  assignments TenantRoleAssignment[]
+  @@id([tenantId, userId])
+  @@index([userId, active])
+}
+
+model StoreMembership {
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  userId String @db.Uuid
+  active Boolean @default(true)
+  store Store @relation(fields: [storeId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  tenantMembership TenantMembership @relation(fields: [tenantId, userId], references: [tenantId, userId], onDelete: Restrict)
+  assignments StoreRoleAssignment[]
+  @@id([tenantId, storeId, userId])
+  @@index([userId, active])
+}
+
+// Separate from the retained legacy Role table; no legacy role becomes PLATFORM.
+model ScopedRole {
+  id String @id @default(uuid()) @db.Uuid
+  scopeKind AuthorizationScope
+  tenantId String? @db.Uuid
+  storeId String? @db.Uuid
+  code String @db.VarChar(50)
+  name String @db.VarChar(100)
+  system Boolean @default(false)
+  owner Boolean @default(false)
+  tenant Tenant? @relation(fields: [tenantId], references: [id], onDelete: Restrict)
+  store Store? @relation(fields: [storeId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  permissions ScopedRolePermission[]
+  platformAssignments PlatformRoleAssignment[]
+  tenantAssignments TenantRoleAssignment[]
+  storeAssignments StoreRoleAssignment[]
+  @@unique([id, scopeKind])
+  @@unique([id, tenantId, scopeKind])
+  @@unique([id, tenantId, storeId, scopeKind])
+  @@index([tenantId, storeId])
+}
+
+model PermissionScope {
+  permissionId String @db.Uuid
+  scopeKind AuthorizationScope
+  permission Permission @relation(fields: [permissionId], references: [id], onDelete: Restrict)
+  grants ScopedRolePermission[]
+  @@id([permissionId, scopeKind])
+}
+
+model ScopedRolePermission {
+  roleId String @db.Uuid
+  permissionId String @db.Uuid
+  scopeKind AuthorizationScope
+  canDelegate Boolean @default(false)
+  role ScopedRole @relation(fields: [roleId, scopeKind], references: [id, scopeKind], onDelete: Cascade)
+  supportedScope PermissionScope @relation(fields: [permissionId, scopeKind], references: [permissionId, scopeKind], onDelete: Restrict)
+  @@id([roleId, permissionId])
+  @@index([permissionId, scopeKind])
+}
+
+model PlatformRoleAssignment {
+  userId String @db.Uuid
+  roleId String @db.Uuid
+  scopeKind AuthorizationScope @default(PLATFORM)
+  user AdminUser @relation(fields: [userId], references: [id], onDelete: Restrict)
+  role ScopedRole @relation(fields: [roleId, scopeKind], references: [id, scopeKind], onDelete: Restrict)
+  @@id([userId, roleId])
+}
+
+model TenantRoleAssignment {
+  tenantId String @db.Uuid
+  userId String @db.Uuid
+  roleId String @db.Uuid
+  scopeKind AuthorizationScope @default(TENANT)
+  membership TenantMembership @relation(fields: [tenantId, userId], references: [tenantId, userId], onDelete: Restrict)
+  role ScopedRole @relation(fields: [roleId, tenantId, scopeKind], references: [id, tenantId, scopeKind], onDelete: Restrict)
+  @@id([tenantId, userId, roleId])
+}
+
+model StoreRoleAssignment {
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  userId String @db.Uuid
+  roleId String @db.Uuid
+  scopeKind AuthorizationScope @default(STORE)
+  membership StoreMembership @relation(fields: [tenantId, storeId, userId], references: [tenantId, storeId, userId], onDelete: Restrict)
+  role ScopedRole @relation(fields: [roleId, tenantId, storeId, scopeKind], references: [id, tenantId, storeId, scopeKind], onDelete: Restrict)
+  @@id([tenantId, storeId, userId, roleId])
 }
