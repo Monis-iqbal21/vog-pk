@@ -1,10 +1,38 @@
 // Only these foundation APIs may cross the authenticated BFF. Never a generic proxy.
 export function allowedScopedRoute(method, path) {
-  if (method === 'GET' && path === 'contexts') return true;
-  const id = '[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}';
+  if (method === "GET" && ["contexts", "contexts/schema"].includes(path))
+    return true;
+  const id = "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}";
   const scope = `scopes/(?:platform|tenants/${id}(?:/stores/${id})?)`;
-  if (method === 'GET') return new RegExp(`^${scope}/(?:access|roles|permissions)$`).test(path);
-  if (method === 'POST') return new RegExp(`^${scope}/(?:roles|members/${id}/(?:roles|revoke))$`).test(path);
-  if (method === 'PATCH') return new RegExp(`^${scope}/roles/${id}$`).test(path);
+  const schema = `scopes/tenants/${id}/schema`;
+  if (
+    method === "GET" &&
+    new RegExp(
+      `^${schema}/(?:registry|attributes|option-sets(?:/${id})?|product-types(?:/${id}/versions(?:/${id}(?:/impact)?)?)?)$`,
+    ).test(path)
+  )
+    return true;
+  if (
+    method === "POST" &&
+    new RegExp(
+      `^${schema}/(?:attributes|option-sets|product-types(?:/${id}/versions/${id}/(?:clone|actions/(?:review|draft|approve|activate|archive)))?)$`,
+    ).test(path)
+  )
+    return true;
+  if (
+    method === "PATCH" &&
+    new RegExp(
+      `^${schema}/(?:attributes/${id}|option-sets/${id}|product-types/${id}/versions/${id})$`,
+    ).test(path)
+  )
+    return true;
+  if (method === "GET")
+    return new RegExp(`^${scope}/(?:access|roles|permissions)$`).test(path);
+  if (method === "POST")
+    return new RegExp(
+      `^${scope}/(?:roles|members/${id}/(?:roles|revoke))$`,
+    ).test(path);
+  if (method === "PATCH")
+    return new RegExp(`^${scope}/roles/${id}$`).test(path);
   return false;
 }

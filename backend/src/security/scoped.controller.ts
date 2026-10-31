@@ -45,7 +45,14 @@ export class ScopedController {
 
 @Controller('admin/contexts')
 export class ContextsController {
-  constructor(@Inject(DatabaseService) private readonly db: DatabaseService) {}
+  constructor(@Inject(DatabaseService) private readonly db: DatabaseService,@Inject(ScopedAuthorizationService) private readonly authz: ScopedAuthorizationService) {}
+  @Get('schema') @SessionOnly()
+  async schema(@Req() request:AdminRequest){
+    const memberships=await this.db.tenantMembership.findMany({where:{userId:request.identity.id,active:true,tenant:{active:true}},take:25,orderBy:{tenantId:'asc'},include:{tenant:true}});
+    const contexts=[];
+    for(const membership of memberships){const access=await this.authz.resolve(request.identity.id,{kind:'TENANT',tenantId:membership.tenantId});if(['attributes.view','product-types.view','option-sets.view'].some(p=>access.permissions.includes(p)))contexts.push({id:membership.tenantId,name:membership.tenant.name,permissions:access.permissions});}
+    return contexts;
+  }
   @Get() @SessionOnly()
   async list(@Req() request: AdminRequest) {
     // Query, nested projections and counts all start from the authenticated user.

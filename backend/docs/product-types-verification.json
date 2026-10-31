@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checks": 12,
+  "tests": [
+    "All three additive Prisma migrations apply to a fresh isolated database",
+    "Attributes are reusable; duplicate tenant codes reject while another tenant can reuse the code",
+    "Invalid types, executable metadata, malformed swatches, units and ranges reject",
+    "Industry-independent keyboard, clothing and vehicle schema fixtures reuse the same attribute identity",
+    "Duplicate bindings, widened validation, foreign attributes and incorrect axis/scope reject",
+    "Active schema and nested fields/groups/options are immutable in both API and PostgreSQL",
+    "Referenced options cannot be deleted/archived and approved snapshots retain vocabulary meaning",
+    "Cloning creates a separate draft; stale writes and concurrent activation conflict safely",
+    "Tenant A/B reads, edits, approval and activation remain isolated",
+    "Store-only and narrowly delegated multiple roles cannot approve, activate or escalate schema rights",
+    "Real admin attribute/option/type creation, form preview, lifecycle, clone and responsive browser workflows",
+    "Privileged mutations are tenant-audited without tokens, passwords or database URLs"
+  ],
+  "admin": {
+    "passed": true,
+    "checks": 15,
+    "productionBuild": true,
+    "realBackend": true,
+    "persistedCredentials": false,
+    "extra": {
+      "passed": true,
+      "browserChecks": 8,
+      "headlessBrowser": "Microsoft Edge",
+      "realForms": true,
+      "noPageErrors": true
+    }
+  },
+  "postgres": "PostgreSQL 18.4",
+  "database": "fresh disposable loopback database",
+  "productionAccess": false,
+  "credentialsPersisted": false,
+  "cleanup": "temporary API and PostgreSQL stopped; generated cluster and admin fixture removed"
+}

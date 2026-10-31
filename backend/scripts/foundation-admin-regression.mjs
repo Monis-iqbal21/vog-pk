@@ -8,7 +8,7 @@ const require = createRequire(import.meta.url);
 
 // Build and run the actual admin application in an env-free copy. No browser
 // account fixtures, passwords, session cookies or bridge keys are written to disk.
-export async function verifyAdmin({apiPort, adminPort, email, password, scopedRoute}) {
+export async function verifyAdmin({apiPort, adminPort, email, password, scopedRoute, exercise}) {
   const root = path.resolve('..'), admin = path.join(root, 'admin');
   const parent = path.resolve('.local', 'foundation'); await fs.mkdir(parent, {recursive: true});
   const fixture = await fs.mkdtemp(path.join(parent, 'admin-'));
@@ -48,10 +48,11 @@ export async function verifyAdmin({apiPort, adminPort, email, password, scopedRo
     assert.equal((await call(`admin/${scopedRoute}/roles`, {...mutation, headers: {...headers, Cookie: cookie, 'x-csrf-token': '0'.repeat(64)}})).status, 403);
     assert.equal((await call(`admin/${scopedRoute}/roles`, {...mutation, headers: {...headers, Cookie: cookie, Origin: 'https://hostile.invalid'}})).status, 403);
     assert.equal((await call('admin/unregistered/route', {headers: {Cookie: cookie}})).status, 404);
+    const extra = exercise ? await exercise({base,cookie}) : undefined;
     assert.equal((await call('admin/auth/logout', mutation)).status, 201);
     assert.equal((await call('admin/auth/me', {headers: {Cookie: cookie}})).status, 401);
     console.log('PASS Real admin BFF login, host-only HttpOnly cookie, CSRF/Origin, scoped access, logout and replay rejection');
-    return {passed: true, checks: 15, productionBuild: true, realBackend: true, persistedCredentials: false};
+    return {passed: true, checks: 15, productionBuild: true, realBackend: true, persistedCredentials: false,...(extra?{extra}: {})};
   } finally {
     if (server && server.exitCode === null && server.signalCode === null) {const exit = once(server, 'exit'); server.kill(); await exit;}
     if (path.dirname(fixture) !== parent || !path.basename(fixture).startsWith('admin-')) throw new Error('Unsafe fixture cleanup path');

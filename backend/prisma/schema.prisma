@@ -106,6 +106,159 @@ model Tenant {
   memberships TenantMembership[]
   roles ScopedRole[]
   audits AuditLog[]
+  attributes AttributeDefinition[]
+  optionSets OptionSet[]
+  productTypes ProductType[]
+}
+
+enum AttributeDataType {
+  TEXT
+  NUMBER
+  BOOLEAN
+  SINGLE_SELECT
+  MULTI_SELECT
+}
+enum DefinitionStatus {
+  ACTIVE
+  ARCHIVED
+}
+enum AttributeLevel {
+  PRODUCT
+  SKU
+}
+enum SchemaStatus {
+  DRAFT
+  REVIEW
+  APPROVED
+  ACTIVE
+  ARCHIVED
+}
+
+model OptionSet {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  code String @db.VarChar(64)
+  label String @db.VarChar(120)
+  description String @default("") @db.VarChar(500)
+  status DefinitionStatus @default(ACTIVE)
+  revision Int @default(1)
+  createdAt DateTime @default(now())
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Restrict)
+  values OptionValue[]
+  attributes AttributeDefinition[]
+  @@unique([id, tenantId])
+  @@unique([tenantId, code])
+}
+model OptionValue {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  optionSetId String @db.Uuid
+  code String @db.VarChar(64)
+  label String @db.VarChar(120)
+  sortOrder Int @default(0)
+  swatch String? @db.VarChar(7)
+  status DefinitionStatus @default(ACTIVE)
+  optionSet OptionSet @relation(fields: [optionSetId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  references ProductTypeAttributeOption[]
+  @@unique([id, tenantId])
+  @@unique([optionSetId, code])
+}
+model AttributeDefinition {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  code String @db.VarChar(64)
+  label String @db.VarChar(120)
+  description String @default("") @db.VarChar(500)
+  dataType AttributeDataType
+  canonicalUnit String? @db.VarChar(24)
+  optionSetId String? @db.Uuid
+  rules Json
+  widget String @db.VarChar(24)
+  allowedScopes AttributeLevel[]
+  axisEligible Boolean @default(false)
+  visibility Json
+  status DefinitionStatus @default(ACTIVE)
+  revision Int @default(1)
+  createdAt DateTime @default(now())
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Restrict)
+  optionSet OptionSet? @relation(fields: [optionSetId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  bindings ProductTypeAttribute[]
+  @@unique([id, tenantId])
+  @@unique([tenantId, code])
+}
+model ProductType {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  code String @db.VarChar(64)
+  label String @db.VarChar(120)
+  revision Int @default(1)
+  activeVersionId String? @db.Uuid
+  createdAt DateTime @default(now())
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Restrict)
+  versions ProductTypeVersion[] @relation("TypeVersions")
+  activeVersion ProductTypeVersion? @relation("ActiveVersion", fields: [activeVersionId, id, tenantId], references: [id, productTypeId, tenantId], onDelete: Restrict)
+  @@unique([id, tenantId])
+  @@unique([tenantId, code])
+}
+model ProductTypeVersion {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  productTypeId String @db.Uuid
+  number Int
+  label String @db.VarChar(120)
+  description String @default("") @db.VarChar(500)
+  status SchemaStatus @default(DRAFT)
+  revision Int @default(1)
+  createdAt DateTime @default(now())
+  approvedAt DateTime?
+  approvedBy String? @db.Uuid
+  productType ProductType @relation("TypeVersions", fields: [productTypeId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  activeFor ProductType[] @relation("ActiveVersion")
+  groups SpecificationGroup[]
+  attributes ProductTypeAttribute[]
+  @@unique([id, tenantId])
+  @@unique([id, productTypeId, tenantId])
+  @@unique([productTypeId, number])
+  @@index([tenantId, status])
+}
+model SpecificationGroup {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  versionId String @db.Uuid
+  code String @db.VarChar(64)
+  label String @db.VarChar(120)
+  sortOrder Int @default(0)
+  version ProductTypeVersion @relation(fields: [versionId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  attributes ProductTypeAttribute[]
+  @@unique([id, versionId, tenantId])
+  @@unique([versionId, code])
+}
+model ProductTypeAttribute {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  versionId String @db.Uuid
+  attributeId String @db.Uuid
+  groupId String @db.Uuid
+  level AttributeLevel
+  required Boolean @default(false)
+  variantAxis Boolean @default(false)
+  sortOrder Int @default(0)
+  snapshot Json
+  version ProductTypeVersion @relation(fields: [versionId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  attribute AttributeDefinition @relation(fields: [attributeId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  group SpecificationGroup @relation(fields: [groupId, versionId, tenantId], references: [id, versionId, tenantId], onDelete: Restrict)
+  options ProductTypeAttributeOption[]
+  @@unique([id, tenantId])
+  @@unique([versionId, attributeId])
+}
+model ProductTypeAttributeOption {
+  bindingId String @db.Uuid
+  tenantId String @db.Uuid
+  optionValueId String @db.Uuid
+  binding ProductTypeAttribute @relation(fields: [bindingId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  optionValue OptionValue @relation(fields: [optionValueId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  @@id([bindingId, optionValueId])
+  @@index([optionValueId, tenantId])
 }
 
 model Store {
