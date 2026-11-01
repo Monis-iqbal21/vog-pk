@@ -32,6 +32,8 @@ export const SCOPED_PERMISSIONS: Record<string, readonly AuthorizationScope[]> =
   'category-filters.approve': ['STORE'],
   'category-filters.activate': ['STORE'],
   'listings.view': ['STORE'],
+  ...Object.fromEntries(['products.create','products.update','products.archive','products.submit','products.approve','products.publish','skus.create','skus.update','skus.archive','variants.manage'].map(p=>[p,['TENANT']])),
+  ...Object.fromEntries(['listings.create','listings.update','listings.archive','listings.submit','listings.approve','listings.publish','listings.assign-categories'].map(p=>[p,['STORE']])),
   'listings.manage': ['STORE'],
   'pricing.view': ['STORE'],
   'pricing.manage': ['STORE'],

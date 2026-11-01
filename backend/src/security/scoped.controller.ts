@@ -49,8 +49,10 @@ export class ContextsController {
   @Get('catalog') @SessionOnly()
   async catalog(@Req() request:AdminRequest){
     const memberships=await this.db.storeMembership.findMany({where:{userId:request.identity.id,active:true,store:{active:true},tenantMembership:{active:true,tenant:{active:true}}},take:50,orderBy:{storeId:'asc'},include:{store:true,tenantMembership:{include:{tenant:true}}}});
-    const contexts=[];for(const member of memberships){const access=await this.authz.resolve(request.identity.id,{kind:'STORE',tenantId:member.tenantId,storeId:member.storeId});if(['categories.view','category-filters.view'].some(p=>access.permissions.includes(p)))contexts.push({id:member.storeId,tenantId:member.tenantId,name:member.store.name,tenantName:member.tenantMembership.tenant.name,permissions:access.permissions});}return contexts;
+    const contexts=[];for(const member of memberships){const access=await this.authz.resolve(request.identity.id,{kind:'STORE',tenantId:member.tenantId,storeId:member.storeId});if(['categories.view','category-filters.view','listings.view'].some(p=>access.permissions.includes(p)))contexts.push({id:member.storeId,tenantId:member.tenantId,name:member.store.name,tenantName:member.tenantMembership.tenant.name,permissions:access.permissions});}return contexts;
   }
+  @Get('products') @SessionOnly()
+  async products(@Req()request:AdminRequest){const memberships=await this.db.tenantMembership.findMany({where:{userId:request.identity.id,active:true,tenant:{active:true}},take:25,orderBy:{tenantId:'asc'},include:{tenant:true}});const contexts=[];for(const member of memberships){const access=await this.authz.resolve(request.identity.id,{kind:'TENANT',tenantId:member.tenantId});if(access.permissions.includes('products.view'))contexts.push({id:member.tenantId,name:member.tenant.name,permissions:access.permissions});}return contexts;}
   @Get('schema') @SessionOnly()
   async schema(@Req() request:AdminRequest){
     const memberships=await this.db.tenantMembership.findMany({where:{userId:request.identity.id,active:true,tenant:{active:true}},take:25,orderBy:{tenantId:'asc'},include:{tenant:true}});

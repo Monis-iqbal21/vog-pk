@@ -8,6 +8,8 @@ import { adminConfig } from "@/lib/config";
 import StaffPanel from "@/components/StaffPanel";
 import SchemaWorkspace from "@/components/schema/SchemaWorkspace";
 import CategoryWorkspace from "@/components/categories/CategoryWorkspace";
+import ProductWorkspace from "@/components/catalog/ProductWorkspace";
+import ListingWorkspace from "@/components/catalog/ListingWorkspace";
 export default async function ModulePage({ params }) {
   const user = await requireAdmin(),
     { module: slug } = await params,
@@ -24,6 +26,8 @@ export default async function ModulePage({ params }) {
         <Link href="/dashboard">Return to overview</Link>
       </section>
     );
+  if(slug==='products'||slug==='variants')return <ProductWorkspace contexts={user.productContexts??[]}/>;
+  if(slug==='listings')return <ListingWorkspace contexts={(user.catalogContexts??[]).filter((c)=>c.permissions.includes('listings.view'))}/>;
   if (slug === "attributes" || slug === "product-types")
     return (
       <SchemaWorkspace

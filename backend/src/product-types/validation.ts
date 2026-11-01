@@ -105,6 +105,7 @@ export const fieldInput = z
 export const draftInput = z
   .object({
     revision,
+    allowNoSku: z.boolean().default(false),
     label,
     description,
     groups: z.array(groupInput).min(1).max(12),

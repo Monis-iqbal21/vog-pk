@@ -11,6 +11,7 @@ import {
 import GeneratedPreview from "./GeneratedPreview";
 
 const toDraft = (version) => ({
+  allowNoSku: version.allowNoSku ?? false,
   label: version.label,
   description: version.description,
   revision: version.revision,
@@ -378,6 +379,11 @@ export default function ProductTypePanel({ base, permissions, registry }) {
                     setDraft({ ...draft, description })
                   }
                 />
+                <CheckField
+                  label="Permit SKU-free informational or inquiry products"
+                  value={draft.allowNoSku}
+                  onChange={(allowNoSku) => setDraft({ ...draft, allowNoSku })}
+                />
                 <h3>Specification groups</h3>
                 {draft.groups.map((g, index) => (
                   <fieldset key={index}>
@@ -693,10 +699,31 @@ export default function ProductTypePanel({ base, permissions, registry }) {
                   {impact.usage.blockingReasons.join(" ")}
                 </p>
                 <p className="muted">
-                  There is no product model in this milestone. Future usage
-                  queries must replace the explicit empty-model adapter before
-                  product publication.
+                  Existing products keep their pinned schemas. Conflicting
+                  approved facts or listing pins block activation until an
+                  explicit migration is reviewed.
                 </p>
+                {impact.usage.affected && (
+                  <>
+                    <p>
+                      SKU revisions: {impact.usage.affected.skuRevisionCount}.
+                      Listing revisions:{" "}
+                      {impact.usage.affected.listingRevisionCount}. Filter
+                      dependencies: {impact.usage.affected.filterDependencies}.
+                    </p>
+                    {impact.usage.affected.conflicts.map((c) => (
+                      <p key={c.revisionId}>
+                        Product revision {c.revisionId}: {c.reasons.join(" ")}
+                      </p>
+                    ))}
+                    {impact.usage.affected.truncated && (
+                      <p role="alert">
+                        Impact analysis is truncated; activation requires
+                        explicit migration review.
+                      </p>
+                    )}
+                  </>
+                )}
               </div>
             )}
           </section>

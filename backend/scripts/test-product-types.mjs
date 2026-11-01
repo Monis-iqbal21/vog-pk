@@ -817,6 +817,11 @@ try {
     const {verifyCategories} = await import('./categories-verification.mjs');
     categories = await verifyCategories({db, ids, owner, token, bToken, tenantB, member, base, test, call, create, attribute, makeType, action, hashToken});
   }
+  let catalog;
+  if(process.env.VOG_TEST_PRODUCTS==='1'){
+    const {verifyProducts}=await import('./products-verification.mjs');
+    catalog=await verifyProducts({db,ids,owner,token,bToken,tenantB,member,base,test,call,create,attribute,makeType,action,hashToken});
+  }
   phase = 'admin production build and browser workflows';
   const admin = await verifyAdmin({
     apiPort,
@@ -1016,6 +1021,8 @@ try {
         }
         assert.equal(errors.length, 0);
         if (categories) await categories.browser({page, base, cookie});
+        if (catalog) await catalog.browser({page,base,cookie});
+        assert.equal(errors.length,0);
         await context.close();
         return {
           passed: true,
@@ -1023,6 +1030,7 @@ try {
           headlessBrowser: 'Microsoft Edge',
           realForms: true,
           noPageErrors: true,
+          ...(catalog?{catalogBrowser:{passed:true,productAndSkuForms:true,typedFalseAndZero:true,dependentResolution:true,listingPins:true,separateApprovalAndPublication:true,clonedRevisions:true,responsiveWidths:[1440,390],missingCsrfRejected:true,invalidBffPathsRejected:true}}:{}),
         };
       } catch (error) {
         if (debugPage) {
@@ -1114,7 +1122,7 @@ try {
   await fs.rm(directory, { recursive: true, force: true });
   await fs.mkdir('docs', { recursive: true });
   await fs.writeFile(
-    process.env.VOG_TEST_CATEGORIES === '1' ? 'docs/categories-verification.json' : 'docs/product-types-verification.json',
+    process.env.VOG_TEST_PRODUCTS==='1'?'docs/products-verification.json':process.env.VOG_TEST_CATEGORIES === '1' ? 'docs/categories-verification.json' : 'docs/product-types-verification.json',
     JSON.stringify(
       {
         ...report,

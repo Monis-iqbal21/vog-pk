@@ -83,3 +83,73 @@ for (const method of ["PUT", "DELETE", "OPTIONS"]) {
 console.log(
   `PASS Category/filter BFF explicit route allowlist (${assertions} assertions).`,
 );
+const productBase = `scopes/tenants/${id}/catalog`,
+  pr = `${productBase}/products/${id}/revisions/${id}`,
+  listingBase = `stores/${id}/listings`,
+  lr = `${listingBase}/${id}/revisions/${id}`;
+const catalogAllowed = {
+  GET: [
+    "contexts/products",
+    productBase + "/schemas",
+    productBase + "/brands",
+    productBase + "/products",
+    productBase + `/products/${id}`,
+    productBase + `/products/${id}/revisions`,
+    pr,
+    pr + "/impact",
+    listingBase,
+    listingBase + "/catalog",
+    listingBase + "/categories",
+    listingBase + `/${id}`,
+    listingBase + `/${id}/revisions`,
+    lr,
+    lr + "/impact",
+  ],
+  POST: [
+    productBase + "/products",
+    productBase + "/brands",
+    productBase + `/products/${id}/archive`,
+    productBase + `/products/${id}/skus/${id}/archive`,
+    pr + "/clone",
+    pr + "/resolve",
+    pr + "/actions/review",
+    pr + "/actions/publish",
+    listingBase,
+    listingBase + `/${id}/archive`,
+    lr + "/clone",
+    lr + "/actions/approve",
+    lr + "/actions/publish",
+  ],
+  PATCH: [pr, lr],
+};
+let catalogAssertions = 0;
+for (const [method, paths] of Object.entries(catalogAllowed))
+  for (const path of paths) {
+    assert.equal(allowedScopedRoute(method, path), true, path);
+    catalogAssertions++;
+  }
+for (const path of [
+  productBase + "/sql",
+  pr + "/actions/activate",
+  pr + "/actions/reset",
+  lr + "/actions/execute",
+  productBase + "/products?tenantId=" + id,
+  pr + "/../roles",
+  productBase.replace(id, "invalid") + "/products",
+  listingBase + "/catalog/execute",
+  listingBase + "/upload",
+  pr + "/media",
+  lr + "/media",
+])
+  for (const method of ["GET", "POST", "PATCH", "DELETE"]) {
+    assert.equal(allowedScopedRoute(method, path), false, path);
+    catalogAssertions++;
+  }
+for (const method of ["PUT", "DELETE", "OPTIONS"])
+  for (const path of [pr, lr]) {
+    assert.equal(allowedScopedRoute(method, path), false);
+    catalogAssertions++;
+  }
+console.log(
+  `PASS Product/SKU/listing BFF allowlist (${catalogAssertions} assertions).`,
+);

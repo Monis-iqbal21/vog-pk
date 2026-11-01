@@ -42,7 +42,7 @@ export async function verifyCategories({
         .map((d) => d.name)
         .sort();
       for (const dir of directories.filter(
-        (d) => d !== '202611010003_categories_filters',
+        (d) => d < '202611010003_categories_filters',
       ))
         await upgrade.query(
           await fs.readFile(`prisma/migrations/${dir}/migration.sql`, 'utf8'),

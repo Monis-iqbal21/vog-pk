@@ -548,6 +548,58 @@ export class CategoryFiltersService {
     );
     if (usage.assignments === null || usage.blockingReasons.length)
       blockingReasons.push('Real listing usage has not been verified.');
+    const categoryIds = row.includeDescendants
+      ? this.categories
+          .treeRows(
+            (await this.categories.graph(tx, ctx)).filter(
+              (c) => c.status !== 'ARCHIVED',
+            ),
+            {
+              rootId: categoryId,
+              maxDepth: 32,
+              view: category.activeSnapshot ? 'active' : 'draft',
+            },
+          )
+          .nodes.map((c) => c.id)
+      : [categoryId];
+    const assigned = await tx.listingCategory.findMany({
+      where: {
+        ...ownership(ctx),
+        categoryId: { in: categoryIds },
+        revision: { listing: { archived: false }, status: { not: 'ARCHIVED' } },
+      },
+      select: {
+        revision: {
+          select: {
+            productRevision: {
+              select: { schemaVersionId: true, productTypeId: true },
+            },
+          },
+        },
+      },
+      take: 501,
+    });
+    if (assigned.length > 500)
+      blockingReasons.push(
+        'Listing/filter analysis exceeds the safe limit; review a bounded migration first.',
+      );
+    if (
+      assigned.some((a) =>
+        row.filters.some(
+          (f) =>
+            (f.snapshot as FilterSnapshot).bindings.some(
+              (b) =>
+                b.productTypeId === a.revision.productRevision.productTypeId,
+            ) &&
+            !(f.snapshot as FilterSnapshot).bindings.some(
+              (b) => b.versionId === a.revision.productRevision.schemaVersionId,
+            ),
+        ),
+      )
+    )
+      blockingReasons.push(
+        'Existing listing pins use a different schema version for configured attributes. Migrate those listing pins explicitly before activation.',
+      );
     return {
       revision: row.revision,
       categoryRevision: category.revision,

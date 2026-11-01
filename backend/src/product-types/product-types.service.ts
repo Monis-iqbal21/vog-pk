@@ -373,6 +373,8 @@ export class ProductTypesService {
         code: old.code,
         dataType: old.dataType,
       });
+      const used=await tx.productAttributeBinding.count({where:{tenantId,attributeId:id,revision:{approvedAt:{not:null}}}});
+      if(used&&(input.status!==old.status||input.canonicalUnit!==old.canonicalUnit||JSON.stringify(rules)!==JSON.stringify(old.rules)||JSON.stringify(input.allowedScopes)!==JSON.stringify(old.allowedScopes)||JSON.stringify(input.visibility)!==JSON.stringify(old.visibility)||input.axisEligible!==old.axisEligible))throw new ConflictException('Approved product facts depend on this definition. Create and review a new attribute/schema migration instead.');
       const { revision: _, ...changes } = input;
       const row = await tx.attributeDefinition.update({
         where: { id },
@@ -622,6 +624,7 @@ export class ProductTypesService {
           label: input.label,
           description: input.description,
           revision: { increment: 1 },
+          allowNoSku: input.allowNoSku,
         },
       });
       await this.audit(tx, actor, tenantId, 'draft_saved', versionId);
@@ -657,6 +660,7 @@ export class ProductTypesService {
           number: last.number + 1,
           label: source.label,
           description: source.description,
+          allowNoSku: source.allowNoSku,
         },
       });
       for (const group of source.groups) {
@@ -757,7 +761,7 @@ export class ProductTypesService {
         .map((f) => (f.snapshot as { code: string }).code),
       metadataChanged:
         !!active &&
-        (active.label !== next.label ||
+        (active.allowNoSku !== next.allowNoSku || active.label !== next.label ||
           active.description !== next.description ||
           JSON.stringify(
             active.groups.map(({ code, label, sortOrder }) => ({

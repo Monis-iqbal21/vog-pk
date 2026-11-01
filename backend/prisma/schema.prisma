@@ -109,6 +109,9 @@ model Tenant {
   attributes AttributeDefinition[]
   optionSets OptionSet[]
   productTypes ProductType[]
+  products Product[]
+  brands CatalogBrand[]
+  mediaAssets MediaAsset[]
 }
 
 enum AttributeDataType {
@@ -160,6 +163,8 @@ model OptionValue {
   status DefinitionStatus @default(ACTIVE)
   optionSet OptionSet @relation(fields: [optionSetId, tenantId], references: [id, tenantId], onDelete: Restrict)
   references ProductTypeAttributeOption[]
+  productChoices ProductAttributeChoice[]
+  skuChoices SKUAttributeChoice[]
   @@unique([id, tenantId])
   @@unique([optionSetId, code])
 }
@@ -184,6 +189,7 @@ model AttributeDefinition {
   optionSet OptionSet? @relation(fields: [optionSetId, tenantId], references: [id, tenantId], onDelete: Restrict)
   bindings ProductTypeAttribute[]
   categoryFilters CategoryFilter[]
+  catalogBindings ProductAttributeBinding[]
   @@unique([id, tenantId])
   @@unique([tenantId, code])
 }
@@ -199,6 +205,7 @@ model ProductType {
   versions ProductTypeVersion[] @relation("TypeVersions")
   activeVersion ProductTypeVersion? @relation("ActiveVersion", fields: [activeVersionId, id, tenantId], references: [id, productTypeId, tenantId], onDelete: Restrict)
   categoryCompatibility CategoryAllowedType[]
+  products Product[]
   @@unique([id, tenantId])
   @@unique([tenantId, code])
 }
@@ -209,6 +216,7 @@ model ProductTypeVersion {
   number Int
   label String @db.VarChar(120)
   description String @default("") @db.VarChar(500)
+  allowNoSku Boolean @default(false)
   status SchemaStatus @default(DRAFT)
   revision Int @default(1)
   createdAt DateTime @default(now())
@@ -219,6 +227,7 @@ model ProductTypeVersion {
   groups SpecificationGroup[]
   attributes ProductTypeAttribute[]
   filterDependencies CategoryFilterTypeVersion[]
+  catalogRevisions ProductRevision[]
   @@unique([id, tenantId])
   @@unique([id, productTypeId, tenantId])
   @@unique([productTypeId, number])
@@ -251,6 +260,7 @@ model ProductTypeAttribute {
   attribute AttributeDefinition @relation(fields: [attributeId, tenantId], references: [id, tenantId], onDelete: Restrict)
   group SpecificationGroup @relation(fields: [groupId, versionId, tenantId], references: [id, versionId, tenantId], onDelete: Restrict)
   options ProductTypeAttributeOption[]
+  catalogBindings ProductAttributeBinding[]
   @@unique([id, tenantId])
   @@unique([versionId, attributeId])
 }
@@ -279,6 +289,7 @@ model Store {
   currency String @default("PKR") @db.VarChar(3)
   categories Category[]
   catalogRoutes CatalogRoute[]
+  listings StoreListing[]
   @@unique([id, tenantId])
   @@unique([tenantId, slug])
 }
@@ -402,6 +413,7 @@ enum RouteOwner {
   LEGACY_PRODUCT
   LEGACY_CATEGORY
   RESERVED
+  LISTING
 }
 model Category {
   id String @id @default(uuid()) @db.Uuid
@@ -435,6 +447,7 @@ model Category {
   activeChildren Category[] @relation("CategoryActiveTree")
   allowedTypes CategoryAllowedType[]
   routes CatalogRoute[]
+  listingAssignments ListingCategory[]
   filterSets CategoryFilterSet[] @relation("CategoryFilterVersions")
   activeFilterSet CategoryFilterSet? @relation("ActiveCategoryFilters", fields: [activeFilterSetId, id, storeId, tenantId], references: [id, categoryId, storeId, tenantId], onDelete: Restrict)
   filterKeys CategoryFilterKey[]
@@ -462,6 +475,8 @@ model CatalogRoute {
   ownerKind RouteOwner
   categoryId String? @db.Uuid
   legacyKey String? @db.VarChar(160)
+  listingId String? @db.Uuid
+  listing StoreListing? @relation(fields: [listingId,storeId,tenantId],references: [id,storeId,tenantId],onDelete: Restrict)
   store Store @relation(fields: [storeId,tenantId],references: [id,tenantId],onDelete: Restrict)
   category Category? @relation(fields: [categoryId,storeId,tenantId],references: [id,storeId,tenantId],onDelete: Restrict)
   @@unique([storeId,slug])
@@ -539,4 +554,366 @@ model CategoryFilter {
   key CategoryFilterKey @relation(fields: [keyId,categoryId,storeId,tenantId],references: [id,categoryId,storeId,tenantId],onDelete: Restrict)
   @@unique([setId,code])
   @@unique([setId,keyId])
+}
+
+enum CatalogState {
+  DRAFT
+  IN_REVIEW
+  APPROVED
+  PUBLISHED
+  ARCHIVED
+}
+enum SellingMode {
+  REFERENCE
+  INFORMATIONAL
+  RFQ
+  RETAIL
+}
+model CatalogBrand {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  code String @db.VarChar(64)
+  name String @db.VarChar(120)
+  tenant Tenant @relation(fields:[tenantId],references:[id],onDelete:Restrict)
+  revisions ProductRevision[]
+  @@unique([id,tenantId])
+  @@unique([tenantId,code])
+}
+model Product {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  productTypeId String @db.Uuid
+  code String @db.VarChar(64)
+  externalReference String? @db.VarChar(160)
+  revision Int @default(1)
+  archived Boolean @default(false)
+  publishedRevisionId String? @db.Uuid
+  createdAt DateTime @default(now())
+  createdBy String @db.Uuid
+  tenant Tenant @relation(fields:[tenantId],references:[id],onDelete:Restrict)
+  type ProductType @relation(fields:[productTypeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  revisions ProductRevision[] @relation("ProductHistory")
+  published ProductRevision? @relation("PublishedProduct",fields:[publishedRevisionId,id,tenantId],references:[id,productId,tenantId],onDelete:Restrict)
+  skus SKU[]
+  listings StoreListing[]
+  @@unique([id,tenantId])
+  @@unique([id,productTypeId,tenantId])
+  @@unique([tenantId,code])
+  @@unique([tenantId,externalReference])
+}
+model ProductRevision {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  productId String @db.Uuid
+  productTypeId String @db.Uuid
+  schemaVersionId String @db.Uuid
+  number Int
+  revision Int @default(1)
+  status CatalogState @default(DRAFT)
+  name String @db.VarChar(120)
+  slug String @db.VarChar(120)
+  description String @default("") @db.VarChar(500)
+  content Json @default("[]")
+  brandId String? @db.Uuid
+  sellingMode SellingMode @default(REFERENCE)
+  createdAt DateTime @default(now())
+  createdBy String @db.Uuid
+  updatedAt DateTime @updatedAt
+  updatedBy String @db.Uuid
+  approvedAt DateTime?
+  approvedBy String? @db.Uuid
+  publishedAt DateTime?
+  publishedBy String? @db.Uuid
+  product Product @relation("ProductHistory",fields:[productId,productTypeId,tenantId],references:[id,productTypeId,tenantId],onDelete:Restrict)
+  publishedFor Product[] @relation("PublishedProduct")
+  schema ProductTypeVersion @relation(fields:[schemaVersionId,productTypeId,tenantId],references:[id,productTypeId,tenantId],onDelete:Restrict)
+  brand CatalogBrand? @relation(fields:[brandId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  bindings ProductAttributeBinding[]
+  values ProductAttributeValue[]
+  skus SKURevision[]
+  listingRevisions ListingRevision[]
+  media ProductRevisionMedia[]
+  @@unique([id,productId,tenantId])
+  @@unique([id,tenantId])
+  @@unique([productId,number])
+  @@index([tenantId,status,name])
+  @@index([schemaVersionId,tenantId])
+}
+model ProductAttributeBinding {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  productRevisionId String @db.Uuid
+  schemaBindingId String @db.Uuid
+  attributeId String @db.Uuid
+  level AttributeLevel
+  required Boolean
+  axis Boolean
+  sortOrder Int
+  snapshot Json
+  revision ProductRevision @relation(fields:[productRevisionId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  schemaBinding ProductTypeAttribute @relation(fields:[schemaBindingId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  attribute AttributeDefinition @relation(fields:[attributeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  productValues ProductAttributeValue[]
+  skuValues SKUAttributeValue[]
+  @@unique([id,productRevisionId,tenantId])
+  @@unique([productRevisionId,attributeId])
+}
+model ProductAttributeValue {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  productRevisionId String @db.Uuid
+  bindingId String @db.Uuid
+  dataType AttributeDataType
+  textValue String? @db.VarChar(10000)
+  numberValue Decimal? @db.Decimal(24,6)
+  booleanValue Boolean?
+  unit String? @db.VarChar(24)
+  binding ProductAttributeBinding @relation(fields:[bindingId,productRevisionId,tenantId],references:[id,productRevisionId,tenantId],onDelete:Restrict)
+  revision ProductRevision @relation(fields:[productRevisionId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  choices ProductAttributeChoice[]
+  @@unique([id,tenantId])
+  @@unique([productRevisionId,bindingId])
+}
+model ProductAttributeChoice {
+  valueId String @db.Uuid
+  tenantId String @db.Uuid
+  optionId String @db.Uuid
+  value ProductAttributeValue @relation(fields:[valueId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  option OptionValue @relation(fields:[optionId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  @@id([valueId,optionId])
+}
+model SKU {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  productId String @db.Uuid
+  code String @db.VarChar(80)
+  manufacturerPartNumber String? @db.VarChar(120)
+  identityKey String @db.Char(64)
+  identityFacts Json
+  archived Boolean @default(false)
+  createdAt DateTime @default(now())
+  createdBy String @db.Uuid
+  product Product @relation(fields:[productId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  revisions SKURevision[]
+  @@unique([id,productId,tenantId])
+  @@unique([tenantId,code])
+  @@index([productId,identityKey])
+}
+model SKURevision {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  productId String @db.Uuid
+  productRevisionId String @db.Uuid
+  skuId String @db.Uuid
+  state DefinitionStatus @default(ACTIVE)
+  combinationKey String @db.Char(64)
+  revision ProductRevision @relation(fields:[productRevisionId,productId,tenantId],references:[id,productId,tenantId],onDelete:Restrict)
+  sku SKU @relation(fields:[skuId,productId,tenantId],references:[id,productId,tenantId],onDelete:Restrict)
+  values SKUAttributeValue[]
+  listingPins ListingSKU[]
+  media SKURevisionMedia[]
+  @@unique([id,productRevisionId,productId,tenantId])
+  @@unique([id,tenantId])
+  @@unique([productRevisionId,skuId])
+  @@unique([productRevisionId,combinationKey])
+}
+model SKUAttributeValue {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  productRevisionId String @db.Uuid
+  productId String @db.Uuid
+  skuRevisionId String @db.Uuid
+  bindingId String @db.Uuid
+  dataType AttributeDataType
+  textValue String? @db.VarChar(10000)
+  numberValue Decimal? @db.Decimal(24,6)
+  booleanValue Boolean?
+  unit String? @db.VarChar(24)
+  binding ProductAttributeBinding @relation(fields:[bindingId,productRevisionId,tenantId],references:[id,productRevisionId,tenantId],onDelete:Restrict)
+  revision SKURevision @relation(fields:[skuRevisionId,productRevisionId,productId,tenantId],references:[id,productRevisionId,productId,tenantId],onDelete:Restrict)
+  choices SKUAttributeChoice[]
+  @@unique([id,tenantId])
+  @@unique([skuRevisionId,bindingId])
+}
+model SKUAttributeChoice {
+  valueId String @db.Uuid
+  tenantId String @db.Uuid
+  optionId String @db.Uuid
+  value SKUAttributeValue @relation(fields:[valueId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  option OptionValue @relation(fields:[optionId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  @@id([valueId,optionId])
+}
+model StoreListing {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  productId String @db.Uuid
+  code String @db.VarChar(64)
+  externalReference String? @db.VarChar(160)
+  revision Int @default(1)
+  archived Boolean @default(false)
+  publishedRevisionId String? @db.Uuid
+  createdAt DateTime @default(now())
+  createdBy String @db.Uuid
+  store Store @relation(fields:[storeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  product Product @relation(fields:[productId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  revisions ListingRevision[] @relation("ListingHistory")
+  published ListingRevision? @relation("PublishedListing",fields:[publishedRevisionId,id,storeId,tenantId],references:[id,listingId,storeId,tenantId],onDelete:Restrict)
+  routes CatalogRoute[]
+  @@unique([id,storeId,tenantId])
+  @@unique([id,productId,storeId,tenantId])
+  @@unique([storeId,code])
+  @@unique([storeId,externalReference])
+  @@unique([storeId,productId])
+}
+model ListingRevision {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  listingId String @db.Uuid
+  productId String @db.Uuid
+  productRevisionId String @db.Uuid
+  number Int
+  revision Int @default(1)
+  status CatalogState @default(DRAFT)
+  title String @db.VarChar(120)
+  slug String @db.VarChar(120)
+  visible Boolean @default(true)
+  sellingMode SellingMode
+  seo Json @default("{}")
+  featuredOrder Int?
+  newArrivalOrder Int?
+  createdAt DateTime @default(now())
+  createdBy String @db.Uuid
+  updatedAt DateTime @updatedAt
+  updatedBy String @db.Uuid
+  approvedAt DateTime?
+  approvedBy String? @db.Uuid
+  publishedAt DateTime?
+  publishedBy String? @db.Uuid
+  listing StoreListing @relation("ListingHistory",fields:[listingId,productId,storeId,tenantId],references:[id,productId,storeId,tenantId],onDelete:Restrict)
+  publishedFor StoreListing[] @relation("PublishedListing")
+  productRevision ProductRevision @relation(fields:[productRevisionId,productId,tenantId],references:[id,productId,tenantId],onDelete:Restrict)
+  categories ListingCategory[]
+  skus ListingSKU[]
+  media ListingRevisionMedia[]
+  @@unique([id,listingId,storeId,tenantId])
+  @@unique([id,storeId,tenantId])
+  @@unique([id,productRevisionId,productId,tenantId])
+  @@unique([id,productRevisionId,productId,storeId,tenantId])
+  @@unique([listingId,number])
+  @@index([storeId,status,title])
+}
+model ListingCategory {
+  listingRevisionId String @db.Uuid
+  storeId String @db.Uuid
+  tenantId String @db.Uuid
+  categoryId String @db.Uuid
+  revision ListingRevision @relation(fields:[listingRevisionId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  category Category @relation(fields:[categoryId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  @@id([listingRevisionId,categoryId])
+  @@index([categoryId,storeId,tenantId])
+}
+model ListingSKU {
+  listingRevisionId String @db.Uuid
+  tenantId String @db.Uuid
+  productId String @db.Uuid
+  productRevisionId String @db.Uuid
+  skuRevisionId String @db.Uuid
+  revision ListingRevision @relation(fields:[listingRevisionId,productRevisionId,productId,tenantId],references:[id,productRevisionId,productId,tenantId],onDelete:Restrict)
+  skuRevision SKURevision @relation(fields:[skuRevisionId,productRevisionId,productId,tenantId],references:[id,productRevisionId,productId,tenantId],onDelete:Restrict)
+  @@id([listingRevisionId,skuRevisionId])
+}
+
+// Reference contracts only in Milestone 4. No uploads, processing or public reads.
+enum MediaPurpose {
+  GALLERY
+  DETAIL_POSTER
+  SIZE_CHART
+  DIMENSIONS
+  INSTALLATION_GUIDE
+  FEATURE_DIAGRAM
+  OTHER_CONTENT
+}
+enum MediaRights {
+  UNVERIFIED
+  APPROVED
+  RESTRICTED
+}
+model MediaAsset {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  code String @db.VarChar(80)
+  contentDigest String? @db.Char(64)
+  storageReference String? @db.VarChar(240)
+  sourceUrl String? @db.VarChar(1000)
+  rights MediaRights @default(UNVERIFIED)
+  rightsMetadata Json @default("{}")
+  mimeType String @db.VarChar(80)
+  width Int?
+  height Int?
+  archived Boolean @default(false)
+  createdAt DateTime @default(now())
+  createdBy String @db.Uuid
+  tenant Tenant @relation(fields:[tenantId],references:[id],onDelete:Restrict)
+  productReferences ProductRevisionMedia[]
+  skuReferences SKURevisionMedia[]
+  @@unique([id,tenantId])
+  @@unique([tenantId,code])
+}
+model ProductRevisionMedia {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  productRevisionId String @db.Uuid
+  assetId String @db.Uuid
+  purpose MediaPurpose
+  sortOrder Int @default(0)
+  altText String @db.VarChar(500)
+  caption String? @db.VarChar(500)
+  visible Boolean @default(true)
+  presentation Json @default("{}")
+  revision ProductRevision @relation(fields:[productRevisionId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  asset MediaAsset @relation(fields:[assetId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  listingPins ListingRevisionMedia[]
+  @@unique([id,productRevisionId,tenantId])
+  @@unique([productRevisionId,purpose,sortOrder])
+}
+model SKURevisionMedia {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  productId String @db.Uuid
+  productRevisionId String @db.Uuid
+  skuRevisionId String @db.Uuid
+  assetId String @db.Uuid
+  purpose MediaPurpose
+  sortOrder Int @default(0)
+  altText String @db.VarChar(500)
+  caption String? @db.VarChar(500)
+  visible Boolean @default(true)
+  presentation Json @default("{}")
+  revision SKURevision @relation(fields:[skuRevisionId,productRevisionId,productId,tenantId],references:[id,productRevisionId,productId,tenantId],onDelete:Restrict)
+  asset MediaAsset @relation(fields:[assetId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  listingPins ListingRevisionMedia[]
+  @@unique([id,productRevisionId,tenantId])
+  @@unique([skuRevisionId,purpose,sortOrder])
+}
+model ListingRevisionMedia {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  listingRevisionId String @db.Uuid
+  productId String @db.Uuid
+  productRevisionId String @db.Uuid
+  productMediaId String? @db.Uuid
+  skuMediaId String? @db.Uuid
+  purpose MediaPurpose
+  sortOrder Int @default(0)
+  altText String @db.VarChar(500)
+  caption String? @db.VarChar(500)
+  visible Boolean @default(true)
+  presentation Json @default("{}")
+  revision ListingRevision @relation(fields:[listingRevisionId,productRevisionId,productId,storeId,tenantId],references:[id,productRevisionId,productId,storeId,tenantId],onDelete:Restrict)
+  productMedia ProductRevisionMedia? @relation(fields:[productMediaId,productRevisionId,tenantId],references:[id,productRevisionId,tenantId],onDelete:Restrict)
+  skuMedia SKURevisionMedia? @relation(fields:[skuMediaId,productRevisionId,tenantId],references:[id,productRevisionId,tenantId],onDelete:Restrict)
+  @@unique([listingRevisionId,purpose,sortOrder])
 }
