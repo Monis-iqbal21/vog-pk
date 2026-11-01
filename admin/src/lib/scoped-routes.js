@@ -13,6 +13,50 @@ export function allowedScopedRoute(method, path) {
   const id = "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}";
   const scope = `scopes/(?:platform|tenants/${id}(?:/stores/${id})?)`;
   const catalog = `stores/${id}`;
+  const ops = `stores/${id}/operations`,
+    media = `scopes/tenants/${id}/media`;
+  if (
+    method === "GET" &&
+    new RegExp(
+      `^${ops}/(?:settings|locations|skus/${id}/(?:prices|inventory(?:/history)?|quote)|listings/${id}/revisions/${id}/media(?:/${id}/content)?)$`,
+    ).test(path)
+  )
+    return true;
+  if (
+    method === "POST" &&
+    new RegExp(
+      `^${ops}/(?:locations|skus/${id}/(?:prices(?:/${id}/actions/(?:review|draft|approve|publish|archive))?|inventory/adjustments))$`,
+    ).test(path)
+  )
+    return true;
+  if (
+    method === "PATCH" &&
+    new RegExp(
+      `^${ops}/(?:settings|skus/${id}/(?:prices/${id}|inventory)|listings/${id}/revisions/${id}/media)$`,
+    ).test(path)
+  )
+    return true;
+  if (
+    method === "GET" &&
+    new RegExp(
+      `^${media}/(?:assets(?:/${id}/content)?|products/${id}/revisions/${id}/assignments)$`,
+    ).test(path)
+  )
+    return true;
+  if (
+    method === "POST" &&
+    new RegExp(`^${media}/(?:uploads|assets/${id}/(?:approve|archive))$`).test(
+      path,
+    )
+  )
+    return true;
+  if (
+    method === "PATCH" &&
+    new RegExp(
+      `^${media}/(?:assets/${id}|products/${id}/revisions/${id}(?:/skus/${id})?/assignments)$`,
+    ).test(path)
+  )
+    return true;
   const products = `scopes/tenants/${id}/catalog`;
   if (
     method === "GET" &&

@@ -36,7 +36,8 @@
     "test:foundation": "npm run build && node scripts/test-foundation.mjs",
     "test:product-types": "npm run build && node scripts/test-product-types.mjs",
     "test:categories": "npm run build && node scripts/test-categories.mjs",
-    "test:products": "npm run build && node scripts/test-products.mjs"
+    "test:products": "npm run build && node scripts/test-products.mjs",
+    "test:operations": "npm run build && node scripts/test-operations.mjs"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",
@@ -50,6 +51,7 @@
     "pg": "^8.23.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
+    "sharp": "0.35.5",
     "zod": "^4.6.7"
   },
   "devDependencies": {

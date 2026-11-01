@@ -1022,7 +1022,7 @@ export async function verifyProducts({
     await db.mediaAsset.update({
       where: { id: asset.id },
       data: {
-        rights: 'APPROVED',
+        rights: 'APPROVED',publicUse:true,developmentOnly:false,
         rightsMetadata: {
           synthetic: true,
           developmentOnly: true,

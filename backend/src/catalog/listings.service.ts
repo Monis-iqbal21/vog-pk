@@ -318,6 +318,8 @@ export class ListingsService {
         source.purpose !== reference.purpose ||
         source.asset.archived ||
         source.asset.rights !== 'APPROVED' ||
+        !source.asset.publicUse ||
+        source.asset.developmentOnly ||
         (reference.visible && !source.visible)
       )
         fail(
@@ -342,7 +344,7 @@ export class ListingsService {
     const revision = await this.validate(tx, ctx, input, row.productId);
     if (row.media.length && row.productRevisionId !== revision.id)
       throw new ConflictException(
-        'Review and replace pinned media presentation before changing its product revision; media editing is deferred to Milestone 5.',
+        'Remove draft presentation references before changing the product revision, then select media from the new approved revision.',
       );
     await this.reserve(tx, ctx, input.slug, row.listingId);
     await tx.listingCategory.deleteMany({
@@ -617,8 +619,8 @@ export class ListingsService {
       ).filter((k) => JSON.stringify(row[k]) !== JSON.stringify(previous?.[k])),
       categoryIds: row.categories.map((c) => c.categoryId),
       purchasable: false,
-      pricing: 'NOT_IMPLEMENTED',
-      inventory: 'NOT_IMPLEMENTED',
+      pricing: 'SEPARATE_STORE_SKU_OFFER',
+      inventory: 'SEPARATE_STORE_SKU_BALANCE',
     };
   }
   transition(

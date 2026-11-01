@@ -6,7 +6,7 @@ export const modules=[
  {path:'/categories',title:'Categories & Filters',permission:'categories.view',permissions:['categories.view','category-filters.view'],scope:'STORE',icon:'categories'},
  {path:'/variants',title:'Product Variants',permission:'products.view',scope:'CATALOG',icon:'variants'},
  {path:'/listings',title:'Store Listings',permission:'listings.view',scope:'STORE',icon:'products'},
- {path:'/media',title:'Images & Posters',permission:'media.view',icon:'media'},
+ {path:'/media',title:'Images & Posters',permission:'media.view',scope:'CATALOG',icon:'media'},
  {path:'/homepage',title:'Homepage Content',permission:'homepage.view',icon:'homepage'},
  {path:'/coupons',title:'Coupons & Promotions',permission:'coupons.view',icon:'coupons'},
  {path:'/orders',title:'Orders',permission:'orders.view',icon:'orders'},

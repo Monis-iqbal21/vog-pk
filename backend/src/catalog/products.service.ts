@@ -804,8 +804,8 @@ export class ProductsService {
     return {
       valid: true,
       purchasable: false,
-      pricing: 'NOT_IMPLEMENTED',
-      inventory: 'NOT_IMPLEMENTED',
+      pricing: 'SEPARATE_STORE_SKU_OFFER',
+      inventory: 'SEPARATE_STORE_SKU_BALANCE',
       activeSkuCount: active.length,
     };
   }

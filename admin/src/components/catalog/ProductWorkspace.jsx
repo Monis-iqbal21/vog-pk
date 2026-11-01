@@ -4,6 +4,8 @@ import { adminMutation } from "@/lib/client-api";
 import { TextField, SelectField, CheckField } from "../schema/SchemaFields";
 import { read } from "../categories/fields";
 import ValueFields, { valuesFrom } from "./ValueFields";
+import OperationsPane from "../operations/OperationsPane";
+import MediaPanel from "../operations/MediaPanel";
 const empty = {
   code: "",
   name: "",
@@ -46,6 +48,8 @@ function Editor({
   onLoad,
   run,
   busy,
+  stores,
+  tenantId,
 }) {
   const [form, setForm] = useState(row ? fromRow(row, code) : empty),
     [dirty, setDirty] = useState(false),
@@ -109,9 +113,8 @@ function Editor({
         </p>
       )}
       <p className="muted">
-        Catalog facts only. Purchasing is disabled; pricing, inventory and media
-        management are future integrations. Gallery images and ordered detail
-        posters will be managed separately from specifications.
+        Catalog facts and store operations are managed separately. Purchasing
+        remains disabled.
       </p>
       <fieldset disabled={!editable || busy}>
         <legend>General information</legend>
@@ -485,10 +488,29 @@ function Editor({
           )}
         </fieldset>
       )}
+      {row && (
+        <>
+          <OperationsPane stores={stores} skus={row.skus} />
+          <MediaPanel
+            tenantId={tenantId}
+            permissions={permissions}
+            row={row}
+            parentDirty={dirty}
+            onReload={async () =>
+              onLoad(
+                await read(
+                  `${base}/products/${row.productId}/revisions/${row.id}`,
+                ),
+                code,
+              )
+            }
+          />
+        </>
+      )}
     </section>
   );
 }
-function TenantCatalog({ context }) {
+function TenantCatalog({ context, stores }) {
   const base = `scopes/tenants/${context.id}/catalog`,
     has = (p) => context.permissions.includes(p);
   const [data, setData] = useState({ items: [], total: 0 }),
@@ -733,6 +755,8 @@ function TenantCatalog({ context }) {
             onLoad={load}
             run={run}
             busy={busy}
+            stores={stores}
+            tenantId={context.id}
           />
         ) : (
           <p>Select a product or create a catalog draft.</p>
@@ -741,7 +765,7 @@ function TenantCatalog({ context }) {
     </>
   );
 }
-export default function ProductWorkspace({ contexts }) {
+export default function ProductWorkspace({ contexts, stores = [] }) {
   const [tenant, setTenant] = useState(contexts[0]?.id ?? "");
   const context = contexts.find((c) => c.id === tenant);
   return (
@@ -761,7 +785,17 @@ export default function ProductWorkspace({ contexts }) {
         ))}
       </SelectField>
       {context ? (
-        <TenantCatalog key={context.id} context={context} />
+        <TenantCatalog
+          key={context.id}
+          context={context}
+          stores={stores.filter(
+            (s) =>
+              s.tenantId === context.id &&
+              s.permissions.some((p) =>
+                ["pricing.view", "inventory.view"].includes(p),
+              ),
+          )}
+        />
       ) : (
         <p role="alert">No authorized catalog tenant.</p>
       )}

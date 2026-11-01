@@ -287,6 +287,10 @@ model Store {
   audits AuditLog[]
   legacyBridge LegacyStoreBridge?
   currency String @default("PKR") @db.VarChar(3)
+  timeZone String @default("UTC") @db.VarChar(80)
+  prices StorePrice[]
+  inventoryItems InventoryItem[]
+  inventoryLocations InventoryLocation[]
   categories Category[]
   catalogRoutes CatalogRoute[]
   listings StoreListing[]
@@ -695,6 +699,8 @@ model SKU {
   createdBy String @db.Uuid
   product Product @relation(fields:[productId,tenantId],references:[id,tenantId],onDelete:Restrict)
   revisions SKURevision[]
+  prices StorePrice[]
+  inventoryItems InventoryItem[]
   @@unique([id,productId,tenantId])
   @@unique([tenantId,code])
   @@index([productId,identityKey])
@@ -853,6 +859,19 @@ model MediaAsset {
   width Int?
   height Int?
   archived Boolean @default(false)
+  revision Int @default(1)
+  storageProvider String @default("REFERENCE") @db.VarChar(32)
+  byteSize Int?
+  storedBytes Int @default(0)
+  altText String @default("") @db.VarChar(500)
+  caption String? @db.VarChar(500)
+  intendedPurpose MediaPurpose @default(GALLERY)
+  developmentOnly Boolean @default(true)
+  publicUse Boolean @default(false)
+  derivatives Json @default("[]")
+  uploadKey String? @db.Uuid
+  uploadHash String? @db.Char(64)
+  approvals MediaApproval[]
   createdAt DateTime @default(now())
   createdBy String @db.Uuid
   tenant Tenant @relation(fields:[tenantId],references:[id],onDelete:Restrict)
@@ -860,6 +879,7 @@ model MediaAsset {
   skuReferences SKURevisionMedia[]
   @@unique([id,tenantId])
   @@unique([tenantId,code])
+  @@unique([tenantId,uploadKey])
 }
 model ProductRevisionMedia {
   id String @id @default(uuid()) @db.Uuid
@@ -916,4 +936,158 @@ model ListingRevisionMedia {
   productMedia ProductRevisionMedia? @relation(fields:[productMediaId,productRevisionId,tenantId],references:[id,productRevisionId,tenantId],onDelete:Restrict)
   skuMedia SKURevisionMedia? @relation(fields:[skuMediaId,productRevisionId,tenantId],references:[id,productRevisionId,tenantId],onDelete:Restrict)
   @@unique([listingRevisionId,purpose,sortOrder])
+}
+
+model StorePrice {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  productId String @db.Uuid
+  skuId String @db.Uuid
+  revision Int @default(1)
+  publishedRevisionId String? @db.Uuid
+  store Store @relation(fields:[storeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  sku SKU @relation(fields:[skuId,productId,tenantId],references:[id,productId,tenantId],onDelete:Restrict)
+  revisions PriceRevision[] @relation("PriceHistory")
+  published PriceRevision? @relation("PublishedPrice",fields:[publishedRevisionId,id,storeId,tenantId],references:[id,priceId,storeId,tenantId],onDelete:Restrict)
+  @@unique([id,storeId,tenantId])
+  @@unique([storeId,skuId])
+}
+model PriceRevision {
+  id String @id @default(uuid()) @db.Uuid
+  priceId String @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  number Int
+  revision Int @default(1)
+  status CatalogState @default(DRAFT)
+  currency String @db.VarChar(3)
+  regularAmount Decimal @db.Decimal(24,6)
+  validFrom DateTime?
+  validUntil DateTime?
+  createdAt DateTime @default(now())
+  createdBy String @db.Uuid
+  approvedAt DateTime?
+  approvedBy String? @db.Uuid
+  publishedAt DateTime?
+  publishedBy String? @db.Uuid
+  price StorePrice @relation("PriceHistory",fields:[priceId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  publishedFor StorePrice[] @relation("PublishedPrice")
+  promotions PricePromotion[]
+  approvals PriceApproval[]
+  @@unique([id,priceId,storeId,tenantId])
+  @@unique([id,storeId,tenantId])
+  @@unique([priceId,number])
+}
+model PricePromotion {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  priceRevisionId String @db.Uuid
+  amount Decimal @db.Decimal(24,6)
+  startsAt DateTime
+  endsAt DateTime
+  label String @db.VarChar(120)
+  revision PriceRevision @relation(fields:[priceRevisionId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  @@index([priceRevisionId,startsAt])
+}
+model PriceApproval {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  priceRevisionId String @db.Uuid
+  approvedRevision Int
+  actorId String @db.Uuid
+  contentHash String @db.Char(64)
+  createdAt DateTime @default(now())
+  revision PriceRevision @relation(fields:[priceRevisionId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  @@unique([priceRevisionId,approvedRevision])
+}
+enum InventoryPolicy {
+  QUANTITY
+  SERIALIZED
+  NON_STOCK
+  UNTRACKED
+}
+model InventoryLocation {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  code String @db.VarChar(64)
+  name String @db.VarChar(120)
+  isDefault Boolean @default(false)
+  active Boolean @default(true)
+  store Store @relation(fields:[storeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  balances StockBalance[]
+  @@unique([id,storeId,tenantId])
+  @@unique([storeId,code])
+}
+model InventoryItem {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  productId String @db.Uuid
+  skuId String @db.Uuid
+  policy InventoryPolicy @default(UNTRACKED)
+  revision Int @default(1)
+  lowStockThreshold Int?
+  store Store @relation(fields:[storeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  sku SKU @relation(fields:[skuId,productId,tenantId],references:[id,productId,tenantId],onDelete:Restrict)
+  balances StockBalance[]
+  storeMovements InventoryMovement[]
+  @@unique([id,storeId,tenantId])
+  @@unique([storeId,skuId])
+}
+model StockBalance {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  inventoryItemId String @db.Uuid
+  locationId String @db.Uuid
+  onHand Int @default(0)
+  known Boolean @default(false)
+  revision Int @default(0)
+  updatedAt DateTime @updatedAt
+  item InventoryItem @relation(fields:[inventoryItemId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  location InventoryLocation @relation(fields:[locationId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  movements InventoryMovement[]
+  @@unique([id,storeId,tenantId])
+  @@unique([id,inventoryItemId,storeId,tenantId])
+  @@unique([inventoryItemId,locationId])
+}
+model InventoryMovement {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  inventoryItemId String @db.Uuid
+  balanceId String @db.Uuid
+  idempotencyKey String @db.Uuid
+  requestHash String @db.Char(64)
+  mode String @db.VarChar(12)
+  beforeQuantity Int
+  afterQuantity Int
+  beforeKnown Boolean
+  afterKnown Boolean
+  balanceRevision Int
+  reason String @db.VarChar(500)
+  actorId String @db.Uuid
+  createdAt DateTime @default(now())
+  item InventoryItem @relation(fields:[inventoryItemId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  balance StockBalance @relation(fields:[balanceId,inventoryItemId,storeId,tenantId],references:[id,inventoryItemId,storeId,tenantId],onDelete:Restrict)
+  @@unique([storeId,idempotencyKey])
+  @@unique([balanceId,balanceRevision])
+  @@index([inventoryItemId,createdAt])
+}
+model MediaApproval {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  assetId String @db.Uuid
+  approvedRevision Int
+  actorId String @db.Uuid
+  license String @db.VarChar(500)
+  attribution String @db.VarChar(500)
+  publicUse Boolean
+  createdAt DateTime @default(now())
+  asset MediaAsset @relation(fields:[assetId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  @@unique([assetId,approvedRevision])
 }

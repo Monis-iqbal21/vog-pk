@@ -15,6 +15,10 @@
 .schema-card h2 {
   margin-bottom: 16px;
 }
+.operations-panel { min-width: 0; overflow-wrap: anywhere; }
+.operations-panel figure { margin: 16px 0; }
+.media-library-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,200px),1fr)); gap: 12px; padding: 0; list-style: none; }
+.media-library-grid .schema-card { padding: 12px; }
 .category-evidence { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 340px; overflow: auto; font-size: 12px; }
 .schema-field {
   display: flex;

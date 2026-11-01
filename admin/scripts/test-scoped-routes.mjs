@@ -153,3 +153,73 @@ for (const method of ["PUT", "DELETE", "OPTIONS"])
 console.log(
   `PASS Product/SKU/listing BFF allowlist (${catalogAssertions} assertions).`,
 );
+const ops = `stores/${id}/operations`,
+  media = `scopes/tenants/${id}/media`,
+  item = `${ops}/skus/${id}`,
+  presentation = `${ops}/listings/${id}/revisions/${id}/media`,
+  assignments = `${media}/products/${id}/revisions/${id}`;
+const operationalAllowed = {
+  GET: [
+    `${ops}/settings`,
+    `${ops}/locations`,
+    `${item}/prices`,
+    `${item}/inventory`,
+    `${item}/inventory/history`,
+    `${item}/quote`,
+    presentation,
+    `${presentation}/${id}/content`,
+    `${media}/assets`,
+    `${media}/assets/${id}/content`,
+    `${assignments}/assignments`,
+  ],
+  POST: [
+    `${ops}/locations`,
+    `${item}/prices`,
+    ...["review", "draft", "approve", "publish", "archive"].map(
+      (a) => `${item}/prices/${id}/actions/${a}`,
+    ),
+    `${item}/inventory/adjustments`,
+    `${media}/uploads`,
+    `${media}/assets/${id}/approve`,
+    `${media}/assets/${id}/archive`,
+  ],
+  PATCH: [
+    `${ops}/settings`,
+    `${item}/prices/${id}`,
+    `${item}/inventory`,
+    presentation,
+    `${media}/assets/${id}`,
+    `${assignments}/assignments`,
+    `${assignments}/skus/${id}/assignments`,
+  ],
+};
+let operationsAssertions = 0;
+for (const [method, paths] of Object.entries(operationalAllowed))
+  for (const path of paths) {
+    assert.equal(allowedScopedRoute(method, path), true, `${method} ${path}`);
+    operationsAssertions++;
+    for (const forbiddenMethod of ["PUT", "DELETE", "OPTIONS"]) {
+      assert.equal(allowedScopedRoute(forbiddenMethod, path), false);
+      operationsAssertions++;
+    }
+  }
+for (const path of [
+  `${ops}/sql`,
+  `${ops}/restart`,
+  `${media}/fetch-url`,
+  `${media}/uploads/execute`,
+  `${media}/assets/${id}/delete`,
+  `${media}/assets/${id}/approve/admin`,
+  `${item}/prices/${id}/actions/activate`,
+  `${item}/inventory/delete`,
+  `${media}/../roles`,
+  `${media}/assets?tenantId=${id}`,
+  `${assignments}/skus/not-a-uuid/assignments`,
+])
+  for (const method of ["GET", "POST", "PATCH", "DELETE"]) {
+    assert.equal(allowedScopedRoute(method, path), false, path);
+    operationsAssertions++;
+  }
+console.log(
+  `PASS Pricing/inventory/media BFF allowlist (${operationsAssertions} assertions).`,
+);

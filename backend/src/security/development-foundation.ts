@@ -22,6 +22,11 @@ export async function initializeDevelopmentFoundation(db: PrismaClient, url: str
     }
     const tenant = await tx.tenant.upsert({where: {slug: 'vogpk'}, create: {slug: 'vogpk', name: 'VOGPK'}, update: {}});
     const store = await tx.store.upsert({where: {tenantId_slug: {tenantId: tenant.id, slug: 'vogpk'}}, create: {tenantId: tenant.id, slug: 'vogpk', name: 'VOGPK'}, update: {}});
+    // Explicit development initialization only. Never infer stock or change an
+    // existing location configuration on repeat runs.
+    if (!(await tx.inventoryLocation.count({where:{tenantId:tenant.id,storeId:store.id}}))) {
+      await tx.inventoryLocation.create({data:{tenantId:tenant.id,storeId:store.id,code:'main',name:'VOGPK default development location',isDefault:true}});
+    }
     const bridge = await tx.legacyStoreBridge.upsert({where: {key: 'default'}, create: {key: 'default', tenantId: tenant.id, storeId: store.id}, update: {}});
     if (bridge.tenantId !== tenant.id || bridge.storeId !== store.id) throw new Error('Default context differs; manual review required.');
     const users = await tx.adminUser.findMany({where: {roles: {some: {}}}, select: {id: true}});

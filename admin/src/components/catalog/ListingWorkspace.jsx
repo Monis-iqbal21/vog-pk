@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { adminMutation } from "@/lib/client-api";
 import { TextField, SelectField, CheckField } from "../schema/SchemaFields";
 import { Choices, read } from "../categories/fields";
+import ListingMediaPanel from "../operations/ListingMediaPanel";
 const blank = {
   code: "",
   title: "",
@@ -75,8 +76,8 @@ function Editor({
       )}
       <p className="muted">
         Pins approved shared catalog facts. Purchasing remains disabled for
-        every policy. Pricing, stock and media presentation are not configured
-        here.
+        every policy. Configure store prices and stock in the product editor;
+        organize this listing’s approved media below.
       </p>
       <fieldset disabled={!editable || busy}>
         <legend>Listing presentation</legend>
@@ -286,6 +287,21 @@ function Editor({
             Changed: {impact.changed.join(", ") || "None"}. Purchasable: no.
           </p>
         </div>
+      )}
+      {row && permissions.includes("listing-media.view") && (
+        <ListingMediaPanel
+          key={`${row.id}-${row.revision}`}
+          storeId={base.split("/")[1]}
+          row={row}
+          permissions={permissions}
+          parentDirty={dirty}
+          onReload={async () =>
+            onLoad(
+              await read(`${base}/${row.listingId}/revisions/${row.id}`),
+              code,
+            )
+          }
+        />
       )}
     </section>
   );
