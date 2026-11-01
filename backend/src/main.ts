@@ -9,6 +9,7 @@ import { listenOptions } from './listen-options.js';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { bodyParser: false });
   app.use(helmet());
+  app.use('/api/catalog',(_req:Request,res:Response,next:NextFunction)=>{res.setHeader('Cache-Control','no-store');next();});
   app.use(
     '/api/admin',
     (

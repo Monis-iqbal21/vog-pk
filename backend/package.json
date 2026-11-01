@@ -37,7 +37,8 @@
     "test:product-types": "npm run build && node scripts/test-product-types.mjs",
     "test:categories": "npm run build && node scripts/test-categories.mjs",
     "test:products": "npm run build && node scripts/test-products.mjs",
-    "test:operations": "npm run build && node scripts/test-operations.mjs"
+    "test:operations": "npm run build && node scripts/test-operations.mjs",
+    "test:storefront": "npm run build && node scripts/test-storefront.mjs"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",

@@ -477,6 +477,7 @@ model CatalogRoute {
   tenantId String @db.Uuid
   slug String @db.VarChar(120)
   ownerKind RouteOwner
+  published Boolean @default(false)
   categoryId String? @db.Uuid
   legacyKey String? @db.VarChar(160)
   listingId String? @db.Uuid
@@ -722,6 +723,7 @@ model SKURevision {
   @@unique([id,tenantId])
   @@unique([productRevisionId,skuId])
   @@unique([productRevisionId,combinationKey])
+  @@index([tenantId,state,id])
 }
 model SKUAttributeValue {
   id String @id @default(uuid()) @db.Uuid
@@ -809,6 +811,7 @@ model ListingRevision {
   @@unique([id,productRevisionId,productId,storeId,tenantId])
   @@unique([listingId,number])
   @@index([storeId,status,title])
+  @@index([storeId,status,slug])
 }
 model ListingCategory {
   listingRevisionId String @db.Uuid

@@ -713,6 +713,11 @@ export class ListingsService {
               : {}),
           },
         });
+        if (action === 'publish')
+          await tx.catalogRoute.updateMany({
+            where: { ...ownership(ctx), listingId, slug: row.slug },
+            data: { published: true },
+          });
         await this.audit(tx, actor, ctx, action, id);
         return {
           ...(await this.row(tx, ctx, listingId, id)),

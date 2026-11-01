@@ -92,6 +92,7 @@ try {
       where: { email: 'schema-owner@example.invalid' },
     }),
     ids = await initializeDevelopmentFoundation(db, url, 'test');
+  if(process.env.VOG_TEST_STOREFRONT==='1')Object.assign(process.env,{PUBLIC_CATALOG_MODE:'development',PUBLIC_CATALOG_STORE_ID:ids.storeId,PUBLIC_MEDIA_DEVELOPMENT:'1'});
   const token = randomBytes(32).toString('hex');
   await db.adminSession.create({
     data: {
@@ -825,6 +826,8 @@ try {
   }
   let operations;
   if(process.env.VOG_TEST_OPERATIONS==='1'){const {verifyOperations}=await import('./operations-verification.mjs');operations=await verifyOperations({db,ids,owner,token,bToken,tenantB,member,base,test,hashToken});}
+  let storefront;
+  if(process.env.VOG_TEST_STOREFRONT==='1'){phase='storefront fixture preparation';const {verifyStorefront}=await import('./storefront-verification.mjs');storefront=await verifyStorefront({db,ids,owner,token,tenantB,base,test,create,attribute,makeType,action});}
   phase = 'admin production build and browser workflows';
   const admin = await verifyAdmin({
     apiPort,
@@ -1074,6 +1077,7 @@ try {
     },
   });
   checks++;
+  if(storefront){phase='dynamic storefront production build and browser';await storefront.browser();}
   tests.push(
     'Real admin attribute/option/type creation, form preview, lifecycle, clone and responsive browser workflows',
   );
@@ -1124,11 +1128,11 @@ try {
   await db?.$disconnect();
   await cluster.stop();
   if (path.dirname(directory) !== parent) throw Error('Unsafe test cleanup');
-  await fs.rm(directory, { recursive: true, force: true });
+  await fs.rm(directory, { recursive: true, force: true,maxRetries:8,retryDelay:150 });
   if(process.env.VOG_TEST_OPERATIONS==='1'){const target=path.resolve(process.env.MEDIA_LOCAL_ROOT),root=path.resolve('.local/operations');if(!target.startsWith(root+path.sep)||!path.basename(target).startsWith('media-'))throw Error('Unsafe media fixture cleanup');await fs.rm(target,{recursive:true,force:true});}
   await fs.mkdir('docs', { recursive: true });
   await fs.writeFile(
-    process.env.VOG_TEST_OPERATIONS==='1'?'docs/operations-verification.json':process.env.VOG_TEST_PRODUCTS==='1'?'docs/products-verification.json':process.env.VOG_TEST_CATEGORIES === '1' ? 'docs/categories-verification.json' : 'docs/product-types-verification.json',
+    process.env.VOG_TEST_STOREFRONT==='1'?'docs/storefront-verification.json':process.env.VOG_TEST_OPERATIONS==='1'?'docs/operations-verification.json':process.env.VOG_TEST_PRODUCTS==='1'?'docs/products-verification.json':process.env.VOG_TEST_CATEGORIES === '1' ? 'docs/categories-verification.json' : 'docs/product-types-verification.json',
     JSON.stringify(
       {
         ...report,

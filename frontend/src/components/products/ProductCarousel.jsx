@@ -7,7 +7,7 @@ import SeeAllCard from './SeeAllCard';
 import { HOMEPAGE_PRODUCT_LIMIT } from '@/data/products';
 import './Products.css';
 
-export default function ProductCarousel({ id, title, subtitle, products, seeAllHref, seeAllLabel, children, onAddToCart, labelledBy, singleRow = false }) {
+export default function ProductCarousel({ id, title, subtitle, products, seeAllHref, seeAllLabel, children, onAddToCart, labelledBy, singleRow = false, cardComponent: Card = ProductCard }) {
   const track = useRef(null);
   const drag = useRef(null);
   const suppressClick = useRef(false);
@@ -82,7 +82,7 @@ export default function ProductCarousel({ id, title, subtitle, products, seeAllH
       }} onPointerUp={endDrag} onPointerCancel={endDrag} onLostPointerCapture={() => { drag.current = null; track.current?.classList.remove('is-dragging'); }}
       onClickCapture={(event) => { if (suppressClick.current) { event.preventDefault(); event.stopPropagation(); suppressClick.current = false; } }}
       onDragStart={(event) => event.preventDefault()}>
-      {products.slice(0, HOMEPAGE_PRODUCT_LIMIT).map((product) => <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />)}
+      {products.slice(0, HOMEPAGE_PRODUCT_LIMIT).map((product) => <Card key={product.id} product={product} onAddToCart={onAddToCart} />)}
       <SeeAllCard href={seeAllHref} label={seeAllLabel} />
     </div>
   </section>;

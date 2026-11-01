@@ -7,13 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "verify:product-images": "node scripts/verify-product-images.mjs"
+    "verify:product-images": "node scripts/verify-product-images.mjs",
+    "test:catalogue-parity":"node scripts/catalogue-parity.mjs --write-report"
   },
   "dependencies": {
     "lucide-react": "^1.61.0",
     "next": "16.4.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",

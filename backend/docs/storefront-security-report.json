@@ -1,0 +1,488 @@
+{
+  "milestone": 6,
+  "branch": "feature/commerce-storefront-integration",
+  "baseCommit": "b6d088f",
+  "productionAccess": false,
+  "validation": {
+    "backendBuild": "PASS",
+    "backendLint": "PASS",
+    "unitTests": 37,
+    "integrationGroups": 61,
+    "postgres": "PostgreSQL 18.4",
+    "adminBuiltBrowser": {
+      "passed": true,
+      "checks": 15,
+      "productionBuild": true,
+      "realBackend": true,
+      "persistedCredentials": false,
+      "extra": {
+        "passed": true,
+        "browserChecks": 8,
+        "headlessBrowser": "Microsoft Edge",
+        "realForms": true,
+        "noPageErrors": true,
+        "catalogBrowser": {
+          "passed": true,
+          "productAndSkuForms": true,
+          "typedFalseAndZero": true,
+          "dependentResolution": true,
+          "listingPins": true,
+          "separateApprovalAndPublication": true,
+          "clonedRevisions": true,
+          "responsiveWidths": [
+            1440,
+            390
+          ],
+          "missingCsrfRejected": true,
+          "invalidBffPathsRejected": true
+        },
+        "operationsBrowser": {
+          "passed": true
+        }
+      }
+    },
+    "storefrontBuiltBrowser": {
+      "passed": true,
+      "realNest": true,
+      "realPostgreSQL": true,
+      "dependentOptions": true,
+      "sameSkuFilters": true,
+      "posters": true,
+      "scopeIsolation": true,
+      "runtimePublication": true,
+      "privateDraftRoutesDenied": true,
+      "aliasesAndArchive": true,
+      "outageWithoutStaticFallback": true,
+      "responsiveWidths": [
+        1440,
+        390
+      ]
+    },
+    "foundationChecks": 23,
+    "authenticationChecks": 25,
+    "adminLint": "PASS",
+    "routingChecks": 19,
+    "previewConfigurationChecks": 10,
+    "previewHttpChecks": 38,
+    "bffAssertions": {
+      "foundation": 57,
+      "categories": 59,
+      "productsSkusListings": 80,
+      "pricingInventoryMedia": 160
+    },
+    "frontendLint": "PASS",
+    "frontendProductionBuild": "PASS; catalog product routes resolved at request time",
+    "legacyParity": {
+      "passed": true,
+      "mode": "read-only static compatibility parity; not a production import",
+      "products": 84,
+      "categories": 12,
+      "featured": [
+        "rog-strix-rtx5070ti-o16g",
+        "aorus-rtx5080-master-ice-16g",
+        "asus-rog-astral-rtx5080-oc-16gb",
+        "amd-ryzen9-9950x",
+        "intel-core-i7-13700k-tray",
+        "kingston-fury-beast-ddr5-16gb-6000",
+        "asus-rog-harpe-ace-aim-lab"
+      ],
+      "newArrivals": [
+        "proart-rtx5080-16g",
+        "asus-prime-rtx5080-oc-16gb",
+        "asus-prime-rtx5070-oc-12gb-white",
+        "intel-core-i5-13600k",
+        "intel-core-i7-12700k-tray",
+        "kingston-fury-beast-16gb-4800",
+        "asus-rog-keris-ii-ace-black"
+      ],
+      "hashes": [
+        {
+          "file": "src/data/products.js",
+          "sha256": "da4d1fb02d1cd5c67566d87b74daff9288f982f76eb300f510fa97d2b13c86fb"
+        },
+        {
+          "file": "src/data/catalogue-products.js",
+          "sha256": "5f2ed5c826231fdab1213c48cdd5ce5f1d814a318518c03e67255f54c82c16cf"
+        },
+        {
+          "file": "src/data/catalogue-images.js",
+          "sha256": "7f49bea94774d47248e451ac4713fa6c361e0c0ca4b6a0b451130b840ba15398"
+        },
+        {
+          "file": "src/data/productDetails.js",
+          "sha256": "d307dfe1ffdc17e027b83c5da442f38008bcf9c847a98ae8241ed931a6230f92"
+        },
+        {
+          "file": "src/data/product-detail-gallery.js",
+          "sha256": "92e15f3f7ff39fe4e54e2e82d9ca15f6fa70e239c866a9dc86d9a86c256ab544"
+        },
+        {
+          "file": "src/data/retail-product-images.js",
+          "sha256": "764912c188046857ace8b2a1d8e5aa1854f6b203899edf2dc02ac52f4b323d18"
+        }
+      ],
+      "adapterValidated": true,
+      "productionAccess": false
+    },
+    "queryPerformance": {
+      "passed": true,
+      "total": 206,
+      "additionalInquiryFixtures": 200,
+      "foreignPublishedTwin": true,
+      "httpMs": 1979,
+      "sqlExecutionMs": 46.139,
+      "sqlPlanningMs": 306.607,
+      "productionScaleCertified": false
+    }
+  },
+  "dependencyAudit": {
+    "backend": {
+      "production": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "all": {
+        "info": 0,
+        "low": 0,
+        "moderate": 2,
+        "high": 0,
+        "critical": 0,
+        "total": 2
+      },
+      "advisories": [
+        {
+          "name": "@nestjs/cli",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "minimatch",
+          "severity": "moderate",
+          "advisories": [
+            {
+              "title": "minimatch has potential denial of service via globparts amplification",
+              "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249"
+            }
+          ]
+        }
+      ]
+    },
+    "frontend": {
+      "production": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "all": {
+        "info": 0,
+        "low": 0,
+        "moderate": 16,
+        "high": 0,
+        "critical": 0,
+        "total": 16
+      },
+      "advisories": [
+        {
+          "name": "@eslint-community/eslint-utils",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@eslint/config-array",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@eslint/eslintrc",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@next/eslint-plugin-next",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/eslint-plugin",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/parser",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/type-utils",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/typescript-estree",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/utils",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "eslint",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "eslint-config-next",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "eslint-plugin-import",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "eslint-plugin-jsx-a11y",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "eslint-plugin-react",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "minimatch",
+          "severity": "moderate",
+          "advisories": [
+            {
+              "title": "minimatch has potential denial of service via globparts amplification",
+              "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249"
+            }
+          ]
+        },
+        {
+          "name": "typescript-eslint",
+          "severity": "moderate",
+          "advisories": []
+        }
+      ]
+    },
+    "admin": {
+      "production": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "all": {
+        "info": 0,
+        "low": 0,
+        "moderate": 16,
+        "high": 0,
+        "critical": 0,
+        "total": 16
+      },
+      "advisories": [
+        {
+          "name": "@eslint-community/eslint-utils",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@eslint/config-array",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@eslint/eslintrc",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@next/eslint-plugin-next",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/eslint-plugin",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/parser",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/type-utils",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/typescript-estree",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/utils",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "eslint",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "eslint-config-next",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "eslint-plugin-import",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "eslint-plugin-jsx-a11y",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "eslint-plugin-react",
+          "severity": "moderate",
+          "advisories": []
+        },
+        {
+          "name": "minimatch",
+          "severity": "moderate",
+          "advisories": [
+            {
+              "title": "minimatch has potential denial of service via globparts amplification",
+              "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249"
+            }
+          ]
+        },
+        {
+          "name": "typescript-eslint",
+          "severity": "moderate",
+          "advisories": []
+        }
+      ]
+    }
+  },
+  "dependencyChanges": "Direct frontend Zod 4.6.7, matching backend; no unrelated upgrades",
+  "secretScan": {
+    "status": "PASS",
+    "scanner": "Gitleaks 8.30.1",
+    "scope": "Exact final staged contents, rescanned after staging this evidence",
+    "findings": 0,
+    "forbiddenArtifacts": 0,
+    "privateKeyMarkers": 0,
+    "rawReport": "Ignored local artifact"
+  },
+  "limits": {
+    "publicPageSize": 24,
+    "categoryRecords": 1000,
+    "hierarchyDepth": 32,
+    "matchingProducts": 10000,
+    "discreteFacetBuckets": 256,
+    "filterQueryBytes": 4096,
+    "facetChoices": 40,
+    "choicesPerFacet": 12,
+    "sqlStatementMs": 8000,
+    "readTransactionMs": 15000,
+    "frontendApiTimeoutMs": 10000
+  },
+  "operations": {
+    "push": false,
+    "merge": false,
+    "deploy": false,
+    "productionMigration": false,
+    "productionImport": false,
+    "cloudChanges": false,
+    "credentialsChanged": false,
+    "ownerChanged": false,
+    "checkout": false,
+    "remoteProvider": false,
+    "scheduledAutomation": false
+  },
+  "readiness": {
+    "milestone7": "READY for reviewed development migration rehearsal and parity planning",
+    "productionCutover": "NOT APPROVED; provider/rights, import/provenance, routing, backup/migration, hosting and load review remain separate"
+  },
+  "cleanup": "Owned temporary Nest, PostgreSQL, admin/storefront fixtures and test uploaded media removed by harness. Credentials stayed in memory; no production state accessed. Framework-only diagnostic excluded from pass evidence.",
+  "cleanupResidualArtifacts": {
+    "path": "backend/.local/product-types/67b04dbf0329e417",
+    "origin": "Earlier failed isolated test",
+    "tracked": false,
+    "status": "Optional deletion blocked by automatic execution review",
+    "reason": "blocked by policy",
+    "action": "Left untouched; verify no owning process before approved manual cleanup"
+  },
+  "changedFiles": [
+    "backend/docs/storefront-auth-regression.json",
+    "backend/docs/storefront-foundation-regression.json",
+    "backend/docs/storefront-query-performance.json",
+    "backend/docs/storefront-security-report.json",
+    "backend/docs/storefront-verification.json",
+    "backend/package.json",
+    "backend/prisma/migrations/202611020006_storefront_read_indexes/migration.sql",
+    "backend/prisma/schema.prisma",
+    "backend/scripts/storefront-verification.mjs",
+    "backend/scripts/test-product-types.mjs",
+    "backend/scripts/test-storefront.mjs",
+    "backend/src/app.module.ts",
+    "backend/src/catalog/listings.service.ts",
+    "backend/src/categories/categories.module.ts",
+    "backend/src/categories/category.service.ts",
+    "backend/src/main.ts",
+    "backend/src/storefront/projection.ts",
+    "backend/src/storefront/query.ts",
+    "backend/src/storefront/sql.ts",
+    "backend/src/storefront/storefront.controller.ts",
+    "backend/src/storefront/storefront.module.ts",
+    "backend/src/storefront/storefront.service.ts",
+    "backend/src/storefront/storefront.spec.ts",
+    "docs/DYNAMIC_STOREFRONT.md",
+    "frontend/docs/storefront-static-parity.json",
+    "frontend/package-lock.json",
+    "frontend/package.json",
+    "frontend/scripts/catalogue-parity.mjs",
+    "frontend/src/app/api/catalog-category/route.js",
+    "frontend/src/app/api/catalog-media/[slug]/[asset]/route.js",
+    "frontend/src/app/collections/[collection]/page.jsx",
+    "frontend/src/app/layout.jsx",
+    "frontend/src/app/page.jsx",
+    "frontend/src/app/products/[slug]/[productSlug]/page.jsx",
+    "frontend/src/app/products/[slug]/page.jsx",
+    "frontend/src/app/products/error.jsx",
+    "frontend/src/app/products/page.jsx",
+    "frontend/src/app/sitemap.js",
+    "frontend/src/components/catalog/CatalogCard.jsx",
+    "frontend/src/components/catalog/CatalogHome.jsx",
+    "frontend/src/components/catalog/CatalogListing.jsx",
+    "frontend/src/components/catalog/CatalogPages.jsx",
+    "frontend/src/components/catalog/CatalogProduct.jsx",
+    "frontend/src/components/catalog/CatalogShop.jsx",
+    "frontend/src/components/catalog/catalog.css",
+    "frontend/src/components/layout/Footer.jsx",
+    "frontend/src/components/layout/Navbar.jsx",
+    "frontend/src/components/products/ProductCarousel.jsx",
+    "frontend/src/lib/catalog/breadcrumbs.js",
+    "frontend/src/lib/catalog/contracts.js",
+    "frontend/src/lib/catalog/server.js",
+    "frontend/src/lib/catalog/static-adapter.js"
+  ]
+}

@@ -6,6 +6,6 @@ import { CategoryUsageService } from './usage.service.js';
 @Module({
   controllers: [CategoriesController],
   providers: [CategoryService, CategoryFiltersService, CategoryUsageService],
-  exports: [CategoryService],
+  exports: [CategoryService, CategoryFiltersService],
 })
 export class CategoriesModule {}

@@ -6,5 +6,6 @@ import {ProductTypesModule} from './product-types/product-types.module.js';
 import {CategoriesModule} from './categories/categories.module.js';
 import {CatalogModule} from './catalog/catalog.module.js';
 import {OperationsModule} from './operations/operations.module.js';
-@Module({ imports:[SecurityModule,ProductTypesModule,CategoriesModule,CatalogModule,OperationsModule],controllers: [AppController,ReadinessController] })
+import {StorefrontModule} from './storefront/storefront.module.js';
+@Module({ imports:[SecurityModule,ProductTypesModule,CategoriesModule,CatalogModule,OperationsModule,StorefrontModule],controllers: [AppController,ReadinessController] })
 export class AppModule {}

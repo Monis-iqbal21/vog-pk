@@ -553,6 +553,11 @@ export class CategoryService {
             : {}),
         },
       });
+      if (action === 'activate')
+        await tx.catalogRoute.updateMany({
+          where: { ...ownership(ctx), categoryId: id, slug: row.slug },
+          data: { published: true },
+        });
       await this.audit(tx, ctx, actor, action, id);
       return this.row(tx, ctx, id);
     });
