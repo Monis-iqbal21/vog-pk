@@ -4,6 +4,7 @@ import type {Prisma} from '../generated/prisma/client.js';
 import {SCOPED_PERMISSIONS, manageRolePermission, manageStaffPermission} from './scoped-permissions.js';
 import type {ScopeContext} from './scoped-permissions.js';
 import {PERMISSIONS, userGraph} from './roles.js';
+import {validId} from './validation.js';
 
 export type ScopeTransaction = Prisma.TransactionClient;
 export type RoleGrant = {code: string; canDelegate: boolean};
@@ -15,6 +16,13 @@ const denied = () => new ForbiddenException('Access denied.');
 @Injectable()
 export class ScopedAuthorizationService {
   constructor(@Inject(DatabaseService) private readonly db: DatabaseService) {}
+  async storeContext(userId:string,storeId:string,tx:ScopeTransaction=this.db){
+    validId(storeId);
+    const member=await tx.storeMembership.findFirst({where:{storeId,userId},select:{tenantId:true}});
+    if(!member)throw denied();
+    const ctx={kind:'STORE' as const,tenantId:member.tenantId,storeId};
+    await this.resolve(userId,ctx,tx);return ctx;
+  }
 
   // No authorization cache: each request and every write transaction re-resolves
   // active users, memberships, scope ownership and current grants from PostgreSQL.

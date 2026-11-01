@@ -3,5 +3,6 @@ import { AppController } from './app.controller.js';
 import {SecurityModule} from './security/security.module.js';
 import {ReadinessController} from './readiness.controller.js';
 import {ProductTypesModule} from './product-types/product-types.module.js';
-@Module({ imports:[SecurityModule,ProductTypesModule],controllers: [AppController,ReadinessController] })
+import {CategoriesModule} from './categories/categories.module.js';
+@Module({ imports:[SecurityModule,ProductTypesModule,CategoriesModule],controllers: [AppController,ReadinessController] })
 export class AppModule {}

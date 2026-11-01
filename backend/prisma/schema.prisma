@@ -183,6 +183,7 @@ model AttributeDefinition {
   tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Restrict)
   optionSet OptionSet? @relation(fields: [optionSetId, tenantId], references: [id, tenantId], onDelete: Restrict)
   bindings ProductTypeAttribute[]
+  categoryFilters CategoryFilter[]
   @@unique([id, tenantId])
   @@unique([tenantId, code])
 }
@@ -197,6 +198,7 @@ model ProductType {
   tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Restrict)
   versions ProductTypeVersion[] @relation("TypeVersions")
   activeVersion ProductTypeVersion? @relation("ActiveVersion", fields: [activeVersionId, id, tenantId], references: [id, productTypeId, tenantId], onDelete: Restrict)
+  categoryCompatibility CategoryAllowedType[]
   @@unique([id, tenantId])
   @@unique([tenantId, code])
 }
@@ -216,6 +218,7 @@ model ProductTypeVersion {
   activeFor ProductType[] @relation("ActiveVersion")
   groups SpecificationGroup[]
   attributes ProductTypeAttribute[]
+  filterDependencies CategoryFilterTypeVersion[]
   @@unique([id, tenantId])
   @@unique([id, productTypeId, tenantId])
   @@unique([productTypeId, number])
@@ -273,6 +276,9 @@ model Store {
   roles ScopedRole[]
   audits AuditLog[]
   legacyBridge LegacyStoreBridge?
+  currency String @default("PKR") @db.VarChar(3)
+  categories Category[]
+  catalogRoutes CatalogRoute[]
   @@unique([id, tenantId])
   @@unique([tenantId, slug])
 }
@@ -379,4 +385,158 @@ model StoreRoleAssignment {
   membership StoreMembership @relation(fields: [tenantId, storeId, userId], references: [tenantId, storeId, userId], onDelete: Restrict)
   role ScopedRole @relation(fields: [roleId, tenantId, storeId, scopeKind], references: [id, tenantId, storeId, scopeKind], onDelete: Restrict)
   @@id([tenantId, storeId, userId, roleId])
+}
+
+enum CategoryCompatibility {
+  ANY
+  ALLOW_LIST
+}
+enum FilterSource {
+  ATTRIBUTE
+  PRICE
+  BRAND
+  AVAILABILITY
+}
+enum RouteOwner {
+  CATEGORY
+  LEGACY_PRODUCT
+  LEGACY_CATEGORY
+  RESERVED
+}
+model Category {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  code String @db.VarChar(64)
+  name String @db.VarChar(120)
+  slug String @db.VarChar(120)
+  parentId String? @db.Uuid
+  activeParentId String? @db.Uuid
+  description String @default("") @db.VarChar(1000)
+  media Json
+  seo Json
+  sortOrder Int @default(0)
+  visible Boolean @default(true)
+  inNavigation Boolean @default(true)
+  compatibility CategoryCompatibility @default(ANY)
+  status SchemaStatus @default(DRAFT)
+  revision Int @default(1)
+  filterRevision Int @default(1)
+  activeSnapshot Json?
+  activeFilterSetId String? @db.Uuid
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  createdBy String @db.Uuid
+  updatedBy String @db.Uuid
+  store Store @relation(fields: [storeId, tenantId], references: [id, tenantId], onDelete: Restrict)
+  parent Category? @relation("CategoryDraftTree",fields: [parentId, storeId, tenantId],references: [id, storeId, tenantId],onDelete: Restrict)
+  children Category[] @relation("CategoryDraftTree")
+  activeParent Category? @relation("CategoryActiveTree",fields: [activeParentId, storeId, tenantId],references: [id, storeId, tenantId],onDelete: Restrict)
+  activeChildren Category[] @relation("CategoryActiveTree")
+  allowedTypes CategoryAllowedType[]
+  routes CatalogRoute[]
+  filterSets CategoryFilterSet[] @relation("CategoryFilterVersions")
+  activeFilterSet CategoryFilterSet? @relation("ActiveCategoryFilters", fields: [activeFilterSetId, id, storeId, tenantId], references: [id, categoryId, storeId, tenantId], onDelete: Restrict)
+  filterKeys CategoryFilterKey[]
+  filterRoutes CategoryFilterRoute[]
+  @@unique([id, storeId, tenantId])
+  @@unique([id, tenantId])
+  @@unique([storeId, code])
+  @@unique([storeId, slug])
+  @@index([storeId, parentId, sortOrder])
+}
+model CategoryAllowedType {
+  categoryId String @db.Uuid
+  storeId String @db.Uuid
+  tenantId String @db.Uuid
+  productTypeId String @db.Uuid
+  category Category @relation(fields: [categoryId,storeId,tenantId],references: [id,storeId,tenantId],onDelete: Restrict)
+  productType ProductType @relation(fields: [productTypeId,tenantId],references: [id,tenantId],onDelete: Restrict)
+  @@id([categoryId,productTypeId])
+}
+model CatalogRoute {
+  id String @id @default(uuid()) @db.Uuid
+  storeId String @db.Uuid
+  tenantId String @db.Uuid
+  slug String @db.VarChar(120)
+  ownerKind RouteOwner
+  categoryId String? @db.Uuid
+  legacyKey String? @db.VarChar(160)
+  store Store @relation(fields: [storeId,tenantId],references: [id,tenantId],onDelete: Restrict)
+  category Category? @relation(fields: [categoryId,storeId,tenantId],references: [id,storeId,tenantId],onDelete: Restrict)
+  @@unique([storeId,slug])
+}
+model CategoryFilterSet {
+  id String @id @default(uuid()) @db.Uuid
+  categoryId String @db.Uuid
+  storeId String @db.Uuid
+  tenantId String @db.Uuid
+  number Int
+  revision Int @default(1)
+  status SchemaStatus @default(DRAFT)
+  includeDescendants Boolean @default(true)
+  createdAt DateTime @default(now())
+  createdBy String @db.Uuid
+  approvedBy String? @db.Uuid
+  approvedAt DateTime?
+  category Category @relation("CategoryFilterVersions", fields: [categoryId,storeId,tenantId],references: [id,storeId,tenantId],onDelete: Restrict)
+  activeFor Category[] @relation("ActiveCategoryFilters")
+  filters CategoryFilter[]
+  dependencies CategoryFilterTypeVersion[]
+  @@unique([id,storeId,tenantId])
+  @@unique([id,categoryId,storeId,tenantId])
+  @@unique([categoryId,number])
+}
+model CategoryFilterTypeVersion {
+  setId String @db.Uuid
+  storeId String @db.Uuid
+  tenantId String @db.Uuid
+  versionId String @db.Uuid
+  set CategoryFilterSet @relation(fields: [setId,storeId,tenantId],references: [id,storeId,tenantId],onDelete: Restrict)
+  version ProductTypeVersion @relation(fields: [versionId,tenantId],references: [id,tenantId],onDelete: Restrict)
+  @@id([setId,versionId])
+}
+model CategoryFilterKey {
+  id String @id @default(uuid()) @db.Uuid
+  categoryId String @db.Uuid
+  storeId String @db.Uuid
+  tenantId String @db.Uuid
+  semanticHash String @db.Char(64)
+  category Category @relation(fields: [categoryId,storeId,tenantId],references: [id,storeId,tenantId],onDelete: Restrict)
+  routes CategoryFilterRoute[]
+  filters CategoryFilter[]
+  @@unique([id,categoryId,storeId,tenantId])
+}
+model CategoryFilterRoute {
+  categoryId String @db.Uuid
+  storeId String @db.Uuid
+  tenantId String @db.Uuid
+  code String @db.VarChar(64)
+  keyId String @db.Uuid
+  published Boolean @default(false)
+  category Category @relation(fields: [categoryId,storeId,tenantId],references: [id,storeId,tenantId],onDelete: Restrict)
+  key CategoryFilterKey @relation(fields: [keyId,categoryId,storeId,tenantId],references: [id,categoryId,storeId,tenantId],onDelete: Restrict)
+  @@id([categoryId,code])
+}
+model CategoryFilter {
+  id String @id @default(uuid()) @db.Uuid
+  setId String @db.Uuid
+  categoryId String @db.Uuid
+  storeId String @db.Uuid
+  tenantId String @db.Uuid
+  keyId String @db.Uuid
+  source FilterSource
+  attributeId String? @db.Uuid
+  code String @db.VarChar(64)
+  label String @db.VarChar(120)
+  description String @db.VarChar(500)
+  group String @db.VarChar(120)
+  sortOrder Int @default(0)
+  visible Boolean @default(true)
+  snapshot Json
+  set CategoryFilterSet @relation(fields: [setId,categoryId,storeId,tenantId],references: [id,categoryId,storeId,tenantId],onDelete: Restrict)
+  attribute AttributeDefinition? @relation(fields: [attributeId,tenantId],references: [id,tenantId],onDelete: Restrict)
+  key CategoryFilterKey @relation(fields: [keyId,categoryId,storeId,tenantId],references: [id,categoryId,storeId,tenantId],onDelete: Restrict)
+  @@unique([setId,code])
+  @@unique([setId,keyId])
 }

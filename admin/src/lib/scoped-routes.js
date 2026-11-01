@@ -1,9 +1,34 @@
 // Only these foundation APIs may cross the authenticated BFF. Never a generic proxy.
 export function allowedScopedRoute(method, path) {
-  if (method === "GET" && ["contexts", "contexts/schema"].includes(path))
+  if (
+    method === "GET" &&
+    ["contexts", "contexts/schema", "contexts/catalog"].includes(path)
+  )
     return true;
   const id = "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}";
   const scope = `scopes/(?:platform|tenants/${id}(?:/stores/${id})?)`;
+  const catalog = `stores/${id}`;
+  if (
+    method === "GET" &&
+    new RegExp(
+      `^${catalog}/(?:filter-registry|filter-schemas|categories(?:/tree|/${id}(?:/(?:impact|active-filters|filter-sets(?:/${id}(?:/impact)?)?))?)?)$`,
+    ).test(path)
+  )
+    return true;
+  if (
+    method === "POST" &&
+    new RegExp(
+      `^${catalog}/categories(?:/${id}/(?:move|actions/(?:review|draft|approve|activate|archive)|filter-sets(?:/${id}/(?:clone|preview|actions/(?:review|draft|approve|activate|archive)))?))?$`,
+    ).test(path)
+  )
+    return true;
+  if (
+    method === "PATCH" &&
+    new RegExp(`^${catalog}/categories/${id}(?:/filter-sets/${id})?$`).test(
+      path,
+    )
+  )
+    return true;
   const schema = `scopes/tenants/${id}/schema`;
   if (
     method === "GET" &&

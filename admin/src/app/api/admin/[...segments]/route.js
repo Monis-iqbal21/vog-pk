@@ -29,7 +29,7 @@ async function handler(request,{params}){
   const clientIp=process.env.TRUST_PROXY_HEADERS==='1'?(request.headers.get('x-vercel-forwarded-for')??request.headers.get('x-forwarded-for')??'unknown').split(',')[0].trim().slice(0,128):'local';
   // Only schema collection reads forward query parameters. Nest validates every
   // key and bound; no query can change a tenant or expand the proxy allowlist.
-  const query=method==='GET'&&/^scopes\/tenants\/[a-f0-9-]{36}\/schema\/(attributes|option-sets|product-types(?:\/[a-f0-9-]{36}\/versions)?)$/.test(path)?new URL(request.url).search:'';
+  const query=method==='GET'&&(/^scopes\/tenants\/[a-f0-9-]{36}\/schema\/(attributes|option-sets|product-types(?:\/[a-f0-9-]{36}\/versions)?)$/.test(path)||/^stores\/[a-f0-9-]{36}\/(filter-schemas|categories(?:\/tree|\/[a-f0-9-]{36}\/filter-sets)?)$/.test(path))?new URL(request.url).search:'';
   const result=await backendRequest(path+query,{method,token,body,clientIp});
   if(path==='auth/login'&&result.status===201){
    const response=NextResponse.json({user:result.data.user},{headers:{'Cache-Control':'no-store'}});

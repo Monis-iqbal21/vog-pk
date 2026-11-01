@@ -13,6 +13,8 @@ export const currentAdmin=cache(async()=>{
  if(result.status!==200)throw new Error('Administration service is unavailable. Please retry shortly.');
  const contexts=await backendRequest('contexts/schema',{token});
  if(![200,404].includes(contexts.status))throw new Error('Unable to load authorized configuration contexts.');
- return {...result.data,schemaContexts:contexts.status===200?contexts.data:[]};
+ const catalog=await backendRequest('contexts/catalog',{token});
+ if(![200,404].includes(catalog.status))throw new Error('Unable to load authorized store contexts.');
+ return {...result.data,schemaContexts:contexts.status===200?contexts.data:[],catalogContexts:catalog.status===200?catalog.data:[]};
 });
 export async function requireAdmin(){const user=await currentAdmin();if(!user)redirect(loginPath((await headers()).get('x-vog-admin-return-to')));return user;}

@@ -34,7 +34,8 @@
     "owner:setup": "node scripts/setup-owner-access.mjs",
     "foundation:init:dev": "tsx scripts/initialize-foundation.ts",
     "test:foundation": "npm run build && node scripts/test-foundation.mjs",
-    "test:product-types": "npm run build && node scripts/test-product-types.mjs"
+    "test:product-types": "npm run build && node scripts/test-product-types.mjs",
+    "test:categories": "npm run build && node scripts/test-categories.mjs"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",

@@ -15,6 +15,7 @@
 .schema-card h2 {
   margin-bottom: 16px;
 }
+.category-evidence { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 340px; overflow: auto; font-size: 12px; }
 .schema-field {
   display: flex;
   flex-direction: column;

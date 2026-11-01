@@ -204,12 +204,12 @@ try {
     rules: {},
     ...extra,
   });
-  await test('All three additive Prisma migrations apply to a fresh isolated database', async () => {
+  await test('All reviewed additive Prisma migrations apply to a fresh isolated database', async () => {
     assert.equal(
       (
         await db.$queryRaw`SELECT count(*)::int AS n FROM "_prisma_migrations" WHERE finished_at IS NOT NULL`
       )[0].n,
-      3,
+      (await fs.readdir('prisma/migrations', {withFileTypes:true})).filter((e)=>e.isDirectory()).length,
     );
   });
   const colors = await create('option-sets', {
@@ -812,6 +812,11 @@ try {
     );
     assert.equal(forged.status, 403);
   });
+  let categories;
+  if (process.env.VOG_TEST_CATEGORIES === '1') {
+    const {verifyCategories} = await import('./categories-verification.mjs');
+    categories = await verifyCategories({db, ids, owner, token, bToken, tenantB, member, base, test, call, create, attribute, makeType, action, hashToken});
+  }
   phase = 'admin production build and browser workflows';
   const admin = await verifyAdmin({
     apiPort,
@@ -1010,6 +1015,7 @@ try {
           browserChecks++;
         }
         assert.equal(errors.length, 0);
+        if (categories) await categories.browser({page, base, cookie});
         await context.close();
         return {
           passed: true,
@@ -1081,6 +1087,7 @@ try {
     credentialsPersisted: false,
   };
 } catch (error) {
+  if (error.constructor.name === 'AssertionError') console.error(error.message);
   console.error(
     'Schema verification failed at:',
     phase,
@@ -1107,7 +1114,7 @@ try {
   await fs.rm(directory, { recursive: true, force: true });
   await fs.mkdir('docs', { recursive: true });
   await fs.writeFile(
-    'docs/product-types-verification.json',
+    process.env.VOG_TEST_CATEGORIES === '1' ? 'docs/categories-verification.json' : 'docs/product-types-verification.json',
     JSON.stringify(
       {
         ...report,

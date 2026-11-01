@@ -7,6 +7,7 @@ import { cookies } from "next/headers";
 import { adminConfig } from "@/lib/config";
 import StaffPanel from "@/components/StaffPanel";
 import SchemaWorkspace from "@/components/schema/SchemaWorkspace";
+import CategoryWorkspace from "@/components/categories/CategoryWorkspace";
 export default async function ModulePage({ params }) {
   const user = await requireAdmin(),
     { module: slug } = await params,
@@ -34,6 +35,14 @@ export default async function ModulePage({ params }) {
         )}
       />
     );
+  if (slug === "categories")
+    return (
+      <CategoryWorkspace
+        contexts={(user.catalogContexts ?? []).filter((c) =>
+          definition.permissions.some((p) => c.permissions.includes(p)),
+        )}
+      />
+    );
   if (slug === "dashboard")
     return (
       <>
@@ -54,8 +63,7 @@ export default async function ModulePage({ params }) {
             {modules
               .filter(
                 (module) =>
-                  module.path !== "/dashboard" &&
-                  canOpenModule(user,module),
+                  module.path !== "/dashboard" && canOpenModule(user, module),
               )
               .map((module) => (
                 <Link
