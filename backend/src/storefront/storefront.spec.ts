@@ -10,6 +10,8 @@ afterEach(() => {
   for (const key of [
     'PUBLIC_CATALOG_MODE',
     'PUBLIC_CATALOG_STORE_ID',
+    'PUBLIC_CATALOG_TENANT_ID',
+    'PUBLIC_CATALOG_READS_ENABLED',
     'NODE_ENV',
     'DATABASE_URL',
   ])
@@ -17,6 +19,42 @@ afterEach(() => {
     else process.env[key] = saved[key];
 });
 describe('public storefront boundary', () => {
+  it('production reads require a separate exact cutover switch and fixed tenant/store', async () => {
+    Object.assign(process.env, {
+      NODE_ENV: 'production',
+      PUBLIC_CATALOG_MODE: 'production',
+      PUBLIC_CATALOG_STORE_ID: '11111111-1111-4111-8111-111111111111',
+      PUBLIC_CATALOG_TENANT_ID: '22222222-2222-4222-8222-222222222222',
+    });
+    delete process.env.PUBLIC_CATALOG_READS_ENABLED;
+    let queried = false;
+    const tx = {
+      store: {
+        findFirst: async ({
+          where,
+        }: {
+          where: { id: string; tenantId: string };
+        }) => {
+          queried = true;
+          expect(where.id).toBe(process.env.PUBLIC_CATALOG_STORE_ID);
+          expect(where.tenantId).toBe(process.env.PUBLIC_CATALOG_TENANT_ID);
+          return null;
+        },
+      },
+    } as unknown as DatabaseService;
+    const service = new StorefrontService(
+      tx,
+      {} as CategoryFiltersService,
+      {} as LocalMediaStorage,
+    );
+    await expect(service.context(tx)).rejects.toThrow('not enabled');
+    expect(queried).toBe(false);
+    process.env.PUBLIC_CATALOG_READS_ENABLED = 'true';
+    await expect(service.context(tx)).rejects.toThrow('not enabled');
+    process.env.PUBLIC_CATALOG_READS_ENABLED = '1';
+    await expect(service.context(tx)).rejects.toThrow('unavailable');
+    expect(queried).toBe(true);
+  });
   it('bounds pagination, sort, category and scope inputs', () => {
     for (const input of [
       { storeId: 'x' },

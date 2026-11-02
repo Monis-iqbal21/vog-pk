@@ -531,6 +531,7 @@ function TenantCatalog({ context, stores }) {
     [busy, setBusy] = useState(false),
     [error, setError] = useState(""),
     [brand, setBrand] = useState({ code: "", name: "" });
+  const [releaseReview, setReleaseReview] = useState(null);
   async function run(fn) {
     setBusy(true);
     setError("");
@@ -602,6 +603,37 @@ function TenantCatalog({ context, stores }) {
         {error}
       </p>
       <div className="schema-actions">
+        <button
+          onClick={() =>
+            run(async () =>
+              setReleaseReview(await read(`${base}/release-review`)),
+            )
+          }
+        >
+          Review imported catalog decisions
+        </button>
+        {releaseReview && (
+          <section aria-label="Imported catalog decisions">
+            <p>{releaseReview.policy}</p>
+            {releaseReview.items.length ? (
+              releaseReview.items.map((p) => (
+                <details key={p.productId}>
+                  <summary>{p.name}</summary>
+                  <ul>
+                    {p.decisions.map((d) => (
+                      <li key={d.id}>
+                        <strong>{d.field}</strong>: {d.reason}
+                        <p>{d.decision}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ))
+            ) : (
+              <p>No imported source decisions in this tenant.</p>
+            )}
+          </section>
+        )}
         {has("products.create") && (
           <button
             onClick={() => {

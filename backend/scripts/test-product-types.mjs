@@ -1028,7 +1028,7 @@ try {
         assert.equal(errors.length, 0);
         if (categories) await categories.browser({page, base, cookie});
         if (catalog) await catalog.browser({page,base,cookie});
-        if(operations)await operations.browser({page,base,cookie});
+        if(operations){phase='browser: operations workflows';await operations.browser({page,base,cookie});}
         assert.equal(errors.length,0);
         await context.close();
         return {
@@ -1111,6 +1111,10 @@ try {
     'error:',
     error.constructor.name,
   );
+  if(error.constructor.name.startsWith('TimeoutError')){
+    const hint=error.message?.match(/waiting for (getBy(?:Role|Label|Text)\([^\n]{1,180})/)?.[1];
+    if(hint)console.error('Timed out on UI locator:',hint);
+  }
   process.exitCode = 1;
   report = {
     passed: false,

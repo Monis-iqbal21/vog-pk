@@ -92,7 +92,7 @@ const get = async (route, status = 200, headers = {}) => {
   return status === 200 ? r.json() : null;
 };
 const output = path.resolve(
-  process.env.VOG_TEST_CATALOG_COMPLIANCE === '1'
+  process.env.VOG_TEST_RELEASE_DELIVERY === '1' ? 'docs/release-delivery' : process.env.VOG_TEST_CATALOG_COMPLIANCE === '1'
     ? 'docs/catalog-compliance'
     : preflight
       ? 'docs/catalog-preflight'
@@ -133,7 +133,7 @@ try {
   const owner = await db.adminUser.findUniqueOrThrow({
       where: { email: 'rehearsal@example.invalid' },
     }),
-    ids = await initializeDevelopmentFoundation(db, url, 'test');
+    ids = process.env.VOG_TEST_RELEASE_DELIVERY === '1' ? await (await import('./release-delivery-verification.mjs')).initializeReleaseFixture(db,url,owner) : await initializeDevelopmentFoundation(db, url, 'test');
   const beforeAuth = canonical(
     await db.adminUser.findMany({ include: { roles: true } }),
   );
@@ -898,6 +898,7 @@ try {
       productEvidence,
       output,
     });
+  if(process.env.VOG_TEST_RELEASE_DELIVERY==='1')await (await import('./release-delivery-verification.mjs')).verifyReleaseDelivery({db,url,ids,owner,base,token,manifest,test,output,directory});
   passed = true;
   await fs.writeFile(
     path.join(output, 'parity.json'),

@@ -11,6 +11,11 @@ export function allowedScopedRoute(method, path) {
   )
     return true;
   const id = "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}";
+  if (
+    method === "GET" &&
+    new RegExp(`^scopes/tenants/${id}/catalog/release-review$`).test(path)
+  )
+    return true;
   const scope = `scopes/(?:platform|tenants/${id}(?:/stores/${id})?)`;
   const catalog = `stores/${id}`;
   const ops = `stores/${id}/operations`,

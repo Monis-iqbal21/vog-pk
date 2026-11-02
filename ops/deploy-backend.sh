@@ -29,7 +29,7 @@ probe(){
  for ((attempt=0;attempt<15;attempt++)); do
   if curl --fail --silent --max-time 8 "http://127.0.0.1:4000/api/health${endpoint:+/$endpoint}" >/dev/null 2>&1; then
    # A healthy process must also preserve the approved loopback listener.
-   ss -lntH 'sport = :4000' | awk '$4=="127.0.0.1:4000" {found=1} END {exit !found}' && return 0
+   ss -lntH 'sport = :4000' | awk 'NF {seen=1; if ($4!="127.0.0.1:4000") bad=1} END {exit (!seen || bad)}' && return 0
   fi
   sleep 2
  done
@@ -109,6 +109,12 @@ case "$action" in
   check_env
   target=$(release_path "${2:-}")
   [[ -f $target/RELEASE_COMMIT && $(cat "$target/RELEASE_COMMIT") == "$2" ]] || fail 'Prepare this release first.'
+  if [[ -f $target/REVIEWED_SCHEMA_DELTA ]]; then
+   [[ -f $target/RELEASE_ARTIFACTS.sha256 && -f ${target%/backend}/RELEASE_SOURCE.sha256 ]] || fail 'Catalog release integrity evidence missing.'
+   [[ $(cat "$target/RELEASE_BACKEND_TREE") == $(git -C "$repo" rev-parse "$2:backend") ]] || fail 'Prepared backend source tree differs.'
+   ( cd "$target" && sha256sum --check --status RELEASE_ARTIFACTS.sha256 ) || fail 'Prepared runtime artifacts changed.'
+   ( cd "${target%/backend}" && sha256sum --check --status RELEASE_SOURCE.sha256 ) || fail 'Prepared catalog sources changed.'
+  fi
   previous=$(systemctl show vogpk-api -p WorkingDirectory --value)
   [[ $previous == "$repo/backend" || $previous =~ ^$releases/[a-f0-9]{40}/backend$ ]] || fail 'Unexpected service working directory; inspect manually.'
   [[ $previous != "$target" ]] || fail 'This release is already active.'

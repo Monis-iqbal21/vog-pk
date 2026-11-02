@@ -19,6 +19,7 @@ import type { Snapshot } from './facts.js';
 import { resolveVariants } from './resolver.js';
 import * as v from './validation.js';
 import type { z } from 'zod';
+import fs from 'node:fs/promises';
 export const valueGraph = { include: { binding: true, choices: true } };
 export const productGraph = {
   media: true,
@@ -39,6 +40,61 @@ export class ProductsService {
     @Inject(ScopedAuthorizationService)
     readonly auth: ScopedAuthorizationService,
   ) {}
+  async releaseReview(actor: string, tenantId: string) {
+    await this.context(actor, tenantId, 'products.view');
+    const report = JSON.parse(
+      await fs.readFile(
+        new URL(
+          '../../docs/catalog-compliance/source-review.json',
+          import.meta.url,
+        ),
+        'utf8',
+      ),
+    ) as {
+      products: {
+        id: string;
+        name: string;
+        findings: {
+          id: string;
+          field: string;
+          reason: string;
+          decision: string;
+          classification: string;
+        }[];
+      }[];
+    };
+    const items = report.products.filter((p) =>
+      p.findings.some((f) => f.classification === 'REQUIRES ADMIN REVIEW'),
+    );
+    const imported = await this.db.catalogImportRecord.findMany({
+      where: {
+        tenantId,
+        kind: 'PRODUCT',
+        complete: true,
+        sourceKey: { in: items.map((p) => p.id) },
+      },
+      select: { sourceKey: true, mapping: true },
+    });
+    return {
+      items: items.flatMap((p) => {
+        const e = imported.find((e) => e.sourceKey === p.id);
+        return e
+          ? [
+              {
+                sourceKey: p.id,
+                name: p.name,
+                productId: (e.mapping as { productId: string }).productId,
+                decisions: p.findings.filter(
+                  (f) => f.classification === 'REQUIRES ADMIN REVIEW',
+                ),
+              },
+            ]
+          : [];
+      }),
+      policy:
+        'Pending source decisions are retained evidence, not automatic approval. Review exact manufacturer data and publish a new revision through normal controls. Media rights require separate media.approve evidence; generic placeholders require an explicit business cutover decision.',
+    };
+  }
   context(
     actor: string,
     tenantId: string,

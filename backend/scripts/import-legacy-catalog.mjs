@@ -4,6 +4,7 @@ import { Client } from 'pg';
 import { buildManifest, digest, code } from './legacy-catalog-manifest.mjs';
 import { assertDevelopmentDatabase } from '../dist/security/development-foundation.js';
 import { decimal } from '../dist/product-types/registry.js';
+import { assertReleaseTarget } from './release-target.mjs';
 
 export async function assertRehearsalDestination(db, url, environment) {
   assertDevelopmentDatabase(url, environment);
@@ -29,10 +30,20 @@ export async function importLegacyCatalog({
   confirm,
   interruptAfter,
   interruptAfterProductCreation = false,
+  releasePlan,
 }) {
-  if (confirm !== 'ISOLATED_DEVELOPMENT_REHEARSAL')
-    throw Error('Explicit rehearsal confirmation required.');
-  await assertRehearsalDestination(db, url, process.env.NODE_ENV);
+  if (releasePlan) {
+    if (confirm !== 'APPROVED_CATALOG_IMPORT' || manifest.checksum !== releasePlan.manifestHash || tenantId !== releasePlan.tenantId || storeId !== releasePlan.storeId || actorId !== releasePlan.actorId)
+      throw Error('Explicit reviewed release import required.');
+    await assertReleaseTarget(db, url, releasePlan);
+    if (releasePlan.environment === 'production' && process.env.CATALOG_ADMIN_WRITES_ENABLED !== '1')
+      throw Error('Approved catalog write window required.');
+    if (interruptAfter || interruptAfterProductCreation) throw Error('Release import does not accept fault injection.');
+  } else {
+    if (confirm !== 'ISOLATED_DEVELOPMENT_REHEARSAL')
+      throw Error('Explicit rehearsal confirmation required.');
+    await assertRehearsalDestination(db, url, process.env.NODE_ENV);
+  }
   const origin = new URL(base);
   if (
     !['http:'].includes(origin.protocol) ||
@@ -167,6 +178,8 @@ export async function importLegacyCatalog({
     types = new Map(),
     categories = new Map();
   try {
+    if (releasePlan && (await api('auth/me')).id !== actorId)
+      throw Error('Import session actor does not match the approved operator.');
     // No roles, passwords, memberships or inventory are changed by the importer.
     if (
       store.currency !== 'PKR' ||

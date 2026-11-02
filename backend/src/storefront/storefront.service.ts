@@ -57,22 +57,41 @@ export class StorefrontService {
   ) {}
   async context(tx: ScopeTransaction) {
     const id = process.env.PUBLIC_CATALOG_STORE_ID;
+    const production =
+      process.env.NODE_ENV === 'production' &&
+      process.env.PUBLIC_CATALOG_MODE === 'production' &&
+      process.env.PUBLIC_CATALOG_READS_ENABLED === '1' &&
+      /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(
+        process.env.PUBLIC_CATALOG_TENANT_ID ?? '',
+      );
     if (
-      process.env.PUBLIC_CATALOG_MODE !== 'development' ||
-      !['development', 'test'].includes(process.env.NODE_ENV ?? '') ||
+      (!production &&
+        (process.env.PUBLIC_CATALOG_MODE !== 'development' ||
+          !['development', 'test'].includes(process.env.NODE_ENV ?? ''))) ||
       !id ||
-      !/^[a-f0-9-]{36}$/.test(id)
+      !/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(id)
     )
       throw new ServiceUnavailableException('Dynamic catalog is not enabled.');
     try {
-      assertDevelopmentDatabase(process.env.DATABASE_URL, process.env.NODE_ENV);
+      if (!production)
+        assertDevelopmentDatabase(
+          process.env.DATABASE_URL,
+          process.env.NODE_ENV,
+        );
     } catch {
       throw new ServiceUnavailableException(
         'A loopback development catalog database is required.',
       );
     }
     const store = await tx.store.findFirst({
-      where: { id, active: true, tenant: { active: true } },
+      where: {
+        id,
+        ...(production
+          ? { tenantId: process.env.PUBLIC_CATALOG_TENANT_ID }
+          : {}),
+        active: true,
+        tenant: { active: true },
+      },
       select: { id: true, tenantId: true, name: true, currency: true },
     });
     if (!store)

@@ -224,6 +224,22 @@ console.log(
   `PASS Pricing/inventory/media BFF allowlist (${operationsAssertions} assertions).`,
 );
 let reviewAssertions = 0;
+assert.equal(
+  allowedScopedRoute("GET", `scopes/tenants/${id}/catalog/release-review`),
+  true,
+);
+for (const method of ["POST", "PATCH", "DELETE"])
+  assert.equal(
+    allowedScopedRoute(method, `scopes/tenants/${id}/catalog/release-review`),
+    false,
+  );
+assert.equal(
+  allowedScopedRoute(
+    "GET",
+    `scopes/tenants/${id}/catalog/release-review?tenantId=${id}`,
+  ),
+  false,
+);
 for (const [verb, suffix] of [
   ["GET", "review"],
   ["POST", "reject"],

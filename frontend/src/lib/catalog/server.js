@@ -2,6 +2,7 @@ import "server-only";
 import { cache } from "react";
 import { unstable_rethrow } from "next/navigation";
 import { connection } from "next/server";
+import { catalogMode, configuredCatalogOrigin } from "./config.mjs";
 import {
   navigationSchema,
   listSchema,
@@ -9,26 +10,10 @@ import {
   routeSchema,
 } from "./contracts";
 export function dynamicCatalog() {
-  const mode = process.env.CATALOG_MODE ?? "static";
-  if (!["static", "dynamic-development"].includes(mode))
-    throw Error("Invalid catalog mode.");
-  return mode === "dynamic-development";
+  return catalogMode() !== "static";
 }
 export function catalogOrigin() {
-  if (!dynamicCatalog() || process.env.CATALOG_DEVELOPMENT !== "1")
-    throw Error("Dynamic development catalog is not configured.");
-  const url = new URL(process.env.CATALOG_API_ORIGIN ?? "");
-  if (
-    url.protocol !== "http:" ||
-    !["localhost", "127.0.0.1"].includes(url.hostname) ||
-    url.username ||
-    url.password ||
-    url.search ||
-    url.hash ||
-    url.pathname !== "/"
-  )
-    throw Error("A loopback development catalog origin is required.");
-  return url.origin;
+  return configuredCatalogOrigin();
 }
 export class CatalogError extends Error {
   constructor(status) {

@@ -43,7 +43,9 @@
     "test:catalog-migration": "npm run build && node scripts/test-catalog-migration.mjs",
     "catalog:preflight": "npm run build && node scripts/catalog-preflight-report.mjs",
     "test:catalog-preflight": "npm run build && node scripts/test-catalog-preflight.mjs",
-    "test:catalog-compliance": "npm run build && node scripts/test-catalog-compliance.mjs"
+    "test:catalog-compliance": "npm run build && node scripts/test-catalog-compliance.mjs",
+    "test:release-delivery": "npm run build && node scripts/test-release-delivery.mjs",
+    "catalog:release": "node scripts/catalog-release.mjs"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",

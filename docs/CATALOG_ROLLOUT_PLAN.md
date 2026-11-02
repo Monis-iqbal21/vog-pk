@@ -1,5 +1,10 @@
 # Catalog rollout plan — unexecuted and approval-gated
 
+Latest delivery preparation: [FINAL_PRODUCTION_DELIVERY.md](FINAL_PRODUCTION_DELIVERY.md)
+supersedes the implementation-blocker list below with tested guarded production
+operator tooling and independent read switches. The 7B/7C text remains historical
+context; all production execution still requires separate approval.
+
 Milestone 7C update: [CATALOG_COMPLIANCE.md](CATALOG_COMPLIANCE.md) contains the
 latest evidence and stop gates. There are now nine additive migrations; the first
 eight are unchanged. Production catalog mutations additionally require the explicit

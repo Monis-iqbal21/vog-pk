@@ -19,6 +19,14 @@ import * as v from './validation.js';
 @ScopedAccess()
 export class CatalogController {
   constructor(@Inject(ProductsService) readonly products: ProductsService) {}
+  @Get('release-review') releaseReview(
+    @Req() r: AdminRequest,
+    @Param('tenantId') t: string,
+    @Query() q: unknown,
+  ) {
+    validate(v.list.pick({ page: true }).strict(), q);
+    return this.products.releaseReview(r.identity.id, validId(t));
+  }
   @Get('products/:id/revisions') history(
     @Req() r: AdminRequest,
     @Param('tenantId') t: string,

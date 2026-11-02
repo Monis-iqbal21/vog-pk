@@ -1686,6 +1686,12 @@ export async function verifyOperations({
       await page
         .getByLabel('Media tenant', { exact: true })
         .selectOption(ids.tenantId);
+      // setInputFiles bypasses disabled-control actionability; wait for the real
+      // user-visible storage capability before selecting a file in this fresh page.
+      await page.waitForFunction(()=>{
+        const input=document.querySelector('input[type=file]');
+        return input&&!input.matches(':disabled');
+      });
       await page
         .getByLabel('Upload product images', { exact: true })
         .setInputFiles({

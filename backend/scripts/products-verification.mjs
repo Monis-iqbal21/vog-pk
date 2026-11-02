@@ -1244,6 +1244,8 @@ export async function verifyProducts({
       await page
         .getByRole('heading', { name: 'Products & SKU Variants', exact: true })
         .waitFor();
+      await page.getByRole('button',{name:'Review imported catalog decisions',exact:true}).click();
+      await page.getByText('No imported source decisions in this tenant.',{exact:true}).waitFor();
       await page
         .getByRole('button', { name: 'Create product', exact: true })
         .click();
