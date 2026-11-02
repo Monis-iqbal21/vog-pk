@@ -364,7 +364,10 @@ export class ListingsService {
         sellingMode: revision.sellingMode,
         featuredOrder: input.featuredOrder,
         newArrivalOrder: input.newArrivalOrder,
-        catalogOrder: input.catalogOrder,
+        catalogOrder:
+          input.catalogOrder === undefined
+            ? row.catalogOrder
+            : input.catalogOrder,
         revision: { increment: 1 },
         updatedBy: actor,
       },

@@ -44,7 +44,12 @@ export async function importLegacyCatalog({
     origin.hash
   )
     throw Error('Only a fixed loopback development API origin is accepted.');
-  const current = await buildManifest();
+  const current =
+    manifest.reviewProfile === '7B-reviewed-existing-sources'
+      ? await (
+          await import('./catalog-preflight-manifest.mjs')
+        ).buildPreflightManifest()
+      : await buildManifest();
   if (current.checksum !== manifest.checksum)
     throw Error('Manifest differs from reviewed local source.');
   const { checksum, ...body } = manifest;
@@ -640,6 +645,17 @@ export async function importLegacyCatalog({
           legacyId: p.id,
           categoryId: categories.get(p.category).id,
           media,
+          ...(manifest.reviewProfile
+            ? {
+                review: {
+                  profile: manifest.reviewProfile,
+                  manifestHash: manifest.checksum,
+                  resolutions: manifest.resolutions.filter(
+                    (item) => item.product === p.id,
+                  ),
+                },
+              }
+            : {}),
         },
         { listingId: lr.listingId },
       );

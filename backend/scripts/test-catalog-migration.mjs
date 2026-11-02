@@ -8,11 +8,15 @@ import { once } from 'node:events';
 import EmbeddedPostgres from 'embedded-postgres';
 import { chromium } from 'playwright';
 import {
-  buildManifest,
+  buildManifest as buildOriginalManifest,
   canonical,
   digest,
   root,
 } from './legacy-catalog-manifest.mjs';
+const preflight = process.env.VOG_TEST_CATALOG_PREFLIGHT === '1';
+const buildManifest = preflight
+  ? (await import('./catalog-preflight-manifest.mjs')).buildPreflightManifest
+  : buildOriginalManifest;
 import {
   importLegacyCatalog,
   assertRehearsalDestination,
@@ -87,7 +91,9 @@ const get = async (route, status = 200, headers = {}) => {
   assert.equal(r.status, status, route);
   return status === 200 ? r.json() : null;
 };
-const output = path.resolve('docs/catalog-migration');
+const output = path.resolve(
+  preflight ? 'docs/catalog-preflight' : 'docs/catalog-migration',
+);
 await fs.mkdir(output, { recursive: true });
 try {
   // URL and actual server identity checked before migrations, seed or import.
@@ -828,6 +834,53 @@ try {
     await browser.close();
     browser = null;
   });
+  if (preflight)
+    await test('Reviewed unit values, cached field provenance and corrected gallery sources survive the real import', async () => {
+      assert.equal(manifest.resolutions.length, 58);
+      for (const e of productEvidence) {
+        assert.equal(e.mapping.review.profile, manifest.reviewProfile);
+        assert.equal(e.mapping.review.manifestHash, manifest.checksum);
+        const record = manifest.records.find(
+          (r) => r.sourceKey === e.sourceKey,
+        );
+        const values = await db.productAttributeValue.findMany({
+          where: { productRevisionId: e.mapping.productRevisionId },
+          include: { binding: true },
+        });
+        for (const spec of record.specs.filter((s) => s.numeric?.provenance)) {
+          const attribute = await db.attributeDefinition.findUniqueOrThrow({
+            where: {
+              tenantId_code: {
+                tenantId: ids.tenantId,
+                code: (await import('./legacy-catalog-manifest.mjs')).code(
+                  'legacy_number',
+                  spec.attributeCode,
+                ),
+              },
+            },
+          });
+          assert.equal(
+            values
+              .find((v) => v.binding.attributeId === attribute.id)
+              .numberValue.toString(),
+            spec.numeric.number,
+          );
+        }
+        for (const media of e.mapping.media) {
+          const asset = await db.mediaAsset.findUniqueOrThrow({
+            where: { id: media.assetId },
+          });
+          assert.equal(asset.sourceUrl, media.source.sourceUrl);
+        }
+      }
+      assert.equal(
+        productEvidence.reduce(
+          (n, e) => n + e.mapping.review.resolutions.length,
+          0,
+        ),
+        58,
+      );
+    });
   passed = true;
   await fs.writeFile(
     path.join(output, 'parity.json'),

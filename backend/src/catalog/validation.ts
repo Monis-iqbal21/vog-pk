@@ -101,6 +101,9 @@ export const listingCreate = z
   .strict();
 export const listingSave = listingCreate
   .omit({ code: true })
-  .extend({ revision });
+  .extend({
+    revision,
+    catalogOrder: z.number().int().min(0).max(100000).nullable().optional(),
+  });
 export type ValueInput = z.infer<typeof value>;
 export type FactsInput = z.infer<typeof facts>;

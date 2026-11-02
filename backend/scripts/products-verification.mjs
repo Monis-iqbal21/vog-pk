@@ -645,6 +645,51 @@ export async function verifyProducts({
       }),
     );
     assert.equal(inquiryListing.skus.length, 0);
+    const orderInput = {
+      title: inquiryListing.title,
+      slug: inquiryListing.slug,
+      productRevisionId: inquiryListing.productRevisionId,
+      categoryIds: [c.id],
+      skuRevisionIds: [],
+      revision: inquiryListing.revision,
+      catalogOrder: 42,
+    };
+    let ordered = ok(
+      await api(listingPath(inquiryListing), {
+        storeId: ids.storeId,
+        method: 'PATCH',
+        body: orderInput,
+      }),
+      200,
+    );
+    assert.equal(ordered.catalogOrder, 42);
+    delete orderInput.catalogOrder;
+    ordered = ok(
+      await api(listingPath(ordered), {
+        storeId: ids.storeId,
+        method: 'PATCH',
+        body: { ...orderInput, revision: ordered.revision },
+      }),
+      200,
+    );
+    assert.equal(
+      ordered.catalogOrder,
+      42,
+      'Older admin payloads must preserve imported general order',
+    );
+    ordered = ok(
+      await api(listingPath(ordered), {
+        storeId: ids.storeId,
+        method: 'PATCH',
+        body: { ...orderInput, revision: ordered.revision, catalogOrder: null },
+      }),
+      200,
+    );
+    assert.equal(
+      ordered.catalogOrder,
+      null,
+      'Explicit clear remains supported',
+    );
     const collision = await api('listings', {
       storeId: ids.storeId,
       method: 'POST',

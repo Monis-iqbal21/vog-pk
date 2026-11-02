@@ -15,6 +15,7 @@ const blank = {
   seo: { title: "", description: "" },
   featuredOrder: null,
   newArrivalOrder: null,
+  catalogOrder: null,
 };
 const fromRow = (r, code) => ({
   code,
@@ -27,6 +28,7 @@ const fromRow = (r, code) => ({
   seo: r.seo,
   featuredOrder: r.featuredOrder,
   newArrivalOrder: r.newArrivalOrder,
+  catalogOrder: r.catalogOrder,
 });
 function Editor({
   row,
@@ -151,6 +153,14 @@ function Editor({
             min="0"
             value={form.featuredOrder ?? ""}
             onChange={(v) => set("featuredOrder", v === "" ? null : Number(v))}
+          />
+          <TextField
+            label="Catalog order (optional)"
+            type="number"
+            min="0"
+            max="100000"
+            value={form.catalogOrder ?? ""}
+            onChange={(v) => set("catalogOrder", v === "" ? null : Number(v))}
           />
           <TextField
             label="New Arrivals order (optional)"

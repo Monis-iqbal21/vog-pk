@@ -1,0 +1,272 @@
+{
+  "baselineCommit": "96915e1",
+  "localRegressionStatus": "PASS",
+  "productionRecommendation": "NO-GO",
+  "sourceReview": {
+    "total": 130,
+    "resolved": 58,
+    "pending": 72,
+    "resolvedUnitConversions": 43,
+    "resolvedExistingCachedFields": 15,
+    "pendingBySeverity": {
+      "LOW": 64,
+      "MEDIUM": 8,
+      "HIGH": 0
+    }
+  },
+  "media": {
+    "references": 95,
+    "uniqueContentHashes": 93,
+    "gallery": 95,
+    "posters": 0,
+    "accessible": 95,
+    "valid": 95,
+    "broken": 0,
+    "developmentOnly": 95,
+    "commerciallyApproved": 0,
+    "blocked": 95,
+    "documentedCcCandidates": 7,
+    "originalBytes": 45090535,
+    "webp640Bytes": 2398238
+  },
+  "migrations": [
+    {
+      "file": "backend/prisma/migrations/202610290001_admin_security/migration.sql",
+      "sha256": "2cf40e73742e28a5bba7192f9bf22c3f8da213742b22865b0f05bcd194ca8539",
+      "unchangedFrom7A": true
+    },
+    {
+      "file": "backend/prisma/migrations/202611010001_commerce_foundation/migration.sql",
+      "sha256": "59765eef862d5fb989f1571a437232a2ad96cb850d3155f77cf44e4288fe8f98",
+      "unchangedFrom7A": true
+    },
+    {
+      "file": "backend/prisma/migrations/202611010002_product_types/migration.sql",
+      "sha256": "b4fee59da7169ea0b89ed6446c64a7ea1bcc23c24087512041a1bc412f439055",
+      "unchangedFrom7A": true
+    },
+    {
+      "file": "backend/prisma/migrations/202611010003_categories_filters/migration.sql",
+      "sha256": "d2347c7148b850f8fd7ed18585a50c599f5bc93da30c49b195a89760fe8c4432",
+      "unchangedFrom7A": true
+    },
+    {
+      "file": "backend/prisma/migrations/202611010004_catalog_products/migration.sql",
+      "sha256": "1889aca2d6cb0ffb7e6b2ac2091442db95b01c60e4587964824ef870021e48c0",
+      "unchangedFrom7A": true
+    },
+    {
+      "file": "backend/prisma/migrations/202611010005_pricing_inventory_media/migration.sql",
+      "sha256": "ddaa43ed7f0718826436cad98af72e30115c63645b39ddb26f72133d9dac194d",
+      "unchangedFrom7A": true
+    },
+    {
+      "file": "backend/prisma/migrations/202611020006_storefront_read_indexes/migration.sql",
+      "sha256": "4b854ae8bfa2241b29d243bdd8db72113f7315b04f677a99c1b8a3bafabd4c9f",
+      "unchangedFrom7A": true
+    },
+    {
+      "file": "backend/prisma/migrations/202611020007_catalog_import_evidence/migration.sql",
+      "sha256": "fcc50ab4be10da8375228f6c43975ac7463e2462e84191b48a2663abb99e5213",
+      "unchangedFrom7A": true
+    }
+  ],
+  "components": [
+    {
+      "component": "Tenant/store compound ownership and draft isolation",
+      "status": "PASS_IN_ISOLATED_REGRESSION",
+      "productionVerified": false
+    },
+    {
+      "component": "Custom RBAC and default-context Owner compatibility",
+      "status": "PASS_IN_ISOLATED_REGRESSION",
+      "productionVerified": false
+    },
+    {
+      "component": "Approved Product Types/schema versions and dynamic category filters",
+      "status": "PASS_IN_ISOLATED_REGRESSION",
+      "productionVerified": false
+    },
+    {
+      "component": "Immutable product/SKU/listing revisions and one default SKU",
+      "status": "PASS_IN_ISOLATED_REGRESSION",
+      "productionVerified": false
+    },
+    {
+      "component": "Reference-only prices and unknown inventory",
+      "status": "PASS_IN_ISOLATED_REGRESSION",
+      "productionVerified": false
+    },
+    {
+      "component": "Media rights gating and shared/variant poster lifecycle",
+      "status": "PASS_IN_ISOLATED_REGRESSION",
+      "productionVerified": false
+    },
+    {
+      "component": "Public catalog same-SKU predicates and pagination",
+      "status": "PASS_IN_ISOLATED_REGRESSION",
+      "productionVerified": false
+    },
+    {
+      "component": "Admin BFF CSRF/session/path allowlists",
+      "status": "PASS_IN_ISOLATED_REGRESSION",
+      "productionVerified": false
+    },
+    {
+      "component": "Runtime routes, 84 legacy redirects, SEO and sitemap",
+      "status": "PASS_IN_ISOLATED_REGRESSION",
+      "productionVerified": false
+    },
+    {
+      "component": "Independent 7-product home rows and complete editorial memberships",
+      "status": "PASS_IN_ISOLATED_REGRESSION",
+      "productionVerified": false
+    }
+  ],
+  "regressions": {
+    "backendBuild": "PASS",
+    "backendLint": "PASS",
+    "unitFiles": 9,
+    "unitTests": 37,
+    "adminLint": "PASS",
+    "adminBuild": "PASS clean actual built fixture",
+    "frontendLint": "PASS",
+    "frontendBuild": "PASS static and dynamic",
+    "migrationAndReviewGroups": 12,
+    "reviewTests": [
+      {
+        "name": "Deterministic 84/12 manifest, local source hashes and strict destination guards",
+        "passed": true,
+        "durationMs": 167
+      },
+      {
+        "name": "Interrupted import resumes through real approved lifecycle without duplicate schema/category records",
+        "passed": true,
+        "durationMs": 52044
+      },
+      {
+        "name": "Exactly 84 legacy products, 12 categories, 84 default SKUs and stable source/destination identities",
+        "passed": true,
+        "durationMs": 216
+      },
+      {
+        "name": "Repeat import makes zero writes; altered manifest and immutable source changes fail closed",
+        "passed": true,
+        "durationMs": 557
+      },
+      {
+        "name": "No approved prices, discounts, invented stock or media grants; original provenance retained",
+        "passed": true,
+        "durationMs": 62
+      },
+      {
+        "name": "Full public API parity for all products, categories, routes, SEO, reference prices and default variants",
+        "passed": true,
+        "durationMs": 7495
+      },
+      {
+        "name": "Editorial membership/order, pagination, search, related products and deterministic sorting",
+        "passed": true,
+        "durationMs": 5601
+      },
+      {
+        "name": "Every equivalent source facet value preserves matching IDs and disjunctive counts",
+        "passed": true,
+        "durationMs": 19377
+      },
+      {
+        "name": "Cross-tenant/store isolation, private drafts, scope forgery and protected APIs remain closed",
+        "passed": true,
+        "durationMs": 732
+      },
+      {
+        "name": "Imported dataset SQL plan, constant per-page query count and isolated 284-record growth store",
+        "passed": true,
+        "durationMs": 4414
+      },
+      {
+        "name": "Built storefront browser parity: desktop/tablet/mobile, reference-only pages, SEO, collections and missing-media safety",
+        "passed": true,
+        "durationMs": 47394
+      },
+      {
+        "name": "Reviewed unit values, cached field provenance and corrected gallery sources survive the real import",
+        "passed": true,
+        "durationMs": 207
+      }
+    ],
+    "integrationGroups": 61,
+    "foundationGroups": 23,
+    "authenticationGroups": 25,
+    "adminBrowser": {
+      "passed": true,
+      "checks": 15,
+      "productionBuild": true,
+      "realBackend": true,
+      "persistedCredentials": false,
+      "extra": {
+        "passed": true,
+        "browserChecks": 8,
+        "headlessBrowser": "Microsoft Edge",
+        "realForms": true,
+        "noPageErrors": true,
+        "catalogBrowser": {
+          "passed": true,
+          "productAndSkuForms": true,
+          "typedFalseAndZero": true,
+          "dependentResolution": true,
+          "listingPins": true,
+          "separateApprovalAndPublication": true,
+          "clonedRevisions": true,
+          "responsiveWidths": [
+            1440,
+            390
+          ],
+          "missingCsrfRejected": true,
+          "invalidBffPathsRejected": true
+        },
+        "operationsBrowser": {
+          "passed": true
+        }
+      }
+    },
+    "facetValueComparisons": 181,
+    "listingOrderCompatibility": "PASS real API: set 42, omitted save preserves 42, explicit null clears",
+    "routingChecks": 19,
+    "bffAllowlistAssertions": 356
+  },
+  "audits": {
+    "runtime": {
+      "backend": 0,
+      "admin": 0,
+      "frontend": 0
+    },
+    "fullModerate": {
+      "backend": 2,
+      "admin": 16,
+      "frontend": 16
+    },
+    "high": 0,
+    "critical": 0,
+    "note": "Inherited development-tool findings; no new dependency/provider installed"
+  },
+  "remainingIntegrationDecisions": [
+    "Production catalog gates/HTTPS origin and production importer remain unimplemented",
+    "Additive production permission/context/Owner bridge backfill requires separate review; blanket seed forbidden",
+    "Existing release prepare tool blocks schema deltas; migration-aware staging required",
+    "Reference-price editing/carry-forward after listing republish needs an explicit workflow; the old import pin is intentionally not reused automatically",
+    "Legacy filter URL/reference-price browsing and production SEO/breadcrumb decisions",
+    "95 media approvals and a reviewed static bundle or private production delivery adapter",
+    "Actual cloud capacity/hosting plan, fresh recovery proof and Oracle ARM64 release checks unverified"
+  ],
+  "cleanup": {
+    "preflight": "owned API/PostgreSQL/browser/frontend stopped; owned temporary files removed; historical ignored directory untouched",
+    "synthetic": "temporary API and PostgreSQL stopped; generated cluster and admin fixture removed",
+    "preexistingIgnoredDirectories": "Preserved; no cleanup attempted"
+  },
+  "productionAccess": false,
+  "push": false,
+  "merge": false,
+  "deploy": false,
+  "paidResourcesCreated": false
+}
