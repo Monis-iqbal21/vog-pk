@@ -223,3 +223,26 @@ for (const path of [
 console.log(
   `PASS Pricing/inventory/media BFF allowlist (${operationsAssertions} assertions).`,
 );
+let reviewAssertions = 0;
+for (const [verb, suffix] of [
+  ["GET", "review"],
+  ["POST", "reject"],
+]) {
+  const route = `${media}/assets/${id}/${suffix}`;
+  for (const method of ["GET", "POST", "PATCH", "DELETE", "PUT"]) {
+    assert.equal(allowedScopedRoute(method, route), method === verb);
+    reviewAssertions++;
+  }
+  for (const bad of [
+    route + "/",
+    route + "/../approve",
+    route + "?scope=PUBLIC",
+    route.replace(id, "not-a-uuid"),
+  ]) {
+    assert.equal(allowedScopedRoute(verb, bad), false);
+    reviewAssertions++;
+  }
+}
+console.log(
+  `PASS Media review/rejection BFF routes (${reviewAssertions} assertions).`,
+);

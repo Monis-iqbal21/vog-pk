@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "Deterministic 84/12 manifest, local source hashes and strict destination guards",
+      "passed": true,
+      "durationMs": 163
+    },
+    {
+      "name": "Interrupted import resumes through real approved lifecycle without duplicate schema/category records",
+      "passed": true,
+      "durationMs": 41023
+    },
+    {
+      "name": "Exactly 84 legacy products, 12 categories, 84 default SKUs and stable source/destination identities",
+      "passed": true,
+      "durationMs": 316
+    },
+    {
+      "name": "Repeat import makes zero writes; altered manifest and immutable source changes fail closed",
+      "passed": true,
+      "durationMs": 617
+    },
+    {
+      "name": "No approved prices, discounts, invented stock or media grants; original provenance retained",
+      "passed": true,
+      "durationMs": 51
+    },
+    {
+      "name": "Full public API parity for all products, categories, routes, SEO, reference prices and default variants",
+      "passed": true,
+      "durationMs": 4865
+    },
+    {
+      "name": "Editorial membership/order, pagination, search, related products and deterministic sorting",
+      "passed": true,
+      "durationMs": 3422
+    },
+    {
+      "name": "Every equivalent source facet value preserves matching IDs and disjunctive counts",
+      "passed": true,
+      "durationMs": 12763
+    },
+    {
+      "name": "Cross-tenant/store isolation, private drafts, scope forgery and protected APIs remain closed",
+      "passed": true,
+      "durationMs": 487
+    },
+    {
+      "name": "Imported dataset SQL plan, constant per-page query count and isolated 284-record growth store",
+      "passed": true,
+      "durationMs": 3465
+    },
+    {
+      "name": "Built storefront browser parity: desktop/tablet/mobile, reference-only pages, SEO, collections and missing-media safety",
+      "passed": true,
+      "durationMs": 42321
+    },
+    {
+      "name": "Reviewed unit values, cached field provenance and corrected gallery sources survive the real import",
+      "passed": true,
+      "durationMs": 204
+    },
+    {
+      "name": "Imported private previews are digest checked and rights/history/listing impact stay scoped",
+      "passed": true,
+      "durationMs": 218
+    },
+    {
+      "name": "Real approval/rejection records preserve reviewer/evidence/conditions and cannot authorize by URL alone",
+      "passed": true,
+      "durationMs": 225
+    },
+    {
+      "name": "Production-mode staging dry-run leaves catalog writes/public reads off while health and Owner reads work",
+      "passed": true,
+      "durationMs": 1377
+    }
+  ],
+  "failedPhase": null,
+  "timings": {
+    "importMs": 26975
+  },
+  "productionAccess": false,
+  "credentialsPersisted": false,
+  "cleanup": "owned API/PostgreSQL/browser/frontend stopped; owned temporary files removed; historical ignored directory untouched"
+}

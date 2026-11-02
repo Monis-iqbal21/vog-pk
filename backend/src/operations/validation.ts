@@ -132,6 +132,17 @@ export const approveMedia = z
     license: description.refine((v) => v.trim().length >= 3),
     attribution: description,
     scope: z.enum(['DEVELOPMENT', 'PUBLIC']),
+    evidenceUrl: sourceUrl,
+    evidenceNote: z.string().max(1000).default(''),
+    conditions: z.string().max(1000).default(''),
+  })
+  .strict();
+export const rejectMedia = z
+  .object({
+    revision,
+    reason: description.refine((v) => v.trim().length >= 3),
+    evidenceUrl: sourceUrl,
+    conditions: z.string().max(1000).default(''),
   })
   .strict();
 export const presentation = z

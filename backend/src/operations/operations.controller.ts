@@ -327,6 +327,26 @@ export class MediaController {
       validate(v.lifecycle, b).revision,
     );
   }
+  @Post('assets/:id/reject') reject(
+    @Req() r: AdminRequest,
+    @Param('tenantId') t: string,
+    @Param('id') id: string,
+    @Body() b: unknown,
+  ) {
+    return this.media.reject(
+      r.identity.id,
+      validId(t),
+      validId(id),
+      validate(v.rejectMedia, b),
+    );
+  }
+  @Get('assets/:id/review') review(
+    @Req() r: AdminRequest,
+    @Param('tenantId') t: string,
+    @Param('id') id: string,
+  ) {
+    return this.media.review(r.identity.id, validId(t), validId(id));
+  }
   @Get('assets/:id/content') content(
     @Req() r: AdminRequest,
     @Param('tenantId') t: string,

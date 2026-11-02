@@ -92,7 +92,11 @@ const get = async (route, status = 200, headers = {}) => {
   return status === 200 ? r.json() : null;
 };
 const output = path.resolve(
-  preflight ? 'docs/catalog-preflight' : 'docs/catalog-migration',
+  process.env.VOG_TEST_CATALOG_COMPLIANCE === '1'
+    ? 'docs/catalog-compliance'
+    : preflight
+      ? 'docs/catalog-preflight'
+      : 'docs/catalog-migration',
 );
 await fs.mkdir(output, { recursive: true });
 try {
@@ -880,6 +884,19 @@ try {
         ),
         58,
       );
+    });
+  if (process.env.VOG_TEST_CATALOG_COMPLIANCE === '1')
+    await (
+      await import('./media-compliance-verification.mjs')
+    ).verifyMediaCompliance({
+      db,
+      ids,
+      owner,
+      token,
+      base,
+      test,
+      productEvidence,
+      output,
     });
   passed = true;
   await fs.writeFile(

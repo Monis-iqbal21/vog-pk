@@ -20,6 +20,7 @@ model AdminUser {
   audits AuditLog[]
   tenantMemberships TenantMembership[]
   platformAssignments PlatformRoleAssignment[]
+  mediaReviews MediaReview[]
 }
 model Role {
   id String @id @default(uuid()) @db.Uuid
@@ -880,6 +881,7 @@ model MediaAsset {
   uploadKey String? @db.Uuid
   uploadHash String? @db.Char(64)
   approvals MediaApproval[]
+  reviews MediaReview[]
   createdAt DateTime @default(now())
   createdBy String @db.Uuid
   tenant Tenant @relation(fields:[tenantId],references:[id],onDelete:Restrict)
@@ -1121,4 +1123,29 @@ model CatalogImportRecord {
   category Category? @relation(fields:[categoryId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict,map:"import_category")
   @@unique([storeId,kind,sourceKey])
   @@index([listingId,storeId,tenantId])
+}
+
+enum MediaReviewDecision {
+  APPROVE_PUBLIC
+  APPROVE_DEVELOPMENT
+  REJECT
+}
+model MediaReview {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  assetId String @db.Uuid
+  assetRevision Int
+  decision MediaReviewDecision
+  reviewerId String @db.Uuid
+  createdAt DateTime @default(now())
+  license String @db.VarChar(500)
+  attribution String @db.VarChar(500)
+  evidenceUrl String? @db.VarChar(1000)
+  evidenceNote String @db.VarChar(1000)
+  conditions String @db.VarChar(1000)
+  sourceSnapshot Json
+  asset MediaAsset @relation(fields:[assetId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  reviewer AdminUser @relation(fields:[reviewerId],references:[id],onDelete:Restrict)
+  @@unique([assetId,assetRevision])
+  @@index([tenantId,assetId,createdAt])
 }

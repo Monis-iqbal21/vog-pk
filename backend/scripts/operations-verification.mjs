@@ -1682,6 +1682,59 @@ export async function verifyOperations({
           ).status,
           404,
         );
+      await page.goto(base + '/media');
+      await page
+        .getByLabel('Media tenant', { exact: true })
+        .selectOption(ids.tenantId);
+      await page
+        .getByLabel('Upload product images', { exact: true })
+        .setInputFiles({
+          name: 'Browser rejection fixture.png',
+          mimeType: 'image/png',
+          buffer: bytes,
+        });
+      await page
+        .getByText(
+          '1 images uploaded privately. Review alternative text and usage rights.',
+          { exact: true },
+        )
+        .waitFor();
+      await page
+        .getByRole('button', {
+          name: 'Inspect media Browser rejection fixture',
+          exact: true,
+        })
+        .click();
+      await page
+        .getByLabel('Rights evidence notes or rejection reason', {
+          exact: true,
+        })
+        .fill(
+          'Insufficient commercial authorization for this synthetic review drill',
+        );
+      await page
+        .getByLabel('License conditions and restrictions', { exact: true })
+        .fill('Remain private until a new evidence decision');
+      await page
+        .getByRole('button', { name: 'Reject commercial usage', exact: true })
+        .click();
+      await page.getByText('REJECT', { exact: true }).waitFor();
+      const rejectedAsset = await db.mediaAsset.findFirstOrThrow({
+        where: { tenantId: ids.tenantId, altText: 'Browser rejection fixture' },
+      });
+      assert.equal(rejectedAsset.rights, 'RESTRICTED');
+      assert.ok(
+        await db.mediaReview.findFirst({
+          where: {
+            assetId: rejectedAsset.id,
+            reviewerId: owner.id,
+            decision: 'REJECT',
+          },
+        }),
+      );
+      console.log(
+        'PASS actual admin rejection form, reviewer history, conditions and publication-blocked status',
+      );
       console.log(
         'PASS Real admin price/approval and quantity workflows, two private uploads, rights decisions, poster reorder, variant media, listing presentation and checkout-disabled quote',
       );

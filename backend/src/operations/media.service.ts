@@ -13,6 +13,7 @@ import { fail } from '../product-types/validation.js';
 import { LocalMediaStorage, decodeImage, mediaLimits } from './storage.js';
 import * as v from './validation.js';
 import type { z } from 'zod';
+import { referencePreview } from './reference-preview.js';
 @Injectable()
 export class MediaService {
   constructor(
@@ -118,9 +119,41 @@ export class MediaService {
   async content(actor: string, tenantId: string, id: string, width: number) {
     await this.require(actor, tenantId, 'media.view');
     const asset = await this.row(this.db, tenantId, id);
-    if (asset.storageProvider !== this.storage.kind)
-      fail('This reference has no active managed delivery provider.');
-    const bytes = await this.storage.read(tenantId, id, width);
+    if (![320, 640, 1280, 1920].includes(width))
+      fail('Unsupported preview width.');
+    let bytes: Buffer;
+    if (asset.storageProvider === 'REFERENCE') {
+      const evidence = await this.db.catalogImportRecord.findFirst({
+        where: {
+          tenantId,
+          complete: true,
+          kind: 'PRODUCT',
+          mapping: { path: ['media'], array_contains: [{ assetId: id }] },
+        },
+      });
+      const refs = (
+        evidence?.mapping as
+          | {
+              media?: {
+                assetId: string;
+                source: { src: string; sha256: string };
+              }[];
+            }
+          | undefined
+      )?.media;
+      const ref = refs?.find((r) => r.assetId === id);
+      if (
+        !ref ||
+        ref.source.src !== asset.storageReference ||
+        ref.source.sha256 !== asset.contentDigest
+      )
+        throw new NotFoundException('Private reference preview unavailable.');
+      bytes = await referencePreview(ref.source.src, ref.source.sha256, width);
+    } else {
+      if (asset.storageProvider !== this.storage.kind)
+        fail('This reference has no active managed delivery provider.');
+      bytes = await this.storage.read(tenantId, id, width);
+    }
     return {
       assetId: id,
       width,
@@ -281,6 +314,12 @@ export class MediaService {
           'Asset approval is immutable; replace the asset for a different rights decision.',
         );
       const publicUse = input.scope === 'PUBLIC';
+      if (
+        publicUse &&
+        (/^https?:\/\/\S+$/.test(input.license.trim()) ||
+          (input.evidenceNote.trim() || input.license.trim()).length < 10)
+      )
+        fail('Record licensing evidence, not only a working source URL.');
       const saved = await tx.mediaAsset.update({
         where: { id },
         data: {
@@ -288,6 +327,7 @@ export class MediaService {
           publicUse,
           developmentOnly: !publicUse,
           rightsMetadata: {
+            previousSourceMetadata: row.rightsMetadata,
             license: input.license,
             attribution: input.attribution,
             scope: input.scope,
@@ -306,9 +346,168 @@ export class MediaService {
           publicUse,
         },
       });
+      await tx.mediaReview.create({
+        data: {
+          tenantId,
+          assetId: id,
+          assetRevision: row.revision,
+          decision: publicUse ? 'APPROVE_PUBLIC' : 'APPROVE_DEVELOPMENT',
+          reviewerId: actor,
+          license: input.license,
+          attribution: input.attribution,
+          evidenceUrl: input.evidenceUrl,
+          evidenceNote: input.evidenceNote || input.license,
+          conditions: input.conditions,
+          sourceSnapshot: json({
+            sourceUrl: row.sourceUrl,
+            contentDigest: row.contentDigest,
+            purpose: row.intendedPurpose,
+            rightsMetadata: row.rightsMetadata,
+          }),
+        },
+      });
       await this.audit(tx, actor, tenantId, 'rights_approved', id);
       return saved;
     });
+  }
+  reject(
+    actor: string,
+    tenantId: string,
+    id: string,
+    input: z.infer<typeof v.rejectMedia>,
+  ) {
+    return this.write(actor, tenantId, 'media.approve', async (tx) => {
+      const row = await this.row(tx, tenantId, id);
+      if (row.revision !== input.revision) stale();
+      if (
+        row.archived ||
+        row.rights === 'APPROVED' ||
+        (await this.frozen(tx, tenantId, id))
+      )
+        throw new ConflictException(
+          'Reviewed/public assets require replacement and republishing.',
+        );
+      const saved = await tx.mediaAsset.update({
+        where: { id },
+        data: {
+          rights: 'RESTRICTED',
+          publicUse: false,
+          developmentOnly: true,
+          revision: { increment: 1 },
+        },
+      });
+      await tx.mediaReview.create({
+        data: {
+          tenantId,
+          assetId: id,
+          assetRevision: row.revision,
+          decision: 'REJECT',
+          reviewerId: actor,
+          license: '',
+          attribution: '',
+          evidenceUrl: input.evidenceUrl,
+          evidenceNote: input.reason,
+          conditions: input.conditions,
+          sourceSnapshot: json({
+            sourceUrl: row.sourceUrl,
+            contentDigest: row.contentDigest,
+            purpose: row.intendedPurpose,
+            rightsMetadata: row.rightsMetadata,
+          }),
+        },
+      });
+      await this.audit(tx, actor, tenantId, 'rights_rejected', id);
+      return saved;
+    });
+  }
+  async review(actor: string, tenantId: string, id: string) {
+    await this.require(actor, tenantId, 'media.view');
+    const asset = await this.row(this.db, tenantId, id);
+    const reviews = await this.db.mediaReview.findMany({
+      where: { tenantId, assetId: id },
+      include: { reviewer: { select: { id: true, name: true } } },
+      orderBy: { createdAt: 'desc' },
+      take: 100,
+    });
+    const imports = await this.db.catalogImportRecord.findMany({
+      where: {
+        tenantId,
+        complete: true,
+        kind: 'PRODUCT',
+        mapping: { path: ['media'], array_contains: [{ assetId: id }] },
+      },
+      select: { listingId: true, sourceKey: true },
+      take: 100,
+    });
+    const memberships = await this.db.storeMembership.findMany({
+      where: { tenantId, userId: actor, active: true, store: { active: true } },
+      select: { storeId: true },
+      take: 100,
+    });
+    const allowed: string[] = [];
+    for (const m of memberships) {
+      const access = await this.auth.resolve(actor, {
+        kind: 'STORE',
+        tenantId,
+        storeId: m.storeId,
+      });
+      if (access.permissions.includes('listings.view')) allowed.push(m.storeId);
+    }
+    const affected = allowed.length
+      ? await this.db.listingRevision.findMany({
+          where: {
+            tenantId,
+            storeId: { in: allowed },
+            OR: [
+              {
+                listingId: {
+                  in: imports.flatMap((r) =>
+                    r.listingId ? [r.listingId] : [],
+                  ),
+                },
+              },
+              { productRevision: { media: { some: { assetId: id } } } },
+              {
+                productRevision: {
+                  skus: { some: { media: { some: { assetId: id } } } },
+                },
+              },
+            ],
+          },
+          select: {
+            id: true,
+            listingId: true,
+            storeId: true,
+            title: true,
+            slug: true,
+            status: true,
+          },
+          take: 100,
+        })
+      : [];
+    return {
+      asset,
+      reviews,
+      legacyApprovals: await this.db.mediaApproval.findMany({
+        where: { tenantId, assetId: id },
+        orderBy: { createdAt: 'desc' },
+        take: 100,
+      }),
+      affectedListings: affected,
+      publicationBlocked:
+        asset.archived ||
+        asset.rights !== 'APPROVED' ||
+        asset.developmentOnly ||
+        !asset.publicUse ||
+        !this.storage.active() ||
+        asset.storageProvider !== 'LOCAL_DEVELOPMENT',
+      previewMode:
+        asset.storageProvider === 'REFERENCE'
+          ? 'CONTROLLED_DEVELOPMENT_REFERENCE'
+          : 'MANAGED_PRIVATE',
+      replacement:
+        'Upload a new authorized asset and assign it to a draft product/SKU revision; reviewed relationships remain immutable.',
+    };
   }
   archive(actor: string, tenantId: string, id: string, revision: number) {
     return this.write(actor, tenantId, 'media.manage', async (tx) => {

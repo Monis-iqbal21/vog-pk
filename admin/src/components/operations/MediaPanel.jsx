@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TextField, SelectField, CheckField } from "../schema/SchemaFields";
 import { read } from "../categories/fields";
 import { adminMutation } from "@/lib/client-api";
+import MediaReviewDetails from "./MediaReviewDetails";
 const purposes = [
   "GALLERY",
   "DETAIL_POSTER",
@@ -19,12 +20,20 @@ const presentation = {
   alignment: "center",
   widths: [320, 640, 1280],
 };
-export function MediaPreview({ asset, contentBase, width = 320 }) {
+export function MediaPreview({
+  asset,
+  contentBase,
+  width = 320,
+  allowReference = false,
+}) {
   const [src, setSrc] = useState(""),
     [error, setError] = useState("");
   useEffect(() => {
     let current = true;
-    if (asset.storageProvider === "LOCAL_DEVELOPMENT")
+    if (
+      asset.storageProvider === "LOCAL_DEVELOPMENT" ||
+      (allowReference && asset.storageProvider === "REFERENCE")
+    )
       read(`${contentBase}/${asset.id}/content?width=${width}`)
         .then((d) => {
           if (current) setSrc(d.dataUrl);
@@ -35,7 +44,7 @@ export function MediaPreview({ asset, contentBase, width = 320 }) {
     return () => {
       current = false;
     };
-  }, [asset.id, asset.storageProvider, contentBase, width]);
+  }, [asset.id, asset.storageProvider, contentBase, width, allowReference]);
   return src ? (
     <Image
       unoptimized
@@ -70,7 +79,10 @@ function Library({ base, permissions, onSelect, refresh }) {
     [edit, setEdit] = useState(null),
     [meta, setMeta] = useState(null),
     [license, setLicense] = useState(""),
-    [publicUse, setPublicUse] = useState(false);
+    [publicUse, setPublicUse] = useState(false),
+    [evidenceUrl, setEvidenceUrl] = useState(""),
+    [evidenceNote, setEvidenceNote] = useState(""),
+    [conditions, setConditions] = useState("");
   const uploadKeys = useRef(new Map());
   useEffect(() => {
     let current = true;
@@ -143,6 +155,9 @@ function Library({ base, permissions, onSelect, refresh }) {
     });
     setLicense("");
     setPublicUse(false);
+    setEvidenceUrl("");
+    setEvidenceNote("");
+    setConditions("");
   }
   return (
     <section className="schema-card">
@@ -264,7 +279,13 @@ function Library({ base, permissions, onSelect, refresh }) {
       {edit && meta && (
         <section className="schema-card">
           <h4>Selected media metadata</h4>
-          <MediaPreview asset={edit} contentBase={base + "/assets"} />
+          <MediaPreview
+            key={edit.id}
+            asset={edit}
+            contentBase={base + "/assets"}
+            allowReference
+          />
+          <MediaReviewDetails asset={edit} base={base} />
           <fieldset
             disabled={
               busy ||
@@ -337,6 +358,21 @@ function Library({ base, permissions, onSelect, refresh }) {
               value={publicUse}
               onChange={setPublicUse}
             />
+            <TextField
+              label="Rights evidence URL (HTTPS, optional)"
+              value={evidenceUrl}
+              onChange={setEvidenceUrl}
+            />
+            <TextField
+              label="Rights evidence notes or rejection reason"
+              value={evidenceNote}
+              onChange={setEvidenceNote}
+            />
+            <TextField
+              label="License conditions and restrictions"
+              value={conditions}
+              onChange={setConditions}
+            />
             <button
               onClick={() =>
                 run(async () =>
@@ -346,12 +382,32 @@ function Library({ base, permissions, onSelect, refresh }) {
                       license,
                       attribution: meta.attribution,
                       scope: publicUse ? "PUBLIC" : "DEVELOPMENT",
+                      evidenceUrl: evidenceUrl || null,
+                      evidenceNote,
+                      conditions,
                     }),
                   ),
                 )
               }
             >
               Approve media rights
+            </button>
+            <button
+              disabled={!evidenceNote.trim()}
+              onClick={() =>
+                run(async () =>
+                  editing(
+                    await adminMutation(`${base}/assets/${edit.id}/reject`, {
+                      revision: edit.revision,
+                      reason: evidenceNote,
+                      evidenceUrl: evidenceUrl || null,
+                      conditions,
+                    }),
+                  ),
+                )
+              }
+            >
+              Reject commercial usage
             </button>
           </fieldset>
           <p>

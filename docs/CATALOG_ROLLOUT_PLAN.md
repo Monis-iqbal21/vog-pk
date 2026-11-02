@@ -1,5 +1,12 @@
 # Catalog rollout plan — unexecuted and approval-gated
 
+Milestone 7C update: [CATALOG_COMPLIANCE.md](CATALOG_COMPLIANCE.md) contains the
+latest evidence and stop gates. There are now nine additive migrations; the first
+eight are unchanged. Production catalog mutations additionally require the explicit
+server-only `CATALOG_ADMIN_WRITES_ENABLED=1` switch, which remains disabled. No
+production read mode, importer or upload adapter has been activated or implemented
+by this update.
+
 This plan targets the existing Vercel storefront/admin, Oracle Nest API and Neon
 database. It creates no cloud resource and assumes no new paid provider. Production
 state was not queried in 7B; historical health, backups, hosting limits and deployed
@@ -55,7 +62,7 @@ Each numbered stage has a stop gate. None is approved or executed by this milest
    and a successful isolated full restore. Confirm destination capacity/eligibility
    first; no paid snapshot/storage is implied. Earlier recovery success is evidence
    of a procedure, not a current recovery point. Stop if recovery cannot be proven.
-3. **Release/DDL rehearsal.** Reconcile production schema drift against all eight
+3. **Release/DDL rehearsal.** Reconcile production schema drift against all nine
    migrations, in order. Rehearse the exact delta and backfill against an isolated
    restored copy without changing Owner hashes or grants. Stage exact reviewed code
    in an isolated non-running Oracle ARM64 release using migration-aware tooling
@@ -66,7 +73,7 @@ Each numbered stage has a stop gate. None is approved or executed by this milest
    status`, the exact reviewed `prisma migrate deploy`, then status and constraint/
    ownership verification with private existing environment injection. Never use
    reset, db push, a destructive down migration or migration-history edits. This
-   milestone adds no ninth migration. Measure locks/duration; stop on unexpected SQL,
+   plan includes the 7C ninth additive media-review migration. Measure locks/duration; stop on unexpected SQL,
    drift or auth-record changes. Old application compatibility must be rehearsed.
 5. **Owner/RBAC bridge.** In one separately approved idempotent transaction, add only
    missing Permission/PermissionScope registrations; bind the explicitly selected

@@ -5,6 +5,7 @@ import {SCOPED_PERMISSIONS, manageRolePermission, manageStaffPermission} from '.
 import type {ScopeContext} from './scoped-permissions.js';
 import {PERMISSIONS, userGraph} from './roles.js';
 import {validId} from './validation.js';
+import {assertCatalogMutationEnabled} from './catalog-gate.js';
 
 export type ScopeTransaction = Prisma.TransactionClient;
 export type RoleGrant = {code: string; canDelegate: boolean};
@@ -72,6 +73,7 @@ export class ScopedAuthorizationService {
   async require(userId: string, ctx: ScopeContext, permissions: string[], tx: ScopeTransaction = this.db) {
     const access = await this.resolve(userId, ctx, tx);
     if (!permissions.length || permissions.some(code => !access.permissions.includes(code))) throw denied();
+    assertCatalogMutationEnabled(permissions);
     return access;
   }
 

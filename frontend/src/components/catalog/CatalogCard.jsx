@@ -22,7 +22,26 @@ export function PublicImage({ image, className = "", poster = false }) {
         role="img"
         aria-label={image?.alt || "Product image unavailable"}
       >
-        Image unavailable
+        <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+          <rect
+            x="6"
+            y="10"
+            width="36"
+            height="28"
+            rx="4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <path
+            d="m8 34 10-10 8 8 6-6 8 8"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+        </svg>
+        <strong>VOGPK</strong>
+        <span>Image unavailable</span>
       </div>
     );
   // Provider-generated responsive derivatives. Native picture delivery avoids

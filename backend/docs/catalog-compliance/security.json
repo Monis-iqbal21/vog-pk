@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "scanner": "Gitleaks 8.30.1",
+  "scope": "exact staged file contents",
+  "files": 37,
+  "secretFindings": 0,
+  "forbiddenPaths": 0,
+  "privateKeyMarkers": 0,
+  "credentialsIncluded": false,
+  "backupOrDumpIncluded": false,
+  "productionAccess": false
+}

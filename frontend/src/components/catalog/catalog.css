@@ -24,6 +24,9 @@
 }
 .catalog-image-fallback {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
   align-items: center;
   justify-content: center;
   min-height: 180px;

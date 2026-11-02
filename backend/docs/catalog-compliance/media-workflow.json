@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "importedAssetsApproved": 0,
+  "privateReferencePreview": true,
+  "hashChecks": true,
+  "reviewerAudit": true,
+  "rejection": true,
+  "storeImpactAuthorization": true,
+  "foreignTenantDenied": true,
+  "productionModeDryRun": true,
+  "productionAccess": false,
+  "fixturesOnly": true
+}

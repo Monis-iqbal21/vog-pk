@@ -39,15 +39,15 @@ export function allowedScopedRoute(method, path) {
   if (
     method === "GET" &&
     new RegExp(
-      `^${media}/(?:assets(?:/${id}/content)?|products/${id}/revisions/${id}/assignments)$`,
+      `^${media}/(?:assets(?:/${id}/(?:content|review))?|products/${id}/revisions/${id}/assignments)$`,
     ).test(path)
   )
     return true;
   if (
     method === "POST" &&
-    new RegExp(`^${media}/(?:uploads|assets/${id}/(?:approve|archive))$`).test(
-      path,
-    )
+    new RegExp(
+      `^${media}/(?:uploads|assets/${id}/(?:approve|reject|archive))$`,
+    ).test(path)
   )
     return true;
   if (
