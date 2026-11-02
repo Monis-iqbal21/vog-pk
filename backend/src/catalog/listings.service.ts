@@ -364,6 +364,7 @@ export class ListingsService {
         sellingMode: revision.sellingMode,
         featuredOrder: input.featuredOrder,
         newArrivalOrder: input.newArrivalOrder,
+        catalogOrder: input.catalogOrder,
         revision: { increment: 1 },
         updatedBy: actor,
       },
@@ -517,6 +518,7 @@ export class ListingsService {
             seo: source.seo!,
             featuredOrder: source.featuredOrder,
             newArrivalOrder: source.newArrivalOrder,
+            catalogOrder: source.catalogOrder,
             createdBy: actor,
             updatedBy: actor,
           },
@@ -615,6 +617,7 @@ export class ListingsService {
           'seo',
           'featuredOrder',
           'newArrivalOrder',
+          'catalogOrder',
         ] as const
       ).filter((k) => JSON.stringify(row[k]) !== JSON.stringify(previous?.[k])),
       categoryIds: row.categories.map((c) => c.categoryId),

@@ -49,7 +49,10 @@ export const facts = z
     skus: z.array(sku).max(50).optional(),
   })
   .strict();
-export const productCreate = facts.extend({ code });
+export const productCreate = facts.extend({
+  code,
+  externalReference: z.string().min(1).max(160).optional(),
+});
 export const productSave = facts.extend({ revision });
 export const lifecycle = z
   .object({ revision, rootRevision: revision.optional() })
@@ -86,6 +89,7 @@ export const listingCreate = z
     categoryIds: z.array(z.uuid()).max(20).default([]),
     skuRevisionIds: z.array(z.uuid()).max(50).default([]),
     featuredOrder: z.number().int().min(0).max(10000).nullable().default(null),
+    catalogOrder: z.number().int().min(0).max(100000).nullable().default(null),
     newArrivalOrder: z
       .number()
       .int()

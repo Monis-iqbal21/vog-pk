@@ -3,6 +3,20 @@
   align-items: center;
   justify-content: center;
 }
+.product-price small {
+  display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+.catalog-public-product .pd-main-layout > section p,
+.catalog-filters label {
+  overflow-wrap: anywhere;
+}
+.catalog-filters fieldset {
+  min-width: 0;
+}
 .catalog-card-image img {
   max-height: 100%;
   width: 100%;

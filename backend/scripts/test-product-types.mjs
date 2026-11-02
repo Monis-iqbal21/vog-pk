@@ -1128,7 +1128,9 @@ try {
   await db?.$disconnect();
   await cluster.stop();
   if (path.dirname(directory) !== parent) throw Error('Unsafe test cleanup');
-  await fs.rm(directory, { recursive: true, force: true,maxRetries:8,retryDelay:150 });
+  // Windows may retain a short-lived file handle after pg_ctl reports shutdown.
+  // This path belongs to this invocation, never a historical fixture directory.
+  await fs.rm(directory, { recursive: true, force: true,maxRetries:20,retryDelay:200 });
   if(process.env.VOG_TEST_OPERATIONS==='1'){const target=path.resolve(process.env.MEDIA_LOCAL_ROOT),root=path.resolve('.local/operations');if(!target.startsWith(root+path.sep)||!path.basename(target).startsWith('media-'))throw Error('Unsafe media fixture cleanup');await fs.rm(target,{recursive:true,force:true});}
   await fs.mkdir('docs', { recursive: true });
   await fs.writeFile(

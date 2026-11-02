@@ -78,7 +78,10 @@ export default function CatalogCard({ product }) {
               </del>
             )}
           <span className="product-price">
-            <Money offer={product.offer} />
+            <Money offer={product.offer ?? product.referencePrice} />
+            {!product.offer && product.referencePrice && (
+              <small>Reference price · not a selling offer</small>
+            )}
           </span>
           <small>
             {product.sellingMode === "RFQ"

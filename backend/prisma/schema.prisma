@@ -287,6 +287,7 @@ model Store {
   audits AuditLog[]
   legacyBridge LegacyStoreBridge?
   currency String @default("PKR") @db.VarChar(3)
+  locale String @default("en-PK") @db.VarChar(35)
   timeZone String @default("UTC") @db.VarChar(80)
   prices StorePrice[]
   inventoryItems InventoryItem[]
@@ -294,6 +295,7 @@ model Store {
   categories Category[]
   catalogRoutes CatalogRoute[]
   listings StoreListing[]
+  importRecords CatalogImportRecord[]
   @@unique([id, tenantId])
   @@unique([tenantId, slug])
 }
@@ -452,6 +454,7 @@ model Category {
   allowedTypes CategoryAllowedType[]
   routes CatalogRoute[]
   listingAssignments ListingCategory[]
+  importRecords CatalogImportRecord[]
   filterSets CategoryFilterSet[] @relation("CategoryFilterVersions")
   activeFilterSet CategoryFilterSet? @relation("ActiveCategoryFilters", fields: [activeFilterSetId, id, storeId, tenantId], references: [id, categoryId, storeId, tenantId], onDelete: Restrict)
   filterKeys CategoryFilterKey[]
@@ -768,6 +771,7 @@ model StoreListing {
   revisions ListingRevision[] @relation("ListingHistory")
   published ListingRevision? @relation("PublishedListing",fields:[publishedRevisionId,id,storeId,tenantId],references:[id,listingId,storeId,tenantId],onDelete:Restrict)
   routes CatalogRoute[]
+  importRecords CatalogImportRecord[]
   @@unique([id,storeId,tenantId])
   @@unique([id,productId,storeId,tenantId])
   @@unique([storeId,code])
@@ -791,6 +795,7 @@ model ListingRevision {
   seo Json @default("{}")
   featuredOrder Int?
   newArrivalOrder Int?
+  catalogOrder Int?
   createdAt DateTime @default(now())
   createdBy String @db.Uuid
   updatedAt DateTime @updatedAt
@@ -1093,4 +1098,27 @@ model MediaApproval {
   createdAt DateTime @default(now())
   asset MediaAsset @relation(fields:[assetId,tenantId],references:[id,tenantId],onDelete:Restrict)
   @@unique([assetId,approvedRevision])
+}
+
+// Immutable source evidence for explicitly guarded development rehearsals.
+model CatalogImportRecord {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  kind String @db.VarChar(16)
+  sourceKey String @db.VarChar(160)
+  sourceHash String @db.Char(64)
+  manifestHash String @db.Char(64)
+  source Json
+  mapping Json @default("{}")
+  complete Boolean @default(false)
+  listingId String? @db.Uuid
+  categoryId String? @db.Uuid
+  referenceAmount Decimal? @db.Decimal(24,6)
+  createdAt DateTime @default(now())
+  store Store @relation(fields:[storeId,tenantId],references:[id,tenantId],onDelete:Restrict,map:"import_store")
+  listing StoreListing? @relation(fields:[listingId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict,map:"import_listing")
+  category Category? @relation(fields:[categoryId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict,map:"import_category")
+  @@unique([storeId,kind,sourceKey])
+  @@index([listingId,storeId,tenantId])
 }

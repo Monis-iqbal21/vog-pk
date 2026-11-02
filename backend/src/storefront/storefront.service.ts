@@ -187,6 +187,35 @@ export class StorefrontService {
       c.plan.category.ids = c.plan.category.ids.filter((id) =>
         categories.some((r) => r.id === id),
       );
+      const brandFilters = new Set(
+        c.filters.filter((f) => f.source === 'BRAND').map((f) => f.code),
+      );
+      if (brandFilters.size) {
+        const brands = await tx.catalogBrand.findMany({
+          where: {
+            tenantId: ctx.tenantId,
+            code: {
+              in: c.publicDefinition
+                .filter((f) => brandFilters.has(f.code))
+                .flatMap((f) => f.values.map((v) => v.code)),
+            },
+          },
+          select: { code: true, name: true },
+        });
+        c.publicDefinition = c.publicDefinition.map((f) =>
+          brandFilters.has(f.code)
+            ? {
+                ...f,
+                values: f.values.map((value) => ({
+                  ...value,
+                  label:
+                    brands.find((b) => b.code === value.code)?.name ??
+                    value.label,
+                })),
+              }
+            : f,
+        );
+      }
       return { ...c, categories, category };
     }
     const config = category?.filterSetId
@@ -311,6 +340,22 @@ export class StorefrontService {
           : null;
     return {
       id: row.listingId,
+      legacyId:
+        row.listing.importRecords.find(
+          (r) => r.sourceKey === row.productRevision.product.externalReference,
+        )?.sourceKey ?? null,
+      referencePrice:
+        row.sellingMode === 'REFERENCE' &&
+        row.listing.importRecords[0]?.referenceAmount != null &&
+        (row.listing.importRecords[0].mapping as { listingRevisionId?: string })
+          .listingRevisionId === row.id
+          ? {
+              currency: 'PKR',
+              minorUnits: 2,
+              amount: row.listing.importRecords[0].referenceAmount.toString(),
+              approved: false as const,
+            }
+          : null,
       slug: row.slug,
       path: `/products/${row.slug}`,
       name: row.title,
@@ -362,7 +407,9 @@ export class StorefrontService {
                 ? Prisma.sql`lr."publishedAt" DESC`
                 : q.collection === 'new-arrivals'
                   ? Prisma.sql`lr."newArrivalOrder" ASC NULLS LAST`
-                  : Prisma.sql`lr."featuredOrder" ASC NULLS LAST`;
+                  : q.collection === 'featured'
+                    ? Prisma.sql`lr."featuredOrder" ASC NULLS LAST`
+                    : Prisma.sql`COALESCE(lr."catalogOrder",lr."featuredOrder") ASC NULLS LAST`;
       const [selection] = await tx.$queryRaw<
         { items: { id: string; skus: string[] | null }[]; total: number }[]
       >(

@@ -130,7 +130,7 @@ export default function CatalogProduct({ product }) {
                   ? "Reference only"
                   : "Fixed price"}
           </p>
-          <p>Product ID: {product.id}</p>
+          <p>Product ID: {product.legacyId ?? product.id}</p>
           {product.axes.map((a, index) => {
             const options = a.options.filter((o) =>
               product.variants.some(
@@ -164,7 +164,10 @@ export default function CatalogProduct({ product }) {
             );
           })}
           <p className="product-price">
-            <Money offer={offer} />
+            <Money offer={offer ?? product.referencePrice} />
+            {!offer && product.referencePrice && (
+              <small>Reference price · not a selling offer</small>
+            )}
           </p>
           {offer && offer.amount !== offer.regularAmount && (
             <p>

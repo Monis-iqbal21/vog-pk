@@ -58,6 +58,16 @@ export const offerSchema = z.object({
   promotion: text.nullable(),
 });
 export const cardSchema = z.object({
+  legacyId: text.nullable().optional(),
+  referencePrice: z
+    .object({
+      currency: z.literal("PKR"),
+      minorUnits: z.literal(2),
+      amount,
+      approved: z.literal(false),
+    })
+    .nullable()
+    .optional(),
   id: z.uuid(),
   slug: code,
   path,

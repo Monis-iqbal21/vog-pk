@@ -524,6 +524,7 @@ export class ProductsService {
           tenantId,
           productTypeId: schema.productTypeId,
           code: input.code,
+          externalReference: input.externalReference,
           createdBy: actor,
         },
       });

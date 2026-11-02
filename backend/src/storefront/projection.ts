@@ -1,6 +1,14 @@
 import type { Prisma } from '../generated/prisma/client.js';
 import type { Snapshot } from '../catalog/facts.js';
 export const publicGraph = {
+  listing: {
+    include: {
+      importRecords: {
+        where: { complete: true, kind: 'PRODUCT' },
+        select: { sourceKey: true, referenceAmount: true, mapping: true },
+      },
+    },
+  },
   productRevision: {
     include: {
       product: true,
