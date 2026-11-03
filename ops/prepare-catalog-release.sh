@@ -26,7 +26,13 @@ git -C "$repo" archive "$sha" backend frontend | tar -x -C "$target"
 log="$state/catalog-build-$sha.log"
 if ! env -i PATH="$PATH" HOME="$HOME" LANG=C.UTF-8 NODE_ENV=test /bin/bash -c '
  cd "$1/frontend" && npm ci &&
- cd "$1/backend" && npm ci && npm run build && npm run lint && npm test &&
+ cd "$1/backend" && npm ci && npm run build &&
+ # BEGIN RELEASE_LINT
+ mapfile -d "" lint_files < <(find src test -type f -name "*.ts" ! -path "src/generated/*" -print0) &&
+ (( ${#lint_files[@]} > 0 )) &&
+ npm exec --offline --no -- oxlint --type-aware --no-ignore "${lint_files[@]}" &&
+ # END RELEASE_LINT
+ npm test &&
  find dist -type f -print0 | sort -z | xargs -0 sha256sum > RELEASE_ARTIFACTS.sha256
 ' _ "$target" >"$log" 2>&1; then
  fail 'Preparation failed; release retained for private inspection. No service or database changes.'
