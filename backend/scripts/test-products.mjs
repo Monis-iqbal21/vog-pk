@@ -1,0 +1,3 @@
+process.env.VOG_TEST_CATEGORIES='1';
+process.env.VOG_TEST_PRODUCTS='1';
+await import('./test-product-types.mjs');

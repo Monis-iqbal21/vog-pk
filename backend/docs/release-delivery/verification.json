@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "Deterministic 84/12 manifest, local source hashes and strict destination guards",
+      "passed": true,
+      "durationMs": 194
+    },
+    {
+      "name": "Interrupted import resumes through real approved lifecycle without duplicate schema/category records",
+      "passed": true,
+      "durationMs": 47250
+    },
+    {
+      "name": "Exactly 84 legacy products, 12 categories, 84 default SKUs and stable source/destination identities",
+      "passed": true,
+      "durationMs": 448
+    },
+    {
+      "name": "Repeat import makes zero writes; altered manifest and immutable source changes fail closed",
+      "passed": true,
+      "durationMs": 862
+    },
+    {
+      "name": "No approved prices, discounts, invented stock or media grants; original provenance retained",
+      "passed": true,
+      "durationMs": 95
+    },
+    {
+      "name": "Full public API parity for all products, categories, routes, SEO, reference prices and default variants",
+      "passed": true,
+      "durationMs": 7219
+    },
+    {
+      "name": "Editorial membership/order, pagination, search, related products and deterministic sorting",
+      "passed": true,
+      "durationMs": 7248
+    },
+    {
+      "name": "Every equivalent source facet value preserves matching IDs and disjunctive counts",
+      "passed": true,
+      "durationMs": 18302
+    },
+    {
+      "name": "Cross-tenant/store isolation, private drafts, scope forgery and protected APIs remain closed",
+      "passed": true,
+      "durationMs": 823
+    },
+    {
+      "name": "Imported dataset SQL plan, constant per-page query count and isolated 284-record growth store",
+      "passed": true,
+      "durationMs": 5615
+    },
+    {
+      "name": "Built storefront browser parity: desktop/tablet/mobile, reference-only pages, SEO, collections and missing-media safety",
+      "passed": true,
+      "durationMs": 47627
+    },
+    {
+      "name": "Reviewed unit values, cached field provenance and corrected gallery sources survive the real import",
+      "passed": true,
+      "durationMs": 248
+    },
+    {
+      "name": "Imported private previews are digest checked and rights/history/listing impact stay scoped",
+      "passed": true,
+      "durationMs": 204
+    },
+    {
+      "name": "Real approval/rejection records preserve reviewer/evidence/conditions and cannot authorize by URL alone",
+      "passed": true,
+      "durationMs": 227
+    },
+    {
+      "name": "Production-mode staging dry-run leaves catalog writes/public reads off while health and Owner reads work",
+      "passed": true,
+      "durationMs": 1739
+    },
+    {
+      "name": "Authorized admin source-review queue shows exactly ten retained decisions and rejects a foreign tenant",
+      "passed": true,
+      "durationMs": 27
+    },
+    {
+      "name": "Release target, migration inventory and foundation dry-run preserve Owner and refuse drift/revocation",
+      "passed": true,
+      "durationMs": 86
+    },
+    {
+      "name": "Reviewed operator importer verifies 84/12/84/95 and repeats with zero catalog writes",
+      "passed": true,
+      "durationMs": 904
+    },
+    {
+      "name": "Exact operator CLI dry-runs, confirmations and zero-write import execute against an isolated staged bundle",
+      "passed": true,
+      "durationMs": 9377
+    },
+    {
+      "name": "Production read gate stays off by default and explicit isolated cutover exposes only the fixed store",
+      "passed": true,
+      "durationMs": 1388
+    }
+  ],
+  "failedPhase": null,
+  "timings": {
+    "importMs": 31798
+  },
+  "productionAccess": false,
+  "credentialsPersisted": false,
+  "cleanup": "owned API/PostgreSQL/browser/frontend stopped; owned temporary files removed; historical ignored directory untouched"
+}

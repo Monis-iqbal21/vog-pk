@@ -3,10 +3,11 @@ import {cookies} from 'next/headers';
 import {timingSafeEqual} from 'node:crypto';
 import {adminConfig,cookieOptions} from '@/lib/config';
 import {backendRequest} from '@/lib/api';
+import {allowedScopedRoute} from '@/lib/scoped-routes';
 const routes={GET:new Set(['auth/me','roles','permissions','staff','audit-logs']),POST:new Set(['auth/login','auth/logout','staff'])};
 async function handler(request,{params}){
  const {segments}=await params,path=segments.join('/'),method=request.method,cfg=adminConfig();
- const allowed=routes[method]?.has(path)||method==='PATCH'&&/^staff\/[a-f0-9-]{36}$/.test(path);
+ const allowed=routes[method]?.has(path)||method==='PATCH'&&/^staff\/[a-f0-9-]{36}$/.test(path)||allowedScopedRoute(method,path);
  if(!allowed)return NextResponse.json({message:'Not found.'},{status:404});
  if(!cfg.authEnabled)return NextResponse.json({message:'Authentication is disabled for this preview.'},{status:503,headers:{'Cache-Control':'no-store'}});
  const jar=await cookies(),token=jar.get(cfg.sessionCookie)?.value;
@@ -20,13 +21,16 @@ async function handler(request,{params}){
  if(method!=='GET'){
   try{
    const reader=request.body?.getReader();let size=0,text='';const decoder=new TextDecoder();
-   if(reader)while(true){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>16384){await reader.cancel();return NextResponse.json({message:'Request too large.'},{status:413});}text+=decoder.decode(value,{stream:true});}
+   if(reader)while(true){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>(/^scopes\/tenants\/[a-f0-9-]{36}\/media\/uploads$/.test(path)?8388608:16384)){await reader.cancel();return NextResponse.json({message:'Request too large.'},{status:413});}text+=decoder.decode(value,{stream:true});}
    body=JSON.parse(text+decoder.decode());
   }catch{return NextResponse.json({message:'Invalid JSON.'},{status:400});}
  }
  try{
   const clientIp=process.env.TRUST_PROXY_HEADERS==='1'?(request.headers.get('x-vercel-forwarded-for')??request.headers.get('x-forwarded-for')??'unknown').split(',')[0].trim().slice(0,128):'local';
-  const result=await backendRequest(path,{method,token,body,clientIp});
+  // Only schema collection reads forward query parameters. Nest validates every
+  // key and bound; no query can change a tenant or expand the proxy allowlist.
+  const query=method==='GET'&&(/^scopes\/tenants\/[a-f0-9-]{36}\/media\/(assets(?:\/[a-f0-9-]{36}\/content)?)$/.test(path)||/^stores\/[a-f0-9-]{36}\/operations\/(skus\/[a-f0-9-]{36}\/(prices|inventory\/history)|listings\/[a-f0-9-]{36}\/revisions\/[a-f0-9-]{36}\/media\/[a-f0-9-]{36}\/content)$/.test(path)||/^scopes\/tenants\/[a-f0-9-]{36}\/catalog\/products\/[a-f0-9-]{36}\/revisions$/.test(path)||/^stores\/[a-f0-9-]{36}\/listings\/[a-f0-9-]{36}\/revisions$/.test(path)||/^scopes\/tenants\/[a-f0-9-]{36}\/catalog\/(schemas|brands|products)$/.test(path)||/^stores\/[a-f0-9-]{36}\/listings(?:\/catalog)?$/.test(path)||/^scopes\/tenants\/[a-f0-9-]{36}\/schema\/(attributes|option-sets|product-types(?:\/[a-f0-9-]{36}\/versions)?)$/.test(path)||/^stores\/[a-f0-9-]{36}\/(filter-schemas|categories(?:\/tree|\/[a-f0-9-]{36}\/filter-sets)?)$/.test(path))?new URL(request.url).search:'';
+  const result=await backendRequest(path+query,{method,token,body,clientIp});
   if(path==='auth/login'&&result.status===201){
    const response=NextResponse.json({user:result.data.user},{headers:{'Cache-Control':'no-store'}});
    response.cookies.set(cfg.sessionCookie,result.data.token,{...cookieOptions(cfg.secure),expires:new Date(result.data.expiresAt)});return response;

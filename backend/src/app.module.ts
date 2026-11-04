@@ -2,5 +2,10 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller.js';
 import {SecurityModule} from './security/security.module.js';
 import {ReadinessController} from './readiness.controller.js';
-@Module({ imports:[SecurityModule],controllers: [AppController,ReadinessController] })
+import {ProductTypesModule} from './product-types/product-types.module.js';
+import {CategoriesModule} from './categories/categories.module.js';
+import {CatalogModule} from './catalog/catalog.module.js';
+import {OperationsModule} from './operations/operations.module.js';
+import {StorefrontModule} from './storefront/storefront.module.js';
+@Module({ imports:[SecurityModule,ProductTypesModule,CategoriesModule,CatalogModule,OperationsModule,StorefrontModule],controllers: [AppController,ReadinessController] })
 export class AppModule {}

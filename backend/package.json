@@ -31,7 +31,21 @@
     "test:security:fresh": "npm run build && node scripts/test-security-fresh.mjs",
     "security:cleanup": "tsx scripts/cleanup-security.ts",
     "verify:dev:provision": "node scripts/provision-development-verification.mjs",
-    "owner:setup": "node scripts/setup-owner-access.mjs"
+    "owner:setup": "node scripts/setup-owner-access.mjs",
+    "foundation:init:dev": "tsx scripts/initialize-foundation.ts",
+    "test:foundation": "npm run build && node scripts/test-foundation.mjs",
+    "test:product-types": "npm run build && node scripts/test-product-types.mjs",
+    "test:categories": "npm run build && node scripts/test-categories.mjs",
+    "test:products": "npm run build && node scripts/test-products.mjs",
+    "test:operations": "npm run build && node scripts/test-operations.mjs",
+    "test:storefront": "npm run build && node scripts/test-storefront.mjs",
+    "catalog:manifest": "node scripts/legacy-catalog-manifest.mjs --write",
+    "test:catalog-migration": "npm run build && node scripts/test-catalog-migration.mjs",
+    "catalog:preflight": "npm run build && node scripts/catalog-preflight-report.mjs",
+    "test:catalog-preflight": "npm run build && node scripts/test-catalog-preflight.mjs",
+    "test:catalog-compliance": "npm run build && node scripts/test-catalog-compliance.mjs",
+    "test:release-delivery": "npm run build && node scripts/test-release-delivery.mjs",
+    "catalog:release": "node scripts/catalog-release.mjs"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",
@@ -45,6 +59,7 @@
     "pg": "^8.23.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
+    "sharp": "0.35.5",
     "zod": "^4.6.7"
   },
   "devDependencies": {
@@ -59,6 +74,7 @@
     "embedded-postgres": "^18.4.0-beta.17",
     "oxlint": "^1.58.0",
     "oxlint-tsgolint": "^7.0.2001",
+    "playwright": "^1.64.1",
     "prettier": "^3.4.2",
     "prisma": "^7.10.1",
     "source-map-support": "^0.5.21",

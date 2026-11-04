@@ -4,13 +4,13 @@ import Link from 'next/link';
 import {usePathname,useRouter} from 'next/navigation';
 import {useEffect,useRef,useState} from 'react';
 import {LayoutDashboard,Package,Tags,Layers,ImageIcon,PanelsTopLeft,Ticket,ShoppingBag,Settings,Users,ScrollText,PanelLeftClose,PanelLeftOpen,Menu,X,LogOut,ChevronDown} from 'lucide-react';
-import {modules} from '@/config/modules';
+import {modules,canOpenModule} from '@/config/modules';
 import {adminMutation} from '@/lib/client-api';
 import {loginPath} from '@/lib/return-path';
 const icons={overview:LayoutDashboard,products:Package,categories:Tags,variants:Layers,media:ImageIcon,homepage:PanelsTopLeft,coupons:Ticket,orders:ShoppingBag,settings:Settings,staff:Users,audit:ScrollText};
 export default function AdminShell({user,children}){
  const path=usePathname(),[collapsed,setCollapsed]=useState(false),[open,setOpen]=useState(false),[logoutError,setLogoutError]=useState(''),[pending,setPending]=useState(false),dialog=useRef(null);
- const permitted=modules.filter(module=>user.permissions.includes(module.permission));
+ const permitted=modules.filter(module=>canOpenModule(user,module));
  const router=useRouter();
  useEffect(()=>{const expired=()=>{router.replace(loginPath(path+window.location.search));router.refresh();};window.addEventListener('vog:session-expired',expired);return ()=>window.removeEventListener('vog:session-expired',expired);},[router,path]);
  useEffect(()=>{if(!open)return;const old=document.body.style.overflow;document.body.style.overflow='hidden';const media=matchMedia('(min-width:1024px)');const close=()=>{if(media.matches)dialog.current?.close();};media.addEventListener('change',close);return ()=>{document.body.style.overflow=old;media.removeEventListener('change',close);};},[open]);

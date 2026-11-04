@@ -1,0 +1,131 @@
+.catalog-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-price small {
+  display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+.catalog-public-product .pd-main-layout > section p,
+.catalog-filters label {
+  overflow-wrap: anywhere;
+}
+.catalog-filters fieldset {
+  min-width: 0;
+}
+.catalog-card-image img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.catalog-image-fallback {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  width: 100%;
+}
+.catalog-posters {
+  margin-top: 3rem;
+}
+.catalog-posters figure {
+  margin: 0 0 2rem;
+}
+.catalog-posters img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important;
+}
+.catalog-posters figcaption {
+  padding: 1rem;
+  color: var(--color-text-secondary);
+}
+.catalog-specs > div {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 2fr;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem;
+  gap: 1rem;
+}
+.catalog-specs dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.catalog-axis {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.catalog-axis select,
+.catalog-filters select,
+.catalog-filters input:not([type="checkbox"]) {
+  padding: 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  max-width: 100%;
+  min-width: 0;
+}
+.catalog-filters label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.5rem 0;
+  min-height: 32px;
+}
+.catalog-filters form label {
+  display: grid;
+}
+.catalog-filters fieldset {
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+}
+.catalog-category-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.catalog-description {
+  margin: 2rem 0;
+}
+.catalog-public-product .pd-gallery .pd-main-image img {
+  height: 100% !important;
+  object-fit: contain;
+}
+.catalog-category-home {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.catalog-category-home a {
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+@media (max-width: 767px) {
+  .catalog-filters {
+    width: 100%;
+    grid-column: 1/-1;
+  }
+  .catalog-filters details {
+    padding: 1rem;
+    background: var(--color-surface);
+  }
+  .catalog-specs > div {
+    grid-template-columns: 1fr;
+  }
+  .catalog-axis select {
+    width: 100%;
+  }
+}

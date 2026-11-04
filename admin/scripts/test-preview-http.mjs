@@ -45,10 +45,11 @@ try{
  for(let i=0;i<100;i++){if(exited)throw new Error('Preview server exited');try{if((await fetch(base+'/login')).status===200)break;}catch{}if(i===99)throw new Error('Startup timeout');await new Promise(resolve=>setTimeout(resolve,100));}
  const page=await fetch(base+'/login'),html=await page.text();assert.equal(page.status,200);assert.match(html,/Sign-in is disabled/);assert.doesNotMatch(html,/name="password"/);checks++;
  const headers={Cookie:'__Host-vog_admin_session='+'0'.repeat(64)+'; __Host-vog_admin_preview_session='+'0'.repeat(64)};
- for(const section of ['','dashboard','products','categories','variants','media','homepage','coupons','orders','settings','staff','audit-logs']){
+ for(const section of ['','dashboard','attributes','product-types','products','categories','variants','media','homepage','coupons','orders','settings','staff','audit-logs']){
   const result=await fetch(base+'/'+section,{headers,redirect:'manual'});assert.equal(result.status,307);assert.equal(new URL(result.headers.get('location'),base).pathname,'/login');checks++;
  }
- for(const [method,route] of [['GET','auth/me'],['GET','roles'],['GET','permissions'],['GET','staff'],['GET','audit-logs'],['POST','auth/login'],['POST','auth/logout'],['POST','staff'],['PATCH','staff/00000000-0000-4000-8000-000000000000']]){
+ const schema='scopes/tenants/00000000-0000-4000-8000-000000000000/schema';
+ for(const [method,route] of [['GET','contexts/schema'],['GET',schema+'/registry'],['GET',schema+'/attributes'],['POST',schema+'/attributes'],['POST',schema+'/product-types'],['GET','contexts'],['GET','scopes/platform/access'],['POST','scopes/platform/roles'],['GET','auth/me'],['GET','roles'],['GET','permissions'],['GET','staff'],['GET','audit-logs'],['POST','auth/login'],['POST','auth/logout'],['POST','staff'],['PATCH','staff/00000000-0000-4000-8000-000000000000']]){
   const result=await fetch(base+'/api/admin/'+route,{method,headers:{...headers,Origin:'https://'+env.VERCEL_URL,'Content-Type':'application/json'},...(method==='GET'?{}:{body:'{}'})});
   assert.equal(result.status,503);assert.equal(result.headers.get('set-cookie'),null);assert.match(result.headers.get('cache-control'),/no-store/);assert.match((await result.json()).message,/disabled for this preview/);checks++;
  }

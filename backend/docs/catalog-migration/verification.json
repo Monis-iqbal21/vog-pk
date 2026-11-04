@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "Deterministic 84/12 manifest, local source hashes and strict destination guards",
+      "passed": true,
+      "durationMs": 152
+    },
+    {
+      "name": "Interrupted import resumes through real approved lifecycle without duplicate schema/category records",
+      "passed": true,
+      "durationMs": 43696
+    },
+    {
+      "name": "Exactly 84 legacy products, 12 categories, 84 default SKUs and stable source/destination identities",
+      "passed": true,
+      "durationMs": 253
+    },
+    {
+      "name": "Repeat import makes zero writes; altered manifest and immutable source changes fail closed",
+      "passed": true,
+      "durationMs": 456
+    },
+    {
+      "name": "No approved prices, discounts, invented stock or media grants; original provenance retained",
+      "passed": true,
+      "durationMs": 55
+    },
+    {
+      "name": "Full public API parity for all products, categories, routes, SEO, reference prices and default variants",
+      "passed": true,
+      "durationMs": 6761
+    },
+    {
+      "name": "Editorial membership/order, pagination, search, related products and deterministic sorting",
+      "passed": true,
+      "durationMs": 4557
+    },
+    {
+      "name": "Every equivalent source facet value preserves matching IDs and disjunctive counts",
+      "passed": true,
+      "durationMs": 14502
+    },
+    {
+      "name": "Cross-tenant/store isolation, private drafts, scope forgery and protected APIs remain closed",
+      "passed": true,
+      "durationMs": 572
+    },
+    {
+      "name": "Imported dataset SQL plan, constant per-page query count and isolated 284-record growth store",
+      "passed": true,
+      "durationMs": 4102
+    },
+    {
+      "name": "Built storefront browser parity: desktop/tablet/mobile, reference-only pages, SEO, collections and missing-media safety",
+      "passed": true,
+      "durationMs": 69927
+    }
+  ],
+  "failedPhase": null,
+  "timings": {
+    "importMs": 28625
+  },
+  "productionAccess": false,
+  "credentialsPersisted": false,
+  "cleanup": "owned API/PostgreSQL/browser/frontend stopped; owned temporary files removed; historical ignored directory untouched"
+}

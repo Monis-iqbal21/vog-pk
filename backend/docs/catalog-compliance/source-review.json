@@ -1,0 +1,1694 @@
+{
+  "baseline": "f40b0e9",
+  "previouslyResolved": 58,
+  "newFactsInvented": 0,
+  "newFactualResolutions": 0,
+  "remainingFactGaps": 72,
+  "blocking": 0,
+  "requiresAdminReview": 10,
+  "nonBlockingUnknown": 62,
+  "meaning": "Classification closes triage, not factual verification. No mandatory identity/relationship failure was found among these 72 findings; consult fresh parity tests separately. Media/business/operational blockers remain.",
+  "products": [
+    {
+      "id": "amd-ryzen9-9950x",
+      "name": "AMD Ryzen 9 9950X (Tray)",
+      "findings": [
+        {
+          "id": "7A-008",
+          "product": "amd-ryzen9-9950x",
+          "field": "manufacturerSku",
+          "reason": "NOT_RECORDED; no part number inferred",
+          "productName": "AMD Ryzen 9 9950X (Tray)",
+          "type": "MISSING_MANUFACTURER_PART_NUMBER",
+          "severity": "MEDIUM",
+          "affects": [
+            "product correctness",
+            "procurement"
+          ],
+          "decision": "Confirm exact boxed/tray manufacturer part number from approved supplier evidence; retain null until confirmed. Not required to invent a browsing SKU.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "REQUIRES ADMIN REVIEW",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-009",
+          "product": "amd-ryzen9-9950x",
+          "field": "manufacturer",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "AMD Ryzen 9 9950X (Tray)",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-010",
+          "product": "amd-ryzen9-9950x",
+          "field": "family",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "AMD Ryzen 9 9950X (Tray)",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "intel-core-i7-13700k-tray",
+      "name": "Intel Core i7-13700K (Tray)",
+      "findings": [
+        {
+          "id": "7A-011",
+          "product": "intel-core-i7-13700k-tray",
+          "field": "manufacturerSku",
+          "reason": "NOT_RECORDED; no part number inferred",
+          "productName": "Intel Core i7-13700K (Tray)",
+          "type": "MISSING_MANUFACTURER_PART_NUMBER",
+          "severity": "MEDIUM",
+          "affects": [
+            "product correctness",
+            "procurement"
+          ],
+          "decision": "Confirm exact boxed/tray manufacturer part number from approved supplier evidence; retain null until confirmed. Not required to invent a browsing SKU.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "REQUIRES ADMIN REVIEW",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-012",
+          "product": "intel-core-i7-13700k-tray",
+          "field": "manufacturer",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i7-13700K (Tray)",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-013",
+          "product": "intel-core-i7-13700k-tray",
+          "field": "family",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i7-13700K (Tray)",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "intel-core-i5-13600k",
+      "name": "Intel Core i5-13600K",
+      "findings": [
+        {
+          "id": "7A-014",
+          "product": "intel-core-i5-13600k",
+          "field": "manufacturerSku",
+          "reason": "NOT_RECORDED; no part number inferred",
+          "productName": "Intel Core i5-13600K",
+          "type": "MISSING_MANUFACTURER_PART_NUMBER",
+          "severity": "MEDIUM",
+          "affects": [
+            "product correctness",
+            "procurement"
+          ],
+          "decision": "Confirm exact boxed/tray manufacturer part number from approved supplier evidence; retain null until confirmed. Not required to invent a browsing SKU.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "REQUIRES ADMIN REVIEW",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-015",
+          "product": "intel-core-i5-13600k",
+          "field": "manufacturer",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i5-13600K",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-016",
+          "product": "intel-core-i5-13600k",
+          "field": "family",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i5-13600K",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "intel-core-i7-12700k-tray",
+      "name": "Intel Core i7-12700K (Tray)",
+      "findings": [
+        {
+          "id": "7A-017",
+          "product": "intel-core-i7-12700k-tray",
+          "field": "manufacturerSku",
+          "reason": "NOT_RECORDED; no part number inferred",
+          "productName": "Intel Core i7-12700K (Tray)",
+          "type": "MISSING_MANUFACTURER_PART_NUMBER",
+          "severity": "MEDIUM",
+          "affects": [
+            "product correctness",
+            "procurement"
+          ],
+          "decision": "Confirm exact boxed/tray manufacturer part number from approved supplier evidence; retain null until confirmed. Not required to invent a browsing SKU.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "REQUIRES ADMIN REVIEW",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-018",
+          "product": "intel-core-i7-12700k-tray",
+          "field": "manufacturer",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i7-12700K (Tray)",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-019",
+          "product": "intel-core-i7-12700k-tray",
+          "field": "family",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i7-12700K (Tray)",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "intel-core-i9-14900k",
+      "name": "Intel Core i9-14900K",
+      "findings": [
+        {
+          "id": "7A-020",
+          "product": "intel-core-i9-14900k",
+          "field": "manufacturerSku",
+          "reason": "NOT_RECORDED; no part number inferred",
+          "productName": "Intel Core i9-14900K",
+          "type": "MISSING_MANUFACTURER_PART_NUMBER",
+          "severity": "MEDIUM",
+          "affects": [
+            "product correctness",
+            "procurement"
+          ],
+          "decision": "Confirm exact boxed/tray manufacturer part number from approved supplier evidence; retain null until confirmed. Not required to invent a browsing SKU.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "REQUIRES ADMIN REVIEW",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-021",
+          "product": "intel-core-i9-14900k",
+          "field": "manufacturer",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i9-14900K",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-022",
+          "product": "intel-core-i9-14900k",
+          "field": "family",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i9-14900K",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "intel-core-i7-12700kf-tray",
+      "name": "Intel Core i7-12700KF (Tray)",
+      "findings": [
+        {
+          "id": "7A-023",
+          "product": "intel-core-i7-12700kf-tray",
+          "field": "manufacturerSku",
+          "reason": "NOT_RECORDED; no part number inferred",
+          "productName": "Intel Core i7-12700KF (Tray)",
+          "type": "MISSING_MANUFACTURER_PART_NUMBER",
+          "severity": "MEDIUM",
+          "affects": [
+            "product correctness",
+            "procurement"
+          ],
+          "decision": "Confirm exact boxed/tray manufacturer part number from approved supplier evidence; retain null until confirmed. Not required to invent a browsing SKU.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "REQUIRES ADMIN REVIEW",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-024",
+          "product": "intel-core-i7-12700kf-tray",
+          "field": "manufacturer",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i7-12700KF (Tray)",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-025",
+          "product": "intel-core-i7-12700kf-tray",
+          "field": "family",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i7-12700KF (Tray)",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "intel-core-i5-11400",
+      "name": "Intel Core i5-11400",
+      "findings": [
+        {
+          "id": "7A-026",
+          "product": "intel-core-i5-11400",
+          "field": "manufacturerSku",
+          "reason": "NOT_RECORDED; no part number inferred",
+          "productName": "Intel Core i5-11400",
+          "type": "MISSING_MANUFACTURER_PART_NUMBER",
+          "severity": "MEDIUM",
+          "affects": [
+            "product correctness",
+            "procurement"
+          ],
+          "decision": "Confirm exact boxed/tray manufacturer part number from approved supplier evidence; retain null until confirmed. Not required to invent a browsing SKU.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "REQUIRES ADMIN REVIEW",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-027",
+          "product": "intel-core-i5-11400",
+          "field": "manufacturer",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i5-11400",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-028",
+          "product": "intel-core-i5-11400",
+          "field": "family",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Intel Core i5-11400",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "kingston-fury-beast-ddr5-16gb-6000",
+      "name": "Kingston FURY Beast DDR5 16GB 6000 CL36 Black",
+      "findings": [
+        {
+          "id": "7A-029",
+          "product": "kingston-fury-beast-ddr5-16gb-6000",
+          "field": "color",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Kingston FURY Beast DDR5 16GB 6000 CL36 Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "kingston-fury-beast-16gb-4800",
+      "name": "Kingston FURY Beast DDR5 16GB 4800",
+      "findings": [
+        {
+          "id": "7A-030",
+          "product": "kingston-fury-beast-16gb-4800",
+          "field": "color",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Kingston FURY Beast DDR5 16GB 4800",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "xpg-spectrix-d35g-32gb-3200-black",
+      "name": "XPG SPECTRIX D35G RGB 32GB (2x16GB) DDR4-3200 Black",
+      "findings": [
+        {
+          "id": "7A-031",
+          "product": "xpg-spectrix-d35g-32gb-3200-black",
+          "field": "color",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "XPG SPECTRIX D35G RGB 32GB (2x16GB) DDR4-3200 Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "xpg-spectrix-d35g-16gb-3200-white",
+      "name": "XPG SPECTRIX D35G RGB 16GB (2x8GB) DDR4-3200 White",
+      "findings": [
+        {
+          "id": "7A-032",
+          "product": "xpg-spectrix-d35g-16gb-3200-white",
+          "field": "color",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "XPG SPECTRIX D35G RGB 16GB (2x8GB) DDR4-3200 White",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "xpg-lancer-blade-rgb-32gb-6000",
+      "name": "XPG LANCER BLADE RGB DDR5 32GB (2x16GB) 6000 Black",
+      "findings": [
+        {
+          "id": "7A-033",
+          "product": "xpg-lancer-blade-rgb-32gb-6000",
+          "field": "color",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "XPG LANCER BLADE RGB DDR5 32GB (2x16GB) 6000 Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "xpg-spectrix-d35g-32gb-3600-white",
+      "name": "XPG SPECTRIX D35G RGB 32GB (2x16GB) DDR4-3600 White",
+      "findings": [
+        {
+          "id": "7A-034",
+          "product": "xpg-spectrix-d35g-32gb-3600-white",
+          "field": "color",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "XPG SPECTRIX D35G RGB 32GB (2x16GB) DDR4-3600 White",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-keris-ii-ace-black",
+      "name": "ASUS ROG Keris II Ace Black",
+      "findings": [
+        {
+          "id": "7A-036",
+          "product": "asus-rog-keris-ii-ace-black",
+          "field": "polling_rate",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Keris II Ace Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Review connection/receiver-dependent multi-valued polling rates; preserve source text and avoid asserting a single maximum or inventing SKU options.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "REQUIRES ADMIN REVIEW",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-gladius-iii-wireless",
+      "name": "ASUS ROG Gladius III Wireless Black",
+      "findings": [
+        {
+          "id": "7A-037",
+          "product": "asus-rog-gladius-iii-wireless",
+          "field": "Buttons quantity",
+          "value": "6 programmable buttons; scroll wheel, profile and pair controls",
+          "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT",
+          "productName": "ASUS ROG Gladius III Wireless Black",
+          "type": "CANONICAL_MEASUREMENT",
+          "severity": "MEDIUM",
+          "affects": [
+            "specifications",
+            "filters"
+          ],
+          "decision": "Retain the full six-programmable-buttons description. Decide whether a separate programmable-button count is appropriate; do not claim total controls=6.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "REQUIRES ADMIN REVIEW",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-chakram-x-origin",
+      "name": "ASUS ROG Chakram X Origin",
+      "findings": [
+        {
+          "id": "7A-039",
+          "product": "asus-rog-chakram-x-origin",
+          "field": "polling_rate",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Chakram X Origin",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Review connection/receiver-dependent multi-valued polling rates; preserve source text and avoid asserting a single maximum or inventing SKU options.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "REQUIRES ADMIN REVIEW",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-tuf-k1",
+      "name": "ASUS TUF Gaming K1 US English",
+      "findings": [
+        {
+          "id": "7A-043",
+          "product": "asus-tuf-k1",
+          "field": "switch_model",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS TUF Gaming K1 US English",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "kingston-fury-renegade-2tb",
+      "name": "Kingston FURY Renegade 2TB NVMe SSD",
+      "findings": [
+        {
+          "id": "7A-045",
+          "product": "kingston-fury-renegade-2tb",
+          "field": "storage_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Kingston FURY Renegade 2TB NVMe SSD",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "kingston-nv2-1tb",
+      "name": "Kingston NV2 1TB NVMe SSD",
+      "findings": [
+        {
+          "id": "7A-047",
+          "product": "kingston-nv2-1tb",
+          "field": "storage_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Kingston NV2 1TB NVMe SSD",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "kingston-kc3000-1tb",
+      "name": "Kingston KC3000 1TB",
+      "findings": [
+        {
+          "id": "7A-049",
+          "product": "kingston-kc3000-1tb",
+          "field": "storage_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Kingston KC3000 1TB",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "kingston-nv3-1tb",
+      "name": "Kingston NV3 1TB NVMe SSD",
+      "findings": [
+        {
+          "id": "7A-051",
+          "product": "kingston-nv3-1tb",
+          "field": "storage_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Kingston NV3 1TB NVMe SSD",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "kingston-nv3-2tb",
+      "name": "Kingston NV3 2TB NVMe SSD",
+      "findings": [
+        {
+          "id": "7A-053",
+          "product": "kingston-nv3-2tb",
+          "field": "storage_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Kingston NV3 2TB NVMe SSD",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "kingston-fury-renegade-1tb",
+      "name": "Kingston FURY Renegade 1TB NVMe SSD",
+      "findings": [
+        {
+          "id": "7A-055",
+          "product": "kingston-fury-renegade-1tb",
+          "field": "storage_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Kingston FURY Renegade 1TB NVMe SSD",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "kingston-nv3-500gb",
+      "name": "Kingston NV3 500GB",
+      "findings": [
+        {
+          "id": "7A-056",
+          "product": "kingston-nv3-500gb",
+          "field": "storage_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "Kingston NV3 500GB",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "msi-g274qpf-e2",
+      "name": "MSI G274QPF E2",
+      "findings": [
+        {
+          "id": "7A-057",
+          "product": "msi-g274qpf-e2",
+          "field": "panel",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "MSI G274QPF E2",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Obtain explicit panel-technology evidence. HD type/resolution is not panel technology.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "msi-mag-forge-m100a-black",
+      "name": "MSI MAG FORGE M100A Black",
+      "findings": [
+        {
+          "id": "7A-074",
+          "product": "msi-mag-forge-m100a-black",
+          "field": "gpu_clearance",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "MSI MAG FORGE M100A Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-ryujin-iii-360-argb",
+      "name": "ASUS ROG Ryujin III 360 ARGB Black",
+      "findings": [
+        {
+          "id": "7A-078",
+          "product": "asus-rog-ryujin-iii-360-argb",
+          "field": "radiator_size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Ryujin III 360 ARGB Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm marketed radiator class from an explicit specification. Physical radiator length is not the marketed 240/360 class.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-ryuo-iii-360-argb",
+      "name": "ASUS ROG Ryuo III 360 ARGB Black",
+      "findings": [
+        {
+          "id": "7A-082",
+          "product": "asus-rog-ryuo-iii-360-argb",
+          "field": "radiator_size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Ryuo III 360 ARGB Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm marketed radiator class from an explicit specification. Physical radiator length is not the marketed 240/360 class.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-strix-lc-iii-360-argb",
+      "name": "ASUS ROG Strix LC III 360 ARGB Black",
+      "findings": [
+        {
+          "id": "7A-086",
+          "product": "asus-rog-strix-lc-iii-360-argb",
+          "field": "radiator_size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Strix LC III 360 ARGB Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm marketed radiator class from an explicit specification. Physical radiator length is not the marketed 240/360 class.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "msi-mag-coreliquid-a13-360-black",
+      "name": "MSI MAG CORELIQUID A13 360 Black",
+      "findings": [
+        {
+          "id": "7A-090",
+          "product": "msi-mag-coreliquid-a13-360-black",
+          "field": "radiator_size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "MSI MAG CORELIQUID A13 360 Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm marketed radiator class from an explicit specification. Physical radiator length is not the marketed 240/360 class.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-strix-lc-ii-240-argb",
+      "name": "ASUS ROG Strix LC II 240 ARGB Black",
+      "findings": [
+        {
+          "id": "7A-094",
+          "product": "asus-rog-strix-lc-ii-240-argb",
+          "field": "radiator_size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Strix LC II 240 ARGB Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm marketed radiator class from an explicit specification. Physical radiator length is not the marketed 240/360 class.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "msi-mag-coreliquid-e360-black",
+      "name": "MSI MAG CORELIQUID E360 Black",
+      "findings": [
+        {
+          "id": "7A-098",
+          "product": "msi-mag-coreliquid-e360-black",
+          "field": "radiator_size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "MSI MAG CORELIQUID E360 Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm marketed radiator class from an explicit specification. Physical radiator length is not the marketed 240/360 class.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "msi-mag-coreliquid-i360-black",
+      "name": "MSI MAG CORELIQUID I360 Black",
+      "findings": [
+        {
+          "id": "7A-102",
+          "product": "msi-mag-coreliquid-i360-black",
+          "field": "radiator_size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "MSI MAG CORELIQUID I360 Black",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm marketed radiator class from an explicit specification. Physical radiator length is not the marketed 240/360 class.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-scabbard-ii",
+      "name": "ASUS ROG Scabbard II",
+      "findings": [
+        {
+          "id": "7A-103",
+          "product": "asus-rog-scabbard-ii",
+          "field": "accessory_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Scabbard II",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-104",
+          "product": "asus-rog-scabbard-ii",
+          "field": "connectivity",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Scabbard II",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Choose not-applicable or confirm actual accessory interface; do not label passive products wired/wireless by assumption.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-105",
+          "product": "asus-rog-scabbard-ii",
+          "field": "compatibility",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Scabbard II",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-106",
+          "product": "asus-rog-scabbard-ii",
+          "field": "size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Scabbard II",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-sheath-ii-xxl",
+      "name": "ASUS ROG Sheath II XXL",
+      "findings": [
+        {
+          "id": "7A-107",
+          "product": "asus-rog-sheath-ii-xxl",
+          "field": "accessory_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Sheath II XXL",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-108",
+          "product": "asus-rog-sheath-ii-xxl",
+          "field": "connectivity",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Sheath II XXL",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Choose not-applicable or confirm actual accessory interface; do not label passive products wired/wireless by assumption.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-109",
+          "product": "asus-rog-sheath-ii-xxl",
+          "field": "compatibility",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Sheath II XXL",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-hone-ace-aim-lab",
+      "name": "ASUS ROG Hone Ace Aim Lab Edition",
+      "findings": [
+        {
+          "id": "7A-111",
+          "product": "asus-rog-hone-ace-aim-lab",
+          "field": "accessory_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Hone Ace Aim Lab Edition",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-112",
+          "product": "asus-rog-hone-ace-aim-lab",
+          "field": "connectivity",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Hone Ace Aim Lab Edition",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Choose not-applicable or confirm actual accessory interface; do not label passive products wired/wireless by assumption.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-113",
+          "product": "asus-rog-hone-ace-aim-lab",
+          "field": "compatibility",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Hone Ace Aim Lab Edition",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-tuf-p1",
+      "name": "ASUS TUF Gaming P1",
+      "findings": [
+        {
+          "id": "7A-115",
+          "product": "asus-tuf-p1",
+          "field": "accessory_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS TUF Gaming P1",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-116",
+          "product": "asus-tuf-p1",
+          "field": "connectivity",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS TUF Gaming P1",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Choose not-applicable or confirm actual accessory interface; do not label passive products wired/wireless by assumption.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-117",
+          "product": "asus-tuf-p1",
+          "field": "compatibility",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS TUF Gaming P1",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-118",
+          "product": "asus-tuf-p1",
+          "field": "size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS TUF Gaming P1",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-scabbard-ii-arctic-gray-xxl",
+      "name": "ASUS ROG Scabbard II Arctic Gray XXL",
+      "findings": [
+        {
+          "id": "7A-119",
+          "product": "asus-rog-scabbard-ii-arctic-gray-xxl",
+          "field": "accessory_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Scabbard II Arctic Gray XXL",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-120",
+          "product": "asus-rog-scabbard-ii-arctic-gray-xxl",
+          "field": "connectivity",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Scabbard II Arctic Gray XXL",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Choose not-applicable or confirm actual accessory interface; do not label passive products wired/wireless by assumption.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-121",
+          "product": "asus-rog-scabbard-ii-arctic-gray-xxl",
+          "field": "compatibility",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Scabbard II Arctic Gray XXL",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-balteus-qi",
+      "name": "ASUS ROG Balteus Qi",
+      "findings": [
+        {
+          "id": "7A-123",
+          "product": "asus-rog-balteus-qi",
+          "field": "accessory_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Balteus Qi",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-124",
+          "product": "asus-rog-balteus-qi",
+          "field": "connectivity",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Balteus Qi",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Choose not-applicable or confirm actual accessory interface; do not label passive products wired/wireless by assumption.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-125",
+          "product": "asus-rog-balteus-qi",
+          "field": "compatibility",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Balteus Qi",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-126",
+          "product": "asus-rog-balteus-qi",
+          "field": "size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Balteus Qi",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    },
+    {
+      "id": "asus-rog-herculx",
+      "name": "ASUS ROG Herculx Graphics Card Holder",
+      "findings": [
+        {
+          "id": "7A-127",
+          "product": "asus-rog-herculx",
+          "field": "accessory_type",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Herculx Graphics Card Holder",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-128",
+          "product": "asus-rog-herculx",
+          "field": "connectivity",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Herculx Graphics Card Holder",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Choose not-applicable or confirm actual accessory interface; do not label passive products wired/wireless by assumption.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-129",
+          "product": "asus-rog-herculx",
+          "field": "compatibility",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Herculx Graphics Card Holder",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        },
+        {
+          "id": "7A-130",
+          "product": "asus-rog-herculx",
+          "field": "size",
+          "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement",
+          "productName": "ASUS ROG Herculx Graphics Card Holder",
+          "type": "MISSING_FILTER_SOURCE",
+          "severity": "LOW",
+          "affects": [
+            "filters",
+            "search completeness"
+          ],
+          "decision": "Confirm this optional facet with exact-model structured evidence, or explicitly mark not applicable. Keep missing values omitted until reviewed.",
+          "status": "PENDING_ADMIN_REVIEW",
+          "originalPreserved": true,
+          "pricingChanged": false,
+          "commercialRightsGranted": false,
+          "classification": "NON-BLOCKING",
+          "publicationPolicy": "Retain the original description and unknown optional data. No invented value or variant; reference-only browsing may continue. Commercial media is a separate decision."
+        }
+      ]
+    }
+  ]
+}

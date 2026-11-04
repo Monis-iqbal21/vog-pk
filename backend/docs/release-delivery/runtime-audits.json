@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "date": "2026-11-03",
+  "scope": "locked runtime dependencies; development dependencies omitted",
+  "apps": {
+    "backend": {
+      "command": "npm audit --omit=dev --json",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 265,
+        "dev": 258,
+        "optional": 115,
+        "peer": 3,
+        "peerOptional": 0,
+        "total": 553
+      }
+    },
+    "admin": {
+      "command": "npm audit --omit=dev --json",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 18,
+        "dev": 378,
+        "optional": 88,
+        "peer": 1,
+        "peerOptional": 0,
+        "total": 433
+      }
+    },
+    "frontend": {
+      "command": "npm audit --omit=dev --json",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 19,
+        "dev": 377,
+        "optional": 88,
+        "peer": 1,
+        "peerOptional": 0,
+        "total": 433
+      }
+    }
+  },
+  "noDependencyUpgrades": true
+}

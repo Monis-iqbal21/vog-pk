@@ -1,0 +1,701 @@
+{
+  "checksum": "be5f9367bcb48e0f01768d45aea28d1303d1a19cef4043a8a767feed8236b02a",
+  "exceptions": [
+    {
+      "product": "rog-strix-rtx5070ti-o16g",
+      "field": "gpu_manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "aorus-rtx5080-master-ice-16g",
+      "field": "gpu_manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-astral-rtx5080-oc-16gb",
+      "field": "gpu_manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "proart-rtx5080-16g",
+      "field": "gpu_manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-prime-rtx5080-oc-16gb",
+      "field": "gpu_manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-prime-rtx5070-oc-12gb-white",
+      "field": "gpu_manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-dual-rtx5070-oc-12gb",
+      "field": "gpu_manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "amd-ryzen9-9950x",
+      "field": "manufacturerSku",
+      "reason": "NOT_RECORDED; no part number inferred"
+    },
+    {
+      "product": "amd-ryzen9-9950x",
+      "field": "manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "amd-ryzen9-9950x",
+      "field": "family",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i7-13700k-tray",
+      "field": "manufacturerSku",
+      "reason": "NOT_RECORDED; no part number inferred"
+    },
+    {
+      "product": "intel-core-i7-13700k-tray",
+      "field": "manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i7-13700k-tray",
+      "field": "family",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i5-13600k",
+      "field": "manufacturerSku",
+      "reason": "NOT_RECORDED; no part number inferred"
+    },
+    {
+      "product": "intel-core-i5-13600k",
+      "field": "manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i5-13600k",
+      "field": "family",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i7-12700k-tray",
+      "field": "manufacturerSku",
+      "reason": "NOT_RECORDED; no part number inferred"
+    },
+    {
+      "product": "intel-core-i7-12700k-tray",
+      "field": "manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i7-12700k-tray",
+      "field": "family",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i9-14900k",
+      "field": "manufacturerSku",
+      "reason": "NOT_RECORDED; no part number inferred"
+    },
+    {
+      "product": "intel-core-i9-14900k",
+      "field": "manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i9-14900k",
+      "field": "family",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i7-12700kf-tray",
+      "field": "manufacturerSku",
+      "reason": "NOT_RECORDED; no part number inferred"
+    },
+    {
+      "product": "intel-core-i7-12700kf-tray",
+      "field": "manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i7-12700kf-tray",
+      "field": "family",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i5-11400",
+      "field": "manufacturerSku",
+      "reason": "NOT_RECORDED; no part number inferred"
+    },
+    {
+      "product": "intel-core-i5-11400",
+      "field": "manufacturer",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "intel-core-i5-11400",
+      "field": "family",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "kingston-fury-beast-ddr5-16gb-6000",
+      "field": "color",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "kingston-fury-beast-16gb-4800",
+      "field": "color",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "xpg-spectrix-d35g-32gb-3200-black",
+      "field": "color",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "xpg-spectrix-d35g-16gb-3200-white",
+      "field": "color",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "xpg-lancer-blade-rgb-32gb-6000",
+      "field": "color",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "xpg-spectrix-d35g-32gb-3600-white",
+      "field": "color",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-harpe-ace-aim-lab",
+      "field": "polling_rate",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-keris-ii-ace-black",
+      "field": "polling_rate",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-gladius-iii-wireless",
+      "field": "Buttons quantity",
+      "value": "6 programmable buttons; scroll wheel, profile and pair controls",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-gladius-iii-wireless",
+      "field": "polling_rate",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-chakram-x-origin",
+      "field": "polling_rate",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-strix-impact-iii",
+      "field": "polling_rate",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-tuf-m4-air",
+      "field": "polling_rate",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-spatha-x",
+      "field": "polling_rate",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-tuf-k1",
+      "field": "switch_model",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "kingston-fury-renegade-2tb",
+      "field": "SSD capacity",
+      "value": "2 TB",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "kingston-fury-renegade-2tb",
+      "field": "storage_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "kingston-nv2-1tb",
+      "field": "SSD capacity",
+      "value": "1 TB",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "kingston-nv2-1tb",
+      "field": "storage_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "kingston-kc3000-1tb",
+      "field": "SSD capacity",
+      "value": "1 TB",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "kingston-kc3000-1tb",
+      "field": "storage_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "kingston-nv3-1tb",
+      "field": "SSD capacity",
+      "value": "1 TB",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "kingston-nv3-1tb",
+      "field": "storage_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "kingston-nv3-2tb",
+      "field": "SSD capacity",
+      "value": "2 TB",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "kingston-nv3-2tb",
+      "field": "storage_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "kingston-fury-renegade-1tb",
+      "field": "SSD capacity",
+      "value": "1 TB",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "kingston-fury-renegade-1tb",
+      "field": "storage_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "kingston-nv3-500gb",
+      "field": "storage_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "msi-g274qpf-e2",
+      "field": "panel",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-thor-1000p2",
+      "field": "Fan diameter",
+      "value": "13.5 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-a850gl-pcie5",
+      "field": "Fan diameter",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-a750gl-pcie5",
+      "field": "Fan diameter",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mpg-a1000g-pcie5",
+      "field": "Fan diameter",
+      "value": "13.5 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-hyperion-gr701-black",
+      "field": "Maximum CPU cooler height",
+      "value": "19 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-hyperion-gr701-black",
+      "field": "Maximum graphics card length",
+      "value": "46 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-proart-pa602-black",
+      "field": "Maximum CPU cooler height",
+      "value": "19 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-proart-pa602-black",
+      "field": "Maximum graphics card length",
+      "value": "45 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-pano-m100r-pz-black",
+      "field": "Maximum CPU cooler height",
+      "value": "17.5 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-pano-m100r-pz-black",
+      "field": "Maximum graphics card length",
+      "value": "39 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-tuf-gt501-black",
+      "field": "Maximum CPU cooler height",
+      "value": "18 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-tuf-gt501-black",
+      "field": "Maximum graphics card length",
+      "value": "42 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-forge-320r-airflow",
+      "field": "Maximum CPU cooler height",
+      "value": "16 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-forge-320r-airflow",
+      "field": "Maximum graphics card length",
+      "value": "39 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-prime-ap201-tg-black",
+      "field": "Maximum CPU cooler height",
+      "value": "17 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-prime-ap201-tg-black",
+      "field": "Maximum graphics card length",
+      "value": "33.8 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-forge-m100a-black",
+      "field": "gpu_clearance",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-ryujin-iii-360-argb",
+      "field": "Radiator width",
+      "value": "40 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-ryujin-iii-360-argb",
+      "field": "Radiator depth",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-ryujin-iii-360-argb",
+      "field": "Fan diameter",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-ryujin-iii-360-argb",
+      "field": "radiator_size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-ryuo-iii-360-argb",
+      "field": "Radiator width",
+      "value": "40 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-ryuo-iii-360-argb",
+      "field": "Radiator depth",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-ryuo-iii-360-argb",
+      "field": "Fan diameter",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-ryuo-iii-360-argb",
+      "field": "radiator_size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-strix-lc-iii-360-argb",
+      "field": "Radiator width",
+      "value": "39.4 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-strix-lc-iii-360-argb",
+      "field": "Radiator depth",
+      "value": "12.1 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-strix-lc-iii-360-argb",
+      "field": "Fan diameter",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-strix-lc-iii-360-argb",
+      "field": "radiator_size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "msi-mag-coreliquid-a13-360-black",
+      "field": "Radiator width",
+      "value": "39.4 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-coreliquid-a13-360-black",
+      "field": "Radiator depth",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-coreliquid-a13-360-black",
+      "field": "Fan diameter",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-coreliquid-a13-360-black",
+      "field": "radiator_size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-strix-lc-ii-240-argb",
+      "field": "Radiator width",
+      "value": "12.1 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-strix-lc-ii-240-argb",
+      "field": "Radiator depth",
+      "value": "27.2 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-strix-lc-ii-240-argb",
+      "field": "Fan diameter",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "asus-rog-strix-lc-ii-240-argb",
+      "field": "radiator_size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "msi-mag-coreliquid-e360-black",
+      "field": "Radiator width",
+      "value": "39.4 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-coreliquid-e360-black",
+      "field": "Radiator depth",
+      "value": "11.9 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-coreliquid-e360-black",
+      "field": "Fan diameter",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-coreliquid-e360-black",
+      "field": "radiator_size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "msi-mag-coreliquid-i360-black",
+      "field": "Radiator width",
+      "value": "39.4 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-coreliquid-i360-black",
+      "field": "Radiator depth",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-coreliquid-i360-black",
+      "field": "Fan diameter",
+      "value": "12 cm",
+      "reason": "NO_LOSSLESS_CANONICAL_UNIT_MAPPING; original retained as TEXT"
+    },
+    {
+      "product": "msi-mag-coreliquid-i360-black",
+      "field": "radiator_size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-scabbard-ii",
+      "field": "accessory_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-scabbard-ii",
+      "field": "connectivity",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-scabbard-ii",
+      "field": "compatibility",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-scabbard-ii",
+      "field": "size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-sheath-ii-xxl",
+      "field": "accessory_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-sheath-ii-xxl",
+      "field": "connectivity",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-sheath-ii-xxl",
+      "field": "compatibility",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-sheath-ii-xxl",
+      "field": "size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-hone-ace-aim-lab",
+      "field": "accessory_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-hone-ace-aim-lab",
+      "field": "connectivity",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-hone-ace-aim-lab",
+      "field": "compatibility",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-hone-ace-aim-lab",
+      "field": "size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-tuf-p1",
+      "field": "accessory_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-tuf-p1",
+      "field": "connectivity",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-tuf-p1",
+      "field": "compatibility",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-tuf-p1",
+      "field": "size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-scabbard-ii-arctic-gray-xxl",
+      "field": "accessory_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-scabbard-ii-arctic-gray-xxl",
+      "field": "connectivity",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-scabbard-ii-arctic-gray-xxl",
+      "field": "compatibility",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-scabbard-ii-arctic-gray-xxl",
+      "field": "size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-balteus-qi",
+      "field": "accessory_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-balteus-qi",
+      "field": "connectivity",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-balteus-qi",
+      "field": "compatibility",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-balteus-qi",
+      "field": "size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-herculx",
+      "field": "accessory_type",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-herculx",
+      "field": "connectivity",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-herculx",
+      "field": "compatibility",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    },
+    {
+      "product": "asus-rog-herculx",
+      "field": "size",
+      "reason": "SOURCE_FILTER_HAS_NO_VALUE; no inferred replacement"
+    }
+  ],
+  "media": "All legacy references retained; none automatically approved or delivered",
+  "posters": "Absent for all 84 products"
+}

@@ -1,0 +1,225 @@
+{
+  "milestone": 3,
+  "productionAccess": false,
+  "newDependencies": false,
+  "validation": {
+    "backendBuild": "PASS",
+    "backendLint": "PASS",
+    "backendUnitTests": {
+      "passed": 18
+    },
+    "categoryAndProductTypeIntegration": {
+      "passed": 24,
+      "realPostgres": "18.4",
+      "realAdminBrowser": true
+    },
+    "foundationRegression": {
+      "passed": 23
+    },
+    "authenticationRegression": {
+      "passed": 25
+    },
+    "adminLint": "PASS",
+    "adminProductionBuild": "PASS (env-free isolated real API fixture)",
+    "frontendLint": "PASS",
+    "frontendProductionBuild": "PASS (187 pages)",
+    "routingRegression": {
+      "passed": 19
+    },
+    "previewConfiguration": {
+      "passed": 10
+    },
+    "previewHttp": {
+      "passed": 38
+    },
+    "bffAllowlist": {
+      "legacyAssertions": 57,
+      "categoryAssertions": 59
+    },
+    "staticCatalog": {
+      "categories": 12,
+      "products": 84,
+      "sourceUnchanged": true
+    },
+    "additivePopulatedUpgrade": "PASS"
+  },
+  "dependencies": {
+    "backendProduction": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "adminProduction": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "backendAll": {
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "moderate": 2,
+        "high": 0,
+        "critical": 0,
+        "total": 2
+      },
+      "packages": [
+        {
+          "name": "@nestjs/cli",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "minimatch",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": [
+            {
+              "title": "minimatch has potential denial of service via globparts amplification",
+              "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249"
+            }
+          ]
+        }
+      ]
+    },
+    "adminAll": {
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "moderate": 16,
+        "high": 0,
+        "critical": 0,
+        "total": 16
+      },
+      "packages": [
+        {
+          "name": "@eslint-community/eslint-utils",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "@eslint/config-array",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "@eslint/eslintrc",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "@next/eslint-plugin-next",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/eslint-plugin",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/parser",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/type-utils",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/typescript-estree",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "@typescript-eslint/utils",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "eslint",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "eslint-config-next",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "eslint-plugin-import",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "eslint-plugin-jsx-a11y",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "eslint-plugin-react",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        },
+        {
+          "name": "minimatch",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": [
+            {
+              "title": "minimatch has potential denial of service via globparts amplification",
+              "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249"
+            }
+          ]
+        },
+        {
+          "name": "typescript-eslint",
+          "severity": "moderate",
+          "developmentOnly": true,
+          "advisories": []
+        }
+      ]
+    },
+    "decision": "Existing moderate development-tool advisories retained; no forced incompatible Nest/ESLint downgrade and no dependency changes."
+  },
+  "secretScan": {
+    "status": "PASS",
+    "scanner": "Gitleaks 8.30.1",
+    "scope": "Exact staged source, migration, documentation and evidence contents",
+    "findings": 0,
+    "forbiddenStagedArtifacts": 0,
+    "privateKeyMarkers": 0,
+    "rawReport": "Ignored local report only; rescan after staging this report before commit"
+  },
+  "boundaries": {
+    "push": false,
+    "merge": false,
+    "deployment": false,
+    "productionMigrations": false,
+    "productsOrSkusImplemented": false,
+    "realFacetEngine": false,
+    "operationsAutomationActivated": false
+  }
+}
