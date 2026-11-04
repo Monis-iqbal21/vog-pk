@@ -41,6 +41,9 @@ export async function initializeReleaseFixture(db, url, owner) {
       presentation: 'PENDING',
     };
   await assertReleaseTarget(db, url, plan);
+  await (
+    await import('./release-foundation-regression.mjs')
+  ).verifyFoundationRegression(db, plan);
   const before = await authFingerprint(db),
     tenants = await db.tenant.count();
   assert.equal((await initializeReleaseFoundation(db, plan)).dryRun, true);
@@ -49,7 +52,7 @@ export async function initializeReleaseFixture(db, url, owner) {
   await initializeReleaseFoundation(db, plan, { apply: true });
   assert.equal(await authFingerprint(db), before);
   assert.equal(await db.platformRoleAssignment.count(), 0);
-  assert.equal(await db.tenant.count(), tenants + 1);
+  assert.equal(await db.tenant.count(), tenants);
   return { plan, tenantId: plan.tenantId, storeId: plan.storeId };
 }
 export async function verifyReleaseDelivery({

@@ -10,6 +10,7 @@ import { assertReleaseTarget } from './release-target.mjs';
 import { buildPreflightManifest } from './catalog-preflight-manifest.mjs';
 import { digest } from './legacy-catalog-manifest.mjs';
 import { importLegacyCatalog } from './import-legacy-catalog.mjs';
+import { releaseFailureDiagnostic } from './release-failure.mjs';
 import {
   migrationInventory,
   schemaFingerprint,
@@ -253,18 +254,15 @@ try {
   await record('PASS', { result });
   console.log(JSON.stringify({ passed: true, command, result }));
 } catch (error) {
+  const diagnostic = releaseFailureDiagnostic(error);
   await record('FAIL', {
     phase,
+    ...diagnostic,
     retryPolicy:
       'STOP; inspect sanitized checkpoints; never reset or discard edits',
   }).catch(() => {});
-  const safeCode = /^(?:ENOENT|EACCES|EPERM|EINVAL|P\d{4})$/.test(
-    error?.code ?? '',
-  )
-    ? error.code
-    : 'GUARD_OR_VALIDATION';
   console.error(
-    `Release operation failed closed at ${phase} (${safeCode}). No sensitive diagnostics printed. Inspect the private journal and reviewed runbook.`,
+    `Release operation failed closed at ${phase} (${diagnostic.code}). No sensitive diagnostics printed. Inspect the private journal and reviewed runbook.`,
   );
   process.exitCode = 1;
 } finally {

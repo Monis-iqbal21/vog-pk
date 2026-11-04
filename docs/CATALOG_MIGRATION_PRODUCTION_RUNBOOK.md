@@ -157,6 +157,19 @@ account/provider is assumed. Audit existing frontend/public/images/products and
 remove/restrict unapproved static copies as a separately approved launch action;
 blocking the dynamic media API alone does not revoke old static-file access.
 
+## Scoped initialization hold — 5 November 2026
+
+Production has nine applied migrations and zero pending migrations. Scoped
+initialization failed; no tenant/store/bridge/membership was created. The lone
+ungranted `media.approve` permission must remain untouched. Do not rerun migrations,
+retry the old initializer, or use a pre-migration schema fingerprint.
+
+See [the investigation and local correction](SCOPED_INITIALIZATION_INVESTIGATION_20261105.md)
+for the reproduced transaction-expiry race, isolated PostgreSQL 18.6 regression
+results and fresh encrypted recovery evidence. A separately reviewed/staged script
+patch and a newly approved foundation-only plan are required before any retry.
+Production rollout remains NO-GO; no API restart is needed for the script fix.
+
 ## Failure handling and rollback
 
 Stop on failed backup/restore proof, migration drift, route collision, missing source

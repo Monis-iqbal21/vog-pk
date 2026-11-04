@@ -69,6 +69,8 @@ export async function initializeReleaseFoundation(
   plan,
   { apply = false } = {},
 ) {
+  const started = Date.now();
+  let step = 'guards';
   const execute = async (tx) => {
     if (!apply) await tx.$executeRaw`SET TRANSACTION READ ONLY`;
     if (apply) await tx.$executeRaw`SELECT pg_advisory_xact_lock(78201901)`;
@@ -141,21 +143,32 @@ export async function initializeReleaseFoundation(
         createsStore: !store,
         platformGrants: 0,
       };
-    for (const [code, scopes] of Object.entries(SCOPED_PERMISSIONS)) {
-      const permission = await tx.permission.upsert({
-        where: { code },
-        create: { code, description: code },
-        update: {},
-      });
-      for (const scopeKind of scopes)
-        await tx.permissionScope.upsert({
-          where: {
-            permissionId_scopeKind: { permissionId: permission.id, scopeKind },
-          },
-          create: { permissionId: permission.id, scopeKind },
-          update: {},
-        });
-    }
+    // Native INSERT ... ON CONFLICT avoids hundreds of round trips and the
+    // SELECT/conditional-INSERT plan used by empty-update emulated upserts.
+    // Existing permission identities, descriptions and grants are untouched.
+    step = 'permissions';
+    const codes = Object.keys(SCOPED_PERMISSIONS);
+    await tx.permission.createMany({
+      data: codes.map((code) => ({ code, description: code })),
+      skipDuplicates: true,
+    });
+    const permissions = await tx.permission.findMany({
+      where: { code: { in: codes } },
+      select: { id: true, code: true },
+    });
+    if (permissions.length !== codes.length)
+      throw Error('Permission registration incomplete');
+    step = 'permission-scopes';
+    await tx.permissionScope.createMany({
+      data: permissions.flatMap(({ id: permissionId, code }) =>
+        SCOPED_PERMISSIONS[code].map((scopeKind) => ({
+          permissionId,
+          scopeKind,
+        })),
+      ),
+      skipDuplicates: true,
+    });
+    step = 'context';
     if (!tenant)
       await tx.tenant.create({
         data: { id: plan.tenantId, slug: 'vogpk', name: 'VOGPK' },
@@ -172,24 +185,23 @@ export async function initializeReleaseFoundation(
           timeZone: 'Asia/Karachi',
         },
       });
-    for (const userId of plan.memberIds) {
-      await tx.tenantMembership.upsert({
-        where: { tenantId_userId: { tenantId: plan.tenantId, userId } },
-        create: { tenantId: plan.tenantId, userId },
-        update: {},
-      });
-      await tx.storeMembership.upsert({
-        where: {
-          tenantId_storeId_userId: {
-            tenantId: plan.tenantId,
-            storeId: plan.storeId,
-            userId,
-          },
-        },
-        create: { tenantId: plan.tenantId, storeId: plan.storeId, userId },
-        update: {},
-      });
-    }
+    step = 'memberships';
+    await tx.tenantMembership.createMany({
+      data: plan.memberIds.map((userId) => ({
+        tenantId: plan.tenantId,
+        userId,
+      })),
+      skipDuplicates: true,
+    });
+    await tx.storeMembership.createMany({
+      data: plan.memberIds.map((userId) => ({
+        tenantId: plan.tenantId,
+        storeId: plan.storeId,
+        userId,
+      })),
+      skipDuplicates: true,
+    });
+    step = 'bridge';
     if (!bridge)
       await tx.legacyStoreBridge.create({
         data: {
@@ -198,6 +210,7 @@ export async function initializeReleaseFoundation(
           storeId: plan.storeId,
         },
       });
+    step = 'audit';
     await tx.auditLog.create({
       data: {
         actorId: plan.actorId,
@@ -214,10 +227,17 @@ export async function initializeReleaseFoundation(
     });
     return { dryRun: false, members: legacy.length, platformGrants: 0 };
   };
-  return db.$transaction(execute, {
-    isolationLevel: 'Serializable',
-    timeout: 30000,
-  });
+  try {
+    return await db.$transaction(execute, {
+      isolationLevel: 'Serializable',
+      timeout: 30000,
+    });
+  } catch (error) {
+    // Whitelisted metadata only; never attach SQL, parameters or error messages
+    // to the release journal. Preserve the original error for programmatic use.
+    error.foundationDiagnostic = { step, elapsedMs: Date.now() - started };
+    throw error;
+  }
 }
 export async function verifyImportedRelease(db, plan, manifest) {
   const evidence = await db.catalogImportRecord.findMany({
