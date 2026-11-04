@@ -1,5 +1,12 @@
 # VOGPK final production delivery preparation
 
+Operational follow-up, November 4: see the
+[Stage 3 final preflight](CATALOG_STAGE3_FINAL_PREFLIGHT.md) and its
+[restored-copy evidence](catalog-stage3-preflight-verification.json), including the
+[fresh encrypted recovery point](CATALOG_RECOVERY_POINT_20261104.md). Those reports
+supersede historical pending ARM64/recovery/rehearsal statuses below. Production
+execution remains separately gated. No application source or migration changed.
+
 Prepared locally on 2026-11-03, based on Milestone 7C `31bd50d`.
 No production access, migrations, imports, restart, setting changes, push, merge,
 media provider or paid resource activation is included. This is delivery tooling,
@@ -213,12 +220,17 @@ until database/backend readiness. No timers or automatic deployment are enabled.
    internally falls back to the previous application/configuration on readiness or
    binding failure; it never rewinds Neon. Expected interruption is one API restart
    plus warm-up; no measured production downtime guarantee is available.
-6. **Approved import window.** Privately provision an existing authorized short-lived
+6. **Approved private operator import window.** Follow the exact isolated-listener
+   sequence in `CATALOG_STAGE3_FINAL_PREFLIGHT.md`; it supersedes a broad main-API
+   write unlock. Keep the main port-4000 API's catalog write gate disabled. Privately
+   provision an existing authorized short-lived
    Owner Bearer session into `CATALOG_OPERATOR_SESSION`; never paste/log it or write
    it to the plan/journal. `BFF_SHARED_SECRET` comes from the existing private env.
-   Set `CATALOG_OPERATOR_API_ORIGIN=http://127.0.0.1:4000`. Separately approve the
-   actual backend and operator `CATALOG_ADMIN_WRITES_ENABLED=1` window while staff
-   remain frozen. This is a broad catalog unlock, not an import-only grant.
+   Set `CATALOG_OPERATOR_API_ORIGIN=http://127.0.0.1:4011` only after separately
+   approving and verifying the temporary loopback-only API process using the same
+   reviewed release. Enable `CATALOG_ADMIN_WRITES_ENABLED=1` only in that temporary
+   process and the operator CLI, while staff remain frozen. It is not an import-only
+   grant within that process; the main API stays locked and Caddy must not expose it.
 
    Run `catalog-release.mjs import --plan="$PLAN" --journal="$JOURNAL"` using the
    same Node/env-file prefix, review the dry-run, then append
@@ -226,8 +238,10 @@ until database/backend readiness. No timers or automatic deployment are enabled.
    be zero. Run `verify --plan="$PLAN" --journal="$JOURNAL"`: require 84 products,
    12 categories, 84 default SKUs, 95 private refs, 8+8 collection memberships,
    source/category/SKU/URL agreement, zero approved prices and no invented inventory.
-   Revoke the operator session normally and clear it from memory. Close the write
-   window until separately approved handoff. Retain checkpoints on any failure.
+   Revoke the operator session normally and clear it from memory. Stop only the
+   owned temporary process, verify port 4011 absent and release the deployment lock.
+   Main API writes remain disabled until separately approved handoff. Retain
+   checkpoints on any failure.
 7. **Compatible Vercel deployment/static staging.** Approve publishing/merging only
    after prior gates; inspect Git auto-deploy and Build Commands first. Require both
    production deployments READY, existing static homepage and Owner access. Storefront

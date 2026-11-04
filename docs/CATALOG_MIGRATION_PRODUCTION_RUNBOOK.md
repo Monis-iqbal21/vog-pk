@@ -1,5 +1,11 @@
 # Catalog migration production runbook — preparation only
 
+For the current November 4 operational preflight, verified fresh recovery point,
+migration compatibility matrix, private operator-listener import sequence and
+rollback limits, use [Stage 3 final preflight](CATALOG_STAGE3_FINAL_PREFLIGHT.md).
+The historical milestone statements below do not supersede that later evidence.
+No production execution is authorized by either document.
+
 Milestone 7A rehearses development migration. **Production NO-GO.** No commands in
 this document were executed against Oracle, Neon or Vercel during this milestone.
 The last reported production backend was `8c75ca5`; its current state requires a
