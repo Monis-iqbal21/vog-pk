@@ -29,6 +29,7 @@ export class SecurityGuard implements CanActivate {
   const session=await this.auth.authenticate(authorization.startsWith('Bearer ')?authorization.slice(7):'');
   request.identity=session.user;request.sessionId=session.sessionId;
   if(this.reflector.getAllAndOverride<boolean>('scopedAccess',targets)){
+   if(Object.keys(request.headers).some(name=>/^x-(?:tenant|store|scope)(?:-|$)/i.test(name)))throw new ForbiddenException('Scope is selected by the authorized route only.');
    const scope=request.params.storeId&&!request.params.tenantId?await this.scoped.storeContext(session.user.id,String(request.params.storeId)):requestScope(request),permissions=this.reflector.getAllAndOverride<string[]>('scopedPermissions',targets);
    if(permissions)await this.scoped.require(session.user.id,scope,permissions);
    else await this.scoped.resolve(session.user.id,scope);

@@ -5,12 +5,12 @@ import { modules, canOpenModule } from "@/config/modules";
 import { backendRequest } from "@/lib/api";
 import { cookies } from "next/headers";
 import { adminConfig } from "@/lib/config";
-import StaffPanel from "@/components/StaffPanel";
 import SchemaWorkspace from "@/components/schema/SchemaWorkspace";
 import CategoryWorkspace from "@/components/categories/CategoryWorkspace";
 import ProductWorkspace from "@/components/catalog/ProductWorkspace";
 import ListingWorkspace from "@/components/catalog/ListingWorkspace";
 import MediaWorkspace from '@/components/operations/MediaWorkspace';
+import StaffRbacWorkspace from '@/components/StaffRbacWorkspace';
 export default async function ModulePage({ params }) {
   const user = await requireAdmin(),
     { module: slug } = await params,
@@ -27,6 +27,7 @@ export default async function ModulePage({ params }) {
         <Link href="/dashboard">Return to overview</Link>
       </section>
     );
+  if (slug === 'staff') return <><h1>Staff & Roles</h1><p className="muted">Manage existing admin accounts within authorized platform, tenant or store contexts. No account creation or invitations are available here.</p><StaffRbacWorkspace contexts={user.rbacContexts ?? []} currentUserId={user.id} /></>;
   if(slug==='products'||slug==='variants')return <ProductWorkspace contexts={(user.productContexts??[]).filter(c=>c.permissions.includes('products.view'))} stores={user.catalogContexts??[]}/>;
   if(slug==='media')return <MediaWorkspace contexts={(user.productContexts??[]).filter(c=>c.permissions.includes('media.view'))}/>;
   if(slug==='listings')return <ListingWorkspace contexts={(user.catalogContexts??[]).filter((c)=>c.permissions.includes('listings.view'))}/>;
@@ -104,30 +105,6 @@ export default async function ModulePage({ params }) {
       );
     if (result.status !== 200)
       throw new Error("Unable to load this administration page.");
-    if (slug === "staff") {
-      const canManage = ["staff.manage", "roles.manage"].every((code) =>
-        user.permissions.includes(code),
-      );
-      const roles = canManage
-        ? await backendRequest("roles", { token })
-        : { status: 200, data: [] };
-      if (roles.status !== 200) throw new Error("Unable to load roles.");
-      return (
-        <>
-          <h1>Staff & Roles</h1>
-          <p className="muted">
-            Manage staff access using predefined roles. Changes end the affected
-            account’s sessions.
-          </p>
-          <StaffPanel
-            users={result.data}
-            roles={roles.data}
-            currentId={user.id}
-            canManage={canManage}
-          />
-        </>
-      );
-    }
     return (
       <>
         <h1>Audit Logs</h1>

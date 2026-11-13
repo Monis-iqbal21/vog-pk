@@ -109,6 +109,61 @@ export class ScopedAuthorizationService {
     return rows.map(row => ({permissionId: row.permissionId, canDelegate: grants.find(g => g.code === row.permission.code)!.canDelegate}));
   }
 
+  async members(actorId: string, ctx: ScopeContext) {
+    if (ctx.kind === 'PLATFORM') await this.require(actorId, ctx, [manageStaffPermission(ctx)]);
+    else {
+      const access = await this.resolve(actorId, ctx);
+      if (!access.permissions.includes('staff.view') && !access.permissions.includes('staff.manage')) throw denied();
+    }
+    if (ctx.kind === 'PLATFORM') {
+      const rows = await this.db.platformRoleAssignment.findMany({where: {role: {scopeKind: 'PLATFORM'}}, take: 200,
+        orderBy: [{user: {email: 'asc'}}, {userId: 'asc'}], include: {user: {select: {id: true, name: true, email: true, active: true}}, role: {select: {id: true, name: true}}}});
+      const users = new Map<string, {id: string; name: string; email: string; active: boolean; roleIds: string[]; roleNames: string[]}>();
+      for (const row of rows) {
+        if (!row.user.active) continue;
+        const user = users.get(row.userId) ?? {...row.user, roleIds: [], roleNames: []};
+        user.roleIds.push(row.roleId); user.roleNames.push(row.role.name); users.set(row.userId, user);
+      }
+      return [...users.values()];
+    }
+    if (ctx.kind === 'TENANT') {
+      const rows = await this.db.tenantMembership.findMany({where: {tenantId: ctx.tenantId}, take: 200,
+        orderBy: [{user: {email: 'asc'}}, {userId: 'asc'}], include: {user: {select: {id: true, name: true, email: true, active: true}}, assignments: {include: {role: {select: {id: true, name: true}}}}}});
+      return rows.map(row => ({...row.user, membershipActive: row.active, roleIds: row.assignments.map(x => x.roleId), roleNames: row.assignments.map(x => x.role.name)}));
+    }
+    const rows = await this.db.storeMembership.findMany({where: {tenantId: ctx.tenantId, storeId: ctx.storeId}, take: 200,
+      orderBy: [{tenantMembership: {user: {email: 'asc'}}}, {userId: 'asc'}], include: {tenantMembership: {include: {user: {select: {id: true, name: true, email: true, active: true}}}}, assignments: {include: {role: {select: {id: true, name: true}}}}}});
+    return rows.map(row => ({...row.tenantMembership.user, membershipActive: row.active, roleIds: row.assignments.map(x => x.roleId), roleNames: row.assignments.map(x => x.role.name)}));
+  }
+
+  async findMember(actorId: string, ctx: ScopeContext, email: string) {
+    await this.require(actorId, ctx, [manageStaffPermission(ctx)]);
+    const user = await this.db.adminUser.findFirst({where: {email: email.trim().toLowerCase(), active: true}, select: {id: true, name: true, email: true}});
+    if (!user) throw denied();
+    return user;
+  }
+
+  async addMembership(actorId: string, ctx: ScopeContext, userId: string) {
+    if (ctx.kind === 'PLATFORM' || actorId === userId) throw denied();
+    return this.write(async tx => {
+      await this.require(actorId, ctx, [manageStaffPermission(ctx)], tx);
+      if (!await tx.adminUser.findFirst({where: {id: userId, active: true}, select: {id: true}})) throw denied();
+      if (ctx.kind === 'TENANT') {
+        const existing = await tx.tenantMembership.findUnique({where: {tenantId_userId: {tenantId: ctx.tenantId, userId}}});
+        if (existing) throw new ConflictException('This account already has a tenant membership.');
+        await tx.tenantMembership.create({data: {tenantId: ctx.tenantId, userId}});
+      } else {
+        const tenantMember = await tx.tenantMembership.findUnique({where: {tenantId_userId: {tenantId: ctx.tenantId, userId}}});
+        if (!tenantMember?.active) throw denied();
+        const existing = await tx.storeMembership.findUnique({where: {tenantId_storeId_userId: {tenantId: ctx.tenantId, storeId: ctx.storeId, userId}}});
+        if (existing) throw new ConflictException('This account already has a store membership.');
+        await tx.storeMembership.create({data: {tenantId: ctx.tenantId, storeId: ctx.storeId, userId}});
+      }
+      await this.audit(tx, actorId, ctx, 'scoped.membership_added', userId);
+      return {ok: true};
+    });
+  }
+
   async createRole(actorId: string, ctx: ScopeContext, input: {code: string; name: string; grants: RoleGrant[]}) {
     return this.write(async tx => {
       const access = await this.require(actorId, ctx, [manageRolePermission(ctx)], tx);
@@ -135,6 +190,7 @@ export class ScopedAuthorizationService {
   async assignRoles(actorId: string, ctx: ScopeContext, userId: string, roleIds: string[]) {
     return this.write(async tx => {
       const access = await this.require(actorId, ctx, [manageRolePermission(ctx), manageStaffPermission(ctx)], tx);
+      if (actorId === userId) throw denied();
       if (ctx.kind === 'PLATFORM') {
         if (!await tx.adminUser.findFirst({where: {id: userId, active: true}, select: {id: true}})) throw denied();
       } else await this.resolve(userId, ctx, tx); // No cross-scope membership provisioning through this API.
@@ -167,7 +223,7 @@ export class ScopedAuthorizationService {
   }
 
   async revokeMembership(actorId: string, ctx: ScopeContext, userId: string) {
-    if (ctx.kind === 'PLATFORM') throw denied();
+    if (ctx.kind === 'PLATFORM' || actorId === userId) throw denied();
     return this.write(async tx => {
       await this.require(actorId, ctx, [manageRolePermission(ctx), manageStaffPermission(ctx)], tx);
       const actor = await this.resolve(actorId, ctx, tx), target = await this.resolve(userId, ctx, tx);

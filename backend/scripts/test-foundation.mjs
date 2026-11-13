@@ -96,6 +96,8 @@ try {
   const ctxB = {kind: 'STORE', tenantId: tenantB.id, storeId: storeB.id};
   const ctxA2 = {kind: 'STORE', tenantId: defaultIds.tenantId, storeId: storeA2.id};
   const member = await db.adminUser.create({data: {name: 'Member', email: 'member@example.invalid', passwordHash: await hashPassword(ownerPassword)}});
+  const memberToken = randomBytes(32).toString('hex');
+  await db.adminSession.create({data: {userId: member.id, tokenHash: hashToken(memberToken), expiresAt: new Date(Date.now() + 3600000)}});
   const join = async (userId, ctx) => {
     await db.tenantMembership.upsert({where: {tenantId_userId: {tenantId: ctx.tenantId, userId}}, create: {tenantId: ctx.tenantId, userId}, update: {}});
     await db.storeMembership.create({data: {tenantId: ctx.tenantId, storeId: ctx.storeId, userId}});
@@ -107,6 +109,23 @@ try {
     await authz.assignRoles(owner.id, storeCtx, member.id, [read.id, update.id]);
     await authz.require(member.id, storeCtx, ['inventory.view', 'inventory.manage']);
     await assert.rejects(() => authz.require(member.id, storeCtx, ['roles.manage']));
+  });
+  await test('An actor cannot assign or elevate their own scoped roles', async () => {
+    await assert.rejects(() => authz.assignRoles(owner.id, storeCtx, owner.id, [read.id]));
+    await assert.rejects(() => authz.assignRoles(owner.id, tenantCtx, owner.id, []));
+    assert.equal((await authz.resolve(owner.id, storeCtx)).owner, true);
+  });
+  await test('Existing active accounts can be added to exact scopes without inherited access', async () => {
+    const added = await db.adminUser.create({data: {name: 'Existing Account', email: 'existing-account@example.invalid', passwordHash: await hashPassword(ownerPassword)}});
+    await authz.addMembership(owner.id, tenantCtx, added.id);
+    await authz.addMembership(owner.id, storeCtx, added.id);
+    assert.equal((await authz.resolve(added.id, storeCtx)).permissions.length, 0);
+    await authz.assignRoles(owner.id, storeCtx, added.id, [read.id]);
+    await authz.require(added.id, storeCtx, ['inventory.view']);
+    await assert.rejects(() => authz.resolve(added.id, ctxA2));
+    await authz.revokeMembership(owner.id, storeCtx, added.id);
+    await assert.rejects(() => authz.resolve(added.id, storeCtx));
+    await assert.rejects(() => authz.addMembership(owner.id, storeCtx, added.id), error => error.getStatus() === 409);
   });
   await test('Store Owner cannot grant platform or unsupported tenant permissions', async () => {
     for (const code of ['platform.roles.manage', 'products.update', 'unregistered.power']) await assert.rejects(() => createRole('INVALID', [code]));
@@ -171,8 +190,8 @@ try {
     await assert.rejects(() => authz.resolve(member.id, storeCtx));
   });
   await test('Last legacy Owner cannot be revoked through store or tenant membership administration', async () => {
-    await assert.rejects(() => authz.revokeMembership(owner.id, storeCtx, owner.id), error => error.getStatus() === 409);
-    await assert.rejects(() => authz.revokeMembership(owner.id, tenantCtx, owner.id), error => error.getStatus() === 409);
+    await assert.rejects(() => authz.revokeMembership(owner.id, storeCtx, owner.id));
+    await assert.rejects(() => authz.revokeMembership(owner.id, tenantCtx, owner.id));
     assert.ok((await authz.resolve(owner.id, storeCtx)).owner);
   });
   await test('Scoped Owner cannot be removed, downgraded or edited; concurrent removal preserves one Owner', async () => {
@@ -185,7 +204,7 @@ try {
       await join(u.id, ctxB); await db.storeRoleAssignment.create({data: {tenantId: tenantB.id, storeId: storeB.id, userId: u.id, roleId: ownerRole.id}}); owners.push(u);
     }
     await assert.rejects(() => authz.updateRole(owners[0].id, ctxB, ownerRole.id, {name: 'Downgrade', grants: []}));
-    const outcomes = await Promise.allSettled(owners.map(u => authz.assignRoles(u.id, ctxB, u.id, [])));
+    const outcomes = await Promise.allSettled([authz.assignRoles(owners[0].id, ctxB, owners[1].id, []), authz.assignRoles(owners[1].id, ctxB, owners[0].id, [])]);
     assert.equal(outcomes.filter(r => r.status === 'fulfilled').length, 1);
     const last = await db.storeRoleAssignment.findFirstOrThrow({where: {roleId: ownerRole.id}});
     await assert.rejects(() => authz.revokeMembership(last.userId, ctxB, last.userId));
@@ -231,8 +250,23 @@ try {
     assert.equal((await call('scopes/platform/access')).status, 403);
     assert.equal((await call(`scopes/tenants/${tenantB.id}/stores/${storeB.id}/roles`)).status, 403);
     assert.equal((await call(route + '/roles', {method: 'POST', body: {code: 'HTTP_BAD', name: 'Bad', grants: [], tenantId: tenantB.id}})).status, 400);
-    assert.equal((await call(route + '/roles', {headers: {'x-tenant-id': tenantB.id, 'x-store-id': storeB.id}})).status, 200);
+    assert.equal((await call(route + '/roles', {headers: {'x-tenant-id': tenantB.id, 'x-store-id': storeB.id}})).status, 403);
+    assert.equal((await call(route + '/roles', {headers: {'x-scope-kind': 'PLATFORM'}})).status, 403);
     const contexts = await (await call('contexts')).json(); assert.equal(contexts.some(c => c.tenant.id === tenantB.id), false);
+    const rbacContexts = await (await call('contexts/rbac')).json(); assert.ok(rbacContexts.some(c => c.kind === 'STORE' && c.id === defaultIds.storeId));
+    const memberRows = await (await call(route + '/members')).json(); assert.ok(memberRows.some(row => row.id === member.id));
+    assert.equal((await call(route + '/members/lookup?email=member%40example.invalid')).status, 200);
+    assert.equal((await call(route + '/members', {session: memberToken})).status, 403);
+    assert.equal((await call(route + '/members/lookup?email=bad', {session: memberToken})).status, 403);
+    assert.equal((await call(route + '/members', {method: 'POST', body: {userId: member.id, roleIds: ['forged']}})).status, 400);
+    const memberInvite = await db.adminUser.create({data: {name: 'HTTP Existing', email: 'http-existing@example.invalid', passwordHash: owner.passwordHash}});
+    await authz.addMembership(owner.id, tenantCtx, memberInvite.id);
+    assert.equal((await call(route + '/members', {method: 'POST', body: {userId: memberInvite.id}})).status, 201);
+    assert.equal((await authz.resolve(memberInvite.id, storeCtx)).permissions.length, 0);
+    assert.equal((await call(route + '/members/' + memberInvite.id + '/revoke', {method: 'POST', body: {}})).status, 201);
+    await assert.rejects(() => authz.resolve(memberInvite.id, storeCtx));
+    assert.equal((await call(route + '/members/' + owner.id + '/roles', {method: 'POST', body: {roleIds: []}})).status, 403);
+    assert.equal((await call(route + '/members/lookup?email=missing%40example.invalid')).status, 403);
   });
   await test('Legacy protected APIs reject a revoked default membership immediately', async () => {
     await db.storeMembership.update({where: {tenantId_storeId_userId: {...defaultIds, userId: owner.id}}, data: {active: false}});

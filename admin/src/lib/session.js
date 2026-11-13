@@ -16,6 +16,7 @@ export const currentAdmin=cache(async()=>{
  const catalog=await backendRequest('contexts/catalog',{token});
  if(![200,404].includes(catalog.status))throw new Error('Unable to load authorized store contexts.');
  const products=await backendRequest('contexts/products',{token});if(![200,404].includes(products.status))throw new Error('Unable to load authorized catalog contexts.');
- return {...result.data,schemaContexts:contexts.status===200?contexts.data:[],catalogContexts:catalog.status===200?catalog.data:[],productContexts:products.status===200?products.data:[]};
+ const rbac=await backendRequest('contexts/rbac',{token});if(![200,404].includes(rbac.status))throw new Error('Unable to load authorized staff contexts.');
+ return {...result.data,schemaContexts:contexts.status===200?contexts.data:[],catalogContexts:catalog.status===200?catalog.data:[],productContexts:products.status===200?products.data:[],rbacContexts:rbac.status===200?rbac.data:[]};
 });
 export async function requireAdmin(){const user=await currentAdmin();if(!user)redirect(loginPath((await headers()).get('x-vog-admin-return-to')));return user;}

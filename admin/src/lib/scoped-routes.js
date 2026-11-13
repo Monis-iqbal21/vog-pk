@@ -7,6 +7,7 @@ export function allowedScopedRoute(method, path) {
       "contexts/schema",
       "contexts/catalog",
       "contexts/products",
+      "contexts/rbac",
     ].includes(path)
   )
     return true;
@@ -17,6 +18,8 @@ export function allowedScopedRoute(method, path) {
   )
     return true;
   const scope = `scopes/(?:platform|tenants/${id}(?:/stores/${id})?)`;
+  if (method === "GET" && new RegExp(`^${scope}/members(?:/lookup)?$`).test(path)) return true;
+  if (method === "POST" && new RegExp(`^${scope}/members$`).test(path)) return true;
   const catalog = `stores/${id}`;
   const ops = `stores/${id}/operations`,
     media = `scopes/tenants/${id}/media`;
