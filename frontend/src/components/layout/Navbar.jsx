@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Search, UserRound, Heart, ShoppingCart, Menu, X, ChevronDown } from 'lucide-react';
 import { navigation } from '@/config/navigation';
 import Brand from './Brand';
+import { useCart } from '@/components/cart/CartProvider';
 
 function NavigationLinks({ mobile = false, onNavigate,items=navigation }) {
   const pathname = usePathname();
@@ -25,6 +26,7 @@ function NavigationLinks({ mobile = false, onNavigate,items=navigation }) {
 }
 
 export default function Navbar({items=navigation}) {
+  const { itemCount } = useCart();
   const dialog = useRef(null);
   const search = useRef(null);
   const [open, setOpen] = useState(false);
@@ -50,7 +52,7 @@ export default function Navbar({items=navigation}) {
         <button className="icon-button mobile-search" aria-label="Focus product search" onClick={() => search.current?.focus()}><Search /></button>
         <button className="icon-button desktop-action" disabled aria-label="Account (coming soon)" title="Account coming soon"><UserRound /></button>
         <button className="icon-button desktop-action" disabled aria-label="Wishlist (coming soon)" title="Wishlist coming soon"><Heart /></button>
-        <button className="icon-button cart-button" disabled aria-label="Shopping cart (coming soon)" title="Cart coming soon"><ShoppingCart /><span className="cart-count" aria-hidden="true">—</span></button>
+        <Link className="icon-button cart-button" href="/cart" aria-label={`Shopping cart, ${itemCount} items`} title="Shopping cart"><ShoppingCart /><span className="cart-count" aria-hidden="true">{itemCount}</span></Link>
         <button className="icon-button mobile-menu" aria-label="Open navigation" aria-haspopup="dialog" aria-expanded={open} aria-controls="mobile-navigation" onClick={() => { dialog.current.showModal(); setOpen(true); }}><Menu /></button>
       </div>
     </div>

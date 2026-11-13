@@ -16,6 +16,7 @@ import { PricingService } from './pricing.service.js';
 import { InventoryService } from './inventory.service.js';
 import { MediaService } from './media.service.js';
 import { PresentationService } from './presentation.service.js';
+import { CheckoutSettingsService } from './checkout-settings.service.js';
 import * as v from './validation.js';
 @Controller('admin/stores/:storeId/operations')
 @ScopedAccess()
@@ -24,7 +25,14 @@ export class OperationsController {
     @Inject(PricingService) readonly pricing: PricingService,
     @Inject(InventoryService) readonly inventory: InventoryService,
     @Inject(PresentationService) readonly presentation: PresentationService,
+    @Inject(CheckoutSettingsService) readonly checkout: CheckoutSettingsService,
   ) {}
+  @Get('checkout-settings') checkoutSettings(@Req() r: AdminRequest, @Param('storeId') s: string) {
+    return this.checkout.read(r.identity.id, validId(s));
+  }
+  @Patch('checkout-settings') updateCheckoutSettings(@Req() r: AdminRequest, @Param('storeId') s: string, @Body() b: unknown) {
+    return this.checkout.update(r.identity.id, validId(s), validate(v.checkoutSettings, b));
+  }
   @Get('skus/:sku/quote') async quote(
     @Req() r: AdminRequest,
     @Param('storeId') s: string,

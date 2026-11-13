@@ -20,7 +20,7 @@ export async function verifyStorefront({
   makeType,
   action,
 }) {
-  const call = async (route, { body, method = body ? 'POST' : 'GET' } = {}) => {
+  const call = async (route, { body, method = body ? 'POST' : 'GET', status } = {}) => {
     const r = await fetch(base + '/api/admin/' + route, {
       method,
       headers: {
@@ -32,7 +32,7 @@ export async function verifyStorefront({
     });
     const json = await r.json();
     assert.ok(
-      r.status === 200 || r.status === 201,
+      status !== undefined ? r.status === status : r.status === 200 || r.status === 201,
       `${method} ${route.replace(/[a-f0-9-]{36}/g, ':id')}: ${r.status} ${json.message ?? ''}`,
     );
     return json;
@@ -401,6 +401,8 @@ export async function verifyStorefront({
             },
           });
     }
+  const { verifyCheckout } = await import('./checkout-verification.mjs');
+  await verifyCheckout({ db, ids, base, test, call, products: { single } });
   let filterSet = await call(
     `${store}/categories/${keyCategory.id}/filter-sets`,
     { body: {} },
@@ -974,6 +976,7 @@ export async function verifyStorefront({
         publicGet,
         products,
         keyboard,
+        single,
         keyCategory,
         mouse,
         vehicle,
@@ -997,6 +1000,7 @@ async function verifyBrowser({
   publicGet,
   products,
   keyboard,
+  single,
   keyCategory,
   mouse,
   vehicle,

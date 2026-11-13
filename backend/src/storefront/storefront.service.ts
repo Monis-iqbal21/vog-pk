@@ -25,6 +25,7 @@ import {
 import { LocalMediaStorage } from '../operations/storage.js';
 import { currencyPrecision } from '../operations/money.js';
 import { assertDevelopmentDatabase } from '../security/development-foundation.js';
+import { PAKISTAN_CITIES } from './pakistan-cities.js';
 type CategorySnapshot = {
   name: string;
   slug: string;
@@ -549,9 +550,29 @@ export class StorefrontService {
       );
       if (variant && !skus.some((s) => s.sku.code === variant))
         throw new NotFoundException('Variant is not offered.');
+      const settings = await tx.storeCheckoutSettings.findFirst({ where: { storeId: ctx.storeId, tenantId: ctx.tenantId }, select: { codEnabled: true, revision: true } });
+      const checkout = { enabled: Boolean(settings?.codEnabled), revision: settings?.revision ?? 0, paymentMethods: settings?.codEnabled ? [{ code: 'COD' as const, label: 'Cash on Delivery' }] : [], cities: PAKISTAN_CITIES, currency: ctx.currency };
+      const paymentEnabled = checkout.paymentMethods.some((method) => method.code === 'COD');
+      const variantDtos = skus.map((s) => {
+        const offer = offers.find((o) => o.skuRevisionId === s.id),
+          selling = row.sellingMode === 'RETAIL' && offer?.amount !== null && offer?.amount !== undefined,
+          purchasable = Boolean(paymentEnabled && selling && offer?.policy === 'QUANTITY' && offer.availability === 'in_stock' && Number(offer.quantity ?? 0) > 0);
+        return {
+          code: s.sku.code,
+          selections: selectionsDto(row, s),
+          offer: selling ? { currency: offer!.currency!, minorUnits: currencyPrecision(offer!.currency!), amount: offer!.amount!.toString(), regularAmount: offer!.regularAmount!.toString(), promotion: offer!.promotion } : null,
+          availability: selling ? offer!.availability : 'not_offered',
+          inventoryPolicy: offer?.policy ?? 'UNTRACKED',
+          quantity: offer?.quantity === null || offer?.quantity === undefined ? null : Number(offer.quantity),
+          purchasable,
+          media: mediaDto(row, s.id),
+          specifications: specifications(row, s.id),
+        };
+      });
       return {
         version: 1,
         ...this.card(row, offers, categories),
+        purchasable: variantDtos.some((item) => item.purchasable),
         content: row.productRevision.content,
         seo: row.seo,
         axes: axesDto(row),
@@ -559,31 +580,8 @@ export class StorefrontService {
         media: mediaDto(row),
         selectedVariant:
           variant ?? (skus.length === 1 ? skus[0].sku.code : null),
-        variants: skus.map((s) => {
-          const offer = offers.find((o) => o.skuRevisionId === s.id),
-            selling =
-              row.sellingMode === 'RETAIL' &&
-              offer?.amount !== null &&
-              offer?.amount !== undefined;
-          return {
-            code: s.sku.code,
-            selections: selectionsDto(row, s),
-            offer: selling
-              ? {
-                  currency: offer!.currency!,
-                  minorUnits: currencyPrecision(offer!.currency!),
-                  amount: offer!.amount!.toString(),
-                  regularAmount: offer!.regularAmount!.toString(),
-                  promotion: offer!.promotion,
-                }
-              : null,
-            availability: selling ? offer!.availability : 'not_offered',
-            inventoryPolicy: offer?.policy ?? 'UNTRACKED',
-            media: mediaDto(row, s.id),
-            specifications: specifications(row, s.id),
-          };
-        }),
-        checkout: 'DISABLED',
+        variants: variantDtos,
+        checkout,
       };
     });
   }

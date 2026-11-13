@@ -297,6 +297,8 @@ model Store {
   catalogRoutes CatalogRoute[]
   listings StoreListing[]
   importRecords CatalogImportRecord[]
+  checkoutSettings StoreCheckoutSettings?
+  orders StoreOrder[]
   @@unique([id, tenantId])
   @@unique([tenantId, slug])
 }
@@ -1019,6 +1021,20 @@ enum InventoryPolicy {
   NON_STOCK
   UNTRACKED
 }
+enum CheckoutPaymentMethod {
+  COD
+  CARD
+}
+enum OrderPaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+enum StoreOrderStatus {
+  RECEIVED
+  CANCELLED
+}
 model InventoryLocation {
   id String @id @default(uuid()) @db.Uuid
   tenantId String @db.Uuid
@@ -1080,13 +1096,72 @@ model InventoryMovement {
   afterKnown Boolean
   balanceRevision Int
   reason String @db.VarChar(500)
-  actorId String @db.Uuid
+  actorId String? @db.Uuid
   createdAt DateTime @default(now())
   item InventoryItem @relation(fields:[inventoryItemId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
   balance StockBalance @relation(fields:[balanceId,inventoryItemId,storeId,tenantId],references:[id,inventoryItemId,storeId,tenantId],onDelete:Restrict)
   @@unique([storeId,idempotencyKey])
   @@unique([balanceId,balanceRevision])
   @@index([inventoryItemId,createdAt])
+}
+
+model StoreCheckoutSettings {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @unique @db.Uuid
+  codEnabled Boolean @default(false)
+  cardEnabled Boolean @default(false)
+  revision Int @default(1)
+  updatedAt DateTime @updatedAt
+  updatedBy String @db.Uuid
+  store Store @relation(fields:[storeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  @@unique([id,storeId,tenantId])
+  @@unique([storeId,tenantId])
+}
+
+model StoreOrder {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  orderNumber String @db.VarChar(40)
+  idempotencyKey String @db.Uuid
+  requestHash String @db.Char(64)
+  receiptTokenHash String @db.Char(64)
+  customerName String @db.VarChar(120)
+  phone String @db.VarChar(32)
+  city String @db.VarChar(80)
+  address String @db.VarChar(500)
+  paymentMethod CheckoutPaymentMethod
+  paymentStatus OrderPaymentStatus @default(PENDING)
+  status StoreOrderStatus @default(RECEIVED)
+  currency String @db.VarChar(3)
+  subtotal Decimal @db.Decimal(24,6)
+  total Decimal @db.Decimal(24,6)
+  createdAt DateTime @default(now())
+  store Store @relation(fields:[storeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  items StoreOrderItem[]
+  @@unique([id,storeId,tenantId])
+  @@unique([storeId,orderNumber])
+  @@unique([storeId,idempotencyKey])
+  @@index([tenantId,storeId,createdAt])
+}
+
+model StoreOrderItem {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  orderId String @db.Uuid
+  listingRevisionId String @db.Uuid
+  skuRevisionId String @db.Uuid
+  productName String @db.VarChar(120)
+  variantName String @db.VarChar(200)
+  skuCode String @db.VarChar(80)
+  selections Json
+  quantity Int
+  unitPrice Decimal @db.Decimal(24,6)
+  lineTotal Decimal @db.Decimal(24,6)
+  order StoreOrder @relation(fields:[orderId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  @@index([orderId,storeId,tenantId])
 }
 model MediaApproval {
   id String @id @default(uuid()) @db.Uuid

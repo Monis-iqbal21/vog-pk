@@ -10,7 +10,7 @@ export const modules=[
  {path:'/homepage',title:'Homepage Content',permission:'homepage.view',icon:'homepage'},
  {path:'/coupons',title:'Coupons & Promotions',permission:'coupons.view',icon:'coupons'},
  {path:'/orders',title:'Orders',permission:'orders.view',icon:'orders'},
- {path:'/settings',title:'Store Settings',permission:'settings.view',icon:'settings'},
+ {path:'/settings',title:'Store Settings',permission:'settings.view',permissions:['settings.view'],scope:'STORE',icon:'settings'},
  {path:'/staff',title:'Staff & Roles',permission:'staff.view',icon:'staff'},
  {path:'/audit-logs',title:'Audit Logs',permission:'audit.view',icon:'audit'},
 ];

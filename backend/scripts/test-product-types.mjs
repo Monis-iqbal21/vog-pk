@@ -48,6 +48,7 @@ const cluster = new EmbeddedPostgres({
 });
 let db,
   server,
+  checkoutDiagnostics = [],
   phase = 'startup',
   checks = 0,
   report;
@@ -153,7 +154,13 @@ try {
   });
   server = spawn(process.execPath, ['dist/main.js'], {
     env: process.env,
-    stdio: 'ignore',
+    stdio: ['ignore', 'ignore', 'pipe'],
+  });
+  server.stderr.on('data', (chunk) => {
+    for (const line of String(chunk).split(/\r?\n/)) {
+      const match = line.match(/\{"event":"checkout\.transaction\.failed","step":"[a-z-]+","code":"(?:P\d{4}|UNEXPECTED)"\}/);
+      if (match) checkoutDiagnostics.push(match[0]);
+    }
   });
   const base = `http://127.0.0.1:${apiPort}`;
   for (let i = 0; i < 100; i++) {
@@ -1111,6 +1118,7 @@ try {
     'error:',
     error.constructor.name,
   );
+  if (checkoutDiagnostics.length) console.error('Sanitized checkout diagnostic:', checkoutDiagnostics.at(-1));
   if(error.constructor.name.startsWith('TimeoutError')){
     const hint=error.message?.match(/waiting for (getBy(?:Role|Label|Text)\([^\n]{1,180})/)?.[1];
     if(hint)console.error('Timed out on UI locator:',hint);

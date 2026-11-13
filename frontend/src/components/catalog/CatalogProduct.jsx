@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Money, PublicImage } from "./CatalogCard";
+import { useCart } from "@/components/cart/CartProvider";
 function Specs({ groups }) {
   return (
     <section className="pd-specifications">
@@ -57,9 +58,10 @@ function Gallery({ images }) {
   );
 }
 export default function CatalogProduct({ product }) {
-  const router = useRouter(),
+  const router = useRouter(), cart = useCart(),
     initial = product.variants.find((v) => v.code === product.selectedVariant),
     [selection, setSelection] = useState(initial?.selections ?? {}),
+    [quantity, setQuantity] = useState(1),
     variant =
       product.variants.find((v) =>
         product.axes.every((a) => selection[a.id] === v.selections[a.id]),
@@ -188,7 +190,11 @@ export default function CatalogProduct({ product }) {
                     ? "Out of stock"
                     : "Availability unknown"}
           </p>
-          <p>Purchasing is not enabled.</p>
+          {variant?.purchasable && product.checkout.enabled ? <div className="catalog-cart-controls">
+            <label>Quantity <input type="number" min="1" max={Math.min(50, variant.quantity ?? 1)} value={quantity} onChange={(event) => setQuantity(Math.max(1, Math.min(Math.min(50, variant.quantity ?? 1), Number(event.target.value) || 1)))} /></label>
+            <button type="button" onClick={() => cart.addItem({ listingId: product.id, skuCode: variant.code, quantity })}>Add to cart</button>
+            <Link href="/cart">View cart ({cart.itemCount})</Link>
+          </div> : <p>{!product.checkout.enabled ? "Checkout is not enabled for this store." : variant?.availability === "out_of_stock" ? "This variant is out of stock." : variant?.inventoryPolicy !== "QUANTITY" ? "Verified quantity stock is required before purchase." : "Purchasing is not enabled for this variant."}</p>}
           {variant && <p>SKU: {variant.code}</p>}
         </section>
       </div>

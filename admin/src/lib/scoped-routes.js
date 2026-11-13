@@ -26,7 +26,7 @@ export function allowedScopedRoute(method, path) {
   if (
     method === "GET" &&
     new RegExp(
-      `^${ops}/(?:settings|locations|skus/${id}/(?:prices|inventory(?:/history)?|quote)|listings/${id}/revisions/${id}/media(?:/${id}/content)?)$`,
+      `^${ops}/(?:settings|checkout-settings|locations|skus/${id}/(?:prices|inventory(?:/history)?|quote)|listings/${id}/revisions/${id}/media(?:/${id}/content)?)$`,
     ).test(path)
   )
     return true;
@@ -40,7 +40,7 @@ export function allowedScopedRoute(method, path) {
   if (
     method === "PATCH" &&
     new RegExp(
-      `^${ops}/(?:settings|skus/${id}/(?:prices/${id}|inventory)|listings/${id}/revisions/${id}/media)$`,
+      `^${ops}/(?:settings|checkout-settings|skus/${id}/(?:prices/${id}|inventory)|listings/${id}/revisions/${id}/media)$`,
     ).test(path)
   )
     return true;

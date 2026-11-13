@@ -11,6 +11,7 @@ import ProductWorkspace from "@/components/catalog/ProductWorkspace";
 import ListingWorkspace from "@/components/catalog/ListingWorkspace";
 import MediaWorkspace from '@/components/operations/MediaWorkspace';
 import StaffRbacWorkspace from '@/components/StaffRbacWorkspace';
+import CheckoutSettingsWorkspace from '@/components/operations/CheckoutSettingsWorkspace';
 export default async function ModulePage({ params }) {
   const user = await requireAdmin(),
     { module: slug } = await params,
@@ -50,6 +51,7 @@ export default async function ModulePage({ params }) {
         )}
       />
     );
+  if (slug === 'settings') return <CheckoutSettingsWorkspace contexts={(user.catalogContexts ?? []).filter((context) => context.permissions.includes('settings.view'))} />;
   if (slug === "dashboard")
     return (
       <>

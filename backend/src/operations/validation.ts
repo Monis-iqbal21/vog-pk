@@ -54,6 +54,11 @@ export const settings = z
     expectedTimeZone: z.string().max(80),
   })
   .strict();
+export const checkoutSettings = z.object({
+  expectedRevision: z.number().int().min(0),
+  codEnabled: z.boolean(),
+  cardEnabled: z.boolean(),
+}).strict();
 export const location = z
   .object({ code, name: label, isDefault: z.boolean().default(false) })
   .strict();

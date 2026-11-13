@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { CartProvider } from "@/components/cart/CartProvider";
 import { site } from "@/config/site";
 import "./globals.css";
 import { dynamicCatalog, catalogNavigation } from "@/lib/catalog/server";
@@ -58,6 +59,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
       <body>
+       <CartProvider>
         <a className="skip-link" href="#main-content">
           Skip to content
         </a>
@@ -66,6 +68,7 @@ export default async function RootLayout({ children }) {
           {children}
         </main>
         <Footer shopLinks={shopLinks} />
+       </CartProvider>
       </body>
     </html>
   );

@@ -1,14 +1,33 @@
-import { Controller, Get, Inject, Param, Query, Res } from '@nestjs/common';
-import type { Response } from 'express';
+import { Body, Controller, Get, HttpCode, Inject, Param, Post, Query, Req, Res } from '@nestjs/common';
+import type { Request, Response } from 'express';
 import { z } from 'zod';
 import { Public } from '../security/guards.js';
 import { validate, validId } from '../security/validation.js';
 import { StorefrontService } from './storefront.service.js';
+import { CheckoutService } from './checkout.service.js';
+import { cartLines, checkoutOrder, receiptRequest } from './checkout.validation.js';
 import { query, slug } from './query.js';
 @Controller('catalog')
 @Public()
 export class StorefrontController {
-  constructor(@Inject(StorefrontService) readonly catalog: StorefrontService) {}
+  constructor(
+    @Inject(StorefrontService) readonly catalog: StorefrontService,
+    @Inject(CheckoutService) readonly checkout: CheckoutService,
+  ) {}
+  @Get('checkout/config') checkoutConfig() {
+    return this.checkout.configuration();
+  }
+  @Post('checkout/quote') @HttpCode(200) quote(@Body() body: unknown) {
+    const input = validate(z.object({ items: cartLines }).strict(), body);
+    return this.checkout.quote(input.items);
+  }
+  @Post('orders') createOrder(@Req() request: Request, @Body() body: unknown) {
+    return this.checkout.create(validate(checkoutOrder, body), request.get('origin'));
+  }
+  @Post('orders/receipt') @HttpCode(200) receipt(@Body() body: unknown) {
+    const input = validate(receiptRequest, body);
+    return this.checkout.readReceipt(input.orderNumber, input.receiptToken);
+  }
   @Get('navigation') navigation(@Query() q: unknown) {
     validate(z.object({}).strict(), q);
     return this.catalog.navigation();

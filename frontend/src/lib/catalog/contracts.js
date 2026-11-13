@@ -79,7 +79,7 @@ export const cardSchema = z.object({
   availability: z.enum(["in_stock", "out_of_stock", "unknown"]),
   media: z.array(mediaSchema).max(100),
   categories: z.array(categorySchema).max(1000),
-  purchasable: z.literal(false),
+  purchasable: z.boolean(),
 });
 const spec = z
   .array(
@@ -143,12 +143,20 @@ export const detailSchema = cardSchema.extend({
           "not_offered",
         ]),
         inventoryPolicy: code,
+        quantity: z.number().int().nonnegative().nullable(),
+        purchasable: z.boolean(),
         media: z.array(mediaSchema).max(100),
         specifications: spec,
       }),
     )
     .max(50),
-  checkout: z.literal("DISABLED"),
+  checkout: z.object({
+    enabled: z.boolean(),
+    revision: z.number().int().nonnegative(),
+    paymentMethods: z.array(z.object({ code: z.literal("COD"), label: text })).max(1),
+    cities: z.array(code).max(100),
+    currency: z.string().regex(/^[A-Z]{3}$/),
+  }),
 });
 export const navigationSchema = z.object({
   version: z.literal(1),
