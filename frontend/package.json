@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "verify:product-images": "node scripts/verify-product-images.mjs",
-    "test:catalogue-parity":"node scripts/catalogue-parity.mjs --write-report"
+    "test:catalogue-parity":"node scripts/catalogue-parity.mjs --write-report",
+    "test:routes":"node scripts/test-route-coverage.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.61.0",

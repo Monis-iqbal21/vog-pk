@@ -10,6 +10,7 @@ import CatalogListing from "./CatalogListing";
 import CatalogProduct from "./CatalogProduct";
 import CatalogCard from "./CatalogCard";
 import { site } from "@/config/site";
+import { EMPTY_CATEGORY_ROUTES } from "@/lib/product-listings";
 import "./catalog.css";
 import "@/components/products/ProductListing.css";
 import "@/components/products/ProductDetail.css";
@@ -45,7 +46,7 @@ export function Unavailable({ error }) {
     </section>
   );
 }
-export async function DynamicListingPage({ search, category, collection }) {
+export async function DynamicListingPage({ search, category, collection, emptyTitle }) {
   let data;
   try {
     data = await catalogList(
@@ -62,7 +63,21 @@ export async function DynamicListingPage({ search, category, collection }) {
     <CatalogListing
       key={`${category ?? collection ?? "all"}-${data.canonicalFilters}`}
       data={data}
+      emptyTitle={emptyTitle}
+      title={collection === "deals" ? "Deals" : collection === "featured" ? "Featured Products" : collection === "new-arrivals" ? "New Arrivals" : undefined}
+      description={collection === "deals" ? "Only currently active, approved store promotions appear here." : undefined}
     />
+  );
+}
+function EmptyCategoryRoute({ category }) {
+  return (
+    <section className="container pl-page" data-category-route={category.slug}>
+      <nav className="pl-breadcrumbs" aria-label="Breadcrumb">
+        <Link href="/">Home</Link><span>/</span><Link href="/products">All Products</Link><span>/</span><span aria-current="page">{category.name}</span>
+      </nav>
+      <header className="pl-heading"><h1>{category.name}</h1><p>{category.description}</p><p className="pl-reference-note">Only approved store listings appear here.</p></header>
+      <div className="pl-empty"><h2>No products are listed here yet.</h2><p>Browse the current catalog while approved listings are being added.</p><Link href="/products" className="pl-primary-button">Browse all products</Link></div>
+    </section>
   );
 }
 export async function DynamicCatalogPage({ slug, search = {} }) {
@@ -71,7 +86,11 @@ export async function DynamicCatalogPage({ slug, search = {} }) {
     route = await catalogRoute(slug);
   } catch (e) {
     if (e instanceof CatalogError) {
-      if (e.status === 404) notFound();
+      if (e.status === 404) {
+        const known = EMPTY_CATEGORY_ROUTES.find((category) => category.slug === slug);
+        if (known) return <EmptyCategoryRoute category={known} />;
+        notFound();
+      }
       return <Unavailable error={e} />;
     }
     throw e;

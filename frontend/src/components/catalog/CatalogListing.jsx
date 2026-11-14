@@ -4,7 +4,7 @@ import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useTransition, useOptimistic } from "react";
 import CatalogCard from "./CatalogCard";
 import { categoryTrail } from "@/lib/catalog/breadcrumbs";
-export default function CatalogListing({ data }) {
+export default function CatalogListing({ data, emptyTitle, title, description }) {
   const router = useRouter(),
     pathname = usePathname(),
     query = useSearchParams(),
@@ -68,8 +68,8 @@ export default function CatalogListing({ data }) {
             />
           </picture>
         )}
-        <h1>{data.category?.name ?? "Products"}</h1>
-        <p>{data.category?.description}</p>
+        <h1>{title ?? data.category?.name ?? "Products"}</h1>
+        <p>{description ?? data.category?.description}</p>
         <p className="pl-reference-note">
           Approved store offers only. Purchasing is not enabled.
         </p>
@@ -229,8 +229,8 @@ export default function CatalogListing({ data }) {
             </div>
           ) : (
             <div className="pl-empty">
-              <h2>No matching products</h2>
-              <p>Try fewer filters or a different category.</p>
+              <h2>{data.total ? "No matching products" : emptyTitle ?? "No products are listed here yet."}</h2>
+              <p>{data.total ? "Try fewer filters or a different category." : emptyTitle ? "Check back when a currently approved promotion is available." : "Browse the rest of the catalog."}</p>
             </div>
           )}
           <nav className="pl-pagination" aria-label="Product pages">

@@ -402,7 +402,18 @@ export async function verifyStorefront({
           });
     }
   const { verifyCheckout } = await import('./checkout-verification.mjs');
-  await verifyCheckout({ db, ids, base, test, call, products: { single } });
+  await verifyCheckout({ db, ids, owner, base, test, call, products: { single } });
+  await test('Deals include only currently active, approved, published SKU promotions', async () => {
+    const dealSku = keyboard.p.skus.find((item) => item.sku.code === 'SF-BLACK').skuId,
+      path = `${store}/operations/skus/${dealSku}/prices`,
+      now = Date.now(), iso = (offset) => new Date(now + offset).toISOString();
+    let revision = await call(path, { body: { currency: 'PKR', regularAmount: '1000', promotions: [{ amount: '900', startsAt: iso(-60000), endsAt: iso(3600000), label: 'Isolated deal fixture' }] } });
+    for (const action of ['review', 'approve', 'publish']) revision = await call(`${path}/${revision.id}/actions/${action}`, { body: { revision: revision.revision, rootRevision: revision.rootRevision ?? revision.price.revision } });
+    const deals = await publicGet('listings?collection=deals&pageSize=24');
+    assert.ok(deals.items.some((item) => item.slug === keyboard.l.slug));
+    assert.ok(deals.items.every((item) => item.offer && item.offer.promotion && Number(item.offer.amount) < Number(item.offer.regularAmount)));
+    assert.equal((await publicGet('listings?collection=deals&sort=DROP', 400)), null);
+  });
   let filterSet = await call(
     `${store}/categories/${keyCategory.id}/filter-sets`,
     { body: {} },
@@ -511,7 +522,8 @@ export async function verifyStorefront({
       (await listing({ color: 'white', switch: 'stormrise' })).total,
       0,
     );
-    assert.equal((await listing({ color: 'white', price: '..1500' })).total, 0);
+    const whiteUnder1500 = await listing({ color: 'white', price: '..1500' });
+    assert.equal(whiteUnder1500.total, 0, JSON.stringify(whiteUnder1500.items.map((item) => ({ slug: item.slug, offer: item.offer, variants: item.variants }))));
     const yes = await listing({
       color: 'white',
       switch: 'lingyun',
@@ -1118,6 +1130,13 @@ async function verifyBrowser({
     page = await browser.newPage();
     const errors = [];
     page.on('pageerror', (e) => errors.push(e.name));
+    const checkoutRequests = [];
+    page.on('request', async (request) => {
+      if (request.url().includes('/api/checkout/quote')) {
+        const headers = await request.allHeaders();
+        checkoutRequests.push({ url: request.url(), origin: headers.origin ?? null, referer: headers.referer ?? null });
+      }
+    });
     await test('Real production-built dynamic storefront filters, dependent variants, posters, responsive layouts, SEO and homepage limits pass', async () => {
       await page.goto(`${site}/products/${keyCategory.slug}`);
       await page
@@ -1194,7 +1213,70 @@ async function verifyBrowser({
       assert.ok(html.includes('rel="canonical"'));
       assert.ok(html.includes('noindex'));
       assert.equal(/"offers":/.test(html), false);
+      const dealsPage = await page.goto(`${site}/deals`);
+      assert.equal(dealsPage.status(), 200);
+      await page.getByRole('heading', { name: 'Deals', exact: true }).waitFor();
+      for (const [slug, title] of [['gaming-pcs', 'Gaming PCs'], ['laptops', 'Laptops'], ['headsets', 'Headsets'], ['mousepads', 'Mousepads'], ['controllers', 'Controllers']]) {
+        const categoryPage = await page.goto(`${site}/products/${slug}`);
+        assert.equal(categoryPage.status(), 200);
+        await page.getByRole('heading', { name: title, exact: true }).waitFor();
+        await page.getByText('No products are listed here yet.', { exact: true }).waitFor();
+      }
       assert.equal(errors.length, 0);
+    });
+    await test('Real shopper cart add, quantity, refresh persistence, verified COD checkout UI and removal work against isolated fixtures', async () => {
+      const checkoutSettings = await call(`${store}/operations/checkout-settings`);
+      await call(`${store}/operations/checkout-settings`, {
+        method: 'PATCH',
+        body: {
+          expectedRevision: checkoutSettings.revision,
+          codEnabled: true,
+          cardEnabled: false,
+        },
+      });
+      const publicCheckoutConfig = await publicGet('checkout/config');
+      assert.equal(publicCheckoutConfig.enabled, true, JSON.stringify(publicCheckoutConfig));
+      await page.goto(site);
+      await page.evaluate(() => localStorage.clear());
+      await page.goto(`${site}/products/${single.l.slug}`);
+      await page.getByRole('button', { name: 'Add to cart', exact: true }).click();
+      await page.getByRole('link', { name: 'View cart (1)', exact: true }).waitFor();
+      await page.getByRole('link', { name: /Shopping cart, 1 items/ }).click();
+      await page.getByRole('heading', { name: 'Your cart', exact: true }).waitFor();
+      const quantity = page.getByLabel('Quantity', { exact: true });
+      await quantity.fill('2');
+      await page.reload();
+      await page.getByLabel('Quantity', { exact: true }).waitFor();
+      assert.equal(await page.getByLabel('Quantity', { exact: true }).inputValue(), '2');
+      await page.locator('.checkout-totals').waitFor({ timeout: 20000 }).catch(() => {});
+      const quoteState = await page.evaluate(() => ({
+        checkoutLink: Boolean(document.querySelector('a[href="/checkout"]')),
+        alerts: [...document.querySelectorAll('[role="alert"]')].map((node) => node.textContent),
+        body: document.body.innerText.slice(-1200),
+      }));
+      assert.ok(quoteState.checkoutLink, `Cart quote failed: ${JSON.stringify({ ...quoteState, checkoutRequests })}`);
+      await page.getByRole('link', { name: 'Continue to checkout', exact: true }).click();
+      await page.getByRole('heading', { name: 'Checkout', exact: true }).waitFor();
+      const checkoutState = await page.evaluate(() => ({
+        phoneField: Boolean(document.querySelector('[name="phone"]')),
+        formDisabled: document.querySelector('.checkout-form fieldset')?.disabled ?? null,
+        cart: localStorage.getItem('vogpk-cart-v1'),
+        body: document.body.innerText.slice(-1000),
+      }));
+      assert.ok(checkoutState.phoneField, `Checkout form unavailable: ${JSON.stringify(checkoutState)}`);
+      await page.waitForFunction(() => {
+        const fieldset = document.querySelector('.checkout-form fieldset');
+        return fieldset && !fieldset.disabled;
+      }, { timeout: 20000 });
+      await page.locator('input[name="customerName"]').fill('Browser Checkout Buyer');
+      await page.locator('input[name="phone"]').fill('+923001234567');
+      await page.locator('select[name="city"]').selectOption({ label: 'Karachi' });
+      await page.locator('textarea[name="address"]').fill('10 Isolated Test Road, Karachi');
+      assert.equal(await page.getByRole('button', { name: 'Place COD order', exact: true }).isEnabled(), true);
+      assert.equal(await db.storeOrder.count({ where: { storeId: ids.storeId } }), 1);
+      await page.getByRole('link', { name: /Shopping cart, 2 items/ }).click();
+      await page.getByRole('button', { name: 'Remove', exact: true }).click();
+      await page.getByText('Your cart is empty.', { exact: true }).waitFor();
     });
     await test('Runtime publication resolves without rebuilding, routes reject collisions and sitemap reflects published records', async () => {
       const added = await makeProduct(

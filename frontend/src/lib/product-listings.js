@@ -5,11 +5,21 @@ import {site} from '../config/site.js';
 export const LISTING_PAGE_SIZE=12;
 export const listingSorts=[['default','Curated order'],['price-asc','Price: Low to High'],['price-desc','Price: High to Low'],['name-asc','Name: A to Z'],['name-desc','Name: Z to A']];
 const collator=new Intl.Collator('en',{numeric:true,sensitivity:'base'});
-export const getCategory=slug=>productCategories.find(category=>category.slug===slug)??null;
+// These navigation destinations are valid merchandising routes even when the
+// current reference catalog has no products in them. Keep route metadata
+// separate from productCategories so product/category parity is unchanged.
+export const EMPTY_CATEGORY_ROUTES=[
+ {id:'route-gaming-pcs',name:'Gaming PCs',slug:'gaming-pcs',description:'Explore gaming PCs offered by VOGPK. New listings will appear here when they are approved.'},
+ {id:'route-laptops',name:'Laptops',slug:'laptops',description:'Explore gaming and performance laptops offered by VOGPK. New listings will appear here when they are approved.'},
+ {id:'route-headsets',name:'Headsets',slug:'headsets',description:'Explore gaming headsets offered by VOGPK. New listings will appear here when they are approved.'},
+ {id:'route-mousepads',name:'Mousepads',slug:'mousepads',description:'Explore mousepads offered by VOGPK. New listings will appear here when they are approved.'},
+ {id:'route-controllers',name:'Controllers',slug:'controllers',description:'Explore gaming controllers offered by VOGPK. New listings will appear here when they are approved.'},
+];
+export const getCategory=slug=>productCategories.find(category=>category.slug===slug)??EMPTY_CATEGORY_ROUTES.find(category=>category.slug===slug)??null;
 export const getCategoryPath=slug=>`/products/${encodeURIComponent(slug)}`;
 export function getListingScope(type='all',slug){
  if(type==='category'){
-  const category=getCategory(slug);return category?{type,slug,title:category.name,description:categoryDescriptions[slug],path:getCategoryPath(slug)}:null;
+  const category=getCategory(slug);return category?{type,slug,title:category.name,description:category.description??categoryDescriptions[slug]??'',path:getCategoryPath(slug)}:null;
  }
  if(type==='collection'){
   if(slug==='featured')return {type,slug,title:'Featured Products',description:'Explore the complete curated selection of featured hardware.',path:'/collections/featured'};
