@@ -5,6 +5,19 @@ export function staticCheckoutConfig() {
   return { enabled: false, revision: 0, currency: "PKR", paymentMethods: [], cities: [] };
 }
 
+function sameOrigin(request) {
+  const origin = request.headers.get("origin"), host = request.headers.get("host");
+  if (!origin || !host || host.includes(",")) return false;
+  const forwardedProtocol = request.headers.get("x-forwarded-proto")?.split(",")[0]?.trim();
+  const protocol = forwardedProtocol || new URL(request.url).protocol.slice(0, -1);
+  if (protocol !== "http" && protocol !== "https") return false;
+  try {
+    return new URL(origin).origin === new URL(`${protocol}://${host}`).origin;
+  } catch {
+    return false;
+  }
+}
+
 export async function proxyCheckout(request, path, { method = "GET", body } = {}) {
   if (!dynamicCatalog()) {
     if (path === "checkout/config" && method === "GET") return NextResponse.json(staticCheckoutConfig(), { headers: { "Cache-Control": "no-store" } });
@@ -12,8 +25,8 @@ export async function proxyCheckout(request, path, { method = "GET", body } = {}
   }
   const headers = { "Content-Type": "application/json", Accept: "application/json" };
   if (method !== "GET") {
-    const origin = request.headers.get("origin"), expected = new URL(request.url).origin;
-    if (!origin || origin !== expected) return NextResponse.json({ message: "Request origin is not allowed." }, { status: 403 });
+    const origin = request.headers.get("origin");
+    if (!sameOrigin(request)) return NextResponse.json({ message: "Request origin is not allowed." }, { status: 403 });
     headers.Origin = origin;
   }
   let response;

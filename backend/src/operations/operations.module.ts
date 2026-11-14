@@ -6,6 +6,8 @@ import { LocalMediaStorage } from './storage.js';
 import { MediaService } from './media.service.js';
 import { PresentationService } from './presentation.service.js';
 import { CheckoutSettingsService } from './checkout-settings.service.js';
+import { CouponsService } from './coupons.service.js';
+import { StoreAdministrationService } from './store-administration.service.js';
 import {
   OperationsController,
   MediaController,
@@ -19,8 +21,10 @@ import {
     MediaService,
     PresentationService,
     CheckoutSettingsService,
+    CouponsService,
+    StoreAdministrationService,
   ],
   controllers: [OperationsController, MediaController],
-  exports: [PricingService, InventoryService],
+  exports: [PricingService, InventoryService, CouponsService],
 })
 export class OperationsModule {}

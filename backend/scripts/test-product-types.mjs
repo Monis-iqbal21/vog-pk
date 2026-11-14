@@ -49,6 +49,8 @@ const cluster = new EmbeddedPostgres({
 let db,
   server,
   checkoutDiagnostics = [],
+  operationDiagnostics = [],
+  catalogDiagnostics = [],
   phase = 'startup',
   checks = 0,
   report;
@@ -160,6 +162,10 @@ try {
     for (const line of String(chunk).split(/\r?\n/)) {
       const match = line.match(/\{"event":"checkout\.transaction\.failed","step":"[a-z-]+","code":"(?:P\d{4}|UNEXPECTED)"\}/);
       if (match) checkoutDiagnostics.push(match[0]);
+      const operationMatch = line.match(/\{"event":"operations\.order-transition\.failed","step":"[a-z-]+","code":"(?:P\d{4}|UNEXPECTED)"\}/);
+      if (operationMatch) operationDiagnostics.push(operationMatch[0]);
+      const catalogMatch = line.match(/\{"event":"catalog\.list\.failed","collection":"[a-z-]+","code":"[A-Z0-9]{5}"\}/);
+      if (catalogMatch) catalogDiagnostics.push(catalogMatch[0]);
     }
   });
   const base = `http://127.0.0.1:${apiPort}`;
@@ -1119,6 +1125,8 @@ try {
     error.constructor.name,
   );
   if (checkoutDiagnostics.length) console.error('Sanitized checkout diagnostic:', checkoutDiagnostics.at(-1));
+  if (operationDiagnostics.length) console.error('Sanitized operations diagnostic:', operationDiagnostics.at(-1));
+  if (catalogDiagnostics.length) console.error('Sanitized catalog diagnostic:', catalogDiagnostics.at(-1));
   if(error.constructor.name.startsWith('TimeoutError')){
     const hint=error.message?.match(/waiting for (getBy(?:Role|Label|Text)\([^\n]{1,180})/)?.[1];
     if(hint)console.error('Timed out on UI locator:',hint);

@@ -59,6 +59,27 @@ export const checkoutSettings = z.object({
   codEnabled: z.boolean(),
   cardEnabled: z.boolean(),
 }).strict();
+export const storeSettings = z.object({
+  expectedRevision: z.number().int().min(0), name: label, locale: z.string().regex(/^[a-z]{2,3}(?:-[A-Z]{2})?$/), timeZone: z.string().min(1).max(80),
+}).strict();
+const internalPath = z.string().max(300).refine((value) => value.startsWith('/') && !value.startsWith('//') && !/[\r\n]/.test(value));
+export const homepageContent = z.object({
+  slides: z.array(z.object({ title: label, eyebrow: z.string().max(80).default(''), description: z.string().max(500).default(''), imageAssetId: z.uuid().nullable(), buttonLabel: z.string().max(80).default(''), href: internalPath.nullable().default(null), sortOrder: z.number().int().min(0).max(100), visible: z.boolean().default(true) }).strict()).max(8),
+  sections: z.array(z.object({ kind: z.enum(['FEATURED','NEW_ARRIVALS','CATEGORY']), title: label, categoryId: z.uuid().nullable().default(null), sortOrder: z.number().int().min(0).max(100), visible: z.boolean().default(true) }).strict()).max(12),
+}).strict().superRefine((data, ctx) => {
+  if (data.slides.some((slide) => !slide.imageAssetId)) ctx.addIssue({ code: 'custom', path: ['slides'], message: 'Choose an approved public image for every hero slide.' });
+  if (data.sections.some((section) => section.kind === 'CATEGORY' ? !section.categoryId : !!section.categoryId)) ctx.addIssue({ code: 'custom', path: ['sections'], message: 'Category sections require a category; collections do not.' });
+});
+export const homepageSave = z.object({ expectedRevision: z.number().int().min(0), content: homepageContent }).strict();
+export const coupon = z.object({
+  code: z.string().trim().min(3).max(40).regex(/^[A-Za-z0-9_-]+$/), discountType: z.enum(['PERCENT','FIXED']), discountValue: z.string().max(32), minimumOrder: z.string().max(32).default('0'), currency: z.string().regex(/^[A-Z]{3}$/), usageLimit: z.number().int().positive().max(100000000).nullable(), startsAt: instant, endsAt: instant, active: z.boolean(),
+}).strict();
+export const couponCreate = coupon;
+export const couponSave = coupon.extend({ expectedRevision: revision });
+export const couponCode = z.string().trim().min(3).max(40).regex(/^[A-Za-z0-9_-]+$/);
+export const orderStatus = z.enum(['CONFIRMED','PROCESSING','SHIPPED','DELIVERED','CANCELLED']);
+export const orderList = page.extend({ status: z.enum(['RECEIVED','CONFIRMED','PROCESSING','SHIPPED','DELIVERED','CANCELLED']).optional() });
+export const orderTransition = z.object({ expectedRevision: revision, status: orderStatus }).strict();
 export const location = z
   .object({ code, name: label, isDefault: z.boolean().default(false) })
   .strict();

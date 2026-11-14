@@ -1,6 +1,7 @@
 import {
   Inject,
   Injectable,
+  HttpException,
   NotFoundException,
   ServiceUnavailableException,
 } from '@nestjs/common';
@@ -185,6 +186,31 @@ export class StorefrontService {
         ),
     }));
   }
+  homepage() {
+    return this.read(async (tx, ctx) => {
+      const page = await tx.storeHomepage.findFirst({ where: { storeId: ctx.storeId, tenantId: ctx.tenantId, archived: false }, include: { revisions: { where: { status: 'PUBLISHED' }, orderBy: { number: 'desc' }, take: 1 } } });
+      const revision = page?.revisions[0];
+      if (!revision) return { version: 1, store: { name: ctx.name }, slides: [], sections: [] };
+      const content = revision.content as { slides: { title: string; eyebrow: string; description: string; imageAssetId: string | null; buttonLabel: string; href: string | null; sortOrder: number; visible: boolean }[]; sections: { kind: string; title: string; categoryId: string | null; sortOrder: number; visible: boolean }[] };
+      const slides = [];
+      for (const slide of [...content.slides].filter((item) => item.visible).sort((a, b) => a.sortOrder - b.sortOrder)) {
+        if (!slide.imageAssetId) continue;
+        const reference = await tx.listingRevisionMedia.findFirst({
+          where: { tenantId: ctx.tenantId, storeId: ctx.storeId, visible: true, revision: { status: 'PUBLISHED', visible: true, publishedFor: { some: { archived: false } } }, OR: [{ productMedia: { assetId: slide.imageAssetId, asset: { archived: false, rights: 'APPROVED', publicUse: true, developmentOnly: false } } }, { skuMedia: { assetId: slide.imageAssetId, asset: { archived: false, rights: 'APPROVED', publicUse: true, developmentOnly: false } } }] },
+          select: { revision: { select: { slug: true } } },
+        });
+        if (!reference) continue;
+        slides.push({ title: slide.title, eyebrow: slide.eyebrow, description: slide.description, buttonLabel: slide.buttonLabel, href: slide.href, imageUrl: `/api/catalog-media/${encodeURIComponent(reference.revision.slug)}/${slide.imageAssetId}?width=640` });
+      }
+      const categories = await this.categoryRows(tx, ctx);
+      const sections = content.sections.filter((item) => item.visible).sort((a, b) => a.sortOrder - b.sortOrder).flatMap((item) => {
+        const category = item.categoryId ? categories.find((row) => row.id === item.categoryId) : null;
+        if (item.kind === 'CATEGORY' && !category) return [];
+        return [{ kind: item.kind, title: item.title, ...(category ? { category: this.categoryDto(category) } : {}) }];
+      });
+      return { version: 1, store: { name: ctx.name }, revision: revision.number, slides, sections };
+    });
+  }
   async contract(tx: ScopeTransaction, ctx: StoreContext, q: CatalogQuery) {
     const categories = await this.categoryRows(tx, ctx),
       category = q.category
@@ -299,7 +325,9 @@ export class StorefrontService {
         ? [Prisma.sql`lr."featuredOrder" IS NOT NULL`]
         : q.collection === 'new-arrivals'
           ? [Prisma.sql`lr."newArrivalOrder" IS NOT NULL`]
-          : []),
+          : q.collection === 'deals'
+            ? [Prisma.sql`lr."sellingMode"='RETAIL' AND o.promotion IS NOT NULL AND o.amount IS NOT NULL AND o."regularAmount" IS NOT NULL AND o.amount<o."regularAmount"`]
+            : []),
       ...(q.related
         ? [
             Prisma.sql`lr.slug<>${q.related} AND EXISTS(SELECT 1 FROM "ListingRevision" related JOIN "StoreListing" rr ON rr."publishedRevisionId"=related.id AND NOT rr.archived JOIN "ProductRevision" rp ON rp.id=related."productRevisionId" JOIN "Product" rproduct ON rproduct.id=rp."productId" AND NOT rproduct.archived WHERE related.slug=${q.related} AND related."storeId"=${ctx.storeId}::uuid AND related.status='PUBLISHED' AND related.visible AND EXISTS(SELECT 1 FROM "ListingCategory" a JOIN "ListingCategory" b ON a."categoryId"=b."categoryId" WHERE a."listingRevisionId"=related.id AND b."listingRevisionId"=lr.id))`,
@@ -427,6 +455,8 @@ export class StorefrontService {
                 ? Prisma.sql`lr."publishedAt" DESC`
                 : q.collection === 'new-arrivals'
                   ? Prisma.sql`lr."newArrivalOrder" ASC NULLS LAST`
+                : q.collection === 'deals'
+                  ? Prisma.sql`lr."publishedAt" DESC`
                   : q.collection === 'featured'
                     ? Prisma.sql`lr."featuredOrder" ASC NULLS LAST`
                     : Prisma.sql`COALESCE(lr."catalogOrder",lr."featuredOrder") ASC NULLS LAST`;
@@ -517,6 +547,12 @@ export class StorefrontService {
         evaluatedAt: now.toISOString(),
         purchasable: false,
       };
+    }).catch((error: unknown) => {
+      if (!(error instanceof HttpException)) {
+        const code = error && typeof error === 'object' && 'code' in error && typeof error.code === 'string' && /^[A-Z0-9]{5}$/.test(error.code) ? error.code : 'UNEXPECTED';
+        console.error(JSON.stringify({ event: 'catalog.list.failed', collection: q.collection ?? 'all', code }));
+      }
+      throw error;
     });
   }
   detail(slug: string, variant?: string) {

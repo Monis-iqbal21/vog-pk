@@ -8,7 +8,7 @@ import { useCheckoutQuote } from "@/components/cart/useCheckoutQuote";
 const money = (currency, value) => `${currency ?? "PKR"} ${new Intl.NumberFormat("en-PK", { maximumFractionDigits: 2 }).format(Number(value))}`;
 
 export default function CheckoutPage() {
-  const router = useRouter(), cart = useCart(), { quote, pending: quoting, error: quoteError } = useCheckoutQuote(cart.items, cart.ready);
+  const router = useRouter(), cart = useCart(), { quote, pending: quoting, error: quoteError } = useCheckoutQuote(cart.items, cart.ready, cart.couponCode);
   const [config, setConfig] = useState(null), [configError, setConfigError] = useState(""), [error, setError] = useState(""), [busy, setBusy] = useState(false);
   useEffect(() => { let active = true; fetch("/api/checkout/config", { cache: "no-store" }).then(async (r) => { const data = await r.json(); if (!r.ok) throw new Error(data.message ?? "Payment options are unavailable."); return data; }).then((data) => { if (active) setConfig(data); }).catch((cause) => { if (active) setConfigError(cause.message); }); return () => { active = false; }; }, []);
   async function submit(event) {
@@ -18,7 +18,7 @@ export default function CheckoutPage() {
     const form = new FormData(event.currentTarget);
     let idempotencyKey = sessionStorage.getItem("vogpk-checkout-key");
     if (!idempotencyKey) { idempotencyKey = crypto.randomUUID(); sessionStorage.setItem("vogpk-checkout-key", idempotencyKey); }
-    const payload = { idempotencyKey, items: cart.items, customerName: form.get("customerName"), phone: form.get("phone"), city: form.get("city"), address: form.get("address"), paymentMethod: "COD" };
+    const payload = { idempotencyKey, items: cart.items, ...(cart.couponCode ? { couponCode: cart.couponCode } : {}), customerName: form.get("customerName"), phone: form.get("phone"), city: form.get("city"), address: form.get("address"), paymentMethod: "COD" };
     try {
       const response = await fetch("/api/checkout/orders", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       const data = await response.json();
@@ -36,7 +36,7 @@ export default function CheckoutPage() {
       {configError && <p className="checkout-error" role="alert">{configError}</p>}
       {config && !config.enabled && <p className="checkout-error" role="alert">This store has no active payment method. Checkout is unavailable.</p>}
       {error && <p className="checkout-error" role="alert">{error}</p>}
-      {quote && <div className="checkout-totals"><p>Subtotal <strong>{money(quote.currency, quote.subtotal)}</strong></p><p>Delivery <strong>{money(quote.currency, quote.delivery)}</strong></p><p>Total <strong>{money(quote.currency, quote.total)}</strong></p></div>}
+      {quote && <div className="checkout-totals"><p>Subtotal <strong>{money(quote.currency, quote.subtotal)}</strong></p><p>Delivery <strong>{money(quote.currency, quote.delivery)}</strong></p>{Number(quote.discount) > 0 && <p>Coupon {quote.couponCode} <strong>−{money(quote.currency, quote.discount)}</strong></p>}<p>Total <strong>{money(quote.currency, quote.total)}</strong></p></div>}
       <form className="checkout-form" onSubmit={submit}>
         <fieldset disabled={busy || quoting || !quote || Boolean(quoteError) || !config?.enabled || !config.paymentMethods?.length}>
           <legend>Delivery details</legend>

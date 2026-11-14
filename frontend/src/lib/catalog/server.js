@@ -8,6 +8,7 @@ import {
   listSchema,
   detailSchema,
   routeSchema,
+  homepageSchema,
 } from "./contracts";
 export function dynamicCatalog() {
   return catalogMode() !== "static";
@@ -51,6 +52,7 @@ const request = cache(async (path, schema) => {
 });
 /** @returns {Promise<import('zod').infer<typeof navigationSchema>>} */
 export const catalogNavigation = () => request("navigation", navigationSchema);
+export const catalogHomepage = () => request("homepage", homepageSchema);
 /** @param {string} slug @returns {Promise<import('zod').infer<typeof routeSchema>>} */
 export const catalogRoute = (slug) =>
   request(`routes/${encodeURIComponent(slug)}`, routeSchema);

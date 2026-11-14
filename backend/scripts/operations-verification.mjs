@@ -1355,8 +1355,55 @@ export async function verifyOperations({
       data: { storedBytes: 0 },
     });
   });
+  await test('Store dashboard and settings use scoped live data and audit revision-checked changes', async () => {
+    const dashboard = (await request(`${ops}/dashboard`));
+    assert.equal(dashboard.status, 200, dashboard.data?.message ?? 'Dashboard endpoint failed.');
+    for (const key of ['orders', 'pendingOrders', 'publishedListings', 'verifiedStockBalances', 'quantityInventoryItems']) assert.equal(Number.isInteger(dashboard.data[key]), true);
+    const settings = (await request(`${ops}/store-settings`));
+    assert.equal(settings.status, 200);
+    const saved = await request(`${ops}/store-settings`, { method: 'PATCH', body: { expectedRevision: settings.data.revision, name: settings.data.name, locale: settings.data.locale, timeZone: settings.data.timeZone } });
+    assert.equal(saved.status, 200);
+    assert.equal(saved.data.revision, settings.data.revision + 1);
+    assert.equal((await request(`${ops}/store-settings`, { method: 'PATCH', body: { expectedRevision: settings.data.revision, name: settings.data.name, locale: settings.data.locale, timeZone: settings.data.timeZone } })).status, 409);
+    assert.ok(await db.auditLog.findFirst({ where: { action: 'operations.store_settings_updated', actorId: owner.id, resourceId: ids.storeId } }));
+    assert.equal((await request(`stores/${ids.storeId}/operations/dashboard`, { session: bToken })).status, 403);
+  });
+  await test('Homepage revisions are auditable and publication rejects unapproved or private media', async () => {
+    const initial = (await request(`${ops}/homepage`));
+    assert.equal(initial.status, 200);
+    const content = { slides: [], sections: [] };
+    const draft = await request(`${ops}/homepage`, { method: 'PATCH', body: { expectedRevision: initial.data.revision, content } });
+    assert.equal(draft.status, 200);
+    assert.equal(draft.data.status, 'DRAFT');
+    const pending = await db.mediaAsset.create({ data: { tenantId: ids.tenantId, code: 'homepage_pending_test', mimeType: 'image/webp', createdBy: owner.id } });
+    const denied = await request(`${ops}/homepage/publish`, { method: 'POST', body: { expectedRevision: draft.data.number, content: { slides: [{ title: 'Pending image', eyebrow: '', description: '', imageAssetId: pending.id, buttonLabel: '', href: null, sortOrder: 0, visible: true }], sections: [] } } });
+    assert.equal(denied.status, 409);
+    const choices = await request(`${ops}/homepage/assets`);
+    assert.equal(choices.status, 200);
+    assert.equal(choices.data.assets.some((item) => item.id === pending.id), false);
+    const archived = await request(`${ops}/homepage/archive`, { method: 'POST', body: { revision: draft.data.number } });
+    assert.equal(archived.status, 201);
+    assert.equal(archived.data.archived, true);
+    assert.ok(await db.auditLog.findFirst({ where: { action: 'operations.homepage_draft_saved', actorId: owner.id, resourceId: draft.data.id } }));
+    assert.ok(await db.auditLog.findFirst({ where: { action: 'operations.homepage_archived', actorId: owner.id } }));
+  });
   return {
     browser: async ({ page, base, cookie }) => {
+      await page.goto(base + '/dashboard');
+      await page.getByRole('heading', { name: /^Welcome,/ }).waitFor();
+      await page.getByRole('heading', { name: 'Inventory status', exact: true }).waitFor();
+      await page.goto(base + '/settings');
+      await page.getByRole('heading', { name: 'Store settings', exact: true }).waitFor();
+      await page.getByLabel('Store name', { exact: true }).waitFor();
+      await page.goto(base + '/homepage');
+      await page.getByRole('heading', { name: 'Homepage content', exact: true }).waitFor();
+      await page.getByRole('heading', { name: 'Sequence preview', exact: true }).waitFor();
+      await page.goto(base + '/coupons');
+      await page.getByRole('heading', { name: 'Coupons & promotions', exact: true }).waitFor();
+      await page.getByRole('heading', { name: 'Store coupons', exact: true }).waitFor();
+      await page.goto(base + '/orders');
+      await page.getByRole('heading', { name: 'Orders', exact: true }).waitFor();
+      await page.getByRole('heading', { name: 'Store orders', exact: true }).waitFor();
       await page.goto(base + '/products');
       await page
         .getByLabel('Search catalog products', { exact: true })

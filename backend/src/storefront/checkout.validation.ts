@@ -18,7 +18,9 @@ export const checkoutOrder = z.object({
   city: z.string().trim().min(2).max(80),
   address: z.string().trim().min(8).max(500),
   paymentMethod: z.enum(['COD', 'CARD']),
+  couponCode: z.string().trim().min(3).max(40).regex(/^[A-Za-z0-9_-]+$/).optional(),
 }).strict();
+export const checkoutQuote = z.object({ items: cartLines, couponCode: z.string().trim().min(3).max(40).regex(/^[A-Za-z0-9_-]+$/).optional() }).strict();
 
 export const receiptRequest = z.object({
   orderNumber: z.string().regex(/^VOG-[0-9]{6}-[A-F0-9]{20}$/),

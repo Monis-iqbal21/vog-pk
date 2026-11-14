@@ -11,7 +11,11 @@ import ProductWorkspace from "@/components/catalog/ProductWorkspace";
 import ListingWorkspace from "@/components/catalog/ListingWorkspace";
 import MediaWorkspace from '@/components/operations/MediaWorkspace';
 import StaffRbacWorkspace from '@/components/StaffRbacWorkspace';
-import CheckoutSettingsWorkspace from '@/components/operations/CheckoutSettingsWorkspace';
+import HomepageWorkspace from '@/components/operations/HomepageWorkspace';
+import CouponWorkspace from '@/components/operations/CouponWorkspace';
+import OrderWorkspace from '@/components/operations/OrderWorkspace';
+import StoreDashboard from '@/components/operations/StoreDashboard';
+import StoreSettingsWorkspace from '@/components/operations/StoreSettingsWorkspace';
 export default async function ModulePage({ params }) {
   const user = await requireAdmin(),
     { module: slug } = await params,
@@ -51,51 +55,11 @@ export default async function ModulePage({ params }) {
         )}
       />
     );
-  if (slug === 'settings') return <CheckoutSettingsWorkspace contexts={(user.catalogContexts ?? []).filter((context) => context.permissions.includes('settings.view'))} />;
-  if (slug === "dashboard")
-    return (
-      <>
-        <div className="page-intro">
-          <h1>Welcome, {user.name}</h1>
-          <p className="muted">
-            Your workspace for VOGPK store administration.
-          </p>
-          <div className="role-list">
-            {user.roles.map((role) => (
-              <span key={role.code}>{role.name}</span>
-            ))}
-          </div>
-        </div>
-        <section aria-labelledby="quick-access">
-          <h2 id="quick-access">Quick access</h2>
-          <div className="quick-grid">
-            {modules
-              .filter(
-                (module) =>
-                  module.path !== "/dashboard" && canOpenModule(user, module),
-              )
-              .map((module) => (
-                <Link
-                  key={module.path}
-                  className="quick-link"
-                  href={module.path}
-                >
-                  {module.title}
-                  <span>Open workspace →</span>
-                </Link>
-              ))}
-          </div>
-        </section>
-        <section className="metrics-empty">
-          <h2>Store metrics</h2>
-          <p>
-            Sales, orders and inventory metrics will appear when those services
-            are connected.
-          </p>
-          <span className="status-badge">Not connected yet</span>
-        </section>
-      </>
-    );
+  if (slug === 'settings') return <StoreSettingsWorkspace contexts={(user.catalogContexts ?? []).filter((context) => context.permissions.includes('settings.view'))} />;
+  if (slug === 'homepage') return <HomepageWorkspace contexts={(user.catalogContexts ?? []).filter((context) => context.permissions.includes('homepage.view'))} />;
+  if (slug === 'coupons') return <CouponWorkspace contexts={(user.catalogContexts ?? []).filter((context) => context.permissions.includes('coupons.view'))} />;
+  if (slug === 'orders') return <OrderWorkspace contexts={(user.catalogContexts ?? []).filter((context) => context.permissions.includes('orders.view'))} />;
+  if (slug === "dashboard") return <><StoreDashboard contexts={user.catalogContexts ?? []} user={user} /><section aria-labelledby="quick-access"><h2 id="quick-access">Quick access</h2><div className="quick-grid">{modules.filter((module) => module.path !== "/dashboard" && canOpenModule(user, module)).map((module) => <Link key={module.path} className="quick-link" href={module.path}>{module.title}<span>Open workspace →</span></Link>)}</div></section></>;
   if (slug === "staff" || slug === "audit-logs") {
     const token = (await cookies()).get(adminConfig().sessionCookie)?.value;
     const result = await backendRequest(slug, { token });

@@ -23,7 +23,7 @@ export default function OrderReceipt({ orderNumber }) {
     {receipt && <><p>Thank you, {receipt.customerName}. Your Cash on Delivery order is <strong>{receipt.status.toLowerCase()}</strong>; payment is <strong>{receipt.paymentStatus.toLowerCase()}</strong>.</p>
       <h2>Delivery</h2><p>{receipt.phone}<br />{receipt.address}<br />{receipt.city}, Pakistan</p>
       <h2>Items</h2><ul>{receipt.items.map((item, index) => <li key={`${item.skuCode}-${index}`}>{item.productName} · {item.variantName} ({item.skuCode}) × {item.quantity} — {money(receipt.currency, item.lineTotal)}</li>)}</ul>
-      <p>Subtotal: {money(receipt.currency, receipt.subtotal)} · Total: {money(receipt.currency, receipt.total)}</p>
+      <p>Subtotal: {money(receipt.currency, receipt.subtotal)}{receipt.couponCode ? ` · Coupon ${receipt.couponCode} −${money(receipt.currency, receipt.discount)}` : ""} · Total: {money(receipt.currency, receipt.total)}</p>
     </>}
     <Link href="/">Return to store</Link>
   </section>;

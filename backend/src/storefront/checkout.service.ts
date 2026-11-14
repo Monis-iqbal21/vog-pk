@@ -15,6 +15,7 @@ import { currencyPrecision } from '../operations/money.js';
 import { StorefrontService } from './storefront.service.js';
 import type { CartLines, CheckoutOrder } from './checkout.validation.js';
 import { PAKISTAN_CITIES } from './pakistan-cities.js';
+import { CouponsService } from '../operations/coupons.service.js';
 type CatalogContext = Awaited<ReturnType<StorefrontService['context']>>;
 
 const digest = (value: string) => createHash('sha256').update(value).digest('hex');
@@ -44,6 +45,7 @@ export class CheckoutService {
   constructor(
     @Inject(DatabaseService) readonly db: DatabaseService,
     @Inject(StorefrontService) readonly catalog: StorefrontService,
+    @Inject(CouponsService) readonly coupons: CouponsService,
   ) {}
 
   async context(tx: ScopeTransaction) {
@@ -163,13 +165,14 @@ export class CheckoutService {
     return { priced, subtotal, total: subtotal };
   }
 
-  async quote(lines: CartLines) {
+  async quote(lines: CartLines, couponCode?: string) {
     return this.catalog.read(async (tx, ctx) => {
-      const { priced, subtotal, total } = await this.quoteIn(tx, ctx, lines);
+      const { priced, subtotal } = await this.quoteIn(tx, ctx, lines);
+      const coupon = await this.coupons.apply(tx, ctx, couponCode, subtotal, new Date());
       return {
         currency: ctx.currency,
         items: priced.map((line) => ({ listingId: line.listingId, skuCode: line.skuCode, productName: line.productName, variantName: line.variantName, quantity: line.quantity, availableQuantity: line.stock.reduce((sum, balance) => sum + balance.onHand, 0), unitPrice: line.unitPrice.toString(), lineTotal: line.lineTotal.toString() })),
-        subtotal: subtotal.toString(), delivery: '0', total: total.toString(),
+        subtotal: subtotal.toString(), delivery: '0', discount: coupon.discount.toString(), couponCode: coupon.code, total: coupon.total.toString(),
       };
     });
   }
@@ -182,7 +185,7 @@ export class CheckoutService {
     }
   }
 
-  private async reserveStock(tx: ScopeTransaction, orderNumber: string, hash: string, priced: PricedLine[]) {
+  private async reserveStock(tx: ScopeTransaction, orderId: string, orderNumber: string, hash: string, priced: PricedLine[]) {
     const grouped = new Map<string, { quantity: number; lines: PricedLine[] }>();
     for (const line of priced) {
       const item = grouped.get(line.inventoryItemId) ?? { quantity: 0, lines: [] };
@@ -196,21 +199,28 @@ export class CheckoutService {
       const locations = await tx.inventoryLocation.count({ where: { storeId: item.storeId, tenantId: item.tenantId, active: true } });
       if (!item || item.policy !== 'QUANTITY' || item.balances.length !== locations || item.balances.some((balance) => !balance.known) || item.balances.reduce((sum, balance) => sum + balance.onHand, 0) < group.quantity)
         throw new ConflictException('Stock changed while checkout was being submitted.');
-      let remaining = group.quantity;
-      for (const balance of item.balances) {
-        if (remaining === 0) break;
-        const taken = Math.min(balance.onHand, remaining);
-        if (!taken) continue;
-        const updated = await tx.stockBalance.update({ where: { id: balance.id }, data: { onHand: { decrement: taken }, revision: { increment: 1 } } });
-        await tx.inventoryMovement.create({ data: {
-          tenantId: item.tenantId, storeId: item.storeId, inventoryItemId: item.id, balanceId: balance.id,
-          idempotencyKey: randomUUID(), requestHash: hash, mode: 'DELTA', beforeQuantity: balance.onHand,
-          afterQuantity: updated.onHand, beforeKnown: true, afterKnown: true, balanceRevision: updated.revision,
-          reason: `Customer order ${orderNumber} stock reservation`, actorId: null,
-        } });
-        remaining -= taken;
+      const balances = item.balances.map((balance) => ({ ...balance }));
+      for (const line of group.lines) {
+        let remaining = line.quantity;
+        const allocations: { balanceId: string; inventoryItemId: string; quantity: number }[] = [];
+        for (const balance of balances) {
+          if (remaining === 0) break;
+          const taken = Math.min(balance.onHand, remaining);
+          if (!taken) continue;
+          const updated = await tx.stockBalance.update({ where: { id: balance.id }, data: { onHand: { decrement: taken }, revision: { increment: 1 } } });
+          await tx.inventoryMovement.create({ data: {
+            tenantId: item.tenantId, storeId: item.storeId, inventoryItemId: item.id, balanceId: balance.id,
+            idempotencyKey: randomUUID(), requestHash: hash, mode: 'DELTA', beforeQuantity: balance.onHand,
+            afterQuantity: updated.onHand, beforeKnown: true, afterKnown: true, balanceRevision: updated.revision,
+            reason: `Customer order ${orderNumber} stock reservation`, actorId: null,
+          } });
+          allocations.push({ balanceId: balance.id, inventoryItemId: item.id, quantity: taken });
+          balance.onHand = updated.onHand; balance.revision = updated.revision;
+          remaining -= taken;
+        }
+        if (remaining) throw new ConflictException('Stock changed while checkout was being submitted.');
+        await tx.storeOrderItem.updateMany({ where: { orderId, skuRevisionId: line.skuRevisionId }, data: { inventoryReservation: allocations } });
       }
-      if (remaining) throw new ConflictException('Stock changed while checkout was being submitted.');
     }
   }
 
@@ -219,7 +229,7 @@ export class CheckoutService {
     if (!allowedOrigin || origin !== allowedOrigin) throw new ForbiddenException('Checkout origin is not allowed.');
     if (input.paymentMethod !== 'COD') throw new ConflictException('Card payment is unavailable until a verified payment gateway is configured.');
     if (!PAKISTAN_CITIES.includes(input.city as (typeof PAKISTAN_CITIES)[number])) throw new BadRequestException('Select a supported city in Pakistan.');
-    const normalized = { ...input, customerName: input.customerName.trim(), phone: input.phone.trim(), city: input.city.trim(), address: input.address.trim(), items: [...input.items].sort((a, b) => `${a.listingId}:${a.skuCode}`.localeCompare(`${b.listingId}:${b.skuCode}`)) };
+    const normalized = { ...input, couponCode: input.couponCode?.trim().toUpperCase(), customerName: input.customerName.trim(), phone: input.phone.trim(), city: input.city.trim(), address: input.address.trim(), items: [...input.items].sort((a, b) => `${a.listingId}:${a.skuCode}`.localeCompare(`${b.listingId}:${b.skuCode}`)) };
     const hash = digest(JSON.stringify({ ...normalized, idempotencyKey: undefined }));
     const storeCtx = await this.db.$transaction(async (tx) => this.context(tx), { isolationLevel: 'RepeatableRead', timeout: 15000 });
     const prior = await this.db.storeOrder.findUnique({ where: { storeId_idempotencyKey: { storeId: storeCtx.storeId, idempotencyKey: input.idempotencyKey } }, include: { items: true } });
@@ -238,6 +248,8 @@ export class CheckoutService {
         if (!checkout?.codEnabled || checkout.cardEnabled) throw new ConflictException('The selected payment method is not active for this store.');
         step = 'server-price-and-stock-validation';
         const { priced, subtotal } = await this.quoteIn(tx, ctx, normalized.items);
+        step = 'coupon-validation';
+        const coupon = await this.coupons.apply(tx, ctx, normalized.couponCode, subtotal, new Date());
         step = 'stock-locking';
         await this.lockStock(tx, priced);
         const now = new Date();
@@ -248,11 +260,14 @@ export class CheckoutService {
           id: orderId, tenantId: ctx.tenantId, storeId: ctx.storeId, orderNumber,
           idempotencyKey: input.idempotencyKey, requestHash: hash, receiptTokenHash: digest(input.idempotencyKey),
           customerName: normalized.customerName, phone: normalized.phone, city: normalized.city, address: normalized.address,
-          paymentMethod: 'COD', paymentStatus: 'PENDING', currency: ctx.currency, subtotal, total: subtotal,
+          paymentMethod: 'COD', paymentStatus: 'PENDING', currency: ctx.currency, subtotal, discount: coupon.discount, total: coupon.total,
+          couponId: coupon.coupon?.id ?? null, couponCode: coupon.code,
           items: { create: priced.map((line) => ({ listingRevisionId: line.listingRevisionId, skuRevisionId: line.skuRevisionId, productName: line.productName, variantName: line.variantName, skuCode: line.skuCode, selections: line.selections, quantity: line.quantity, unitPrice: line.unitPrice, lineTotal: line.lineTotal })) },
         }, include: { items: true } });
         step = 'inventory-ledger';
-        await this.reserveStock(tx, orderNumber, hash, priced);
+        await this.reserveStock(tx, created.id, orderNumber, hash, priced);
+        step = 'coupon-redemption';
+        await this.coupons.redeem(tx, ctx, coupon.coupon, created.id, new Date());
         return created;
       }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable, timeout: 20000, maxWait: 5000 });
       return this.confirmation(order, input.idempotencyKey, false);
@@ -270,13 +285,13 @@ export class CheckoutService {
     }
   }
 
-  private confirmation(order: { orderNumber: string; currency: string; subtotal: Prisma.Decimal; total: Prisma.Decimal; paymentMethod: string; paymentStatus: string; status: string; createdAt: Date; items: { productName: string; variantName: string; skuCode: string; quantity: number; unitPrice: Prisma.Decimal; lineTotal: Prisma.Decimal }[] }, receiptToken: string, replayed: boolean) {
+  private confirmation(order: { orderNumber: string; currency: string; subtotal: Prisma.Decimal; discount: Prisma.Decimal; couponCode: string | null; total: Prisma.Decimal; paymentMethod: string; paymentStatus: string; status: string; createdAt: Date; items: { productName: string; variantName: string; skuCode: string; quantity: number; unitPrice: Prisma.Decimal; lineTotal: Prisma.Decimal }[] }, receiptToken: string, replayed: boolean) {
     return {
       orderNumber: order.orderNumber,
       receiptToken,
       replayed,
       receipt: {
-        currency: order.currency, subtotal: order.subtotal.toString(), total: order.total.toString(),
+        currency: order.currency, subtotal: order.subtotal.toString(), discount: order.discount.toString(), couponCode: order.couponCode, total: order.total.toString(),
         paymentMethod: order.paymentMethod, paymentStatus: order.paymentStatus, status: order.status, createdAt: order.createdAt.toISOString(),
         items: order.items.map((item) => ({ productName: item.productName, variantName: item.variantName, skuCode: item.skuCode, quantity: item.quantity, unitPrice: item.unitPrice.toString(), lineTotal: item.lineTotal.toString() })),
       },
@@ -290,7 +305,7 @@ export class CheckoutService {
       return {
         orderNumber: order.orderNumber, customerName: order.customerName, phone: order.phone,
         city: order.city, address: order.address, currency: order.currency,
-        subtotal: order.subtotal.toString(), total: order.total.toString(), paymentMethod: order.paymentMethod,
+        subtotal: order.subtotal.toString(), discount: order.discount.toString(), couponCode: order.couponCode, total: order.total.toString(), paymentMethod: order.paymentMethod,
         paymentStatus: order.paymentStatus, status: order.status, createdAt: order.createdAt.toISOString(),
         items: order.items.map((item) => ({ productName: item.productName, variantName: item.variantName, skuCode: item.skuCode, quantity: item.quantity, unitPrice: item.unitPrice.toString(), lineTotal: item.lineTotal.toString() })),
       };

@@ -2,18 +2,20 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useSyncExternalStore } from "react";
 
 const KEY = "vogpk-cart-v1";
+const COUPON_KEY = "vogpk-coupon-v1";
 const CartContext = createContext(null);
-const emptySnapshot = Object.freeze({ items: [], ready: false });
+const emptySnapshot = Object.freeze({ items: [], couponCode: "", ready: false });
 let snapshot = emptySnapshot;
 const listeners = new Set();
-function publish(items, ready = true) {
-  snapshot = { items: clean(items), ready };
-  if (ready) localStorage.setItem(KEY, JSON.stringify(snapshot.items));
+function cleanCoupon(value) { return typeof value === "string" && /^[A-Za-z0-9_-]{3,40}$/.test(value.trim()) ? value.trim().toUpperCase() : ""; }
+function publish(items, ready = true, couponCode = snapshot.couponCode) {
+  snapshot = { items: clean(items), couponCode: cleanCoupon(couponCode), ready };
+  if (ready) { localStorage.setItem(KEY, JSON.stringify(snapshot.items)); if (snapshot.couponCode) localStorage.setItem(COUPON_KEY, snapshot.couponCode); else localStorage.removeItem(COUPON_KEY); }
   listeners.forEach((listener) => listener());
 }
 function subscribe(listener) {
   listeners.add(listener);
-  const syncStorage = (event) => { if (event.key === KEY) { try { snapshot = { items: clean(JSON.parse(event.newValue ?? "[]")), ready: true }; } catch { snapshot = { items: [], ready: true }; } listeners.forEach((notify) => notify()); } };
+  const syncStorage = (event) => { if (event.key === KEY || event.key === COUPON_KEY) { try { snapshot = { items: clean(JSON.parse(localStorage.getItem(KEY) ?? "[]")), couponCode: cleanCoupon(localStorage.getItem(COUPON_KEY) ?? ""), ready: true }; } catch { snapshot = { items: [], couponCode: "", ready: true }; } listeners.forEach((notify) => notify()); } };
   window.addEventListener("storage", syncStorage);
   return () => { listeners.delete(listener); window.removeEventListener("storage", syncStorage); };
 }
@@ -28,10 +30,10 @@ function clean(items) {
 
 export function CartProvider({ children }) {
   const state = useSyncExternalStore(subscribe, () => snapshot, () => emptySnapshot);
-  const { items, ready } = state;
+  const { items, couponCode, ready } = state;
   useEffect(() => {
     if (snapshot.ready) return;
-    try { publish(JSON.parse(localStorage.getItem(KEY) ?? "[]")); } catch { publish([]); }
+    try { publish(JSON.parse(localStorage.getItem(KEY) ?? "[]"), true, localStorage.getItem(COUPON_KEY) ?? ""); } catch { publish([], true, ""); }
   }, []);
   const addItem = useCallback((incoming) => {
     const line = clean([incoming])[0];
@@ -51,8 +53,9 @@ export function CartProvider({ children }) {
     publish(snapshot.items.map((item) => item.listingId === listingId && item.skuCode === skuCode ? { ...item, quantity: Math.min(50, quantity) } : item));
   }, []);
   const removeItem = useCallback((listingId, skuCode) => publish(snapshot.items.filter((item) => item.listingId !== listingId || item.skuCode !== skuCode)), []);
-  const clear = useCallback(() => publish([]), []);
-  const value = useMemo(() => ({ items, ready, addItem, setQuantity, removeItem, clear, itemCount: items.reduce((sum, item) => sum + item.quantity, 0) }), [items, ready, addItem, setQuantity, removeItem, clear]);
+  const clear = useCallback(() => publish([], true, ""), []);
+  const setCouponCode = useCallback((value) => publish(snapshot.items, true, value), []);
+  const value = useMemo(() => ({ items, couponCode, ready, addItem, setQuantity, removeItem, clear, setCouponCode, itemCount: items.reduce((sum, item) => sum + item.quantity, 0) }), [items, couponCode, ready, addItem, setQuantity, removeItem, clear, setCouponCode]);
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
 

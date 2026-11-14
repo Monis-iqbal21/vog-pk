@@ -17,6 +17,8 @@ import { InventoryService } from './inventory.service.js';
 import { MediaService } from './media.service.js';
 import { PresentationService } from './presentation.service.js';
 import { CheckoutSettingsService } from './checkout-settings.service.js';
+import { CouponsService } from './coupons.service.js';
+import { StoreAdministrationService } from './store-administration.service.js';
 import * as v from './validation.js';
 @Controller('admin/stores/:storeId/operations')
 @ScopedAccess()
@@ -26,7 +28,24 @@ export class OperationsController {
     @Inject(InventoryService) readonly inventory: InventoryService,
     @Inject(PresentationService) readonly presentation: PresentationService,
     @Inject(CheckoutSettingsService) readonly checkout: CheckoutSettingsService,
+    @Inject(CouponsService) readonly coupons: CouponsService,
+    @Inject(StoreAdministrationService) readonly storeAdmin: StoreAdministrationService,
   ) {}
+  @Get('dashboard') dashboard(@Req() r: AdminRequest, @Param('storeId') s: string) { return this.storeAdmin.dashboard(r.identity.id, validId(s)); }
+  @Get('store-settings') storeSettings(@Req() r: AdminRequest, @Param('storeId') s: string) { return this.storeAdmin.settings(r.identity.id, validId(s)); }
+  @Patch('store-settings') updateStoreSettings(@Req() r: AdminRequest, @Param('storeId') s: string, @Body() b: unknown) { return this.storeAdmin.saveSettings(r.identity.id, validId(s), validate(v.storeSettings, b)); }
+  @Get('homepage') homepage(@Req() r: AdminRequest, @Param('storeId') s: string) { return this.storeAdmin.homepage(r.identity.id, validId(s)); }
+  @Get('homepage/assets') homepageAssets(@Req() r: AdminRequest, @Param('storeId') s: string) { return this.storeAdmin.homepageAssets(r.identity.id, validId(s)); }
+  @Patch('homepage') saveHomepage(@Req() r: AdminRequest, @Param('storeId') s: string, @Body() b: unknown) { const input = validate(v.homepageSave, b); return this.storeAdmin.saveHomepage(r.identity.id, validId(s), input.expectedRevision, input.content, false); }
+  @Post('homepage/publish') publishHomepage(@Req() r: AdminRequest, @Param('storeId') s: string, @Body() b: unknown) { const input = validate(v.homepageSave, b); return this.storeAdmin.saveHomepage(r.identity.id, validId(s), input.expectedRevision, input.content, true); }
+  @Post('homepage/archive') archiveHomepage(@Req() r: AdminRequest, @Param('storeId') s: string, @Body() b: unknown) { const input = validate(v.lifecycle, b); return this.storeAdmin.archiveHomepage(r.identity.id, validId(s), input.revision); }
+  @Get('coupons') couponList(@Req() r: AdminRequest, @Param('storeId') s: string, @Query() q: unknown) { return this.coupons.list(r.identity.id, validId(s), validate(v.page, q)); }
+  @Post('coupons') couponCreate(@Req() r: AdminRequest, @Param('storeId') s: string, @Body() b: unknown) { return this.coupons.create(r.identity.id, validId(s), validate(v.couponCreate, b)); }
+  @Patch('coupons/:id') couponSave(@Req() r: AdminRequest, @Param('storeId') s: string, @Param('id') id: string, @Body() b: unknown) { return this.coupons.save(r.identity.id, validId(s), validId(id), validate(v.couponSave, b)); }
+  @Post('coupons/:id/archive') couponArchive(@Req() r: AdminRequest, @Param('storeId') s: string, @Param('id') id: string, @Body() b: unknown) { const input = validate(v.lifecycle, b); return this.coupons.archive(r.identity.id, validId(s), validId(id), input.revision); }
+  @Get('orders') orderList(@Req() r: AdminRequest, @Param('storeId') s: string, @Query() q: unknown) { return this.storeAdmin.orders(r.identity.id, validId(s), validate(v.orderList, q)); }
+  @Get('orders/:id') orderDetail(@Req() r: AdminRequest, @Param('storeId') s: string, @Param('id') id: string) { return this.storeAdmin.order(r.identity.id, validId(s), validId(id)); }
+  @Patch('orders/:id/status') updateOrderStatus(@Req() r: AdminRequest, @Param('storeId') s: string, @Param('id') id: string, @Body() b: unknown) { return this.storeAdmin.transitionOrder(r.identity.id, validId(s), validId(id), validate(v.orderTransition, b)); }
   @Get('checkout-settings') checkoutSettings(@Req() r: AdminRequest, @Param('storeId') s: string) {
     return this.checkout.read(r.identity.id, validId(s));
   }

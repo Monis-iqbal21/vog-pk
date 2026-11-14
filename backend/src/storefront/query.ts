@@ -7,7 +7,7 @@ export const slug = z
 export const query = z
   .object({
     category: slug.optional(),
-    collection: z.enum(['featured', 'new-arrivals']).optional(),
+    collection: z.enum(['featured', 'new-arrivals', 'deals']).optional(),
     related: slug.optional(),
     page: z.coerce.number().int().min(1).max(10000).default(1),
     pageSize: z.coerce.number().int().min(1).max(24).default(12),

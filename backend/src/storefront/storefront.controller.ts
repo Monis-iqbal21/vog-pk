@@ -5,7 +5,7 @@ import { Public } from '../security/guards.js';
 import { validate, validId } from '../security/validation.js';
 import { StorefrontService } from './storefront.service.js';
 import { CheckoutService } from './checkout.service.js';
-import { cartLines, checkoutOrder, receiptRequest } from './checkout.validation.js';
+import { checkoutOrder, checkoutQuote, receiptRequest } from './checkout.validation.js';
 import { query, slug } from './query.js';
 @Controller('catalog')
 @Public()
@@ -18,8 +18,8 @@ export class StorefrontController {
     return this.checkout.configuration();
   }
   @Post('checkout/quote') @HttpCode(200) quote(@Body() body: unknown) {
-    const input = validate(z.object({ items: cartLines }).strict(), body);
-    return this.checkout.quote(input.items);
+    const input = validate(checkoutQuote, body);
+    return this.checkout.quote(input.items, input.couponCode);
   }
   @Post('orders') createOrder(@Req() request: Request, @Body() body: unknown) {
     return this.checkout.create(validate(checkoutOrder, body), request.get('origin'));
@@ -31,6 +31,10 @@ export class StorefrontController {
   @Get('navigation') navigation(@Query() q: unknown) {
     validate(z.object({}).strict(), q);
     return this.catalog.navigation();
+  }
+  @Get('homepage') homepage(@Query() q: unknown) {
+    validate(z.object({}).strict(), q);
+    return this.catalog.homepage();
   }
   @Get('listings') listings(@Query() q: unknown) {
     return this.catalog.list(validate(query, q));

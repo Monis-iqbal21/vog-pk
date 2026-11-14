@@ -163,6 +163,11 @@ export const navigationSchema = z.object({
   store: z.object({ name: text, currency: code }),
   categories: z.array(categorySchema).max(1000),
 });
+export const homepageSchema = z.object({
+  version: z.literal(1), store: z.object({ name: text }), revision: z.number().int().positive().optional(),
+  slides: z.array(z.object({ title: text, eyebrow: text, description: text, buttonLabel: text, href: z.string().regex(/^\/(?!\/)[^\r\n]*$/).nullable(), imageUrl: z.string().regex(/^\/api\/catalog-media\/[a-z0-9-]+\/[a-f0-9-]{36}\?width=640$/) })).max(8),
+  sections: z.array(z.object({ kind: z.enum(["FEATURED", "NEW_ARRIVALS", "CATEGORY"]), title: text, category: categorySchema.optional() })).max(12),
+});
 const filter = z.object({
   code,
   label: text,

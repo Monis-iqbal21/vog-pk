@@ -290,6 +290,7 @@ model Store {
   currency String @default("PKR") @db.VarChar(3)
   locale String @default("en-PK") @db.VarChar(35)
   timeZone String @default("UTC") @db.VarChar(80)
+  settingsRevision Int @default(0)
   prices StorePrice[]
   inventoryItems InventoryItem[]
   inventoryLocations InventoryLocation[]
@@ -299,6 +300,8 @@ model Store {
   importRecords CatalogImportRecord[]
   checkoutSettings StoreCheckoutSettings?
   orders StoreOrder[]
+  homepage StoreHomepage?
+  coupons StoreCoupon[]
   @@unique([id, tenantId])
   @@unique([tenantId, slug])
 }
@@ -1033,7 +1036,15 @@ enum OrderPaymentStatus {
 }
 enum StoreOrderStatus {
   RECEIVED
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
   CANCELLED
+}
+enum CouponDiscountType {
+  PERCENT
+  FIXED
 }
 model InventoryLocation {
   id String @id @default(uuid()) @db.Uuid
@@ -1134,11 +1145,17 @@ model StoreOrder {
   paymentMethod CheckoutPaymentMethod
   paymentStatus OrderPaymentStatus @default(PENDING)
   status StoreOrderStatus @default(RECEIVED)
+  revision Int @default(1)
   currency String @db.VarChar(3)
   subtotal Decimal @db.Decimal(24,6)
+  discount Decimal @default(0) @db.Decimal(24,6)
   total Decimal @db.Decimal(24,6)
+  couponId String? @db.Uuid
+  couponCode String? @db.VarChar(40)
   createdAt DateTime @default(now())
   store Store @relation(fields:[storeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  coupon StoreCoupon? @relation(fields:[couponId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  couponRedemption CouponRedemption?
   items StoreOrderItem[]
   @@unique([id,storeId,tenantId])
   @@unique([storeId,orderNumber])
@@ -1160,8 +1177,83 @@ model StoreOrderItem {
   quantity Int
   unitPrice Decimal @db.Decimal(24,6)
   lineTotal Decimal @db.Decimal(24,6)
+  inventoryReservation Json @default("[]")
   order StoreOrder @relation(fields:[orderId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
   @@index([orderId,storeId,tenantId])
+}
+
+model StoreHomepage {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @unique @db.Uuid
+  revision Int @default(0)
+  archived Boolean @default(false)
+  updatedAt DateTime @updatedAt
+  updatedBy String @db.Uuid
+  store Store @relation(fields:[storeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  revisions StoreHomepageRevision[]
+  @@unique([id,storeId,tenantId])
+  @@unique([storeId,tenantId])
+}
+
+model StoreHomepageRevision {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  homepageId String @db.Uuid
+  number Int
+  status CatalogState @default(DRAFT)
+  content Json
+  createdAt DateTime @default(now())
+  createdBy String @db.Uuid
+  publishedAt DateTime?
+  publishedBy String? @db.Uuid
+  homepage StoreHomepage @relation(fields:[homepageId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  @@unique([id,storeId,tenantId])
+  @@unique([homepageId,number])
+  @@index([storeId,status,createdAt])
+}
+
+model StoreCoupon {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  code String @db.VarChar(40)
+  discountType CouponDiscountType
+  discountValue Decimal @db.Decimal(24,6)
+  minimumOrder Decimal @default(0) @db.Decimal(24,6)
+  currency String @db.VarChar(3)
+  usageLimit Int?
+  usageCount Int @default(0)
+  startsAt DateTime
+  endsAt DateTime
+  active Boolean @default(false)
+  archived Boolean @default(false)
+  revision Int @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  createdBy String @db.Uuid
+  updatedBy String @db.Uuid
+  store Store @relation(fields:[storeId,tenantId],references:[id,tenantId],onDelete:Restrict)
+  orders StoreOrder[]
+  redemptions CouponRedemption[]
+  @@unique([id,storeId,tenantId])
+  @@unique([storeId,code])
+  @@index([storeId,active,archived,startsAt,endsAt])
+}
+
+model CouponRedemption {
+  id String @id @default(uuid()) @db.Uuid
+  tenantId String @db.Uuid
+  storeId String @db.Uuid
+  couponId String @db.Uuid
+  orderId String @unique @db.Uuid
+  createdAt DateTime @default(now())
+  coupon StoreCoupon @relation(fields:[couponId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  order StoreOrder @relation(fields:[orderId,storeId,tenantId],references:[id,storeId,tenantId],onDelete:Restrict)
+  @@unique([id,storeId,tenantId])
+  @@unique([orderId,storeId,tenantId])
+  @@index([couponId,storeId,tenantId,createdAt])
 }
 model MediaApproval {
   id String @id @default(uuid()) @db.Uuid

@@ -26,21 +26,21 @@ export function allowedScopedRoute(method, path) {
   if (
     method === "GET" &&
     new RegExp(
-      `^${ops}/(?:settings|checkout-settings|locations|skus/${id}/(?:prices|inventory(?:/history)?|quote)|listings/${id}/revisions/${id}/media(?:/${id}/content)?)$`,
+      `^${ops}/(?:settings|store-settings|checkout-settings|dashboard|homepage(?:/assets)?|coupons|orders(?:/${id})?|locations|skus/${id}/(?:prices|inventory(?:/history)?|quote)|listings/${id}/revisions/${id}/media(?:/${id}/content)?)$`,
     ).test(path)
   )
     return true;
   if (
     method === "POST" &&
     new RegExp(
-      `^${ops}/(?:locations|skus/${id}/(?:prices(?:/${id}/actions/(?:review|draft|approve|publish|archive))?|inventory/adjustments))$`,
+      `^${ops}/(?:locations|coupons|homepage/(?:publish|archive)|coupons/${id}/archive|skus/${id}/(?:prices(?:/${id}/actions/(?:review|draft|approve|publish|archive))?|inventory/adjustments))$`,
     ).test(path)
   )
     return true;
   if (
     method === "PATCH" &&
     new RegExp(
-      `^${ops}/(?:settings|checkout-settings|skus/${id}/(?:prices/${id}|inventory)|listings/${id}/revisions/${id}/media)$`,
+      `^${ops}/(?:settings|store-settings|checkout-settings|homepage|coupons/${id}|orders/${id}/status|skus/${id}/(?:prices/${id}|inventory)|listings/${id}/revisions/${id}/media)$`,
     ).test(path)
   )
     return true;
