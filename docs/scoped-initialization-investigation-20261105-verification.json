@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "reviewedHead": "a78d54f634ad1b221fdd4182e73f91302d28636c",
+  "patchStatus": "LOCAL_VERIFIED_PUBLICATION_AUTHORIZED",
+  "originalError": {
+    "recoverable": false,
+    "reason": "Private wrapper discarded child stderr; original journal omitted error code",
+    "wrapperSeconds": 32.602,
+    "journalSeconds": 31.174
+  },
+  "reproduction": [
+    {
+      "latencyMs": 0,
+      "code": null,
+      "model": null,
+      "counts": [
+        {
+          "tenants": 1,
+          "permissions": 82,
+          "scopes": 90
+        }
+      ],
+      "queryCount": 540
+    },
+    {
+      "latencyMs": 63,
+      "code": "P2003",
+      "model": "PermissionScope",
+      "counts": [
+        {
+          "tenants": 0,
+          "permissions": 28,
+          "scopes": 0
+        }
+      ],
+      "queryCount": 474
+    }
+  ],
+  "exactPartialStateReproduction": {
+    "code": "P2028",
+    "model": "PermissionScope",
+    "counts": [
+      {
+        "tenants": 0,
+        "permissions": 28,
+        "scopes": 0
+      }
+    ],
+    "permissionInsertAfterRollback": true,
+    "productionTouched": false
+  },
+  "regressions": [
+    {
+      "kind": "clean",
+      "passed": true,
+      "elapsedMs": 622,
+      "queryCount": 186,
+      "result": {
+        "partialPermissionPreserved": false,
+        "injectedFailureAtomic": true,
+        "dryRunReadOnly": true,
+        "idempotent": true,
+        "permissions": 82,
+        "scopes": 90,
+        "ownerSessionsLegacyRbacPreserved": true,
+        "tenantStoreOwner": true,
+        "platformDenied": true
+      }
+    },
+    {
+      "kind": "partial",
+      "passed": true,
+      "elapsedMs": 4381,
+      "queryCount": 127,
+      "result": {
+        "partialPermissionPreserved": true,
+        "injectedFailureAtomic": true,
+        "dryRunReadOnly": true,
+        "idempotent": true,
+        "permissions": 82,
+        "scopes": 90,
+        "ownerSessionsLegacyRbacPreserved": true,
+        "tenantStoreOwner": true,
+        "platformDenied": true
+      }
+    },
+    {
+      "kind": "deadline",
+      "passed": true,
+      "elapsedMs": 1436,
+      "queryCount": 17,
+      "result": {
+        "timeoutCode": "P2028",
+        "atomic": true,
+        "noLateWrites": true,
+        "diagnostic": {
+          "step": "permissions",
+          "elapsedMs": 431
+        }
+      }
+    }
+  ],
+  "recovery": {
+    "capturedUtc": "2026-11-04T19:44:42.472Z",
+    "objectName": "vogpk-neon-20261104T194442Z-a09444e7.dump.age",
+    "cipherBytes": 281455,
+    "cipherSha256": "5e17d127d14aed5f875e6ed3bbdf1e6fa660b4c828c4fcde1bbde20341c8d686",
+    "sourceSchemaFingerprint": "06716571456a19d8ba4693e700519825afe1c0e51e8eaa03f27f460c3c4b0046",
+    "sourceTables": 65,
+    "migrations": 9,
+    "postgresql": "18.6",
+    "encryptedCopyAndDecryptionVerified": true,
+    "tableCountsVerified": true,
+    "schemaMatchesWithThreeReviewedCheckNormalizations": true,
+    "offlinePageChecksumsPassed": true,
+    "clusterStopped": true,
+    "plaintextAndClusterRemoved": true,
+    "productionUnchanged": true,
+    "privateKeyOnWindowsOnly": true,
+    "ociUpload": false
+  },
+  "production": {
+    "checkedUtc": "2026-11-04T20:04:59Z",
+    "api": {
+      "MainPID": "33120",
+      "NRestarts": "0",
+      "ActiveState": "active",
+      "NeedDaemonReload": "no"
+    },
+    "caddy": {
+      "MainPID": "6864",
+      "NRestarts": "0",
+      "ActiveState": "active",
+      "NeedDaemonReload": "no"
+    },
+    "health": {
+      "local": 200,
+      "localReady": 200,
+      "https": 200,
+      "httpsReady": 200,
+      "storefront": 200,
+      "admin": 200
+    },
+    "binding": [
+      "127.0.0.1:4000"
+    ],
+    "reviewedStagedSourceUnchanged": true,
+    "reviewedStagedArtifactsUnchanged": true
+  },
+  "productionDatabase": {
+    "migrationCount": 9,
+    "pending": 0,
+    "tenantStoreBridgeMemberships": 0,
+    "permissionCount": 28,
+    "mediaApproveRoleGrants": 0,
+    "mediaApproveScopeRegistrations": 0,
+    "originalOwnerSessionsLegacyGrantsPreserved": true
+  },
+  "localChecks": {
+    "backendBuild": true,
+    "backendLint": true,
+    "unitFiles": 10,
+    "unitTestsPassed": 40,
+    "sanitizedDiagnosticTestsPassed": 2
+  },
+  "productionChangingOperationsPerformed": false,
+  "decision": "NO_GO_UNTIL_PATCH_REVIEW_STAGE_NEW_PLAN_AND_SEPARATE_APPROVAL"
+}

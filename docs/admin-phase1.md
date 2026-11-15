@@ -126,7 +126,7 @@ Mappings are persisted through role-permission records and seeded idempotently. 
 
 Backend `@RequirePermissions(...)` is enforced by a global Nest guard. `@SessionOnly()` explicitly marks authenticated identity/logout endpoints; missing authorization metadata denies access by default. Public health is explicitly marked. The only public authentication action still requires the confidential BFF bridge key. Missing/invalid credentials return 401; authenticated insufficient permissions return 403. No unauthenticated privileged endpoint was added.
 
-Creating staff or changing access requires both `staff.manage` and `roles.manage`. The service rechecks the current actor inside the transaction, accepts existing predefined roles only, and prevents granting permissions the actor does not hold. Users cannot modify their own roles or enabled state. Access changes revoke every active session of the affected account. Custom roles are supported by the schema but no custom-role editor or API mutation was introduced.
+The legacy staff API retains its predefined-role behavior. SaaS authorization is managed through the separate scoped `ScopedRole` model and the Staff & Roles workspace; see [Scoped SaaS authorization](SCOPED_RBAC.md). Scoped role and membership changes re-resolve the current actor inside a serializable transaction, enforce scope-local permission delegation and Owner protection, and write audit events. Self role assignment and self membership revocation are denied. Scoped membership revocation takes effect on the next request without invalidating unrelated sessions; legacy account-level changes retain their existing session-revocation behavior. Membership administration applies only to existing active accounts and does not introduce invitations or password provisioning.
 
 ## Session and BFF security
 
@@ -156,7 +156,7 @@ Public admin UI: `/login`. Admin `/` chooses login/dashboard using a server-veri
 
 All share the permission-aware admin shell. Dashboard shows the authenticated name, roles, permitted quick links and an unavailable metrics state; there are no fake sales/orders. Header provides the page title and an account menu with identity, role display and logout. Desktop sidebar collapses to icons; mobile uses an accessible native dialog with focus containment, Escape/outside dismissal, scroll lock and close-on-navigation. Unauthorized modules show Access Denied before protected data loading.
 
-Staff shows up to 200 admin accounts, roles and status, with owner-authorized creation/access changes. It has no fake email invitations or password delivery. Audit shows the latest 100 security events. Full pagination for larger staff/audit datasets is future work. Other modules explicitly state that operational features are not implemented. There are no product, coupon, order or payment mutation APIs in this milestone.
+Staff & Roles shows authorized scoped memberships and roles (up to 200 members and 100 roles per context), supports exact-email lookup of existing active accounts, and provides custom role editing and scoped role assignment/revocation. It does not create admin accounts, send invitations or set passwords. The separate legacy account-level staff API remains available to its existing authorized callers. Audit shows the latest 100 security events. Full pagination for larger staff/audit datasets is future work. Other modules explicitly state that operational features are not implemented. There are no product, coupon, order or payment mutation APIs in this milestone.
 
 Nest routes (under `/api/admin`):
 

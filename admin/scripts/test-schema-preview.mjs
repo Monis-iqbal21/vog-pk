@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {previewErrors} from '../src/lib/schema-preview.js';
+const make=(id,type,rules,extra={})=>({id,required:false,snapshot:{label:id,dataType:type,rules,visibility:{admin:true},options:[{id:'black',label:'Black'},{id:'white',label:'White'}],...extra}});
+const version={attributes:[make('title','TEXT',{minLength:2,maxLength:20,allowedValues:['Good']}),make('size','NUMBER',{min:'123456789012345678.123450',max:'123456789012345678.123456',step:'0.000002'}),make('flag','BOOLEAN',{}),make('colors','MULTI_SELECT',{minItems:1,maxItems:1}),make('choice','SINGLE_SELECT',{})]};
+const values=new FormData();values.set('title','Good');values.set('size','123456789012345678.123456');values.set('colors','black');values.set('choice','white');assert.deepEqual(previewErrors(version,values),[]);
+values.set('size','123456789012345678.123455');assert.ok(previewErrors(version,values).some(e=>e.includes('increment')));
+values.set('size','1e100');assert.ok(previewErrors(version,values).some(e=>e.includes('decimal')));
+values.set('title','<script>');assert.ok(previewErrors(version,values).some(e=>e.includes('allowed')));
+values.append('colors','white');assert.ok(previewErrors(version,values).some(e=>e.includes('selections')));
+values.set('choice','forged');assert.ok(previewErrors(version,values).some(e=>e.includes('configured')));
+console.log('PASS Exact decimal, text, Boolean, single/multi-select and forged-value preview checks (6 assertions).');

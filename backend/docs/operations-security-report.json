@@ -1,0 +1,305 @@
+{
+  "milestone": 5,
+  "branch": "feature/commerce-pricing-inventory-media",
+  "baseCommit": "4e20044",
+  "productionAccess": false,
+  "validation": {
+    "backendBuild": "PASS",
+    "backendLint": "PASS",
+    "backendUnitTests": 32,
+    "integrationGroups": 51,
+    "realAdminProductionBuildAndBrowser": {
+      "passed": true,
+      "checks": 15,
+      "productionBuild": true,
+      "realBackend": true,
+      "persistedCredentials": false,
+      "extra": {
+        "passed": true,
+        "browserChecks": 8,
+        "headlessBrowser": "Microsoft Edge",
+        "realForms": true,
+        "noPageErrors": true,
+        "catalogBrowser": {
+          "passed": true,
+          "productAndSkuForms": true,
+          "typedFalseAndZero": true,
+          "dependentResolution": true,
+          "listingPins": true,
+          "separateApprovalAndPublication": true,
+          "clonedRevisions": true,
+          "responsiveWidths": [
+            1440,
+            390
+          ],
+          "missingCsrfRejected": true,
+          "invalidBffPathsRejected": true
+        },
+        "operationsBrowser": {
+          "passed": true
+        }
+      }
+    },
+    "foundationRegression": 23,
+    "authenticationRegression": 25,
+    "adminLint": "PASS",
+    "routingRegression": 19,
+    "previewConfiguration": 10,
+    "previewHttp": 38,
+    "bffAssertions": {
+      "foundation": 57,
+      "categories": 59,
+      "productsSkusListings": 80,
+      "pricingInventoryMedia": 160
+    },
+    "frontendLint": "PASS",
+    "frontendBuild": "PASS (187 generated pages)",
+    "staticCatalog": {
+      "categories": 12,
+      "products": 84,
+      "sourceUnchanged": true
+    },
+    "populatedMilestone4Upgrade": "PASS",
+    "localMediaProcessing": "PASS (actual signature-validated Sharp WebP files and authenticated previews)",
+    "publicRightsGate": "PASS (development authorization rejected for public listing review)"
+  },
+  "dependencyAudit": {
+    "backendProduction": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "adminProduction": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "backendAll": {
+      "info": 0,
+      "low": 0,
+      "moderate": 2,
+      "high": 0,
+      "critical": 0,
+      "total": 2
+    },
+    "adminAll": {
+      "info": 0,
+      "low": 0,
+      "moderate": 16,
+      "high": 0,
+      "critical": 0,
+      "total": 16
+    },
+    "backendAdvisories": [
+      {
+        "name": "@nestjs/cli",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "minimatch",
+        "severity": "moderate",
+        "advisories": [
+          {
+            "title": "minimatch has potential denial of service via globparts amplification",
+            "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249"
+          }
+        ]
+      }
+    ],
+    "adminAdvisories": [
+      {
+        "name": "@eslint-community/eslint-utils",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "@eslint/config-array",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "@eslint/eslintrc",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "@next/eslint-plugin-next",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "@typescript-eslint/eslint-plugin",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "@typescript-eslint/parser",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "@typescript-eslint/type-utils",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "@typescript-eslint/typescript-estree",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "@typescript-eslint/utils",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "eslint",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "eslint-config-next",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "eslint-plugin-import",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "eslint-plugin-jsx-a11y",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "eslint-plugin-react",
+        "severity": "moderate",
+        "advisories": []
+      },
+      {
+        "name": "minimatch",
+        "severity": "moderate",
+        "advisories": [
+          {
+            "title": "minimatch has potential denial of service via globparts amplification",
+            "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249"
+          }
+        ]
+      },
+      {
+        "name": "typescript-eslint",
+        "severity": "moderate",
+        "advisories": []
+      }
+    ],
+    "change": "Direct pinned Sharp 0.35.5; no unrelated upgrades",
+    "decision": "No production advisories. Existing moderate development-tool minimatch dependency advisories retained for a separate maintenance review."
+  },
+  "secretScan": {
+    "status": "PASS",
+    "scanner": "Gitleaks 8.30.1",
+    "scope": "Exact final staged contents; rescan after staging this evidence",
+    "findings": 0,
+    "forbiddenArtifacts": 0,
+    "privateKeyMarkers": 0,
+    "rawReport": "Ignored local artifact"
+  },
+  "limits": {
+    "pageSize": 25,
+    "promotions": 8,
+    "stockPerLocation": 1000000000,
+    "locations": 100,
+    "uploadBytes": 5242880,
+    "tenantStoredBytes": 536870912,
+    "tenantAssets": 500,
+    "uploadBatch": 8,
+    "concurrentTransformsPerProcess": 2,
+    "assignmentsPerTarget": 24,
+    "imagePixels": 32000000,
+    "imageDimension": 16000,
+    "responsiveWidths": [
+      320,
+      640,
+      1280,
+      1920
+    ],
+    "ordinaryBffMutationBytes": 16384,
+    "uploadBffEnvelopeBytes": 8388608
+  },
+  "operations": {
+    "push": false,
+    "merge": false,
+    "deployment": false,
+    "productionMigration": false,
+    "productionCatalogImport": false,
+    "purchasing": false,
+    "liveUploads": false,
+    "remoteMediaProvider": false,
+    "posterStorefrontRenderer": false,
+    "stage4Changes": false,
+    "scheduledAutomation": false
+  },
+  "readiness": {
+    "milestone6": "READY for separately reviewed storefront integration",
+    "productionActivation": "NOT APPROVED; separate provider, ARM64, permissions, backup, migration and rollout review required"
+  },
+  "cleanup": "Temporary Nest, PostgreSQL, admin fixtures and generated private uploaded test media stopped/removed by harness; no credentials persisted.",
+  "changedFiles": [
+    "admin/scripts/test-scoped-routes.mjs",
+    "admin/src/app/(protected)/[module]/page.jsx",
+    "admin/src/app/api/admin/[...segments]/route.js",
+    "admin/src/components/catalog/ListingWorkspace.jsx",
+    "admin/src/components/catalog/ProductWorkspace.jsx",
+    "admin/src/components/operations/ListingMediaPanel.jsx",
+    "admin/src/components/operations/MediaPanel.jsx",
+    "admin/src/components/operations/MediaWorkspace.jsx",
+    "admin/src/components/operations/OperationsPane.jsx",
+    "admin/src/config/modules.js",
+    "admin/src/lib/api.js",
+    "admin/src/lib/scoped-routes.js",
+    "admin/src/styles/schema.css",
+    "backend/docs/operations-auth-regression.json",
+    "backend/docs/operations-foundation-regression.json",
+    "backend/docs/operations-security-report.json",
+    "backend/docs/operations-verification.json",
+    "backend/package-lock.json",
+    "backend/package.json",
+    "backend/prisma/migrations/202611010005_pricing_inventory_media/migration.sql",
+    "backend/prisma/schema.prisma",
+    "backend/scripts/build-currency-registry.mjs",
+    "backend/scripts/operations-verification.mjs",
+    "backend/scripts/products-verification.mjs",
+    "backend/scripts/test-operations.mjs",
+    "backend/scripts/test-product-types.mjs",
+    "backend/src/app.module.ts",
+    "backend/src/catalog/listings.service.ts",
+    "backend/src/catalog/products.service.ts",
+    "backend/src/main.ts",
+    "backend/src/operations/access.ts",
+    "backend/src/operations/future-contracts.ts",
+    "backend/src/operations/inventory.service.ts",
+    "backend/src/operations/iso-currencies.ts",
+    "backend/src/operations/media.service.ts",
+    "backend/src/operations/money.spec.ts",
+    "backend/src/operations/money.ts",
+    "backend/src/operations/operations.controller.ts",
+    "backend/src/operations/operations.module.ts",
+    "backend/src/operations/presentation.service.ts",
+    "backend/src/operations/pricing.service.ts",
+    "backend/src/operations/storage.spec.ts",
+    "backend/src/operations/storage.ts",
+    "backend/src/operations/validation.ts",
+    "backend/src/security/development-foundation.ts",
+    "backend/src/security/scoped-permissions.ts",
+    "backend/src/security/scoped.controller.ts",
+    "docs/PRICING_INVENTORY_MEDIA.md"
+  ]
+}

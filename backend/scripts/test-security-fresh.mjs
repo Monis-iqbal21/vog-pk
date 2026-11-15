@@ -20,9 +20,9 @@ try{
  const safe=original.replace(reset,`if(await db.adminUser.count()||await db.role.count())throw new Error('Fresh database is not empty');`).replace(exportAccounts,'void accounts; // Do not persist credentials.');
  temporary=`scripts/.security-fresh-${run}.mjs`;
  await fs.writeFile(temporary,safe,{flag:'wx'});
- const result=spawnSync(process.execPath,[temporary],{env:{...process.env,TEST_DATABASE_URL:source.href,HOST:'127.0.0.1',SECURITY_TEST_PORT:'4002'},encoding:'utf8',stdio:'pipe'});
- if(result.status!==0)throw new Error('Security suite failed');
+ const result=spawnSync(process.execPath,[temporary],{env:{...process.env,TEST_DATABASE_URL:source.href,HOST:'127.0.0.1',SECURITY_TEST_PORT:process.env.SECURITY_TEST_PORT??'4002'},encoding:'utf8',stdio:'pipe'});
  console.log(result.stdout);
+ if(result.status!==0)throw new Error('Security suite failed');
  console.log('Fresh test database retained locally. No existing database was reset; no credentials exported.');
 }catch{console.error('Fresh security verification failed; sensitive diagnostics suppressed. Check local database access, free test port and the reviewed test runner.');process.exitCode=1;}
 finally{if(temporary)await fs.unlink(temporary).catch(()=>{});}

@@ -1,0 +1,30 @@
+import { Module } from '@nestjs/common';
+import { OperationsAccess } from './access.js';
+import { PricingService } from './pricing.service.js';
+import { InventoryService } from './inventory.service.js';
+import { LocalMediaStorage } from './storage.js';
+import { MediaService } from './media.service.js';
+import { PresentationService } from './presentation.service.js';
+import { CheckoutSettingsService } from './checkout-settings.service.js';
+import { CouponsService } from './coupons.service.js';
+import { StoreAdministrationService } from './store-administration.service.js';
+import {
+  OperationsController,
+  MediaController,
+} from './operations.controller.js';
+@Module({
+  providers: [
+    OperationsAccess,
+    PricingService,
+    InventoryService,
+    LocalMediaStorage,
+    MediaService,
+    PresentationService,
+    CheckoutSettingsService,
+    CouponsService,
+    StoreAdministrationService,
+  ],
+  controllers: [OperationsController, MediaController],
+  exports: [PricingService, InventoryService, CouponsService],
+})
+export class OperationsModule {}

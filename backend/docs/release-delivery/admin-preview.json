@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "command": "npm run test:preview",
+  "configurationChecks": 10,
+  "httpChecks": 38,
+  "secretFreePreviewBuild": true,
+  "productionMissingConfigRejected": true,
+  "protectedRoutesDenied": true,
+  "authAndPrivilegedApiDenied": true,
+  "noAuthCookiesIssued": true,
+  "backendRequests": 0,
+  "productionValuesIgnored": true,
+  "evidence": "Successful tool process exit 0; test script emits its report on stdout."
+}

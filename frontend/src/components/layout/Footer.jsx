@@ -14,11 +14,11 @@ function WhatsApp() {
   return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.3 8L3 21l1.5-4.7A9 9 0 1 1 21 11.5Z" /><path d="m8 7 2 3-1 1c1 2 2 3 4 4l1-1 3 2c-1 3-4 1-6 0s-5-5-4-7Z" /></svg>;
 }
 
-export default function Footer() {
+export default function Footer({shopLinks}) {
   return <footer className="site-footer">
     <div className="container footer-grid">
       <div className="footer-brand"><Brand /><p>{site.description}</p></div>
-      {footerGroups.map((group) => <div key={group.label}><h2>{group.label}</h2><ul>{group.links.map((link) => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}</ul></div>)}
+      {footerGroups.map((group) => <div key={group.label}><h2>{group.label}</h2><ul>{(group.label==='Shop'&&shopLinks?shopLinks:group.links).map((link) => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}</ul></div>)}
       <div className="footer-contact"><h2>Contact & Social</h2>
         <p><Mail size={16} aria-hidden="true" />{site.contact.email ? <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a> : <span>Email coming soon</span>}</p>
         <p><Phone size={16} aria-hidden="true" />{site.contact.phone ? <a href={`tel:${site.contact.phone}`}>{site.contact.phone}</a> : <span>Phone coming soon</span>}</p>

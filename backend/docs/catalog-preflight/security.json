@@ -1,0 +1,68 @@
+{
+  "milestone": "7B",
+  "branch": "feature/commerce-catalog-migration",
+  "baseCommit": "96915e1",
+  "secretScan": {
+    "passed": true,
+    "scanner": "Gitleaks 8.30.1",
+    "scope": "Exact staged contents plus forbidden-path/private-key marker checks",
+    "secretFindings": 0,
+    "reviewedFalsePositives": 35,
+    "reason": "35 sourceKey alerts exactly match public legacy product IDs in unchanged 96915e1 source. No broad scanner exclusion.",
+    "forbiddenPaths": 0,
+    "privateKeyMarkers": 0
+  },
+  "productionAccess": false,
+  "productionCatalogMode": "UNCHANGED_STATIC_DEFAULT",
+  "commercialMediaApproved": 0,
+  "mediaProviderActivated": false,
+  "ignoredTestDirectories": "Preserved; no cleanup attempted",
+  "changedFiles": [
+    "admin/src/components/catalog/ListingWorkspace.jsx",
+    "backend/docs/catalog-preflight/browser-parity.json",
+    "backend/docs/catalog-preflight/integration.json",
+    "backend/docs/catalog-preflight/manifest.json",
+    "backend/docs/catalog-preflight/media-audit.json",
+    "backend/docs/catalog-preflight/parity.json",
+    "backend/docs/catalog-preflight/performance.json",
+    "backend/docs/catalog-preflight/security.json",
+    "backend/docs/catalog-preflight/source-review.json",
+    "backend/docs/catalog-preflight/synthetic-regression-performance.json",
+    "backend/docs/catalog-preflight/verification.json",
+    "backend/package.json",
+    "backend/scripts/catalog-preflight-integration-report.mjs",
+    "backend/scripts/catalog-preflight-manifest.mjs",
+    "backend/scripts/catalog-preflight-report.mjs",
+    "backend/scripts/import-legacy-catalog.mjs",
+    "backend/scripts/products-verification.mjs",
+    "backend/scripts/test-catalog-migration.mjs",
+    "backend/scripts/test-catalog-preflight.mjs",
+    "backend/src/catalog/listings.service.ts",
+    "backend/src/catalog/validation.ts",
+    "docs/CATALOG_PREFLIGHT.md",
+    "docs/CATALOG_ROLLOUT_PLAN.md"
+  ],
+  "remaining": {
+    "sourceItems": 72,
+    "mediaBlocked": 95,
+    "commercialMediaApproved": 0,
+    "production": "NO-GO",
+    "deploymentImplementationBlockers": [
+      "Production catalog read/write controls and fixed HTTPS origin",
+      "Production-safe import and additive RBAC/Owner-context backfill",
+      "Migration-aware Oracle release preparation; existing guard retained",
+      "Approved static media bundle/private delivery adapter and rights decisions"
+    ],
+    "remoteVerification": "No current Oracle, Neon or Vercel audit in this milestone"
+  },
+  "invariants": {
+    "original7AManifestUnchanged": true,
+    "newPrismaMigrations": 0,
+    "newDependencies": 0,
+    "sourcePricesChanged": false,
+    "inventoryInvented": false,
+    "ownerCredentialsChanged": false,
+    "providerActivated": false,
+    "paidResourcesCreated": false
+  }
+}

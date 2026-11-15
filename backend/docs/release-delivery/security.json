@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "scanner": "Gitleaks 8.30.1",
+  "scope": "complete tracked staged release snapshot; not Git history or ignored files",
+  "trackedFiles": 599,
+  "stagedFiles": 48,
+  "secretFindings": 0,
+  "reviewedPublicProductIdFalsePositives": 70,
+  "falsePositivePolicy": "Only exact sourceKey public product IDs from unchanged baseline, generic-api-key rule, in the two original catalog manifest paths; no blanket rule exclusions",
+  "forbiddenOperationalArtifacts": 0,
+  "credentialsIncluded": false,
+  "productionAccess": false
+}

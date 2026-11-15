@@ -1,0 +1,380 @@
+{
+  "status": "PREFLIGHT_PASS_PRODUCTION_APPROVAL_PENDING",
+  "checkedUtc": "2026-11-04T16:47:30.154Z",
+  "pr": 2,
+  "draft": true,
+  "reviewedRelease": "7223c7817f7c7b93b040c4e5c8201af36ae21e83",
+  "backendTree": "2b9e56ee1eae38de6fca204c584ffd508dae945f",
+  "localOpsFix": "fc1d62ceec248dd12864028b219d51ce8f87389d",
+  "opsFixPushed": false,
+  "recovery": {
+    "archive": "vogpk-neon-20261104T162003Z-14283ee9.dump.age",
+    "capturedUtc": "2026-11-04T16:20:03.538Z",
+    "cipherBytes": 20133,
+    "cipherSha256": "93d8b989c5f7b232c7c4a9221289033ca5498063dedf14320d62368950bb12c6",
+    "logicalRestoreChecks": 42,
+    "secondFreshRestoredCopy": true,
+    "plaintextAndClusterRemoved": true,
+    "privateKeyStayedOnWindows": true,
+    "ociUploads": 0,
+    "offlineSecondCopy": "PENDING DEVICE"
+  },
+  "schemaAudit": {
+    "status": "PASS",
+    "readOnly": true,
+    "tlsVerified": true,
+    "baselineColumnsTypesDefaultsNullabilityMatch": true,
+    "publicTables": 9,
+    "validatedConstraints": true,
+    "indexesValid": true,
+    "noUnexpectedPublicFunctionsOrTriggers": true,
+    "schemaFingerprint": "15e2b8c16c3cadec78d5e36487fff2a34fd741cb2ae47bdc0c9206dd9ed3d41b",
+    "ddlPrivileges": {
+      "schemaCreate": true,
+      "schemaUsage": true,
+      "migrationBookkeeping": true,
+      "auditTableOwnership": true,
+      "plpgsqlUsage": true
+    },
+    "productionRowsModified": false,
+    "checkedUtc": "2026-11-04T16:46:53.796Z"
+  },
+  "migrationHistory": {
+    "status": "PASS",
+    "tlsVerified": true,
+    "actualReadOnlyTransaction": true,
+    "applied": [
+      "202610290001_admin_security"
+    ],
+    "pending": [
+      "202611010001_commerce_foundation",
+      "202611010002_product_types",
+      "202611010003_categories_filters",
+      "202611010004_catalog_products",
+      "202611010005_pricing_inventory_media",
+      "202611020006_storefront_read_indexes",
+      "202611020007_catalog_import_evidence",
+      "202611020008_media_review"
+    ],
+    "successfulHistoryPrefix": true,
+    "sourceChecksumsMatch": true,
+    "publicTableCount": 9,
+    "commerceSchemaPresent": false,
+    "productionMigrationsApplied": false,
+    "productionRowsModified": false,
+    "checkedUtc": "2026-11-04T16:33:39.398Z"
+  },
+  "restoredRehearsal": {
+    "status": "PASS",
+    "productionDataUsedOnlyInIsolatedTmpfs": true,
+    "sourceArchive": "vogpk-neon-20261104T162003Z-14283ee9.dump.age",
+    "restoredPostgresVersion": "18.6",
+    "reviewedRelease": "7223c7817f7c7b93b040c4e5c8201af36ae21e83",
+    "backendSourceUnchanged": true,
+    "migrations": [
+      {
+        "migration": "202611010001_commerce_foundation",
+        "milliseconds": 36.898
+      },
+      {
+        "migration": "202611010002_product_types",
+        "milliseconds": 35.306
+      },
+      {
+        "migration": "202611010003_categories_filters",
+        "milliseconds": 36.122
+      },
+      {
+        "migration": "202611010004_catalog_products",
+        "milliseconds": 67.243
+      },
+      {
+        "migration": "202611010005_pricing_inventory_media",
+        "milliseconds": 43.877
+      },
+      {
+        "migration": "202611020006_storefront_read_indexes",
+        "milliseconds": 4.597
+      },
+      {
+        "migration": "202611020007_catalog_import_evidence",
+        "milliseconds": 7.636
+      },
+      {
+        "migration": "202611020008_media_review",
+        "milliseconds": 5.987
+      }
+    ],
+    "checks": [
+      {
+        "name": "Restored production baseline and all nine reviewed migration bytes match",
+        "passed": true
+      },
+      {
+        "name": "Exactly eight pending migrations applied in order without drift or failures",
+        "passed": true
+      },
+      {
+        "name": "All original authentication, sessions, role, permission, audit and throttle rows unchanged by DDL",
+        "passed": true
+      },
+      {
+        "name": "Active 8c75ca5 binary works against expanded schema; protected legacy APIs and anonymous denial pass",
+        "passed": true
+      },
+      {
+        "name": "Foundation dry-run creates no tenant",
+        "passed": true
+      },
+      {
+        "name": "Repeated foundation preserves original Owner, credentials, assignments and all sessions",
+        "passed": true
+      },
+      {
+        "name": "Exactly one VOGPK context, all active legacy memberships, no platform grants",
+        "passed": true
+      },
+      {
+        "name": "New production backend preserves Owner session with public reads and catalog writes disabled",
+        "passed": true
+      },
+      {
+        "name": "Restored-copy import creates exactly 84 products, 12 categories and 84 default SKUs",
+        "passed": true
+      },
+      {
+        "name": "Import repeat is idempotent with zero catalog writes",
+        "passed": true
+      },
+      {
+        "name": "Strict importer verifier preserves collections, canonical URLs, reference prices, unknown stock and 95 private media refs",
+        "passed": true
+      },
+      {
+        "name": "Previous binary remains usable after foundation/import without database rewind",
+        "passed": true
+      },
+      {
+        "name": "Authorized admin source-review queue shows exactly ten retained decisions and rejects a foreign tenant",
+        "passed": true
+      },
+      {
+        "name": "Release target, migration inventory and foundation dry-run preserve Owner and refuse drift/revocation",
+        "passed": true
+      },
+      {
+        "name": "Reviewed operator importer verifies 84/12/84/95 and repeats with zero catalog writes",
+        "passed": true
+      },
+      {
+        "name": "Exact operator CLI dry-runs, confirmations and zero-write import execute against an isolated staged bundle",
+        "passed": true
+      },
+      {
+        "name": "Production read gate stays off by default and explicit isolated cutover exposes only the fixed store",
+        "passed": true
+      }
+    ],
+    "ownerCredentialsChanged": false,
+    "originalSessionRowsPreservedByDdlAndFoundation": true,
+    "applicationRollbackOldBinaryTested": true,
+    "systemdRollbackExecuted": false,
+    "productionWrites": false,
+    "actualProductionMigrationsApplied": false,
+    "isolatedWriteWindowRequired": true,
+    "mediaApprovalsPerformed": false,
+    "durationSeconds": 79.968,
+    "migrationRecordedTimeSumMilliseconds": 237.66600000000003,
+    "fullExerciseSeconds": 79.968,
+    "isolatedCleanupPassed": true
+  },
+  "rollback": {
+    "previousBinaryAgainstExpandedAndImportedDatabase": "PASS",
+    "actualReviewedShellInGuardedFixture": "PASS",
+    "fixtureCases": [
+      "exact existing override restored",
+      "absence of override restored",
+      "automatic fallback on failed health",
+      "automatic fallback on unsafe listener"
+    ],
+    "realSystemdRollbackRun": false,
+    "databaseDownMigrationRun": false
+  },
+  "production": {
+    "api": {
+      "MainPID": "33120",
+      "NRestarts": "0",
+      "WorkingDirectory": "/home/ubuntu/vog-pk/.local/releases/8c75ca5858d89599108d96c4493a87dc550977bd/backend",
+      "ActiveState": "active",
+      "NeedDaemonReload": "no"
+    },
+    "caddy": {
+      "MainPID": "6864",
+      "NRestarts": "0",
+      "ActiveState": "active"
+    },
+    "health": {
+      "local": 200,
+      "localReady": 200,
+      "publicReady": 200
+    },
+    "bindings": [
+      "127.0.0.1:4000"
+    ],
+    "environmentUnchanged": true,
+    "activeConfigurationUnchanged": true,
+    "rollbackArtifactsUnchanged": true,
+    "liveCheckoutUnchanged": true,
+    "stagedSourceAndArtifactReceiptVerification": "PASS",
+    "caddyUpstream4000AndNo4011": true,
+    "operatorPort4011UnusedAtCheck": true
+  },
+  "vercel": {
+    "checkedUtc": "2026-11-04T16:41:20.236Z",
+    "production": [
+      {
+        "name": "vogpk",
+        "id": "dpl_DN2mv4rtybdJ3ruaR6SP7dK3EQUw",
+        "readyState": "READY",
+        "target": "production",
+        "url": "vogpk-2fbj42rkh-monis-iqbal21s-projects.vercel.app",
+        "meta": {
+          "githubCommitSha": "39f603a7f1a71cb708f585119d61dad409100cd2",
+          "githubCommitRef": "main"
+        },
+        "keys": [
+          "id",
+          "name",
+          "url",
+          "type",
+          "state",
+          "createdAt",
+          "creator",
+          "project",
+          "meta",
+          "alias",
+          "target",
+          "regions",
+          "buildingAt",
+          "ready",
+          "readyState",
+          "source",
+          "aliasError"
+        ]
+      },
+      {
+        "name": "vog-admin",
+        "id": "dpl_3n6zH2CYMmWsSJMmBvh1gRYQzQn8",
+        "readyState": "READY",
+        "target": "production",
+        "url": "vog-admin-l7hjgnjte-monis-iqbal21s-projects.vercel.app",
+        "meta": {
+          "githubCommitSha": "39f603a7f1a71cb708f585119d61dad409100cd2",
+          "githubCommitRef": "main"
+        },
+        "keys": [
+          "id",
+          "name",
+          "url",
+          "type",
+          "state",
+          "createdAt",
+          "creator",
+          "project",
+          "meta",
+          "alias",
+          "target",
+          "regions",
+          "buildingAt",
+          "ready",
+          "readyState",
+          "source",
+          "aliasError"
+        ]
+      }
+    ],
+    "environments": [
+      {
+        "name": "vogpk",
+        "envs": [],
+        "error": false
+      },
+      {
+        "name": "vog-admin",
+        "envs": [
+          {
+            "key": "BFF_SHARED_SECRET",
+            "target": [
+              "production"
+            ],
+            "type": "sensitive"
+          },
+          {
+            "key": "API_URL",
+            "target": [
+              "production"
+            ],
+            "type": "encrypted"
+          },
+          {
+            "key": "ADMIN_ENVIRONMENT",
+            "target": [
+              "production"
+            ],
+            "type": "plain"
+          },
+          {
+            "key": "STOREFRONT_ORIGIN",
+            "target": [
+              "production"
+            ],
+            "type": "sensitive"
+          },
+          {
+            "key": "COOKIE_SECURE",
+            "target": [
+              "production"
+            ],
+            "type": "sensitive"
+          },
+          {
+            "key": "ADMIN_ORIGIN",
+            "target": [
+              "production"
+            ],
+            "type": "encrypted"
+          }
+        ],
+        "error": false
+      }
+    ],
+    "projectSettingsVisibility": "Connector project response omits Git auto-deploy and Build Command fields; re-confirm actual settings before merge/cutover.",
+    "settingsChanged": false
+  },
+  "regression": {
+    "releaseGuardChecks": 14,
+    "frontendFlagChecks": 11,
+    "adminRoutingChecks": 19,
+    "adminPreviewConfigChecks": 10,
+    "genericMediaFixture": "PASS: 95 withheld and unrelated files retained",
+    "hiddenReleaseLint": "PASS: actual app/test errors rejected, generated code excluded and empty input rejected",
+    "bindingAndShellSyntax": "PASS"
+  },
+  "restrictions": {
+    "productionDdlOrImport": false,
+    "productionRestart": false,
+    "merged": false,
+    "pushed": false,
+    "vercelSettingsChanged": false,
+    "productionMediaRightsApproved": false,
+    "paidResourcesCreated": false
+  },
+  "caveats": [
+    "Restored-copy authentication uses a clone-only synthetic session for the existing copied Owner identity, not a production password login. Live credentials were not read for testing.",
+    "One private harness checksum assertion initially hashed Buffer JSON instead of bytes. Corrected only in ignored operational helper; a fresh second restored copy passed. First and second test clusters were cleaned.",
+    "The production import needs a write-enabled API. A separate temporary loopback operator process can isolate this window from the main API; exact production process launch remains unexecuted and requires approval.",
+    "Connector omits effective Git auto-deploy and build-command settings. Treat merge as a potential immediate production deployment; re-confirm actual settings before merge, and npm-run-build media hook before cutover.",
+    "The fresh archive has only one verified independent off-server storage device; separate offline copy pending.",
+    "Recovery freshness and actual schema fingerprint must be rechecked immediately before approved DDL. No measured production lock/downtime guarantee."
+  ]
+}

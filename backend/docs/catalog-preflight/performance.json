@@ -1,0 +1,282 @@
+{
+  "passed": true,
+  "measurements": [
+    {
+      "label": "imported84",
+      "pageSize": 1,
+      "total": 84,
+      "queryCount": 36,
+      "durationMs": 447
+    },
+    {
+      "label": "imported84",
+      "pageSize": 24,
+      "total": 84,
+      "queryCount": 36,
+      "durationMs": 362
+    },
+    {
+      "label": "isolated284Growth",
+      "pageSize": 1,
+      "total": 284,
+      "queryCount": 35,
+      "durationMs": 19
+    },
+    {
+      "label": "isolated284Growth",
+      "pageSize": 24,
+      "total": 284,
+      "queryCount": 35,
+      "durationMs": 25
+    }
+  ],
+  "explain": {
+    "planningMs": 3.402,
+    "executionMs": 25.751,
+    "nodes": [
+      {
+        "type": "Aggregate",
+        "rows": 5
+      },
+      {
+        "type": "Sort",
+        "rows": 5
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 5
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 7
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 7
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 7
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 7
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 7
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 7
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 7
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 7
+      },
+      {
+        "type": "Index Scan",
+        "rows": 7,
+        "index": "ProductRevision_schemaVersionId_tenantId_idx"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 84
+      },
+      {
+        "type": "Index Scan",
+        "rows": 84,
+        "index": "ListingRevision_storeId_status_slug_idx"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "StoreListing_id_productId_storeId_tenantId_key"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "Product_id_productTypeId_tenantId_key"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "ProductTypeVersion_id_productTypeId_tenantId_key"
+      },
+      {
+        "type": "Bitmap Heap Scan",
+        "rows": 1
+      },
+      {
+        "type": "Bitmap Index Scan",
+        "rows": 1,
+        "index": "ListingSKU_pkey"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "SKURevision_id_tenantId_key"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0
+      },
+      {
+        "type": "Bitmap Heap Scan",
+        "rows": 0
+      },
+      {
+        "type": "Bitmap Index Scan",
+        "rows": 12,
+        "index": "ProductAttributeBinding_productRevisionId_attributeId_key"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 0,
+        "index": "AttributeDefinition_id_tenantId_key"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 0,
+        "index": "OptionSet_id_tenantId_key"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 84
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 84
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 84
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 84
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 84
+      },
+      {
+        "type": "Index Scan",
+        "rows": 84,
+        "index": "SKURevision_tenantId_state_id_idx"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "SKU_id_productId_tenantId_key"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0
+      },
+      {
+        "type": "Index Scan",
+        "rows": 0,
+        "index": "StorePrice_storeId_skuId_key"
+      },
+      {
+        "type": "Bitmap Heap Scan",
+        "rows": 0
+      },
+      {
+        "type": "Bitmap Index Scan",
+        "rows": 0,
+        "index": "price_one_published"
+      },
+      {
+        "type": "Limit",
+        "rows": 0
+      },
+      {
+        "type": "Incremental Sort",
+        "rows": 0
+      },
+      {
+        "type": "Index Scan",
+        "rows": 0,
+        "index": "PricePromotion_priceRevisionId_startsAt_idx"
+      },
+      {
+        "type": "Result",
+        "rows": 1
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 1
+      },
+      {
+        "type": "Index Scan",
+        "rows": 42.5,
+        "index": "ListingRevision_storeId_status_slug_idx"
+      },
+      {
+        "type": "Index Only Scan",
+        "rows": 0.02,
+        "index": "ListingSKU_pkey"
+      },
+      {
+        "type": "Index Only Scan",
+        "rows": 1,
+        "index": "ListingCategory_pkey"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0.71
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0.71
+      },
+      {
+        "type": "Index Scan",
+        "rows": 0.71,
+        "index": "ProductAttributeValue_productRevisionId_bindingId_key"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0.12
+      },
+      {
+        "type": "Seq Scan",
+        "rows": 1
+      },
+      {
+        "type": "Index Only Scan",
+        "rows": 0.12,
+        "index": "ProductAttributeChoice_pkey"
+      },
+      {
+        "type": "Memoize",
+        "rows": 1
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "ProductAttributeBinding_pkey"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "AttributeDefinition_id_tenantId_key"
+      }
+    ]
+  },
+  "growth": "Separate tenant/store: 84 source-name/slug inquiry shadows plus 200 synthetic inquiries; no synthetic fixtures in real legacy store",
+  "sameSkuRegression": "Separately exercised with real retail multi-variant fixtures in test:storefront",
+  "snapshot": "Existing RepeatableRead transaction and statement/transaction budgets retained",
+  "cache": "No persistent catalog cache; per-render dedup only",
+  "productionAccess": false
+}

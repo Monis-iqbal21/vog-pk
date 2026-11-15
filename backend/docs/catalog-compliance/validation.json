@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "baseline": "f40b0e9",
+  "unit": {
+    "passed": true,
+    "tests": 39,
+    "files": 10
+  },
+  "integration": {
+    "passed": true,
+    "checks": 61,
+    "actualAdminRejectionForm": true,
+    "productionAdminBuild": true,
+    "productionDynamicStorefrontBuild": true
+  },
+  "foundation": {
+    "passed": true,
+    "checks": 23
+  },
+  "authentication": {
+    "passed": true,
+    "checks": 25
+  },
+  "routing": {
+    "passed": true,
+    "checks": 19
+  },
+  "bffAllowlist": {
+    "passed": true,
+    "assertions": 374
+  },
+  "lint": {
+    "backend": true,
+    "admin": true,
+    "storefront": true
+  },
+  "build": {
+    "backend": true,
+    "adminIsolated": true,
+    "storefrontStatic": true,
+    "storefrontDynamic": true
+  },
+  "staticParity": {
+    "products": 84,
+    "categories": 12,
+    "passed": true
+  },
+  "migrationOrdering": {
+    "passed": true,
+    "previousEightUnchanged": true,
+    "migrations": [
+      {
+        "name": "202610290001_admin_security",
+        "sha256": "2cf40e73742e28a5bba7192f9bf22c3f8da213742b22865b0f05bcd194ca8539"
+      },
+      {
+        "name": "202611010001_commerce_foundation",
+        "sha256": "59765eef862d5fb989f1571a437232a2ad96cb850d3155f77cf44e4288fe8f98"
+      },
+      {
+        "name": "202611010002_product_types",
+        "sha256": "b4fee59da7169ea0b89ed6446c64a7ea1bcc23c24087512041a1bc412f439055"
+      },
+      {
+        "name": "202611010003_categories_filters",
+        "sha256": "d2347c7148b850f8fd7ed18585a50c599f5bc93da30c49b195a89760fe8c4432"
+      },
+      {
+        "name": "202611010004_catalog_products",
+        "sha256": "fa0b70023b80ec159d6d87913cb623addadbec4d74807986e77537e681ec0557"
+      },
+      {
+        "name": "202611010005_pricing_inventory_media",
+        "sha256": "870cbac0bada7d9b84103ba2b60e573576a1f8d1c70c75819b8d20d9f70cee32"
+      },
+      {
+        "name": "202611020006_storefront_read_indexes",
+        "sha256": "4b854ae8bfa2241b29d243bdd8db72113f7315b04f677a99c1b8a3bafabd4c9f"
+      },
+      {
+        "name": "202611020007_catalog_import_evidence",
+        "sha256": "fcc50ab4be10da8375228f6c43975ac7463e2462e84191b48a2663abb99e5213"
+      },
+      {
+        "name": "202611020008_media_review",
+        "sha256": "4852d321338335a0e83d242858e966b0e32149ea98ff0f3ea0638032e61fbd05"
+      }
+    ]
+  },
+  "reactReview": {
+    "hooksCancellation": true,
+    "selectedPreviewOnly": true,
+    "escapedMetadata": true,
+    "accessibleLabels": true
+  },
+  "productionAccess": false,
+  "activation": false,
+  "unrelatedAssetsPreserved": true,
+  "historicalIgnoredDirectoriesPreserved": true,
+  "notes": [
+    "Existing Node MODULE_TYPELESS_PACKAGE_JSON warnings are non-fatal.",
+    "Current production rights, recovery, hosting and infrastructure were not remotely audited."
+  ]
+}

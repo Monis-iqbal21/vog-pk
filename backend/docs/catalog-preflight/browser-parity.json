@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "cleanStaticBuild": true,
+  "cleanDynamicBuild": true,
+  "realBackend": true,
+  "viewports": [
+    1440,
+    768,
+    390
+  ],
+  "comparisons": [
+    {
+      "slug": "keyboards",
+      "width": 1440,
+      "heading": "EXACT",
+      "canonical": "EXACT",
+      "description": "EXACT",
+      "media": "Intentional: legacy static references visible; unapproved dynamic references withheld"
+    },
+    {
+      "slug": "processors",
+      "width": 1440,
+      "heading": "EXACT",
+      "canonical": "EXACT",
+      "description": "EXACT",
+      "media": "Intentional: legacy static references visible; unapproved dynamic references withheld"
+    },
+    {
+      "slug": "rog-strix-rtx5070ti-o16g",
+      "width": 1440,
+      "heading": "EXACT",
+      "canonical": "EXACT",
+      "description": "EXACT",
+      "media": "Intentional: legacy static references visible; unapproved dynamic references withheld"
+    },
+    {
+      "slug": "keyboards",
+      "width": 768,
+      "heading": "EXACT",
+      "canonical": "EXACT",
+      "description": "EXACT",
+      "media": "Intentional: legacy static references visible; unapproved dynamic references withheld"
+    },
+    {
+      "slug": "processors",
+      "width": 768,
+      "heading": "EXACT",
+      "canonical": "EXACT",
+      "description": "EXACT",
+      "media": "Intentional: legacy static references visible; unapproved dynamic references withheld"
+    },
+    {
+      "slug": "rog-strix-rtx5070ti-o16g",
+      "width": 768,
+      "heading": "EXACT",
+      "canonical": "EXACT",
+      "description": "EXACT",
+      "media": "Intentional: legacy static references visible; unapproved dynamic references withheld"
+    },
+    {
+      "slug": "keyboards",
+      "width": 390,
+      "heading": "EXACT",
+      "canonical": "EXACT",
+      "description": "EXACT",
+      "media": "Intentional: legacy static references visible; unapproved dynamic references withheld"
+    },
+    {
+      "slug": "processors",
+      "width": 390,
+      "heading": "EXACT",
+      "canonical": "EXACT",
+      "description": "EXACT",
+      "media": "Intentional: legacy static references visible; unapproved dynamic references withheld"
+    },
+    {
+      "slug": "rog-strix-rtx5070ti-o16g",
+      "width": 390,
+      "heading": "EXACT",
+      "canonical": "EXACT",
+      "description": "EXACT",
+      "media": "Intentional: legacy static references visible; unapproved dynamic references withheld"
+    }
+  ],
+  "legacyRedirectsCompared": 84,
+  "staticMainImageLoaded": true,
+  "staticProductionDefaultUnchanged": true,
+  "productionAccess": false
+}

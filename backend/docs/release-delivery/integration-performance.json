@@ -1,0 +1,311 @@
+{
+  "passed": true,
+  "additionalPublishedFixtures": 200,
+  "foreignPublishedTwin": true,
+  "pageSize": 24,
+  "total": 206,
+  "durationMs": 1136,
+  "explain": {
+    "planningMs": 31.856,
+    "executionMs": 14.877,
+    "nodes": [
+      {
+        "type": "Aggregate",
+        "rows": 1
+      },
+      {
+        "type": "Sort",
+        "rows": 1
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 1
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 1
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 11
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 26
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 26
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 26
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 26
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 26
+      },
+      {
+        "type": "Index Scan",
+        "rows": 26,
+        "index": "SKURevision_tenantId_state_id_idx"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "SKU_id_productId_tenantId_key"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0.62
+      },
+      {
+        "type": "Index Scan",
+        "rows": 0.62,
+        "index": "InventoryItem_storeId_skuId_key"
+      },
+      {
+        "type": "Aggregate",
+        "rows": 5.69
+      },
+      {
+        "type": "Sort",
+        "rows": 11.69
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 19
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 19
+      },
+      {
+        "type": "Bitmap Heap Scan",
+        "rows": 11
+      },
+      {
+        "type": "Bitmap Index Scan",
+        "rows": 11,
+        "index": "InventoryItem_storeId_skuId_key"
+      },
+      {
+        "type": "Bitmap Heap Scan",
+        "rows": 1.45
+      },
+      {
+        "type": "Bitmap Index Scan",
+        "rows": 1.45,
+        "index": "StockBalance_inventoryItemId_locationId_key"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 0.84,
+        "index": "InventoryLocation_id_storeId_tenantId_key"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0.62
+      },
+      {
+        "type": "Index Scan",
+        "rows": 0.62,
+        "index": "StorePrice_storeId_skuId_key"
+      },
+      {
+        "type": "Bitmap Heap Scan",
+        "rows": 5.56
+      },
+      {
+        "type": "Bitmap Index Scan",
+        "rows": 13,
+        "index": "price_one_published"
+      },
+      {
+        "type": "Limit",
+        "rows": 0.23
+      },
+      {
+        "type": "Incremental Sort",
+        "rows": 0.23
+      },
+      {
+        "type": "Index Scan",
+        "rows": 0.23,
+        "index": "PricePromotion_priceRevisionId_startsAt_idx"
+      },
+      {
+        "type": "Aggregate",
+        "rows": 1
+      },
+      {
+        "type": "Bitmap Heap Scan",
+        "rows": 2
+      },
+      {
+        "type": "Bitmap Index Scan",
+        "rows": 3,
+        "index": "InventoryLocation_storeId_code_key"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0.42
+      },
+      {
+        "type": "Index Scan",
+        "rows": 198.62,
+        "index": "ListingRevision_storeId_status_slug_idx"
+      },
+      {
+        "type": "Index Only Scan",
+        "rows": 0,
+        "index": "ListingSKU_pkey"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 1
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 1
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 1
+      },
+      {
+        "type": "Hash Join",
+        "rows": 1
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 11
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 11
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 208
+      },
+      {
+        "type": "Index Scan",
+        "rows": 208,
+        "index": "ListingRevision_storeId_status_slug_idx"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "StoreListing_pkey"
+      },
+      {
+        "type": "Index Only Scan",
+        "rows": 0.05,
+        "index": "ListingSKU_pkey"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "SKURevision_id_tenantId_key"
+      },
+      {
+        "type": "Hash",
+        "rows": 2
+      },
+      {
+        "type": "Index Scan",
+        "rows": 2,
+        "index": "ProductRevision_schemaVersionId_tenantId_idx"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 6
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 6
+      },
+      {
+        "type": "Bitmap Heap Scan",
+        "rows": 7
+      },
+      {
+        "type": "Bitmap Index Scan",
+        "rows": 8,
+        "index": "ProductAttributeBinding_productRevisionId_attributeId_key"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 0.86,
+        "index": "SKUAttributeValue_skuRevisionId_bindingId_key"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0.38
+      },
+      {
+        "type": "Seq Scan",
+        "rows": 3
+      },
+      {
+        "type": "Index Only Scan",
+        "rows": 0.12,
+        "index": "SKUAttributeChoice_pkey"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "AttributeDefinition_id_tenantId_key"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "Product_pkey"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "ProductTypeVersion_id_productTypeId_tenantId_key"
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 0
+      },
+      {
+        "type": "Nested Loop",
+        "rows": 2
+      },
+      {
+        "type": "Bitmap Heap Scan",
+        "rows": 2
+      },
+      {
+        "type": "Bitmap Index Scan",
+        "rows": 2,
+        "index": "ProductAttributeBinding_productRevisionId_attributeId_key"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "AttributeDefinition_id_tenantId_key"
+      },
+      {
+        "type": "Index Scan",
+        "rows": 1,
+        "index": "OptionSet_id_tenantId_key"
+      },
+      {
+        "type": "Index Only Scan",
+        "rows": 1,
+        "index": "ListingCategory_pkey"
+      }
+    ]
+  },
+  "queryDesign": "SQL pagination and sorting; one batched disjunctive-count query; no per-product queries",
+  "productionAccess": false
+}

@@ -6,10 +6,11 @@ import { useEffect, useRef, useState } from 'react';
 import { Search, UserRound, Heart, ShoppingCart, Menu, X, ChevronDown } from 'lucide-react';
 import { navigation } from '@/config/navigation';
 import Brand from './Brand';
+import { useCart } from '@/components/cart/CartProvider';
 
-function NavigationLinks({ mobile = false, onNavigate }) {
+function NavigationLinks({ mobile = false, onNavigate,items=navigation }) {
   const pathname = usePathname();
-  return navigation.map((item) => item.children ? (
+  return items.map((item) => item.children ? (
     <details className="nav-dropdown" key={item.label} onKeyDown={(event) => {
       if (event.key === 'Escape') {
         event.currentTarget.open = false;
@@ -24,7 +25,8 @@ function NavigationLinks({ mobile = false, onNavigate }) {
   ) : <Link key={item.href} href={item.href} className="nav-link" aria-current={pathname === item.href ? 'page' : undefined} onClick={onNavigate}>{item.label}</Link>);
 }
 
-export default function Navbar() {
+export default function Navbar({items=navigation}) {
+  const { itemCount } = useCart();
   const dialog = useRef(null);
   const search = useRef(null);
   const [open, setOpen] = useState(false);
@@ -50,11 +52,11 @@ export default function Navbar() {
         <button className="icon-button mobile-search" aria-label="Focus product search" onClick={() => search.current?.focus()}><Search /></button>
         <button className="icon-button desktop-action" disabled aria-label="Account (coming soon)" title="Account coming soon"><UserRound /></button>
         <button className="icon-button desktop-action" disabled aria-label="Wishlist (coming soon)" title="Wishlist coming soon"><Heart /></button>
-        <button className="icon-button cart-button" disabled aria-label="Shopping cart (coming soon)" title="Cart coming soon"><ShoppingCart /><span className="cart-count" aria-hidden="true">—</span></button>
+        <Link className="icon-button cart-button" href="/cart" aria-label={`Shopping cart, ${itemCount} items`} title="Shopping cart"><ShoppingCart /><span className="cart-count" aria-hidden="true">{itemCount}</span></Link>
         <button className="icon-button mobile-menu" aria-label="Open navigation" aria-haspopup="dialog" aria-expanded={open} aria-controls="mobile-navigation" onClick={() => { dialog.current.showModal(); setOpen(true); }}><Menu /></button>
       </div>
     </div>
-    <nav className="desktop-nav" aria-label="Main navigation"><div className="container nav-items"><NavigationLinks /></div></nav>
+    <nav className="desktop-nav" aria-label="Main navigation"><div className="container nav-items"><NavigationLinks items={items}/></div></nav>
     <dialog ref={dialog} id="mobile-navigation" className="mobile-drawer" aria-labelledby="drawer-title" onClose={() => setOpen(false)} onKeyDown={(event) => {
       if (event.key !== 'Tab') return;
       const controls = [...event.currentTarget.querySelectorAll('button, a[href], summary')].filter((element) => element.getClientRects().length > 0);
@@ -65,7 +67,7 @@ export default function Navbar() {
     }} onClick={(event) => { if (event.target === event.currentTarget) close(); }}>
       <div className="drawer-content">
         <div className="drawer-heading"><span id="drawer-title">Explore VOGPK</span><button className="icon-button" aria-label="Close navigation" onClick={close} autoFocus><X /></button></div>
-        <nav aria-label="Mobile navigation"><NavigationLinks mobile onNavigate={close} /></nav>
+        <nav aria-label="Mobile navigation"><NavigationLinks items={items} mobile onNavigate={close} /></nav>
         <p className="drawer-note">PC hardware. A clearer vision.</p>
       </div>
     </dialog>

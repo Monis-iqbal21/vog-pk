@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "date": "2026-11-03",
+  "baseline": "31bd50d181730aa596b2e89dd554292f104b0ec3",
+  "unit": {
+    "files": 10,
+    "tests": 40
+  },
+  "integration": {
+    "checks": 61,
+    "actualAdminReviewQueue": true,
+    "actualAdminRejection": true
+  },
+  "foundation": {
+    "checks": 23
+  },
+  "authentication": {
+    "checks": 25
+  },
+  "catalogRelease": {
+    "checks": 20,
+    "actualCliDryRuns": true,
+    "actualConfirmedApplyToFixtureOnly": true,
+    "zeroWriteImportRepeat": true,
+    "existingSessionsUnchanged": true
+  },
+  "configuration": {
+    "frontendChecks": 11,
+    "operatorMetadataGuardChecks": 14,
+    "adminRouting": 19,
+    "adminPreviewConfiguration": 10,
+    "adminPreviewHttp": 38,
+    "bffAllowlistAssertions": 379
+  },
+  "mediaBuild": {
+    "passed": true,
+    "staticBuildUnchanged": true,
+    "productionOptInOnly": true,
+    "withheldFixtureFiles": 95,
+    "unrelatedFilesPreserved": true
+  },
+  "shell": {
+    "syntax": true,
+    "listenerCases": 4,
+    "noRemoteExecution": true
+  },
+  "lint": {
+    "backend": true,
+    "admin": true,
+    "frontend": true
+  },
+  "build": {
+    "backend": true,
+    "adminIsolated": true,
+    "frontendStatic": true,
+    "frontendDynamicFixture": true
+  },
+  "migrations": {
+    "count": 9,
+    "unchangedFrom7C": true,
+    "noNewMigration": true
+  },
+  "runtimeAudits": {
+    "allZeroKnownVulnerabilities": true
+  },
+  "productionAccess": false,
+  "remoteArm64Execution": false,
+  "productionActivated": false,
+  "notes": [
+    "Initial CLI source-proof ordering error corrected and actual CLI rerun passed.",
+    "Browser fixture now waits for enabled upload controls before setInputFiles; final complete browser run passed.",
+    "Existing Node package-type and pg concurrent-query deprecation warnings remain; no dependency upgrades performed.",
+    "Production baseline, recovery, Vercel build-command overrides and commercial hosting eligibility remain unverified."
+  ]
+}

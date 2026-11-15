@@ -1,0 +1,2887 @@
+{
+  "manifestHash": "be5f9367bcb48e0f01768d45aea28d1303d1a19cef4043a8a767feed8236b02a",
+  "reviewScope": "Deterministic development mapping; no inferred sellable variants or commercial rights",
+  "types": [
+    {
+      "category": "graphics-cards",
+      "typeCode": "legacy_type_ae0243efe7524ba24b0b7c38",
+      "categoryCode": "legacy_category_ae0243efe7524ba24b0b7c38",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "processors",
+      "typeCode": "legacy_type_b639eb9156f5dff26c087a29",
+      "categoryCode": "legacy_category_b639eb9156f5dff26c087a29",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "motherboards",
+      "typeCode": "legacy_type_dbb8e8734fd1c94fc8b53b55",
+      "categoryCode": "legacy_category_dbb8e8734fd1c94fc8b53b55",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "ram",
+      "typeCode": "legacy_type_a631f4488a457da27b4a64dc",
+      "categoryCode": "legacy_category_a631f4488a457da27b4a64dc",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "storage",
+      "typeCode": "legacy_type_49a25f9feefaffecad0fcd30",
+      "categoryCode": "legacy_category_49a25f9feefaffecad0fcd30",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "keyboards",
+      "typeCode": "legacy_type_3693efb5a03a46fd3d14cccd",
+      "categoryCode": "legacy_category_3693efb5a03a46fd3d14cccd",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "gaming-mice",
+      "typeCode": "legacy_type_8c1f2729af3596148bcce175",
+      "categoryCode": "legacy_category_8c1f2729af3596148bcce175",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "monitors",
+      "typeCode": "legacy_type_e5c19e68e5a39343e18fba64",
+      "categoryCode": "legacy_category_e5c19e68e5a39343e18fba64",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "power-supplies",
+      "typeCode": "legacy_type_c052380154199e25ae9e0065",
+      "categoryCode": "legacy_category_c052380154199e25ae9e0065",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "pc-cases",
+      "typeCode": "legacy_type_cdc395e85ba3f86078068323",
+      "categoryCode": "legacy_category_cdc395e85ba3f86078068323",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "cooling",
+      "typeCode": "legacy_type_eea6040eeb3e0fbffab9bb72",
+      "categoryCode": "legacy_category_eea6040eeb3e0fbffab9bb72",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    },
+    {
+      "category": "accessories",
+      "typeCode": "legacy_type_35e3ab6c5834d3183cec055d",
+      "categoryCode": "legacy_category_35e3ab6c5834d3183cec055d",
+      "sourceParent": null,
+      "groupCodes": [
+        "source_specifications",
+        "canonical_measurements",
+        "filter_values"
+      ],
+      "productCount": 7
+    }
+  ],
+  "attributes": [
+    {
+      "code": "legacy_spec_e572272aa7f850e0cd00ae35",
+      "label": "Graphics processor",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_1f65c79b44aef3c429979b23",
+      "label": "Discrete graphics card memory",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "GB",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_f654f945251058e691c320a0",
+      "label": "Graphics card memory type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_8b6e1d1469700283f5cc8058",
+      "label": "Memory bus",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_1f36a19360ddffde680de2fb",
+      "label": "Interface type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_ac04bd35b653a17b8c6f5ea1",
+      "label": "Cooling type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_55a8eff0c391faf8a372c9fd",
+      "label": "Number of fans",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_7e6efefb6348e5ed66490f0e",
+      "label": "HDMI ports quantity",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "one",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_a1dff89843c3aa33ce3bf00f",
+      "label": "DisplayPorts quantity",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "one",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_7bff6181add2231b3c0f092f",
+      "label": "Cores",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "number"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "one",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_3e42e385075b9b569620eb6d",
+      "label": "Threads",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "number"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "one",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_a06def07d5dd1dd0ada68a9a",
+      "label": "Socket",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_82f8850ab712349e491d71a5",
+      "label": "Maximum boost",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "GHz",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_b4c429af7ed3c9f56858812b",
+      "label": "Base power",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "W",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_609fb7bcfb092b10d57c21f5",
+      "label": "Internal memory",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "GB",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_214ce4ce137ef59ee3bbf6f3",
+      "label": "Memory layout (modules x size)",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_0313c8501f372013f9a1d694",
+      "label": "Internal memory type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_7d013a59ff7793a55ef62cc1",
+      "label": "Memory data transfer rate",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "MT/s",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_37c6f066c167387ee7183d00",
+      "label": "CAS latency",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_a99d0063296e323b8880616f",
+      "label": "Memory form factor",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_7008522633f6ab885b7b4e0e",
+      "label": "Product colour",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_faf8d0a197359c6af295986d",
+      "label": "Memory clock speed",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "MHz",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_15edd0f2c34c7f4793f49764",
+      "label": "Movement detection technology",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_06ae261e71fcce4afcbfe658",
+      "label": "Movement resolution",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_698697b3d9b31acb8bbb74f7",
+      "label": "Device interface",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_27dcc180dae10013f7591726",
+      "label": "Buttons quantity",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "one",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_a6e57e1da3bb58bd57452567",
+      "label": "Form factor",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_81d27ef6d5033c3e1d46b7b2",
+      "label": "Weight",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "g",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_a6b6936eb02cd1b983aa9843",
+      "label": "Keyboard layout",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_ff3f3b81ab27e0738aaa4f88",
+      "label": "Keyboard language",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_ce195fe482d5284be998829c",
+      "label": "Keyboard form factor",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_1e65544a75064603117c7c35",
+      "label": "Keyboard key switch",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_f9ed1a9a19f57a5a9ff842ab",
+      "label": "Keyboard key switch technology",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_e08f2e6696fdb5ccae548ff4",
+      "label": "Processor socket",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_2ae3ecb6842cd2cc3c40a365",
+      "label": "Motherboard chipset",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_d4ddad40a690490843b57dbf",
+      "label": "Motherboard form factor",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_fc384779a23f4ea80cd77058",
+      "label": "Supported memory types",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_c4f0f4d368a116a580974739",
+      "label": "Memory slots type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_27453219652cb20e423d853b",
+      "label": "Number of memory slots",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "one",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_f9f95aae03c48b9ae1376bef",
+      "label": "Top Wi-Fi standard",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_d52cb5e4d5a4c8875cac8c9d",
+      "label": "Ethernet interface type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_8032912a2579a1134444b1c5",
+      "label": "SSD capacity",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "GB",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_7093834d861284a18891ff49",
+      "label": "SSD form factor",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_6daad20cd0041f8d2e324bcf",
+      "label": "Interface",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_83369beba3ab71ca3b91c991",
+      "label": "NVMe",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_10082f606a8d258343d3eadd",
+      "label": "Read speed",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_97125f7c3ced0c864ae3019a",
+      "label": "Write speed",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_839c7dcedf9855eaa84cc258",
+      "label": "Memory type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_52176f1c6fa10d281ff12849",
+      "label": "Display diagonal",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_46625aab4f51baf2dcd83dc5",
+      "label": "Display resolution",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_5ae97382612b11fe6afe8a97",
+      "label": "Panel type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_250c802e2aeb25010f5812d5",
+      "label": "Display technology",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_99334cd838f31409494289ff",
+      "label": "Maximum refresh rate",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "Hz",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_b8e3c6d2e8a44efc01e14e38",
+      "label": "Response time",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "ms",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_777cef8544329dbda0272219",
+      "label": "Screen shape",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_e04537892b71023d52fc557c",
+      "label": "Total power",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "W",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_47193cb85a669e969bfcd5f1",
+      "label": "80 PLUS certification",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_d08623f9e442183cbd514558",
+      "label": "Cabling type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_798241938fcef839fe97f37b",
+      "label": "Power supply unit (PSU) form factor",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_db1f73e8f7e36e97afffa094",
+      "label": "Fan diameter",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_ae7d427b1bda74289be524ab",
+      "label": "Form factor",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_b08e0f5610e57743065acb9c",
+      "label": "Type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_7786a28d751956ab572ba5bd",
+      "label": "Supported motherboard form factors",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_f0e8d6e71e78dee8a11a8514",
+      "label": "Number of front fans supported (max)",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_ee10c816b1f5503a738ff4cb",
+      "label": "Maximum CPU cooler height",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_c8bb21179ef095906236fd2f",
+      "label": "Maximum graphics card length",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_3019947b6daf18b0534a15d8",
+      "label": "Width",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "mm",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_bfe2eca401797325bc268f93",
+      "label": "Height",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "mm",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_f1dbc33978a95b952b19bfc0",
+      "label": "Depth",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "mm",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_133866d9201652ab956783a5",
+      "label": "Type",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_4a3a585d79dfb2f3dc10543e",
+      "label": "Radiator width",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_5d26ff8dc80c002fc0b8e761",
+      "label": "Radiator depth",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_bb0d28c55da23fcca170b0cf",
+      "label": "Supported processor sockets",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_7b5944144275ea10a17c903d",
+      "label": "Thickness",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": {
+        "unit": "mm",
+        "type": "NUMBER"
+      }
+    },
+    {
+      "code": "legacy_spec_616cb218a65b982f61fd738e",
+      "label": "Material",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    },
+    {
+      "code": "legacy_spec_cdecc60d4bc8e08eaa7f43bf",
+      "label": "Surface coloration",
+      "dataType": "TEXT",
+      "originalJsonTypes": [
+        "string"
+      ],
+      "sourcePreservation": "Exact original value and JSON type in immutable source evidence; display text in ProductAttributeValue",
+      "numericSupplement": null
+    }
+  ],
+  "facets": [
+    {
+      "code": "legacy_facet_3048c09b2fc8d5baff90f9f6",
+      "label": "GPU manufacturer",
+      "sourceKeys": [
+        "Graphics processor manufacturer",
+        "gpuManufacturer"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": []
+    },
+    {
+      "code": "legacy_facet_095047629fdf7f657f412262",
+      "label": "GPU model",
+      "sourceKeys": [
+        "Graphics processor",
+        "gpu"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "GeForce RTX 5070 Ti",
+        "GeForce RTX 5080",
+        "GeForce RTX 5070"
+      ]
+    },
+    {
+      "code": "legacy_facet_f9efc9522428ca4a87b26af1",
+      "label": "VRAM capacity",
+      "sourceKeys": [
+        "Discrete graphics card memory",
+        "vram"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "16 GB",
+        "12 GB"
+      ]
+    },
+    {
+      "code": "legacy_facet_21e31fe567e220f6c1aefe4d",
+      "label": "Memory type",
+      "sourceKeys": [
+        "Graphics card memory type",
+        "memoryType"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "GDDR7"
+      ]
+    },
+    {
+      "code": "legacy_facet_05c795263019238d0c3c4e13",
+      "label": "Manufacturer",
+      "sourceKeys": [
+        "Manufacturer",
+        "manufacturer"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": []
+    },
+    {
+      "code": "legacy_facet_7bfd43885d40bff875d681e9",
+      "label": "Socket",
+      "sourceKeys": [
+        "Socket",
+        "socket"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "AM5",
+        "LGA 1700",
+        "LGA 1200"
+      ]
+    },
+    {
+      "code": "legacy_facet_f1909ef0e55aea5e50bd68b0",
+      "label": "Core count",
+      "sourceKeys": [
+        "Cores",
+        "cores"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "16",
+        "14",
+        "12",
+        "24",
+        "6"
+      ]
+    },
+    {
+      "code": "legacy_facet_2aea68e4af44328c73512a2b",
+      "label": "Processor family",
+      "sourceKeys": [
+        "Processor family",
+        "family"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": []
+    },
+    {
+      "code": "legacy_facet_8066f7fade6f9f2d966e870b",
+      "label": "Capacity",
+      "sourceKeys": [
+        "Internal memory",
+        "capacity"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "16 GB",
+        "32 GB"
+      ]
+    },
+    {
+      "code": "legacy_facet_bb5f9914f9a18c22b56ceb6f",
+      "label": "DDR generation",
+      "sourceKeys": [
+        "Internal memory type",
+        "generation"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "DDR5",
+        "DDR4"
+      ]
+    },
+    {
+      "code": "legacy_facet_c88265018d630c4ff9e96b02",
+      "label": "Rated frequency / data rate",
+      "sourceKeys": [
+        "Memory data transfer rate",
+        "Memory clock speed",
+        "speed"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "6000 MT/s",
+        "4800 MT/s",
+        "5600 MT/s",
+        "3200 MHz",
+        "6000 MHz",
+        "3600 MHz"
+      ]
+    },
+    {
+      "code": "legacy_facet_331919199e709cca3c909287",
+      "label": "Kit configuration",
+      "sourceKeys": [
+        "Memory layout (modules x size)",
+        "kit"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "1 x 16 GB",
+        "2 x 16 GB",
+        "2 x 8 GB"
+      ]
+    },
+    {
+      "code": "legacy_facet_d536fe949c04cd2bd2de73e3",
+      "label": "Colour",
+      "sourceKeys": [
+        "Product colour",
+        "color"
+      ],
+      "splitComma": true,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "Black",
+        "Silver",
+        "White",
+        "Grey",
+        "Transparent",
+        "Red"
+      ]
+    },
+    {
+      "code": "legacy_facet_b993f51b63491f79c6b9d067",
+      "label": "Connectivity",
+      "sourceKeys": [
+        "Device interface",
+        "Connectivity",
+        "connectivity"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "RF Wireless + Bluetooth + USB Type-A",
+        "RF Wireless + Bluetooth + USB Type-C",
+        "USB Type-A",
+        "RF Wireless + USB Type-C",
+        "USB + RF Wireless + Bluetooth",
+        "USB"
+      ]
+    },
+    {
+      "code": "legacy_facet_66c9e6a300c0233a75217074",
+      "label": "Sensor technology",
+      "sourceKeys": [
+        "Movement detection technology",
+        "sensor"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "Optical"
+      ]
+    },
+    {
+      "code": "legacy_facet_e12dbdd3e13b3aacfe8a0c5d",
+      "label": "DPI",
+      "sourceKeys": [
+        "Movement resolution",
+        "dpi"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "36000 DPI",
+        "42000 DPI",
+        "19000 DPI",
+        "12000 DPI",
+        "16000 DPI"
+      ]
+    },
+    {
+      "code": "legacy_facet_de4650c1bacc9664a06dec80",
+      "label": "Polling rate",
+      "sourceKeys": [
+        "Polling rate",
+        "pollingRate"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": []
+    },
+    {
+      "code": "legacy_facet_2792f1236a169a92c55cad1b",
+      "label": "Weight",
+      "sourceKeys": [
+        "Weight",
+        "weight"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "54 g",
+        "89 g",
+        "123 g",
+        "59 g",
+        "47 g",
+        "168 g"
+      ]
+    },
+    {
+      "code": "legacy_facet_0b2a9306f70c01fa9ecb01f7",
+      "label": "Switch technology",
+      "sourceKeys": [
+        "Keyboard key switch",
+        "switchType"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "Mechanical",
+        "Optical key switch",
+        "Membrane"
+      ]
+    },
+    {
+      "code": "legacy_facet_2fd812bc9ba1093e33c8263a",
+      "label": "Switch model",
+      "sourceKeys": [
+        "Keyboard key switch technology",
+        "switchModel"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "ROG NX Snow",
+        "ROG RX Red low-profile optical",
+        "ROG RX Red optical",
+        "ROG RX Red",
+        "Red mechanical",
+        "ROG NX Red"
+      ]
+    },
+    {
+      "code": "legacy_facet_7d2a56f64f77b9885cae65fb",
+      "label": "Keyboard size / layout",
+      "sourceKeys": [
+        "Keyboard form factor",
+        "layout"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "96%",
+        "65%",
+        "Full-size (100%)",
+        "80%"
+      ]
+    },
+    {
+      "code": "legacy_facet_45982227c81e8a08cb256b27",
+      "label": "Socket",
+      "sourceKeys": [
+        "Processor socket",
+        "socket"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "Socket AM5",
+        "LGA 1851 (Socket V1)"
+      ]
+    },
+    {
+      "code": "legacy_facet_d51b3caabe2ad505b188fd21",
+      "label": "Chipset",
+      "sourceKeys": [
+        "Motherboard chipset",
+        "chipset"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "AMD X870E",
+        "AMD B850",
+        "Intel Z890",
+        "AMD B650",
+        "AMD X870"
+      ]
+    },
+    {
+      "code": "legacy_facet_bcfd24715e4f36a1fd5933ff",
+      "label": "Form factor",
+      "sourceKeys": [
+        "Motherboard form factor",
+        "formFactor"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "ATX",
+        "micro ATX"
+      ]
+    },
+    {
+      "code": "legacy_facet_a27f256dd3889cf7cd547e7f",
+      "label": "Memory support",
+      "sourceKeys": [
+        "Supported memory types",
+        "memorySupport"
+      ],
+      "splitComma": true,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "DDR5-SDRAM"
+      ]
+    },
+    {
+      "code": "legacy_facet_2ae2f027e0cce914c30c0dd1",
+      "label": "Storage type",
+      "sourceKeys": [
+        "Storage type",
+        "storageType"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": []
+    },
+    {
+      "code": "legacy_facet_cf9e57b963e3390fe57f9295",
+      "label": "Capacity",
+      "sourceKeys": [
+        "SSD capacity",
+        "capacity"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "2 TB",
+        "1 TB",
+        "500 GB"
+      ]
+    },
+    {
+      "code": "legacy_facet_83e2aff4916fa3f979c03d87",
+      "label": "Interface",
+      "sourceKeys": [
+        "Interface",
+        "interface"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "PCI Express 4.0"
+      ]
+    },
+    {
+      "code": "legacy_facet_a635dc2aed0690c4b718ef6a",
+      "label": "Form factor",
+      "sourceKeys": [
+        "SSD form factor",
+        "formFactor"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "M.2"
+      ]
+    },
+    {
+      "code": "legacy_facet_b689972698201a19f862a6db",
+      "label": "Screen size",
+      "sourceKeys": [
+        "Display diagonal",
+        "screenSize"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "68.6 cm (27\")",
+        "113 cm (44.5\")",
+        "67.3 cm (26.5\")"
+      ]
+    },
+    {
+      "code": "legacy_facet_10ac3d8d662fa2a97b9bc4f8",
+      "label": "Resolution",
+      "sourceKeys": [
+        "Display resolution",
+        "resolution"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "2560 x 1440 pixels",
+        "5120 x 1440 pixels"
+      ]
+    },
+    {
+      "code": "legacy_facet_30c741c8681087c7fd1a9d31",
+      "label": "Refresh rate",
+      "sourceKeys": [
+        "Maximum refresh rate",
+        "refreshRate"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "360 Hz",
+        "180 Hz",
+        "170 Hz",
+        "300 Hz",
+        "144 Hz"
+      ]
+    },
+    {
+      "code": "legacy_facet_d5a1946b3ccec5dc966377e1",
+      "label": "Panel type",
+      "sourceKeys": [
+        "Panel type",
+        "panelType"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "OLED",
+        "IPS",
+        "VA"
+      ]
+    },
+    {
+      "code": "legacy_facet_6bf02bdc3f6d885490927d0c",
+      "label": "Wattage",
+      "sourceKeys": [
+        "Total power",
+        "wattage"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "1000 W",
+        "850 W",
+        "750 W",
+        "1200 W"
+      ]
+    },
+    {
+      "code": "legacy_facet_83975808539732e2fe0a9429",
+      "label": "Efficiency certification",
+      "sourceKeys": [
+        "80 PLUS certification",
+        "efficiency"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "80 PLUS Platinum",
+        "80 PLUS Gold"
+      ]
+    },
+    {
+      "code": "legacy_facet_597d358c2dfcd7b8190e3240",
+      "label": "Modularity",
+      "sourceKeys": [
+        "Cabling type",
+        "modularity"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "Fully-Modular"
+      ]
+    },
+    {
+      "code": "legacy_facet_459edbe27ad858d8449ae89d",
+      "label": "Motherboard support",
+      "sourceKeys": [
+        "Supported motherboard form factors",
+        "motherboardSupport"
+      ],
+      "splitComma": true,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "ATX",
+        "EATX",
+        "micro ATX",
+        "Mini-ITX",
+        "DTX",
+        "Mini-DTX"
+      ]
+    },
+    {
+      "code": "legacy_facet_51503b10169e6351e6975383",
+      "label": "Case type",
+      "sourceKeys": [
+        "Form factor",
+        "caseType"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "Tower",
+        "Midi Tower",
+        "Micro Tower",
+        "Mini Tower"
+      ]
+    },
+    {
+      "code": "legacy_facet_b74238077ac549c55a89a4d0",
+      "label": "Maximum GPU clearance",
+      "sourceKeys": [
+        "Maximum graphics card length",
+        "gpuClearance"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "46 cm",
+        "45 cm",
+        "39 cm",
+        "42 cm",
+        "33.8 cm"
+      ]
+    },
+    {
+      "code": "legacy_facet_ce378093277bc631a5a618e9",
+      "label": "Cooling type",
+      "sourceKeys": [
+        "Type",
+        "type"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "All-in-one liquid cooler",
+        "Liquid cooling kit"
+      ]
+    },
+    {
+      "code": "legacy_facet_fdb03348e7c9d09f1f7e8f7d",
+      "label": "Radiator size",
+      "sourceKeys": [
+        "Radiator size",
+        "radiatorSize"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": []
+    },
+    {
+      "code": "legacy_facet_2c2cb1cbad1e790f04472406",
+      "label": "Socket compatibility",
+      "sourceKeys": [
+        "Supported processor sockets",
+        "supportedSockets"
+      ],
+      "splitComma": true,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "LGA 1150 (Socket H3)",
+        "LGA 1151 (Socket H4)",
+        "LGA 1155 (Socket H2)",
+        "LGA 1156 (Socket H)",
+        "LGA 1200 (Socket H5)",
+        "LGA 1700",
+        "Socket AM4",
+        "Socket AM5",
+        "LGA 1851",
+        "LGA 2011 (Socket R)",
+        "LGA 2011-v3 (Socket R)",
+        "LGA 2066",
+        "Socket TR4"
+      ]
+    },
+    {
+      "code": "legacy_facet_c02b61ee79e8be0626a67a70",
+      "label": "Accessory type",
+      "sourceKeys": [
+        "Product type",
+        "type"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": []
+    },
+    {
+      "code": "legacy_facet_e09811a535e66d0fa5aae2bf",
+      "label": "Compatibility",
+      "sourceKeys": [
+        "Compatibility",
+        "compatibility"
+      ],
+      "splitComma": true,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": []
+    },
+    {
+      "code": "legacy_facet_d318cd5017511aecb3aa6193",
+      "label": "Size",
+      "sourceKeys": [
+        "Size",
+        "size"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": []
+    },
+    {
+      "code": "legacy_facet_d69048dedddaeac76eb84c19",
+      "label": "Width",
+      "sourceKeys": [
+        "Width",
+        "width"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "360 mm",
+        "900 mm",
+        "420 mm",
+        "260 mm",
+        "320 mm",
+        "208 mm"
+      ]
+    },
+    {
+      "code": "legacy_facet_f75912bd5278f0a1e65e3eae",
+      "label": "Depth",
+      "sourceKeys": [
+        "Depth",
+        "depth"
+      ],
+      "splitComma": false,
+      "dataType": "MULTI_SELECT",
+      "level": "PRODUCT",
+      "axis": false,
+      "values": [
+        "260 mm",
+        "400 mm",
+        "508 mm",
+        "360 mm",
+        "370 mm",
+        "46 mm"
+      ]
+    }
+  ],
+  "identities": [
+    {
+      "legacyId": "rog-strix-rtx5070ti-o16g",
+      "slug": "rog-strix-rtx5070ti-o16g",
+      "productCode": "legacy_product_2a9cadd167b0337f683bee2b",
+      "listingCode": "legacy_product_2a9cadd167b0337f683bee2b",
+      "externalReference": "rog-strix-rtx5070ti-o16g",
+      "skuCode": "LEGACY-2A9CADD167B0337F683BEE2B",
+      "manufacturerPartNumber": "90YV0M90-M0NA00",
+      "canonical": "https://vogpk.vercel.app/products/rog-strix-rtx5070ti-o16g",
+      "aliases": [
+        "/products/graphics-cards/rog-strix-rtx5070ti-o16g"
+      ]
+    },
+    {
+      "legacyId": "aorus-rtx5080-master-ice-16g",
+      "slug": "aorus-rtx5080-master-ice-16g",
+      "productCode": "legacy_product_a1ddd21bc86979e92b4e242b",
+      "listingCode": "legacy_product_a1ddd21bc86979e92b4e242b",
+      "externalReference": "aorus-rtx5080-master-ice-16g",
+      "skuCode": "LEGACY-A1DDD21BC86979E92B4E242B",
+      "manufacturerPartNumber": "GV-N5080AORUSM ICE-16GD",
+      "canonical": "https://vogpk.vercel.app/products/aorus-rtx5080-master-ice-16g",
+      "aliases": [
+        "/products/graphics-cards/aorus-rtx5080-master-ice-16g"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-astral-rtx5080-oc-16gb",
+      "slug": "asus-rog-astral-rtx5080-oc-16gb",
+      "productCode": "legacy_product_d5f6a2102592c98befc6065a",
+      "listingCode": "legacy_product_d5f6a2102592c98befc6065a",
+      "externalReference": "asus-rog-astral-rtx5080-oc-16gb",
+      "skuCode": "LEGACY-D5F6A2102592C98BEFC6065A",
+      "manufacturerPartNumber": "90YV0LV0-M0NA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-astral-rtx5080-oc-16gb",
+      "aliases": [
+        "/products/graphics-cards/asus-rog-astral-rtx5080-oc-16gb"
+      ]
+    },
+    {
+      "legacyId": "proart-rtx5080-16g",
+      "slug": "proart-rtx5080-16g",
+      "productCode": "legacy_product_e2461628655459d641b0f256",
+      "listingCode": "legacy_product_e2461628655459d641b0f256",
+      "externalReference": "proart-rtx5080-16g",
+      "skuCode": "LEGACY-E2461628655459D641B0F256",
+      "manufacturerPartNumber": "90YV0N31-M0NA00",
+      "canonical": "https://vogpk.vercel.app/products/proart-rtx5080-16g",
+      "aliases": [
+        "/products/graphics-cards/proart-rtx5080-16g"
+      ]
+    },
+    {
+      "legacyId": "asus-prime-rtx5080-oc-16gb",
+      "slug": "asus-prime-rtx5080-oc-16gb",
+      "productCode": "legacy_product_c102a06a0c51fab437650ab9",
+      "listingCode": "legacy_product_c102a06a0c51fab437650ab9",
+      "externalReference": "asus-prime-rtx5080-oc-16gb",
+      "skuCode": "LEGACY-C102A06A0C51FAB437650AB9",
+      "manufacturerPartNumber": "90YV0LX0-M0NA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-prime-rtx5080-oc-16gb",
+      "aliases": [
+        "/products/graphics-cards/asus-prime-rtx5080-oc-16gb"
+      ]
+    },
+    {
+      "legacyId": "asus-prime-rtx5070-oc-12gb-white",
+      "slug": "asus-prime-rtx5070-oc-12gb-white",
+      "productCode": "legacy_product_c483128d236d2ffe6fd05f79",
+      "listingCode": "legacy_product_c483128d236d2ffe6fd05f79",
+      "externalReference": "asus-prime-rtx5070-oc-12gb-white",
+      "skuCode": "LEGACY-C483128D236D2FFE6FD05F79",
+      "manufacturerPartNumber": "90YV0M19-M0NA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-prime-rtx5070-oc-12gb-white",
+      "aliases": [
+        "/products/graphics-cards/asus-prime-rtx5070-oc-12gb-white"
+      ]
+    },
+    {
+      "legacyId": "asus-dual-rtx5070-oc-12gb",
+      "slug": "asus-dual-rtx5070-oc-12gb",
+      "productCode": "legacy_product_8345abcb7a5d18f8e72134e3",
+      "listingCode": "legacy_product_8345abcb7a5d18f8e72134e3",
+      "externalReference": "asus-dual-rtx5070-oc-12gb",
+      "skuCode": "LEGACY-8345ABCB7A5D18F8E72134E3",
+      "manufacturerPartNumber": "90YV0M17-M0NA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-dual-rtx5070-oc-12gb",
+      "aliases": [
+        "/products/graphics-cards/asus-dual-rtx5070-oc-12gb"
+      ]
+    },
+    {
+      "legacyId": "amd-ryzen9-9950x",
+      "slug": "amd-ryzen9-9950x",
+      "productCode": "legacy_product_4ee50580a8827df0a932f30a",
+      "listingCode": "legacy_product_4ee50580a8827df0a932f30a",
+      "externalReference": "amd-ryzen9-9950x",
+      "skuCode": "LEGACY-4EE50580A8827DF0A932F30A",
+      "manufacturerPartNumber": null,
+      "canonical": "https://vogpk.vercel.app/products/amd-ryzen9-9950x",
+      "aliases": [
+        "/products/processors/amd-ryzen9-9950x"
+      ]
+    },
+    {
+      "legacyId": "intel-core-i7-13700k-tray",
+      "slug": "intel-core-i7-13700k-tray",
+      "productCode": "legacy_product_87138396aeaed0cdcb10b41d",
+      "listingCode": "legacy_product_87138396aeaed0cdcb10b41d",
+      "externalReference": "intel-core-i7-13700k-tray",
+      "skuCode": "LEGACY-87138396AEAED0CDCB10B41D",
+      "manufacturerPartNumber": null,
+      "canonical": "https://vogpk.vercel.app/products/intel-core-i7-13700k-tray",
+      "aliases": [
+        "/products/processors/intel-core-i7-13700k-tray"
+      ]
+    },
+    {
+      "legacyId": "intel-core-i5-13600k",
+      "slug": "intel-core-i5-13600k",
+      "productCode": "legacy_product_ac940beff00574e8cf95095a",
+      "listingCode": "legacy_product_ac940beff00574e8cf95095a",
+      "externalReference": "intel-core-i5-13600k",
+      "skuCode": "LEGACY-AC940BEFF00574E8CF95095A",
+      "manufacturerPartNumber": null,
+      "canonical": "https://vogpk.vercel.app/products/intel-core-i5-13600k",
+      "aliases": [
+        "/products/processors/intel-core-i5-13600k"
+      ]
+    },
+    {
+      "legacyId": "intel-core-i7-12700k-tray",
+      "slug": "intel-core-i7-12700k-tray",
+      "productCode": "legacy_product_eca94fe35e1447fe72eb9b63",
+      "listingCode": "legacy_product_eca94fe35e1447fe72eb9b63",
+      "externalReference": "intel-core-i7-12700k-tray",
+      "skuCode": "LEGACY-ECA94FE35E1447FE72EB9B63",
+      "manufacturerPartNumber": null,
+      "canonical": "https://vogpk.vercel.app/products/intel-core-i7-12700k-tray",
+      "aliases": [
+        "/products/processors/intel-core-i7-12700k-tray"
+      ]
+    },
+    {
+      "legacyId": "intel-core-i9-14900k",
+      "slug": "intel-core-i9-14900k",
+      "productCode": "legacy_product_880699829dd77dc0729e3c73",
+      "listingCode": "legacy_product_880699829dd77dc0729e3c73",
+      "externalReference": "intel-core-i9-14900k",
+      "skuCode": "LEGACY-880699829DD77DC0729E3C73",
+      "manufacturerPartNumber": null,
+      "canonical": "https://vogpk.vercel.app/products/intel-core-i9-14900k",
+      "aliases": [
+        "/products/processors/intel-core-i9-14900k"
+      ]
+    },
+    {
+      "legacyId": "intel-core-i7-12700kf-tray",
+      "slug": "intel-core-i7-12700kf-tray",
+      "productCode": "legacy_product_17ab54c02d988ef45c6c98ad",
+      "listingCode": "legacy_product_17ab54c02d988ef45c6c98ad",
+      "externalReference": "intel-core-i7-12700kf-tray",
+      "skuCode": "LEGACY-17AB54C02D988EF45C6C98AD",
+      "manufacturerPartNumber": null,
+      "canonical": "https://vogpk.vercel.app/products/intel-core-i7-12700kf-tray",
+      "aliases": [
+        "/products/processors/intel-core-i7-12700kf-tray"
+      ]
+    },
+    {
+      "legacyId": "intel-core-i5-11400",
+      "slug": "intel-core-i5-11400",
+      "productCode": "legacy_product_6d19d9de807952b1e8366815",
+      "listingCode": "legacy_product_6d19d9de807952b1e8366815",
+      "externalReference": "intel-core-i5-11400",
+      "skuCode": "LEGACY-6D19D9DE807952B1E8366815",
+      "manufacturerPartNumber": null,
+      "canonical": "https://vogpk.vercel.app/products/intel-core-i5-11400",
+      "aliases": [
+        "/products/processors/intel-core-i5-11400"
+      ]
+    },
+    {
+      "legacyId": "kingston-fury-beast-ddr5-16gb-6000",
+      "slug": "kingston-fury-beast-ddr5-16gb-6000",
+      "productCode": "legacy_product_2598263bcd97128ee17507fa",
+      "listingCode": "legacy_product_2598263bcd97128ee17507fa",
+      "externalReference": "kingston-fury-beast-ddr5-16gb-6000",
+      "skuCode": "LEGACY-2598263BCD97128EE17507FA",
+      "manufacturerPartNumber": "KF560C36BBE2-16",
+      "canonical": "https://vogpk.vercel.app/products/kingston-fury-beast-ddr5-16gb-6000",
+      "aliases": [
+        "/products/ram/kingston-fury-beast-ddr5-16gb-6000"
+      ]
+    },
+    {
+      "legacyId": "kingston-fury-beast-16gb-4800",
+      "slug": "kingston-fury-beast-16gb-4800",
+      "productCode": "legacy_product_c8319e0dfd2732a982618987",
+      "listingCode": "legacy_product_c8319e0dfd2732a982618987",
+      "externalReference": "kingston-fury-beast-16gb-4800",
+      "skuCode": "LEGACY-C8319E0DFD2732A982618987",
+      "manufacturerPartNumber": "KF548C38BB-16",
+      "canonical": "https://vogpk.vercel.app/products/kingston-fury-beast-16gb-4800",
+      "aliases": [
+        "/products/ram/kingston-fury-beast-16gb-4800"
+      ]
+    },
+    {
+      "legacyId": "kingston-fury-beast-ddr5-16gb-5600",
+      "slug": "kingston-fury-beast-ddr5-16gb-5600",
+      "productCode": "legacy_product_3d9b7f22e16422565264a0f4",
+      "listingCode": "legacy_product_3d9b7f22e16422565264a0f4",
+      "externalReference": "kingston-fury-beast-ddr5-16gb-5600",
+      "skuCode": "LEGACY-3D9B7F22E16422565264A0F4",
+      "manufacturerPartNumber": "KF556C40BB-16",
+      "canonical": "https://vogpk.vercel.app/products/kingston-fury-beast-ddr5-16gb-5600",
+      "aliases": [
+        "/products/ram/kingston-fury-beast-ddr5-16gb-5600"
+      ]
+    },
+    {
+      "legacyId": "xpg-spectrix-d35g-32gb-3200-black",
+      "slug": "xpg-spectrix-d35g-32gb-3200-black",
+      "productCode": "legacy_product_9291604f74840e65f4ae991f",
+      "listingCode": "legacy_product_9291604f74840e65f4ae991f",
+      "externalReference": "xpg-spectrix-d35g-32gb-3200-black",
+      "skuCode": "LEGACY-9291604F74840E65F4AE991F",
+      "manufacturerPartNumber": "AX4U320016G16A-DTBKD35G",
+      "canonical": "https://vogpk.vercel.app/products/xpg-spectrix-d35g-32gb-3200-black",
+      "aliases": [
+        "/products/ram/xpg-spectrix-d35g-32gb-3200-black"
+      ]
+    },
+    {
+      "legacyId": "xpg-spectrix-d35g-16gb-3200-white",
+      "slug": "xpg-spectrix-d35g-16gb-3200-white",
+      "productCode": "legacy_product_877de04c85fd5853acc73fb9",
+      "listingCode": "legacy_product_877de04c85fd5853acc73fb9",
+      "externalReference": "xpg-spectrix-d35g-16gb-3200-white",
+      "skuCode": "LEGACY-877DE04C85FD5853ACC73FB9",
+      "manufacturerPartNumber": "AX4U32008G16A-DTWHD35G",
+      "canonical": "https://vogpk.vercel.app/products/xpg-spectrix-d35g-16gb-3200-white",
+      "aliases": [
+        "/products/ram/xpg-spectrix-d35g-16gb-3200-white"
+      ]
+    },
+    {
+      "legacyId": "xpg-lancer-blade-rgb-32gb-6000",
+      "slug": "xpg-lancer-blade-rgb-32gb-6000",
+      "productCode": "legacy_product_36116722ae5873a5126624c5",
+      "listingCode": "legacy_product_36116722ae5873a5126624c5",
+      "externalReference": "xpg-lancer-blade-rgb-32gb-6000",
+      "skuCode": "LEGACY-36116722AE5873A5126624C5",
+      "manufacturerPartNumber": "AX5U6000C3016G-DTLABRBK",
+      "canonical": "https://vogpk.vercel.app/products/xpg-lancer-blade-rgb-32gb-6000",
+      "aliases": [
+        "/products/ram/xpg-lancer-blade-rgb-32gb-6000"
+      ]
+    },
+    {
+      "legacyId": "xpg-spectrix-d35g-32gb-3600-white",
+      "slug": "xpg-spectrix-d35g-32gb-3600-white",
+      "productCode": "legacy_product_cc23784c995ca53020e7c43d",
+      "listingCode": "legacy_product_cc23784c995ca53020e7c43d",
+      "externalReference": "xpg-spectrix-d35g-32gb-3600-white",
+      "skuCode": "LEGACY-CC23784C995CA53020E7C43D",
+      "manufacturerPartNumber": "AX4U360016G18I-DTWHD35G",
+      "canonical": "https://vogpk.vercel.app/products/xpg-spectrix-d35g-32gb-3600-white",
+      "aliases": [
+        "/products/ram/xpg-spectrix-d35g-32gb-3600-white"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-harpe-ace-aim-lab",
+      "slug": "asus-rog-harpe-ace-aim-lab",
+      "productCode": "legacy_product_e0e33545e96172ccf8cab5fa",
+      "listingCode": "legacy_product_e0e33545e96172ccf8cab5fa",
+      "externalReference": "asus-rog-harpe-ace-aim-lab",
+      "skuCode": "LEGACY-E0E33545E96172CCF8CAB5FA",
+      "manufacturerPartNumber": "90MP02W0-BMUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-harpe-ace-aim-lab",
+      "aliases": [
+        "/products/gaming-mice/asus-rog-harpe-ace-aim-lab"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-keris-ii-ace-black",
+      "slug": "asus-rog-keris-ii-ace-black",
+      "productCode": "legacy_product_c84e5384b906b3a2bd3874a8",
+      "listingCode": "legacy_product_c84e5384b906b3a2bd3874a8",
+      "externalReference": "asus-rog-keris-ii-ace-black",
+      "skuCode": "LEGACY-C84E5384B906B3A2BD3874A8",
+      "manufacturerPartNumber": "90MP03N0-BMUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-keris-ii-ace-black",
+      "aliases": [
+        "/products/gaming-mice/asus-rog-keris-ii-ace-black"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-gladius-iii-wireless",
+      "slug": "asus-rog-gladius-iii-wireless",
+      "productCode": "legacy_product_adf4bb31b0c2f20a4e65fb16",
+      "listingCode": "legacy_product_adf4bb31b0c2f20a4e65fb16",
+      "externalReference": "asus-rog-gladius-iii-wireless",
+      "skuCode": "LEGACY-ADF4BB31B0C2F20A4E65FB16",
+      "manufacturerPartNumber": "90MP0200-BMUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-gladius-iii-wireless",
+      "aliases": [
+        "/products/gaming-mice/asus-rog-gladius-iii-wireless"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-chakram-x-origin",
+      "slug": "asus-rog-chakram-x-origin",
+      "productCode": "legacy_product_f3fa16435f0f54739313d29c",
+      "listingCode": "legacy_product_f3fa16435f0f54739313d29c",
+      "externalReference": "asus-rog-chakram-x-origin",
+      "skuCode": "LEGACY-F3FA16435F0F54739313D29C",
+      "manufacturerPartNumber": "ROG CHAKRAM X ORIGIN",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-chakram-x-origin",
+      "aliases": [
+        "/products/gaming-mice/asus-rog-chakram-x-origin"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-strix-impact-iii",
+      "slug": "asus-rog-strix-impact-iii",
+      "productCode": "legacy_product_d00d686054b52bc91b557c6f",
+      "listingCode": "legacy_product_d00d686054b52bc91b557c6f",
+      "externalReference": "asus-rog-strix-impact-iii",
+      "skuCode": "LEGACY-D00D686054B52BC91B557C6F",
+      "manufacturerPartNumber": "90MP0300-BMUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-strix-impact-iii",
+      "aliases": [
+        "/products/gaming-mice/asus-rog-strix-impact-iii"
+      ]
+    },
+    {
+      "legacyId": "asus-tuf-m4-air",
+      "slug": "asus-tuf-m4-air",
+      "productCode": "legacy_product_7cacde841f5104d649d3e66c",
+      "listingCode": "legacy_product_7cacde841f5104d649d3e66c",
+      "externalReference": "asus-tuf-m4-air",
+      "skuCode": "LEGACY-7CACDE841F5104D649D3E66C",
+      "manufacturerPartNumber": "90MP02K0-BMUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-tuf-m4-air",
+      "aliases": [
+        "/products/gaming-mice/asus-tuf-m4-air"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-spatha-x",
+      "slug": "asus-rog-spatha-x",
+      "productCode": "legacy_product_0090b1ff1c3f85de9cf5bff1",
+      "listingCode": "legacy_product_0090b1ff1c3f85de9cf5bff1",
+      "externalReference": "asus-rog-spatha-x",
+      "skuCode": "LEGACY-0090B1FF1C3F85DE9CF5BFF1",
+      "manufacturerPartNumber": "90MP0220-BMUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-spatha-x",
+      "aliases": [
+        "/products/gaming-mice/asus-rog-spatha-x"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-scope-ii-96-wireless-nx-snow",
+      "slug": "asus-rog-scope-ii-96-wireless-nx-snow",
+      "productCode": "legacy_product_c3c7aecd425f16bf252ea17d",
+      "listingCode": "legacy_product_c3c7aecd425f16bf252ea17d",
+      "externalReference": "asus-rog-scope-ii-96-wireless-nx-snow",
+      "skuCode": "LEGACY-C3C7AECD425F16BF252EA17D",
+      "manufacturerPartNumber": "90MP037A-BKUA01",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-scope-ii-96-wireless-nx-snow",
+      "aliases": [
+        "/products/keyboards/asus-rog-scope-ii-96-wireless-nx-snow"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-falchion-rx-low-profile-red",
+      "slug": "asus-rog-falchion-rx-low-profile-red",
+      "productCode": "legacy_product_7ed267f1b481322de43aa563",
+      "listingCode": "legacy_product_7ed267f1b481322de43aa563",
+      "externalReference": "asus-rog-falchion-rx-low-profile-red",
+      "skuCode": "LEGACY-7ED267F1B481322DE43AA563",
+      "manufacturerPartNumber": "90MP03EC-BKUA10",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-falchion-rx-low-profile-red",
+      "aliases": [
+        "/products/keyboards/asus-rog-falchion-rx-low-profile-red"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-scope-rx-red",
+      "slug": "asus-rog-scope-rx-red",
+      "productCode": "legacy_product_4007be79179fa8da99a5f26b",
+      "listingCode": "legacy_product_4007be79179fa8da99a5f26b",
+      "externalReference": "asus-rog-scope-rx-red",
+      "skuCode": "LEGACY-4007BE79179FA8DA99A5F26B",
+      "manufacturerPartNumber": "90MP0240-BKUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-scope-rx-red",
+      "aliases": [
+        "/products/keyboards/asus-rog-scope-rx-red"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-scope-rx-tkl-wireless-red",
+      "slug": "asus-rog-scope-rx-tkl-wireless-red",
+      "productCode": "legacy_product_666d7a392a24ba323352f367",
+      "listingCode": "legacy_product_666d7a392a24ba323352f367",
+      "externalReference": "asus-rog-scope-rx-tkl-wireless-red",
+      "skuCode": "LEGACY-666D7A392A24BA323352F367",
+      "manufacturerPartNumber": "90MP02J0-BKUA01",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-scope-rx-tkl-wireless-red",
+      "aliases": [
+        "/products/keyboards/asus-rog-scope-rx-tkl-wireless-red"
+      ]
+    },
+    {
+      "legacyId": "asus-tuf-k3-red-us",
+      "slug": "asus-tuf-k3-red-us",
+      "productCode": "legacy_product_087134e0645bc0199dc5b894",
+      "listingCode": "legacy_product_087134e0645bc0199dc5b894",
+      "externalReference": "asus-tuf-k3-red-us",
+      "skuCode": "LEGACY-087134E0645BC0199DC5B894",
+      "manufacturerPartNumber": "90MP01Q0-BKUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-tuf-k3-red-us",
+      "aliases": [
+        "/products/keyboards/asus-tuf-k3-red-us"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-falchion-ace-nx-red",
+      "slug": "asus-rog-falchion-ace-nx-red",
+      "productCode": "legacy_product_32e09af66069538db07bc921",
+      "listingCode": "legacy_product_32e09af66069538db07bc921",
+      "externalReference": "asus-rog-falchion-ace-nx-red",
+      "skuCode": "LEGACY-32E09AF66069538DB07BC921",
+      "manufacturerPartNumber": "90MP0346-BKUA01",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-falchion-ace-nx-red",
+      "aliases": [
+        "/products/keyboards/asus-rog-falchion-ace-nx-red"
+      ]
+    },
+    {
+      "legacyId": "asus-tuf-k1",
+      "slug": "asus-tuf-k1",
+      "productCode": "legacy_product_7106170a00cf221b895fd58a",
+      "listingCode": "legacy_product_7106170a00cf221b895fd58a",
+      "externalReference": "asus-tuf-k1",
+      "skuCode": "LEGACY-7106170A00CF221B895FD58A",
+      "manufacturerPartNumber": "90MP01X0-BKUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-tuf-k1",
+      "aliases": [
+        "/products/keyboards/asus-tuf-k1"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-crosshair-x870e-dark-hero",
+      "slug": "asus-rog-crosshair-x870e-dark-hero",
+      "productCode": "legacy_product_26ea8b82357136b06c57d252",
+      "listingCode": "legacy_product_26ea8b82357136b06c57d252",
+      "externalReference": "asus-rog-crosshair-x870e-dark-hero",
+      "skuCode": "LEGACY-26EA8B82357136B06C57D252",
+      "manufacturerPartNumber": "90MB1NT0-M0EAY0",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-crosshair-x870e-dark-hero",
+      "aliases": [
+        "/products/motherboards/asus-rog-crosshair-x870e-dark-hero"
+      ]
+    },
+    {
+      "legacyId": "asus-tuf-b850-plus-wifi",
+      "slug": "asus-tuf-b850-plus-wifi",
+      "productCode": "legacy_product_8df6e453be100e1a03a41a68",
+      "listingCode": "legacy_product_8df6e453be100e1a03a41a68",
+      "externalReference": "asus-tuf-b850-plus-wifi",
+      "skuCode": "LEGACY-8DF6E453BE100E1A03A41A68",
+      "manufacturerPartNumber": "90MB1J30-M0EAY0",
+      "canonical": "https://vogpk.vercel.app/products/asus-tuf-b850-plus-wifi",
+      "aliases": [
+        "/products/motherboards/asus-tuf-b850-plus-wifi"
+      ]
+    },
+    {
+      "legacyId": "gigabyte-z890-aorus-pro-ice",
+      "slug": "gigabyte-z890-aorus-pro-ice",
+      "productCode": "legacy_product_716af48fa2103f1eca07d381",
+      "listingCode": "legacy_product_716af48fa2103f1eca07d381",
+      "externalReference": "gigabyte-z890-aorus-pro-ice",
+      "skuCode": "LEGACY-716AF48FA2103F1ECA07D381",
+      "manufacturerPartNumber": "Z890 AORUS PRO ICE",
+      "canonical": "https://vogpk.vercel.app/products/gigabyte-z890-aorus-pro-ice",
+      "aliases": [
+        "/products/motherboards/gigabyte-z890-aorus-pro-ice"
+      ]
+    },
+    {
+      "legacyId": "asus-prime-b850-plus-wifi-csm",
+      "slug": "asus-prime-b850-plus-wifi-csm",
+      "productCode": "legacy_product_5ffdd4d77c5818390b5258fc",
+      "listingCode": "legacy_product_5ffdd4d77c5818390b5258fc",
+      "externalReference": "asus-prime-b850-plus-wifi-csm",
+      "skuCode": "LEGACY-5FFDD4D77C5818390B5258FC",
+      "manufacturerPartNumber": "90MB1L80-M0EAYC",
+      "canonical": "https://vogpk.vercel.app/products/asus-prime-b850-plus-wifi-csm",
+      "aliases": [
+        "/products/motherboards/asus-prime-b850-plus-wifi-csm"
+      ]
+    },
+    {
+      "legacyId": "msi-mag-b650-tomahawk-wifi",
+      "slug": "msi-mag-b650-tomahawk-wifi",
+      "productCode": "legacy_product_3f464be03ad75fe54a3a7358",
+      "listingCode": "legacy_product_3f464be03ad75fe54a3a7358",
+      "externalReference": "msi-mag-b650-tomahawk-wifi",
+      "skuCode": "LEGACY-3F464BE03AD75FE54A3A7358",
+      "manufacturerPartNumber": "MAG B650 TOMAHAWK WIFI",
+      "canonical": "https://vogpk.vercel.app/products/msi-mag-b650-tomahawk-wifi",
+      "aliases": [
+        "/products/motherboards/msi-mag-b650-tomahawk-wifi"
+      ]
+    },
+    {
+      "legacyId": "asus-x870-max-gaming-wifi7",
+      "slug": "asus-x870-max-gaming-wifi7",
+      "productCode": "legacy_product_6ce6509d79c81037ea3af08a",
+      "listingCode": "legacy_product_6ce6509d79c81037ea3af08a",
+      "externalReference": "asus-x870-max-gaming-wifi7",
+      "skuCode": "LEGACY-6CE6509D79C81037EA3AF08A",
+      "manufacturerPartNumber": "90MB1LY0-M0EAY0",
+      "canonical": "https://vogpk.vercel.app/products/asus-x870-max-gaming-wifi7",
+      "aliases": [
+        "/products/motherboards/asus-x870-max-gaming-wifi7"
+      ]
+    },
+    {
+      "legacyId": "gigabyte-z890m-gaming-x",
+      "slug": "gigabyte-z890m-gaming-x",
+      "productCode": "legacy_product_3dec15d45aa1eb7f279f3fc2",
+      "listingCode": "legacy_product_3dec15d45aa1eb7f279f3fc2",
+      "externalReference": "gigabyte-z890m-gaming-x",
+      "skuCode": "LEGACY-3DEC15D45AA1EB7F279F3FC2",
+      "manufacturerPartNumber": "Z890M GAMING X",
+      "canonical": "https://vogpk.vercel.app/products/gigabyte-z890m-gaming-x",
+      "aliases": [
+        "/products/motherboards/gigabyte-z890m-gaming-x"
+      ]
+    },
+    {
+      "legacyId": "kingston-fury-renegade-2tb",
+      "slug": "kingston-fury-renegade-2tb",
+      "productCode": "legacy_product_149979abb1cab9838c5941fd",
+      "listingCode": "legacy_product_149979abb1cab9838c5941fd",
+      "externalReference": "kingston-fury-renegade-2tb",
+      "skuCode": "LEGACY-149979ABB1CAB9838C5941FD",
+      "manufacturerPartNumber": "SFYRD/2000G",
+      "canonical": "https://vogpk.vercel.app/products/kingston-fury-renegade-2tb",
+      "aliases": [
+        "/products/storage/kingston-fury-renegade-2tb"
+      ]
+    },
+    {
+      "legacyId": "kingston-nv2-1tb",
+      "slug": "kingston-nv2-1tb",
+      "productCode": "legacy_product_b36955b53271a1432cf9bbfb",
+      "listingCode": "legacy_product_b36955b53271a1432cf9bbfb",
+      "externalReference": "kingston-nv2-1tb",
+      "skuCode": "LEGACY-B36955B53271A1432CF9BBFB",
+      "manufacturerPartNumber": "SNV2S/1000G",
+      "canonical": "https://vogpk.vercel.app/products/kingston-nv2-1tb",
+      "aliases": [
+        "/products/storage/kingston-nv2-1tb"
+      ]
+    },
+    {
+      "legacyId": "kingston-kc3000-1tb",
+      "slug": "kingston-kc3000-1tb",
+      "productCode": "legacy_product_28bf522179d9e7586fac54bc",
+      "listingCode": "legacy_product_28bf522179d9e7586fac54bc",
+      "externalReference": "kingston-kc3000-1tb",
+      "skuCode": "LEGACY-28BF522179D9E7586FAC54BC",
+      "manufacturerPartNumber": "SKC3000S/1024G",
+      "canonical": "https://vogpk.vercel.app/products/kingston-kc3000-1tb",
+      "aliases": [
+        "/products/storage/kingston-kc3000-1tb"
+      ]
+    },
+    {
+      "legacyId": "kingston-nv3-1tb",
+      "slug": "kingston-nv3-1tb",
+      "productCode": "legacy_product_a979413bc6aec03eb0129e0e",
+      "listingCode": "legacy_product_a979413bc6aec03eb0129e0e",
+      "externalReference": "kingston-nv3-1tb",
+      "skuCode": "LEGACY-A979413BC6AEC03EB0129E0E",
+      "manufacturerPartNumber": "SNV3S/1000G",
+      "canonical": "https://vogpk.vercel.app/products/kingston-nv3-1tb",
+      "aliases": [
+        "/products/storage/kingston-nv3-1tb"
+      ]
+    },
+    {
+      "legacyId": "kingston-nv3-2tb",
+      "slug": "kingston-nv3-2tb",
+      "productCode": "legacy_product_fa1bf570f1908b5c50745084",
+      "listingCode": "legacy_product_fa1bf570f1908b5c50745084",
+      "externalReference": "kingston-nv3-2tb",
+      "skuCode": "LEGACY-FA1BF570F1908B5C50745084",
+      "manufacturerPartNumber": "SNV3S/2000G",
+      "canonical": "https://vogpk.vercel.app/products/kingston-nv3-2tb",
+      "aliases": [
+        "/products/storage/kingston-nv3-2tb"
+      ]
+    },
+    {
+      "legacyId": "kingston-fury-renegade-1tb",
+      "slug": "kingston-fury-renegade-1tb",
+      "productCode": "legacy_product_a22f2b4e05fe6b622de60180",
+      "listingCode": "legacy_product_a22f2b4e05fe6b622de60180",
+      "externalReference": "kingston-fury-renegade-1tb",
+      "skuCode": "LEGACY-A22F2B4E05FE6B622DE60180",
+      "manufacturerPartNumber": "SFYRS/1000G",
+      "canonical": "https://vogpk.vercel.app/products/kingston-fury-renegade-1tb",
+      "aliases": [
+        "/products/storage/kingston-fury-renegade-1tb"
+      ]
+    },
+    {
+      "legacyId": "kingston-nv3-500gb",
+      "slug": "kingston-nv3-500gb",
+      "productCode": "legacy_product_b262bea035b457a413d3d5cd",
+      "listingCode": "legacy_product_b262bea035b457a413d3d5cd",
+      "externalReference": "kingston-nv3-500gb",
+      "skuCode": "LEGACY-B262BEA035B457A413D3D5CD",
+      "manufacturerPartNumber": "SNV3S/500G",
+      "canonical": "https://vogpk.vercel.app/products/kingston-nv3-500gb",
+      "aliases": [
+        "/products/storage/kingston-nv3-500gb"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-strix-xg27acdng",
+      "slug": "asus-rog-strix-xg27acdng",
+      "productCode": "legacy_product_8e20a8c4186682cd63612b42",
+      "listingCode": "legacy_product_8e20a8c4186682cd63612b42",
+      "externalReference": "asus-rog-strix-xg27acdng",
+      "skuCode": "LEGACY-8E20A8C4186682CD63612B42",
+      "manufacturerPartNumber": "XG27ACDNG",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-strix-xg27acdng",
+      "aliases": [
+        "/products/monitors/asus-rog-strix-xg27acdng"
+      ]
+    },
+    {
+      "legacyId": "asus-tuf-vg27aq3a",
+      "slug": "asus-tuf-vg27aq3a",
+      "productCode": "legacy_product_9c67049d4aca00749fc2a20d",
+      "listingCode": "legacy_product_9c67049d4aca00749fc2a20d",
+      "externalReference": "asus-tuf-vg27aq3a",
+      "skuCode": "LEGACY-9C67049D4ACA00749FC2A20D",
+      "manufacturerPartNumber": "90LM0940-B01970",
+      "canonical": "https://vogpk.vercel.app/products/asus-tuf-vg27aq3a",
+      "aliases": [
+        "/products/monitors/asus-tuf-vg27aq3a"
+      ]
+    },
+    {
+      "legacyId": "lenovo-legion-r45w-30",
+      "slug": "lenovo-legion-r45w-30",
+      "productCode": "legacy_product_885f9d71bcbccdc0e27586a1",
+      "listingCode": "legacy_product_885f9d71bcbccdc0e27586a1",
+      "externalReference": "lenovo-legion-r45w-30",
+      "skuCode": "LEGACY-885F9D71BCBCCDC0E27586A1",
+      "manufacturerPartNumber": "67B1GAC3US",
+      "canonical": "https://vogpk.vercel.app/products/lenovo-legion-r45w-30",
+      "aliases": [
+        "/products/monitors/lenovo-legion-r45w-30"
+      ]
+    },
+    {
+      "legacyId": "msi-mag-274qp-qd-oled-x24",
+      "slug": "msi-mag-274qp-qd-oled-x24",
+      "productCode": "legacy_product_991bb2fdac05830a66e38816",
+      "listingCode": "legacy_product_991bb2fdac05830a66e38816",
+      "externalReference": "msi-mag-274qp-qd-oled-x24",
+      "skuCode": "LEGACY-991BB2FDAC05830A66E38816",
+      "manufacturerPartNumber": "MAG 274QP QD-OLED X24",
+      "canonical": "https://vogpk.vercel.app/products/msi-mag-274qp-qd-oled-x24",
+      "aliases": [
+        "/products/monitors/msi-mag-274qp-qd-oled-x24"
+      ]
+    },
+    {
+      "legacyId": "philips-evnia-27m2n3500nf-00",
+      "slug": "philips-evnia-27m2n3500nf-00",
+      "productCode": "legacy_product_afc464961453b2fb2d8c21a2",
+      "listingCode": "legacy_product_afc464961453b2fb2d8c21a2",
+      "externalReference": "philips-evnia-27m2n3500nf-00",
+      "skuCode": "LEGACY-AFC464961453B2FB2D8C21A2",
+      "manufacturerPartNumber": "27M2N3500NF/00",
+      "canonical": "https://vogpk.vercel.app/products/philips-evnia-27m2n3500nf-00",
+      "aliases": [
+        "/products/monitors/philips-evnia-27m2n3500nf-00"
+      ]
+    },
+    {
+      "legacyId": "lenovo-legion-r27qc-30",
+      "slug": "lenovo-legion-r27qc-30",
+      "productCode": "legacy_product_4632cbbfe8c8cb2555801cb0",
+      "listingCode": "legacy_product_4632cbbfe8c8cb2555801cb0",
+      "externalReference": "lenovo-legion-r27qc-30",
+      "skuCode": "LEGACY-4632CBBFE8C8CB2555801CB0",
+      "manufacturerPartNumber": "67C6GAC2US",
+      "canonical": "https://vogpk.vercel.app/products/lenovo-legion-r27qc-30",
+      "aliases": [
+        "/products/monitors/lenovo-legion-r27qc-30"
+      ]
+    },
+    {
+      "legacyId": "msi-g274qpf-e2",
+      "slug": "msi-g274qpf-e2",
+      "productCode": "legacy_product_8f3c2475227512b45a0fcdb1",
+      "listingCode": "legacy_product_8f3c2475227512b45a0fcdb1",
+      "externalReference": "msi-g274qpf-e2",
+      "skuCode": "LEGACY-8F3C2475227512B45A0FCDB1",
+      "manufacturerPartNumber": "G274QPF E2",
+      "canonical": "https://vogpk.vercel.app/products/msi-g274qpf-e2",
+      "aliases": [
+        "/products/monitors/msi-g274qpf-e2"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-thor-1000p2",
+      "slug": "asus-rog-thor-1000p2",
+      "productCode": "legacy_product_4cbdbea4b9cb71e46be33839",
+      "listingCode": "legacy_product_4cbdbea4b9cb71e46be33839",
+      "externalReference": "asus-rog-thor-1000p2",
+      "skuCode": "LEGACY-4CBDBEA4B9CB71E46BE33839",
+      "manufacturerPartNumber": "90YE00L1-B0NA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-thor-1000p2",
+      "aliases": [
+        "/products/power-supplies/asus-rog-thor-1000p2"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-strix-1000g-aura",
+      "slug": "asus-rog-strix-1000g-aura",
+      "productCode": "legacy_product_34aafb2b2b921e71bae2fcf1",
+      "listingCode": "legacy_product_34aafb2b2b921e71bae2fcf1",
+      "externalReference": "asus-rog-strix-1000g-aura",
+      "skuCode": "LEGACY-34AAFB2B2B921E71BAE2FCF1",
+      "manufacturerPartNumber": "ROG-STRIX-1000G-AURA-GAMING",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-strix-1000g-aura",
+      "aliases": [
+        "/products/power-supplies/asus-rog-strix-1000g-aura"
+      ]
+    },
+    {
+      "legacyId": "asus-tuf-850g-evo",
+      "slug": "asus-tuf-850g-evo",
+      "productCode": "legacy_product_092a6f0269fb9cd4b6b5edf7",
+      "listingCode": "legacy_product_092a6f0269fb9cd4b6b5edf7",
+      "externalReference": "asus-tuf-850g-evo",
+      "skuCode": "LEGACY-092A6F0269FB9CD4B6B5EDF7",
+      "manufacturerPartNumber": "90YE00SA-B0AA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-tuf-850g-evo",
+      "aliases": [
+        "/products/power-supplies/asus-tuf-850g-evo"
+      ]
+    },
+    {
+      "legacyId": "msi-mag-a850gl-pcie5",
+      "slug": "msi-mag-a850gl-pcie5",
+      "productCode": "legacy_product_61a8c82c8f6a299a898707bd",
+      "listingCode": "legacy_product_61a8c82c8f6a299a898707bd",
+      "externalReference": "msi-mag-a850gl-pcie5",
+      "skuCode": "LEGACY-61A8C82C8F6A299A898707BD",
+      "manufacturerPartNumber": "MAG A850GL PCIE5",
+      "canonical": "https://vogpk.vercel.app/products/msi-mag-a850gl-pcie5",
+      "aliases": [
+        "/products/power-supplies/msi-mag-a850gl-pcie5"
+      ]
+    },
+    {
+      "legacyId": "msi-mag-a750gl-pcie5",
+      "slug": "msi-mag-a750gl-pcie5",
+      "productCode": "legacy_product_36f942a14df9d4d85cdb116d",
+      "listingCode": "legacy_product_36f942a14df9d4d85cdb116d",
+      "externalReference": "msi-mag-a750gl-pcie5",
+      "skuCode": "LEGACY-36F942A14DF9D4D85CDB116D",
+      "manufacturerPartNumber": "MAG A750GL PCIE5",
+      "canonical": "https://vogpk.vercel.app/products/msi-mag-a750gl-pcie5",
+      "aliases": [
+        "/products/power-supplies/msi-mag-a750gl-pcie5"
+      ]
+    },
+    {
+      "legacyId": "msi-mpg-a1000g-pcie5",
+      "slug": "msi-mpg-a1000g-pcie5",
+      "productCode": "legacy_product_237ac2f8dea7b760ec48acf5",
+      "listingCode": "legacy_product_237ac2f8dea7b760ec48acf5",
+      "externalReference": "msi-mpg-a1000g-pcie5",
+      "skuCode": "LEGACY-237AC2F8DEA7B760EC48ACF5",
+      "manufacturerPartNumber": "MPG A1000G PCIE5",
+      "canonical": "https://vogpk.vercel.app/products/msi-mpg-a1000g-pcie5",
+      "aliases": [
+        "/products/power-supplies/msi-mpg-a1000g-pcie5"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-strix-1200-platinum",
+      "slug": "asus-rog-strix-1200-platinum",
+      "productCode": "legacy_product_023b715b18face88c1c68a8f",
+      "listingCode": "legacy_product_023b715b18face88c1c68a8f",
+      "externalReference": "asus-rog-strix-1200-platinum",
+      "skuCode": "LEGACY-023B715B18FACE88C1C68A8F",
+      "manufacturerPartNumber": "90YE00W0-B0NA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-strix-1200-platinum",
+      "aliases": [
+        "/products/power-supplies/asus-rog-strix-1200-platinum"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-hyperion-gr701-black",
+      "slug": "asus-rog-hyperion-gr701-black",
+      "productCode": "legacy_product_0b90d8e109594ee953cf33cc",
+      "listingCode": "legacy_product_0b90d8e109594ee953cf33cc",
+      "externalReference": "asus-rog-hyperion-gr701-black",
+      "skuCode": "LEGACY-0B90D8E109594EE953CF33CC",
+      "manufacturerPartNumber": "90DC00F0-B39000",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-hyperion-gr701-black",
+      "aliases": [
+        "/products/pc-cases/asus-rog-hyperion-gr701-black"
+      ]
+    },
+    {
+      "legacyId": "asus-proart-pa602-black",
+      "slug": "asus-proart-pa602-black",
+      "productCode": "legacy_product_b26b6473d6874538f209e92b",
+      "listingCode": "legacy_product_b26b6473d6874538f209e92b",
+      "externalReference": "asus-proart-pa602-black",
+      "skuCode": "LEGACY-B26B6473D6874538F209E92B",
+      "manufacturerPartNumber": "90DC00J0-B09000",
+      "canonical": "https://vogpk.vercel.app/products/asus-proart-pa602-black",
+      "aliases": [
+        "/products/pc-cases/asus-proart-pa602-black"
+      ]
+    },
+    {
+      "legacyId": "msi-mag-pano-m100r-pz-black",
+      "slug": "msi-mag-pano-m100r-pz-black",
+      "productCode": "legacy_product_44b9467d04cbc9399e461c44",
+      "listingCode": "legacy_product_44b9467d04cbc9399e461c44",
+      "externalReference": "msi-mag-pano-m100r-pz-black",
+      "skuCode": "LEGACY-44B9467D04CBC9399E461C44",
+      "manufacturerPartNumber": "MAG PANO M100R PZ",
+      "canonical": "https://vogpk.vercel.app/products/msi-mag-pano-m100r-pz-black",
+      "aliases": [
+        "/products/pc-cases/msi-mag-pano-m100r-pz-black"
+      ]
+    },
+    {
+      "legacyId": "asus-tuf-gt501-black",
+      "slug": "asus-tuf-gt501-black",
+      "productCode": "legacy_product_b4b39de0249a57165b7ac971",
+      "listingCode": "legacy_product_b4b39de0249a57165b7ac971",
+      "externalReference": "asus-tuf-gt501-black",
+      "skuCode": "LEGACY-B4B39DE0249A57165B7AC971",
+      "manufacturerPartNumber": "90DC0012-B49000",
+      "canonical": "https://vogpk.vercel.app/products/asus-tuf-gt501-black",
+      "aliases": [
+        "/products/pc-cases/asus-tuf-gt501-black"
+      ]
+    },
+    {
+      "legacyId": "msi-mag-forge-320r-airflow",
+      "slug": "msi-mag-forge-320r-airflow",
+      "productCode": "legacy_product_45c93412b4f44e04b9344b7f",
+      "listingCode": "legacy_product_45c93412b4f44e04b9344b7f",
+      "externalReference": "msi-mag-forge-320r-airflow",
+      "skuCode": "LEGACY-45C93412B4F44E04B9344B7F",
+      "manufacturerPartNumber": "MAG FORGE 320R AIRFLOW",
+      "canonical": "https://vogpk.vercel.app/products/msi-mag-forge-320r-airflow",
+      "aliases": [
+        "/products/pc-cases/msi-mag-forge-320r-airflow"
+      ]
+    },
+    {
+      "legacyId": "asus-prime-ap201-tg-black",
+      "slug": "asus-prime-ap201-tg-black",
+      "productCode": "legacy_product_522bdfb9b9bdef4328b53f0f",
+      "listingCode": "legacy_product_522bdfb9b9bdef4328b53f0f",
+      "externalReference": "asus-prime-ap201-tg-black",
+      "skuCode": "LEGACY-522BDFB9B9BDEF4328B53F0F",
+      "manufacturerPartNumber": "90DC00G0-B30010",
+      "canonical": "https://vogpk.vercel.app/products/asus-prime-ap201-tg-black",
+      "aliases": [
+        "/products/pc-cases/asus-prime-ap201-tg-black"
+      ]
+    },
+    {
+      "legacyId": "msi-mag-forge-m100a-black",
+      "slug": "msi-mag-forge-m100a-black",
+      "productCode": "legacy_product_e5faf6615a6de51255a97331",
+      "listingCode": "legacy_product_e5faf6615a6de51255a97331",
+      "externalReference": "msi-mag-forge-m100a-black",
+      "skuCode": "LEGACY-E5FAF6615A6DE51255A97331",
+      "manufacturerPartNumber": "MAG FORGE M100A",
+      "canonical": "https://vogpk.vercel.app/products/msi-mag-forge-m100a-black",
+      "aliases": [
+        "/products/pc-cases/msi-mag-forge-m100a-black"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-ryujin-iii-360-argb",
+      "slug": "asus-rog-ryujin-iii-360-argb",
+      "productCode": "legacy_product_022ac736e95d8b2a97beaa70",
+      "listingCode": "legacy_product_022ac736e95d8b2a97beaa70",
+      "externalReference": "asus-rog-ryujin-iii-360-argb",
+      "skuCode": "LEGACY-022AC736E95D8B2A97BEAA70",
+      "manufacturerPartNumber": "90RC00L1-M0UAY0",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-ryujin-iii-360-argb",
+      "aliases": [
+        "/products/cooling/asus-rog-ryujin-iii-360-argb"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-ryuo-iii-360-argb",
+      "slug": "asus-rog-ryuo-iii-360-argb",
+      "productCode": "legacy_product_ed1479c6878387e99797e5f1",
+      "listingCode": "legacy_product_ed1479c6878387e99797e5f1",
+      "externalReference": "asus-rog-ryuo-iii-360-argb",
+      "skuCode": "LEGACY-ED1479C6878387E99797E5F1",
+      "manufacturerPartNumber": "90RC00I1-M0UAY0",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-ryuo-iii-360-argb",
+      "aliases": [
+        "/products/cooling/asus-rog-ryuo-iii-360-argb"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-strix-lc-iii-360-argb",
+      "slug": "asus-rog-strix-lc-iii-360-argb",
+      "productCode": "legacy_product_d1395ceecb35b44e571cb7ce",
+      "listingCode": "legacy_product_d1395ceecb35b44e571cb7ce",
+      "externalReference": "asus-rog-strix-lc-iii-360-argb",
+      "skuCode": "LEGACY-D1395CEECB35B44E571CB7CE",
+      "manufacturerPartNumber": "90RC00T1-M0UAY0",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-strix-lc-iii-360-argb",
+      "aliases": [
+        "/products/cooling/asus-rog-strix-lc-iii-360-argb"
+      ]
+    },
+    {
+      "legacyId": "msi-mag-coreliquid-a13-360-black",
+      "slug": "msi-mag-coreliquid-a13-360-black",
+      "productCode": "legacy_product_6110256347f00f68958caa27",
+      "listingCode": "legacy_product_6110256347f00f68958caa27",
+      "externalReference": "msi-mag-coreliquid-a13-360-black",
+      "skuCode": "LEGACY-6110256347F00F68958CAA27",
+      "manufacturerPartNumber": "MAG CORELIQUID A13 360",
+      "canonical": "https://vogpk.vercel.app/products/msi-mag-coreliquid-a13-360-black",
+      "aliases": [
+        "/products/cooling/msi-mag-coreliquid-a13-360-black"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-strix-lc-ii-240-argb",
+      "slug": "asus-rog-strix-lc-ii-240-argb",
+      "productCode": "legacy_product_4e0037362b4b36e5022cc305",
+      "listingCode": "legacy_product_4e0037362b4b36e5022cc305",
+      "externalReference": "asus-rog-strix-lc-ii-240-argb",
+      "skuCode": "LEGACY-4E0037362B4B36E5022CC305",
+      "manufacturerPartNumber": "90RC00E1-M0UAY0",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-strix-lc-ii-240-argb",
+      "aliases": [
+        "/products/cooling/asus-rog-strix-lc-ii-240-argb"
+      ]
+    },
+    {
+      "legacyId": "msi-mag-coreliquid-e360-black",
+      "slug": "msi-mag-coreliquid-e360-black",
+      "productCode": "legacy_product_9c3e05608dde0d03c1369dc8",
+      "listingCode": "legacy_product_9c3e05608dde0d03c1369dc8",
+      "externalReference": "msi-mag-coreliquid-e360-black",
+      "skuCode": "LEGACY-9C3E05608DDE0D03C1369DC8",
+      "manufacturerPartNumber": "MAG CORELIQUID E360",
+      "canonical": "https://vogpk.vercel.app/products/msi-mag-coreliquid-e360-black",
+      "aliases": [
+        "/products/cooling/msi-mag-coreliquid-e360-black"
+      ]
+    },
+    {
+      "legacyId": "msi-mag-coreliquid-i360-black",
+      "slug": "msi-mag-coreliquid-i360-black",
+      "productCode": "legacy_product_48eb82b2be7eddd0df466225",
+      "listingCode": "legacy_product_48eb82b2be7eddd0df466225",
+      "externalReference": "msi-mag-coreliquid-i360-black",
+      "skuCode": "LEGACY-48EB82B2BE7EDDD0DF466225",
+      "manufacturerPartNumber": "MAG CORELIQUID I360",
+      "canonical": "https://vogpk.vercel.app/products/msi-mag-coreliquid-i360-black",
+      "aliases": [
+        "/products/cooling/msi-mag-coreliquid-i360-black"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-scabbard-ii",
+      "slug": "asus-rog-scabbard-ii",
+      "productCode": "legacy_product_2cfa6a623a30b9c7db0d003c",
+      "listingCode": "legacy_product_2cfa6a623a30b9c7db0d003c",
+      "externalReference": "asus-rog-scabbard-ii",
+      "skuCode": "LEGACY-2CFA6A623A30B9C7DB0D003C",
+      "manufacturerPartNumber": "90MP02H0-BPUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-scabbard-ii",
+      "aliases": [
+        "/products/accessories/asus-rog-scabbard-ii"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-sheath-ii-xxl",
+      "slug": "asus-rog-sheath-ii-xxl",
+      "productCode": "legacy_product_c4abcd8f7e28932a17f20a6d",
+      "listingCode": "legacy_product_c4abcd8f7e28932a17f20a6d",
+      "externalReference": "asus-rog-sheath-ii-xxl",
+      "skuCode": "LEGACY-C4ABCD8F7E28932A17F20A6D",
+      "manufacturerPartNumber": "90MP04B0-BPAA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-sheath-ii-xxl",
+      "aliases": [
+        "/products/accessories/asus-rog-sheath-ii-xxl"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-hone-ace-aim-lab",
+      "slug": "asus-rog-hone-ace-aim-lab",
+      "productCode": "legacy_product_68ff4f635223e7950ca08b4a",
+      "listingCode": "legacy_product_68ff4f635223e7950ca08b4a",
+      "externalReference": "asus-rog-hone-ace-aim-lab",
+      "skuCode": "LEGACY-68FF4F635223E7950CA08B4A",
+      "manufacturerPartNumber": "90MP0380-BPUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-hone-ace-aim-lab",
+      "aliases": [
+        "/products/accessories/asus-rog-hone-ace-aim-lab"
+      ]
+    },
+    {
+      "legacyId": "asus-tuf-p1",
+      "slug": "asus-tuf-p1",
+      "productCode": "legacy_product_73779199039151e1cd32c87d",
+      "listingCode": "legacy_product_73779199039151e1cd32c87d",
+      "externalReference": "asus-tuf-p1",
+      "skuCode": "LEGACY-73779199039151E1CD32C87D",
+      "manufacturerPartNumber": "90MP02G0-BPUA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-tuf-p1",
+      "aliases": [
+        "/products/accessories/asus-tuf-p1"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-scabbard-ii-arctic-gray-xxl",
+      "slug": "asus-rog-scabbard-ii-arctic-gray-xxl",
+      "productCode": "legacy_product_fd5919edd1283709178f75df",
+      "listingCode": "legacy_product_fd5919edd1283709178f75df",
+      "externalReference": "asus-rog-scabbard-ii-arctic-gray-xxl",
+      "skuCode": "LEGACY-FD5919EDD1283709178F75DF",
+      "manufacturerPartNumber": "90MP03H0-BPAA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-scabbard-ii-arctic-gray-xxl",
+      "aliases": [
+        "/products/accessories/asus-rog-scabbard-ii-arctic-gray-xxl"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-balteus-qi",
+      "slug": "asus-rog-balteus-qi",
+      "productCode": "legacy_product_356d2ab668527f6a4a63f8c0",
+      "listingCode": "legacy_product_356d2ab668527f6a4a63f8c0",
+      "externalReference": "asus-rog-balteus-qi",
+      "skuCode": "LEGACY-356D2AB668527F6A4A63F8C0",
+      "manufacturerPartNumber": "90MP0120-B0UA00",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-balteus-qi",
+      "aliases": [
+        "/products/accessories/asus-rog-balteus-qi"
+      ]
+    },
+    {
+      "legacyId": "asus-rog-herculx",
+      "slug": "asus-rog-herculx",
+      "productCode": "legacy_product_4b3103784463b37dcb4142f6",
+      "listingCode": "legacy_product_4b3103784463b37dcb4142f6",
+      "externalReference": "asus-rog-herculx",
+      "skuCode": "LEGACY-4B3103784463B37DCB4142F6",
+      "manufacturerPartNumber": "90DA0020-B09000",
+      "canonical": "https://vogpk.vercel.app/products/asus-rog-herculx",
+      "aliases": [
+        "/products/accessories/asus-rog-herculx"
+      ]
+    }
+  ],
+  "price": "CatalogImportRecord.referenceAmount only; not StorePrice or PriceRevision",
+  "inventory": "No InventoryItem, balances, adjustments or reservations created",
+  "collections": {
+    "featured": [
+      "rog-strix-rtx5070ti-o16g",
+      "aorus-rtx5080-master-ice-16g",
+      "asus-rog-astral-rtx5080-oc-16gb",
+      "amd-ryzen9-9950x",
+      "intel-core-i7-13700k-tray",
+      "kingston-fury-beast-ddr5-16gb-6000",
+      "asus-rog-harpe-ace-aim-lab",
+      "asus-rog-scope-ii-96-wireless-nx-snow"
+    ],
+    "new-arrivals": [
+      "proart-rtx5080-16g",
+      "asus-prime-rtx5080-oc-16gb",
+      "asus-prime-rtx5070-oc-12gb-white",
+      "intel-core-i5-13600k",
+      "intel-core-i7-12700k-tray",
+      "kingston-fury-beast-16gb-4800",
+      "asus-rog-keris-ii-ace-black",
+      "asus-rog-falchion-rx-low-profile-red"
+    ]
+  }
+}

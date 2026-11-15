@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "productionAccess": false,
+  "foundationAppliedOnlyToDisposableDatabase": true,
+  "ownerCredentialsUnchanged": true,
+  "platformGrants": 0,
+  "productionTargetGuards": true,
+  "migrationHistoryChecked": true,
+  "importerZeroWriteRepeat": true,
+  "actualOperatorCliPassed": true,
+  "existingSessionsUnchangedByFoundation": true,
+  "productionModeReadCutoverIsolated": true,
+  "liveSettingsChanged": false
+}

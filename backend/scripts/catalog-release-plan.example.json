@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "environment": "production",
+  "releaseSha": "REPLACE_WITH_REVIEWED_FULL_COMMIT_SHA",
+  "host": "REPLACE_WITH_EXISTING_DIRECT_NEON_HOST",
+  "database": "REPLACE_WITH_EXISTING_DATABASE_NAME",
+  "port": 5432,
+  "actorId": "REPLACE_WITH_EXISTING_OWNER_UUID",
+  "tenantId": "REPLACE_WITH_REVIEWED_EXISTING_OR_NEW_UUID",
+  "storeId": "REPLACE_WITH_REVIEWED_EXISTING_OR_NEW_UUID",
+  "memberIds": ["REPLACE_WITH_EVERY_ACTIVE_LEGACY_STAFF_UUID"],
+  "baselineMigrations": ["202610290001_admin_security"],
+  "schemaFingerprint": "REPLACE_WITH_INSPECTED_AND_REVIEWED_SCHEMA_FINGERPRINT",
+  "manifestHash": "264136158ad771573cd526bfa0b2ad8f26eff5306257da2e7886ba3fa1047c04",
+  "recovery": {
+    "verifiedAt": "REPLACE_WITH_CURRENT_VERIFICATION_TIME_UTC",
+    "encryptedSha256": "REPLACE_WITH_VERIFIED_ENCRYPTED_BACKUP_SHA256",
+    "isolatedRestorePassed": true
+  },
+  "presentation": "PENDING"
+}

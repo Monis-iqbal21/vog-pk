@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "mode": "read-only static compatibility parity; not a production import",
+  "products": 84,
+  "categories": 12,
+  "featured": [
+    "rog-strix-rtx5070ti-o16g",
+    "aorus-rtx5080-master-ice-16g",
+    "asus-rog-astral-rtx5080-oc-16gb",
+    "amd-ryzen9-9950x",
+    "intel-core-i7-13700k-tray",
+    "kingston-fury-beast-ddr5-16gb-6000",
+    "asus-rog-harpe-ace-aim-lab"
+  ],
+  "newArrivals": [
+    "proart-rtx5080-16g",
+    "asus-prime-rtx5080-oc-16gb",
+    "asus-prime-rtx5070-oc-12gb-white",
+    "intel-core-i5-13600k",
+    "intel-core-i7-12700k-tray",
+    "kingston-fury-beast-16gb-4800",
+    "asus-rog-keris-ii-ace-black"
+  ],
+  "hashes": [
+    {
+      "file": "src/data/products.js",
+      "sha256": "da4d1fb02d1cd5c67566d87b74daff9288f982f76eb300f510fa97d2b13c86fb"
+    },
+    {
+      "file": "src/data/catalogue-products.js",
+      "sha256": "5f2ed5c826231fdab1213c48cdd5ce5f1d814a318518c03e67255f54c82c16cf"
+    },
+    {
+      "file": "src/data/catalogue-images.js",
+      "sha256": "7f49bea94774d47248e451ac4713fa6c361e0c0ca4b6a0b451130b840ba15398"
+    },
+    {
+      "file": "src/data/productDetails.js",
+      "sha256": "d307dfe1ffdc17e027b83c5da442f38008bcf9c847a98ae8241ed931a6230f92"
+    },
+    {
+      "file": "src/data/product-detail-gallery.js",
+      "sha256": "92e15f3f7ff39fe4e54e2e82d9ca15f6fa70e239c866a9dc86d9a86c256ab544"
+    },
+    {
+      "file": "src/data/retail-product-images.js",
+      "sha256": "764912c188046857ace8b2a1d8e5aa1854f6b203899edf2dc02ac52f4b323d18"
+    }
+  ],
+  "adapterValidated": true,
+  "productionAccess": false
+}

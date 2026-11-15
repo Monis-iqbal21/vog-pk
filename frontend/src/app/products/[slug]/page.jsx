@@ -2,17 +2,20 @@ import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import ProductDetail from '@/components/products/ProductDetail';
 import RelatedProducts from '@/components/products/RelatedProducts';
-import {getProductDetailBySlug,getProductPath,getProductSlugs} from '@/lib/products';
+import {getProductDetailBySlug,getProductPath} from '@/lib/products';
 import {site} from '@/config/site';
-import {productCategories} from '@/data/products';
 import ProductListingPage from '@/components/products/ProductListingPage';
 import {getListingScope,getListingMetadata,toListingSearch,getCategoryPath} from '@/lib/product-listings';
 import '@/components/products/ProductDetail.css';
+import {dynamicCatalog} from '@/lib/catalog/server';
+import {DynamicCatalogPage,dynamicMetadata} from '@/components/catalog/CatalogPages';
 
-export const dynamicParams=false;
-export function generateStaticParams(){return [...getProductSlugs(),...productCategories.map(category=>({slug:category.slug}))];}
+export const dynamicParams=true;
+// Resolve every slug at request time. Build-time fallback prerendering cannot
+// provide current store offers, rights or newly published catalog routes.
 
 export async function generateMetadata({params,searchParams}){
+ if(dynamicCatalog())return dynamicMetadata((await params).slug,await searchParams);
  const {slug}=await params,scope=getListingScope('category',slug);
  if(scope)return getListingMetadata(scope,toListingSearch(await searchParams));
  const product=getProductDetailBySlug(slug);
@@ -23,6 +26,7 @@ export async function generateMetadata({params,searchParams}){
 }
 
 export default async function ProductPage({params,searchParams}){
+ if(dynamicCatalog())return <DynamicCatalogPage slug={(await params).slug} search={await searchParams}/>;
  const {slug}=await params,scope=getListingScope('category',slug);
  if(scope)return <ProductListingPage key={scope.path} scope={scope} initialSearch={toListingSearch(await searchParams)} />;
  const product=getProductDetailBySlug(slug);

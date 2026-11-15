@@ -78,7 +78,7 @@ try{
  await db.loginThrottle.deleteMany();
  for(const value of Object.values(accounts))delete value.token;
  await fs.mkdir('.local',{recursive:true});await fs.writeFile('.local/security-test-accounts.json',JSON.stringify(accounts));
- await fs.mkdir('docs',{recursive:true});await fs.writeFile('docs/security-verification.json',JSON.stringify({passed:true,checks,database:'isolated PostgreSQL test database',defaultRoles:6,permissions:27,storedPasswordHash:'Argon2id 64 MiB / 3 passes / 1 lane',sessions:'Opaque 256-bit tokens, SHA-256 at rest',apiPort:port},null,2)+'\n');
+ await fs.mkdir('docs',{recursive:true});await fs.writeFile(process.env.SECURITY_REPORT_PATH??'docs/security-verification.json',JSON.stringify({passed:true,checks,database:'isolated PostgreSQL test database',defaultRoles:6,permissions:27,storedPasswordHash:'Argon2id 64 MiB / 3 passes / 1 lane',sessions:'Opaque 256-bit tokens, SHA-256 at rest',apiPort:port},null,2)+'\n');
  console.log(`Security integration suite passed: ${checks} checks. No credentials printed.`);
  if(process.argv.includes('--keep-server')){console.log('Isolated test API remains running for browser verification.');await db.$disconnect();setInterval(()=>{},60000);}else server.kill();
 }catch(error){server?.kill();throw error;}finally{await db.$disconnect();}
