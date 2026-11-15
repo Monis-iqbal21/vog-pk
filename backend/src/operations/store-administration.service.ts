@@ -109,7 +109,7 @@ export class StoreAdministrationService {
     const assets = await tx.mediaAsset.findMany({ where: { id: { in: assetIds }, tenantId: ctx.tenantId, archived: false, rights: 'APPROVED', publicUse: true, developmentOnly: false, productReferences: { some: { listingPins: { some: { visible: true, revision: { storeId: ctx.storeId, status: 'PUBLISHED', visible: true, publishedFor: { some: { archived: false } } } } } } } }, select: { id: true } });
     if (assets.length !== assetIds.length) throw new ConflictException('Every published hero slide must use an approved public media asset.');
     const categoryIds = [...new Set(content.sections.flatMap((section) => section.categoryId ? [section.categoryId] : []))];
-    const categories = await tx.category.findMany({ where: { id: { in: categoryIds }, storeId: ctx.storeId, tenantId: ctx.tenantId, archived: false }, select: { id: true } });
+    const categories = await tx.category.findMany({ where: { id: { in: categoryIds }, storeId: ctx.storeId, tenantId: ctx.tenantId, status: 'ACTIVE' }, select: { id: true } });
     if (categories.length !== categoryIds.length) throw new ConflictException('Homepage category placement must use an active category in this store.');
   }
 

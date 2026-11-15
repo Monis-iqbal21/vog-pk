@@ -1368,7 +1368,7 @@ export async function verifyOperations({
     assert.ok(await db.auditLog.findFirst({ where: { action: 'operations.store_settings_updated', actorId: owner.id, resourceId: ids.storeId } }));
     assert.equal((await request(`stores/${ids.storeId}/operations/dashboard`, { session: bToken })).status, 403);
   });
-  await test('Homepage revisions are auditable and publication rejects unapproved or private media', async () => {
+  await test('Homepage revisions are audited and publication rejects unapproved media and inactive categories', async () => {
     const initial = (await request(`${ops}/homepage`));
     assert.equal(initial.status, 200);
     const content = { slides: [], sections: [] };
@@ -1378,13 +1378,26 @@ export async function verifyOperations({
     const pending = await db.mediaAsset.create({ data: { tenantId: ids.tenantId, code: 'homepage_pending_test', mimeType: 'image/webp', createdBy: owner.id } });
     const denied = await request(`${ops}/homepage/publish`, { method: 'POST', body: { expectedRevision: draft.data.number, content: { slides: [{ title: 'Pending image', eyebrow: '', description: '', imageAssetId: pending.id, buttonLabel: '', href: null, sortOrder: 0, visible: true }], sections: [] } } });
     assert.equal(denied.status, 409);
+    const category = await db.category.findFirst({ where: { storeId: ids.storeId, tenantId: ids.tenantId, status: 'ACTIVE' } });
+    assert.ok(category, 'Expected an active isolated store category fixture.');
+    const categoryStatus = category.status;
+    try {
+      await db.category.update({ where: { id: category.id }, data: { status: 'DRAFT' } });
+      const inactiveCategory = await request(`${ops}/homepage/publish`, { method: 'POST', body: { expectedRevision: draft.data.number, content: { slides: [], sections: [{ kind: 'CATEGORY', title: 'Inactive category', categoryId: category.id, sortOrder: 0, visible: true }] } } });
+      assert.equal(inactiveCategory.status, 409, 'Publishing must reject a non-active category.');
+    } finally {
+      await db.category.update({ where: { id: category.id }, data: { status: categoryStatus } });
+    }
+    const published = await request(`${ops}/homepage/publish`, { method: 'POST', body: { expectedRevision: draft.data.number, content: { slides: [], sections: [{ kind: 'CATEGORY', title: 'Active category', categoryId: category.id, sortOrder: 0, visible: true }] } } });
+    assert.equal(published.status, 201, published.data?.message ?? 'Active category publication failed.');
     const choices = await request(`${ops}/homepage/assets`);
     assert.equal(choices.status, 200);
     assert.equal(choices.data.assets.some((item) => item.id === pending.id), false);
-    const archived = await request(`${ops}/homepage/archive`, { method: 'POST', body: { revision: draft.data.number } });
+    const archived = await request(`${ops}/homepage/archive`, { method: 'POST', body: { revision: published.data.number } });
     assert.equal(archived.status, 201);
     assert.equal(archived.data.archived, true);
     assert.ok(await db.auditLog.findFirst({ where: { action: 'operations.homepage_draft_saved', actorId: owner.id, resourceId: draft.data.id } }));
+    assert.ok(await db.auditLog.findFirst({ where: { action: 'operations.homepage_published', actorId: owner.id, resourceId: published.data.id } }));
     assert.ok(await db.auditLog.findFirst({ where: { action: 'operations.homepage_archived', actorId: owner.id } }));
   });
   return {
